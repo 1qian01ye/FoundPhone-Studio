@@ -934,7 +934,7 @@ const WEATHER_CITIES = [
   { name: "济南", lat: 36.6512, lon: 117.1201, timezone: "Asia/Shanghai" },
   { name: "杭州", lat: 30.2741, lon: 120.1551, timezone: "Asia/Shanghai" },
   { name: "东京", lat: 35.6762, lon: 139.6503, timezone: "Asia/Tokyo" },
-  { name: "福州", lat: 26.0745, lon: 119.2965, timezone: "Asia/Shanghai" },
+  { name: "福建", lat: 26.0, lon: 117.5, timezone: "Asia/Shanghai",}
 ];
 
 
