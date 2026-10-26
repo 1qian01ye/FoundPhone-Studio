@@ -879,11 +879,32 @@ console.log("音乐封面调试：", item.title, item.media, src);
   );
 }
 
+
 function AppleMusicPlayer({ item }: { item: Item }) {
-  const appleMusicUrl =
-    item.id === "music-street-lights"
-      ? "https://embed.music.apple.com/cn/song/1440895179?theme=auto"
-      : "";
+  const appleMusicUrls: Record<string, string> = {
+    "Street Lights":
+      "https://embed.music.apple.com/cn/song/1440895179?theme=auto",
+    Twenties:
+      "https://embed.music.apple.com/cn/song/1501741034?theme=auto",
+    "Far away":
+      "https://embed.music.apple.com/cn/song/1764536815?theme=auto",
+    "拜托拜托":
+      "https://embed.music.apple.com/cn/song/6796796665?theme=auto",
+    Always:
+      "https://embed.music.apple.com/cn/song/1522756663?theme=auto",
+    兰亭序:
+      "https://embed.music.apple.com/cn/song/1624001320?theme=auto",
+    "One Last Kiss":
+      "https://embed.music.apple.com/cn/song/1542953977?theme=auto",
+    Drops:
+      "https://embed.music.apple.com/cn/song/1882035645?theme=auto",
+    太聪明:
+      "https://embed.music.apple.com/cn/song/152197590?theme=auto",
+    星と僕らと:
+      "https://embed.music.apple.com/us/song/6791034566?l=zh-Hans-CN&theme=auto",
+  };
+
+  const appleMusicUrl = appleMusicUrls[item.title];
 
   if (!appleMusicUrl) return null;
 
