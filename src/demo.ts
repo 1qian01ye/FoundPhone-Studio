@@ -136,7 +136,7 @@ export function createWork(title = "雨停之前"): Work {
       folder: "我的歌单",
     }),
      makeItem({
-      id: "musice-one-last-kiss",
+      id: "music-one-last-kiss",
       title: "One Last Kiss",
       sender: "宇多田光",
       body: "One Last Kiss",
