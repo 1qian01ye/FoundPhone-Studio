@@ -638,16 +638,22 @@
 
 .ios18 .street-lights-play {
   display: flex;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
   align-items: center;
   justify-content: center;
+  border: 0;
+  padding: 0;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.92);
   color: #242630;
-  font-size: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  pointer-events: auto;
+  position: relative;
+  z-index: 10;
 }
-
 .ios18 .street-lights-more {
   color: rgba(255, 255, 255, 0.8);
   font-size: 12px;
