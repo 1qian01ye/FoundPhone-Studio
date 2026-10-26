@@ -528,3 +528,156 @@
   opacity: 0.4;
   cursor: default;
 }
+
+/* Street Lights — frosted glass music widget */
+.ios18 .street-lights-widget {
+  position: absolute;
+  z-index: 5;
+  top: 100px;
+  left: 20px;
+  right: 20px;
+  height: 132px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 23px;
+  background: rgba(25, 27, 34, 0.52);
+  color: #fff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.13);
+  backdrop-filter: blur(24px) saturate(145%);
+  -webkit-backdrop-filter: blur(24px) saturate(145%);
+  pointer-events: none;
+}
+
+.ios18 .street-lights-cover {
+  width: 104px;
+  height: 104px;
+  flex: 0 0 104px;
+  overflow: hidden;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.ios18 .street-lights-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ios18 .street-lights-info {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ios18 .street-lights-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.ios18 .street-lights-label,
+.ios18 .street-lights-source {
+  font-size: 8px;
+  line-height: 12px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.ios18 .street-lights-song {
+  overflow: hidden;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 650;
+  line-height: 21px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ios18 .street-lights-artist {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 11px;
+  line-height: 15px;
+}
+
+.ios18 .street-lights-album {
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 9px;
+  line-height: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ios18 .street-lights-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  height: 23px;
+  margin-top: 1px;
+}
+
+.ios18 .street-lights-heart {
+  color: #ff7188;
+  font-size: 15px;
+}
+
+.ios18 .street-lights-skip {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 10px;
+}
+
+.ios18 .street-lights-play {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #242630;
+  font-size: 10px;
+}
+
+.ios18 .street-lights-more {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.ios18 .street-lights-progress {
+  width: 100%;
+  height: 2px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.ios18 .street-lights-progress span {
+  display: block;
+  width: 38%;
+  height: 100%;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Keep the widget out of the way while editing the home screen. */
+.ios18 .interactive-home.home-editing .street-lights-widget {
+  display: none;
+}
+
+/* Reserve space for the widget and allow the app grid to scroll vertically. */
+.ios18 .interactive-home:not(.home-editing) .home-pages {
+  top: 246px;
+  overflow-y: auto;
+  touch-action: pan-y;
+}
