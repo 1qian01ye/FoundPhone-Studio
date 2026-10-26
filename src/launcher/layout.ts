@@ -195,8 +195,39 @@ export type HomeEntry = {
   folder?: string;
   widget?: Widget;
 };
+
+const hiddenHomeAppIds = new Set([
+  "appstore",
+  "mail",
+  "music",
+  "find",
+  "delivery",
+  "forum",
+  "whatsapp",
+  "instagram",
+  "tiktok",
+  "twitter",
+  "telegram",
+  "discord",
+  "youtube",
+  "line",
+  "facebook",
+  "messenger",
+  "reddit",
+  "spotify",
+  "pinterest",
+  "threads",
+  "kakao",
+]);
+
 export function homeEntries(layout: DeviceLayout): HomeEntry[] {
-  const apps = layout.apps.filter((a) => a.installed && a.visible && !a.dock);
+  const apps = layout.apps.filter(
+    (a) =>
+      a.installed &&
+      a.visible &&
+      !a.dock &&
+      !hiddenHomeAppIds.has(a.id),
+  );
   const folders = [
     ...new Set(apps.filter((a) => a.folder).map((a) => a.folder)),
   ];
