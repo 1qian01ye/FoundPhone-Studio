@@ -4918,3 +4918,11 @@ label {
   background: #e34f58;
   transform: rotate(135deg);
 }
+
+/* Custom photo wallpaper for lock screen and home screen */
+.phone-screen {
+  background-image: url("./微信图片_20261026172136_255_122.jpg") !important;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
