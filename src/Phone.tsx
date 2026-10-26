@@ -290,7 +290,27 @@ function PhoneRuntime({
   useEffect(() => {
     if (app && !work.apps.some((a) => a.id === app && a.installed)) setApp("");
   }, [app, work.apps]);
-  const displayTime = creator ? work.phone.time : s.time || work.phone.time;
+  const [displayTime, setDisplayTime] = useState(() => {
+  const now = new Date();
+  return `${String(now.getHours()).padStart(2, "0")}:${String(
+    now.getMinutes(),
+  ).padStart(2, "0")}`;
+});
+  useEffect(() => {
+  const updateTime = () => {
+    const now = new Date();
+    setDisplayTime(
+      `${String(now.getHours()).padStart(2, "0")}:${String(
+        now.getMinutes(),
+      ).padStart(2, "0")}`,
+    );
+  };
+
+  updateTime();
+  const timer = setInterval(updateTime, 1000);
+
+  return () => clearInterval(timer);
+}, []);
   const plugin = getApp(app);
   useEffect(() => {
     const count = s.notifications.length;
