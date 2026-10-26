@@ -612,10 +612,28 @@ export function HomeLauncher(p: Props) {
   <span className="street-lights-play-icon">▶</span>
 </button>
           <audio
-            id="street-lights-audio"
-            src={`${import.meta.env.BASE_URL}street-lights.mp3`}
-            preload="metadata"
-          />
+  id="street-lights-audio"
+  src={`${import.meta.env.BASE_URL}street-lights.mp3`}
+  preload="metadata"
+  onPlay={(e) => {
+    const button = e.currentTarget.parentElement?.querySelector(
+      ".street-lights-play-icon",
+    );
+    if (button) button.textContent = "Ⅱ";
+  }}
+  onPause={(e) => {
+    const button = e.currentTarget.parentElement?.querySelector(
+      ".street-lights-play-icon",
+    );
+    if (button) button.textContent = "▶";
+  }}
+  onEnded={(e) => {
+    const button = e.currentTarget.parentElement?.querySelector(
+      ".street-lights-play-icon",
+    );
+    if (button) button.textContent = "▶";
+  }}
+/>
 
           <button
             type="button"
