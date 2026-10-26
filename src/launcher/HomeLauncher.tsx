@@ -559,9 +559,7 @@ export function HomeLauncher(p: Props) {
           <div className="street-lights-song">Street Lights</div>
           <div className="street-lights-artist">Kanye West</div>
           <div className="street-lights-album">808s &amp; Heartbreak</div>
-
-                    ```tsx
-        <div className="street-lights-controls">
+          <div className="street-lights-controls">
           <button
             type="button"
             className="street-lights-heart"
@@ -859,7 +857,6 @@ export function HomeLauncher(p: Props) {
           </div>
         ))}
       </div>
-```
       <div className="launcher-bottom-tools">
         {pages.length > 1 && (
           <div className="home-page-dots">
