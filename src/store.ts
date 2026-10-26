@@ -30,12 +30,12 @@ export const useStudio = create<Store>((set, get) => ({
   future: [],
   error: "",
  
-  load: async () => {
+  
+load: async () => {
   try {
     const template = createWork();
     const songs = template.data.netease ?? [];
     const musicSongs = template.data.music ?? [];
-    console.log("[网易云模板排查]", songs.length, songs.map((item) => item.title));
 
     let works = (
       await db.works.orderBy("updatedAt").reverse().toArray()
@@ -45,51 +45,33 @@ export const useStudio = create<Store>((set, get) => ({
       await db.works.put(template);
       works = [template];
     } else if (songs.length || musicSongs.length) {
-  const updatedWorks: Work[] = [];
-
-  for (const work of works) {
-    const existingNetease = work.data.netease ?? [];
-    const existingMusic = work.data.music ?? [];
-
-    const neteaseIds = new Set(existingNetease.map((item) => item.id));
-    const musicIds = new Set(existingMusic.map((item) => item.id));
-
-    const missingNetease = songs.filter((item) => !neteaseIds.has(item.id));
-    const missingMusic = musicSongs.filter((item) => !musicIds.has(item.id));
-
-    if (missingNetease.length || missingMusic.length) {
-      const updated: Work = {
-        ...work,
-        data: {
-          ...work.data,
-          netease: [...existingNetease, ...missingNetease],
-          music: [...existingMusic, ...missingMusic],
-        },
-        updatedAt: Date.now(),
-      };
-
-      await db.works.put(updated);
-      updatedWorks.push(updated);
-    } else {
-      updatedWorks.push(work);
-    }
-  }
-
-  works = updatedWorks;
-}
       const updatedWorks: Work[] = [];
 
       for (const work of works) {
-        const existing = work.data.netease ?? [];
-        const existingIds = new Set(existing.map((item) => item.id));
-        const missing = songs.filter((item) => !existingIds.has(item.id));
+        const existingNetease = work.data.netease ?? [];
+        const existingMusic = work.data.music ?? [];
 
-        if (missing.length) {
+        const neteaseIds = new Set(
+          existingNetease.map((item) => item.id)
+        );
+        const musicIds = new Set(
+          existingMusic.map((item) => item.id)
+        );
+
+        const missingNetease = songs.filter(
+          (item) => !neteaseIds.has(item.id)
+        );
+        const missingMusic = musicSongs.filter(
+          (item) => !musicIds.has(item.id)
+        );
+
+        if (missingNetease.length || missingMusic.length) {
           const updated: Work = {
             ...work,
             data: {
               ...work.data,
-              netease: [...existing, ...missing],
+              netease: [...existingNetease, ...missingNetease],
+              music: [...existingMusic, ...missingMusic],
             },
             updatedAt: Date.now(),
           };
@@ -114,6 +96,7 @@ export const useStudio = create<Store>((set, get) => ({
     set({ error: String(e), status: "存储不可用" });
   }
 },
+
   select: (id) => {
     void get().flush();
     const work = get().works.find((w) => w.id === id);
