@@ -86,81 +86,81 @@ export function createWork(title = "雨停之前"): Work {
         folder: a.tabs[0],
       }),
     ];
-    w.data.netease = [
-    makeItem({
-      id: "netease-street-lights",
+    w.data.music = [
+     makeItem({
+      id: "music-street-lights",
       title: "Street Lights",
       sender: "Kanye West",
       body: "808s & Heartbreak",
       meta: { album: "808s & Heartbreak" },
       folder: "我的歌单",
     }),
-    makeItem({
-      id: "netease-twenties",
+     makeItem({
+      id: "music-twenties",
       title: "Twenties",
       sender: "Bren Joy",
       body: "Twenties",
       meta: { album: "Twenties" },
       folder: "我的歌单",
     }),
-    makeItem({
-      id: "netease-far-away",
+     makeItem({
+      id: "music-far-away",
       title: "Far away",
       sender: "RINI",
       body: "Far away",
       meta: { album: "Far away" },
       folder: "我的歌单",
     }),
-    makeItem({
-      id: "netease-baituo-baituo",
+     makeItem({
+      id: "music-baituo-baituo",
       title: "拜托拜托",
       sender: "TF家族",
       body: "拜托拜托",
       meta: { album: "拜托拜托" },
       folder: "我的歌单",
     }),
-    makeItem({
-      id: "netease-always",
+     makeItem({
+      id: "music-always",
       title: "Always",
       sender: "keshi",
       body: "Always",
       meta: { album: "Always" },
       folder: "我的歌单",
     }),
-    makeItem({
-      id: "netease-lantingxu",
+     makeItem({
+      id: "music-lantingxu",
       title: "兰亭序",
       sender: "周杰伦",
       body: "兰亭序",
       meta: { album: "兰亭序" },
       folder: "我的歌单",
     }),
-    makeItem({
-      id: "netease-one-last-kiss",
+     makeItem({
+      id: "musice-one-last-kiss",
       title: "One Last Kiss",
       sender: "宇多田光",
       body: "One Last Kiss",
       meta: { album: "One Last Kiss" },
       folder: "我的歌单",
     }),
-    makeItem({
-      id: "netease-drops",
+     makeItem({
+      id: "music-drops",
       title: "Drops",
       sender: "FKJ",
       body: "Drops",
       meta: { album: "Drops" },
       folder: "我的歌单",
     }),
-    makeItem({
-      id: "netease-tai-congming",
+     makeItem({
+      id: "music-tai-congming",
       title: "太聪明",
       sender: "陈绮贞",
       body: "太聪明",
       meta: { album: "太聪明" },
       folder: "我的歌单",
-    }),
-    makeItem({
-      id: "netease-hoshi-to-bokura-to",
+   }),
+     makeItem({
+      id: "music-hoshi-to-bokura-to",
       title: "星と僕らと",
       sender: "目黒将司 / tofubeats（河合佑亮）",
       body: "星と僕らと",
@@ -169,7 +169,7 @@ export function createWork(title = "雨停之前"): Work {
     }),
   ];
   w.data.wechat = [
-    makeItem({
+   makeItem({
       id: "wx1",
       title: "小林",
       sender: "小林",
