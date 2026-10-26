@@ -560,182 +560,255 @@ export function HomeLauncher(p: Props) {
           <div className="street-lights-artist">Kanye West</div>
           <div className="street-lights-album">808s &amp; Heartbreak</div>
 
-                    <div className="street-lights-controls">
-            <button
-              type="button"
-              className="street-lights-heart"
-              aria-label="收藏 Street Lights"
-              title="收藏"
-              onClick={(e) => {
-                e.stopPropagation();
-                e.currentTarget.classList.toggle("is-active");
-              }}
-            >
-              ♥
-            </button>
+                    ```tsx
+        <div className="street-lights-controls">
+          <button
+            type="button"
+            className="street-lights-heart"
+            aria-label="收藏 Street Lights"
+            title="收藏"
+            onClick={(e) => {
+              e.stopPropagation();
+              e.currentTarget.classList.toggle("is-active");
+            }}
+          >
+            ♥
+          </button>
 
-            <button
-              type="button"
-              className="street-lights-skip"
-              aria-label="上一首"
-              title="上一首"
-              onClick={(e) => {
-                e.stopPropagation();
-                console.info("目前只有一首本地歌曲");
-              }}
-            >
-              ◀◀
-            </button>
+          <button
+            type="button"
+            className="street-lights-skip"
+            aria-label="上一首"
+            title="上一首"
+            onClick={(e) => {
+              e.stopPropagation();
+              console.info("目前只有一首本地歌曲");
+            }}
+          >
+            ◀◀
+          </button>
 
-            <button
-              type="button"
-              className="street-lights-play"
-              aria-label="播放或暂停 Street Lights"
-              onClick={(e) => {
-                e.stopPropagation();
+          <button
+            type="button"
+            className="street-lights-play"
+            aria-label="播放或暂停 Street Lights"
+            onClick={(e) => {
+              e.stopPropagation();
 
-                const audio = document.getElementById(
-                  "street-lights-audio",
-                ) as HTMLAudioElement | null;
-
-                if (!audio) return;
-
-                if (audio.paused) {
-                  void audio.play().catch((error) => {
-                    console.error("音乐播放失败：", error);
-                  });
-                } else {
-                  audio.pause();
-                }
-              }}
-            >
-              ▶
-            </button>
-
-            <audio
-              id="street-lights-audio"
-              src={`${import.meta.env.BASE_URL}street-lights.mp3`}
-              preload="none"
-            />
-
-            <button
-              type="button"
-              className="street-lights-skip"
-              aria-label="下一首"
-              title="下一首"
-              onClick={(e) => {
-                e.stopPropagation();
-                console.info("目前只有一首本地歌曲");
-              }}
-            >
-              ▶▶
-            </button>
-
-            <button
-              type="button"
-              className="street-lights-more"
-              aria-label="更多音乐选项"
-              title="更多"
-              onClick={(e) => {
-                e.stopPropagation();
-                window.alert("Street Lights · Kanye West");
-              }}
-            >
-              •••
-            </button>
-          </div>
-
-          <div
-            className="street-lights-progress"
-            onPointerDown={(e) => {
-              const bar = e.currentTarget;
               const audio = document.getElementById(
                 "street-lights-audio",
               ) as HTMLAudioElement | null;
 
-              if (
-                !audio ||
-                !Number.isFinite(audio.duration) ||
-                audio.duration <= 0
-              ) {
-                return;
+              if (!audio) return;
+
+              if (audio.paused) {
+                void audio.play().catch((error) => {
+                  console.error("音乐播放失败：", error);
+                });
+              } else {
+                audio.pause();
               }
-
-              e.preventDefault();
-              bar.setPointerCapture(e.pointerId);
-
-              const seek = (clientX: number) => {
-                const rect = bar.getBoundingClientRect();
-                if (rect.width <= 0) return;
-
-                const ratio = Math.max(
-                  0,
-                  Math.min(1, (clientX - rect.left) / rect.width),
-                );
-
-                audio.currentTime = ratio * audio.duration;
-
-                const fill = bar.querySelector("span");
-                if (fill) {
-                  fill.style.width = `${ratio * 100}%`;
-                }
-              };
-
-              const handleMove = (event: globalThis.PointerEvent) => {
-                seek(event.clientX);
-              };
-
-              const handleEnd = () => {
-                bar.removeEventListener("pointermove", handleMove);
-                bar.removeEventListener("pointerup", handleEnd);
-                bar.removeEventListener("pointercancel", handleEnd);
-                bar.removeEventListener("lostpointercapture", handleEnd);
-              };
-
-              seek(e.clientX);
-
-              bar.addEventListener("pointermove", handleMove);
-              bar.addEventListener("pointerup", handleEnd);
-              bar.addEventListener("pointercancel", handleEnd);
-              bar.addEventListener("lostpointercapture", handleEnd);
             }}
           >
-            <span
-              style={{
-                width: "0%",
-                transition: "width 0.1s linear",
-              }}
-              ref={(el) => {
-                if (!el) return;
+            ▶
+          </button>
 
-                const audio = document.getElementById(
-                  "street-lights-audio",
-                ) as HTMLAudioElement | null;
+          <audio
+            id="street-lights-audio"
+            src={`${import.meta.env.BASE_URL}street-lights.mp3`}
+            preload="metadata"
+          />
 
-                if (!audio) return;
+          <button
+            type="button"
+            className="street-lights-skip"
+            aria-label="下一首"
+            title="下一首"
+            onClick={(e) => {
+              e.stopPropagation();
+              console.info("目前只有一首本地歌曲");
+            }}
+          >
+            ▶▶
+          </button>
 
-                
-                const updateProgress = () => {
-                  const progress =
-                    Number.isFinite(audio.duration) && audio.duration > 0
-                      ? (audio.currentTime / audio.duration) * 100
-                      : 0;
+          <button
+            type="button"
+            className="street-lights-more"
+            aria-label="更多音乐选项"
+            title="更多"
+            onClick={(e) => {
+              e.stopPropagation();
+              window.alert("Street Lights · Kanye West");
+            }}
+          >
+            •••
+          </button>
+        </div>
 
-                  el.style.width = `${progress}%`;
-                };
+        <div
+          className="street-lights-progress"
+          role="slider"
+          aria-label="播放进度"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          tabIndex={0}
+          onPointerDown={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
 
-                audio.addEventListener("timeupdate", updateProgress);
-                audio.addEventListener("loadedmetadata", updateProgress);
-                audio.addEventListener("ended", updateProgress);
-                audio.addEventListener("seeked", updateProgress);
+            const bar = e.currentTarget;
+            const audio = document.getElementById(
+              "street-lights-audio",
+            ) as HTMLAudioElement | null;
 
-                updateProgress();
-              }}
-            />
-          </div>
+            if (
+              !audio ||
+              !Number.isFinite(audio.duration) ||
+              audio.duration <= 0
+            ) {
+              return;
+            }
+
+            const seek = (clientX: number) => {
+              const rect = bar.getBoundingClientRect();
+              if (rect.width <= 0) return;
+
+              const ratio = Math.max(
+                0,
+                Math.min(1, (clientX - rect.left) / rect.width),
+              );
+
+              audio.currentTime = ratio * audio.duration;
+            };
+
+            seek(e.clientX);
+
+            try {
+              bar.setPointerCapture(e.pointerId);
+            } catch {
+              // 某些环境可能不支持 pointer capture
+            }
+          }}
+          onPointerMove={(e) => {
+            const bar = e.currentTarget;
+
+            if (!bar.hasPointerCapture(e.pointerId)) return;
+
+            const audio = document.getElementById(
+              "street-lights-audio",
+            ) as HTMLAudioElement | null;
+
+            if (
+              !audio ||
+              !Number.isFinite(audio.duration) ||
+              audio.duration <= 0
+            ) {
+              return;
+            }
+
+            const rect = bar.getBoundingClientRect();
+            if (rect.width <= 0) return;
+
+            const ratio = Math.max(
+              0,
+              Math.min(1, (e.clientX - rect.left) / rect.width),
+            );
+
+            audio.currentTime = ratio * audio.duration;
+          }}
+          onPointerUp={(e) => {
+            const bar = e.currentTarget;
+
+            if (bar.hasPointerCapture(e.pointerId)) {
+              bar.releasePointerCapture(e.pointerId);
+            }
+          }}
+          onPointerCancel={(e) => {
+            const bar = e.currentTarget;
+
+            if (bar.hasPointerCapture(e.pointerId)) {
+              bar.releasePointerCapture(e.pointerId);
+            }
+          }}
+          onKeyDown={(e) => {
+            const audio = document.getElementById(
+              "street-lights-audio",
+            ) as HTMLAudioElement | null;
+
+            if (
+              !audio ||
+              !Number.isFinite(audio.duration) ||
+              audio.duration <= 0
+            ) {
+              return;
+            }
+
+            let nextTime = audio.currentTime;
+
+            if (e.key === "ArrowRight") {
+              nextTime += 5;
+            } else if (e.key === "ArrowLeft") {
+              nextTime -= 5;
+            } else if (e.key === "Home") {
+              nextTime = 0;
+            } else if (e.key === "End") {
+              nextTime = audio.duration;
+            } else {
+              return;
+            }
+
+            e.preventDefault();
+
+            audio.currentTime = Math.max(
+              0,
+              Math.min(audio.duration, nextTime),
+            );
+          }}
+        >
+          <span
+            style={{
+              display: "block",
+              width: "0%",
+              height: "100%",
+              transition: "none",
+              pointerEvents: "none",
+            }}
+            ref={(el) => {
+              if (!el) return;
+
+              const audio = document.getElementById(
+                "street-lights-audio",
+              ) as HTMLAudioElement | null;
+
+              if (!audio) return;
+
+              const updateProgress = () => {
+                const progress =
+                  Number.isFinite(audio.duration) && audio.duration > 0
+                    ? (audio.currentTime / audio.duration) * 100
+                    : 0;
+
+                el.style.width = `${progress}%`;
+
+                const bar = el.parentElement;
+                bar?.setAttribute(
+                  "aria-valuenow",
+                  String(Math.round(progress)),
+                );
+              };
+
+              audio.addEventListener("timeupdate", updateProgress);
+              audio.addEventListener("loadedmetadata", updateProgress);
+              audio.addEventListener("durationchange", updateProgress);
+              audio.addEventListener("seeked", updateProgress);
+              audio.addEventListener("ended", updateProgress);
+
+              updateProgress();
+            }}
+          />
         </div>
       </div>
-
       <div className="launcher-toolbar">
         {editing ? (
           <>
@@ -786,7 +859,7 @@ export function HomeLauncher(p: Props) {
           </div>
         ))}
       </div>
-
+```
       <div className="launcher-bottom-tools">
         {pages.length > 1 && (
           <div className="home-page-dots">
