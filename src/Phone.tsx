@@ -952,7 +952,18 @@ function weatherDescription(code: number): string {
 }
 
 function WeatherApp({ onBack }: { onBack: () => void }) {
-  const [weather, setWeather] = useState<Record<string, any>>({});
+  type CityWeather = {
+  name: string;
+  temperature: number;
+  feelsLike: number;
+  humidity: number;
+  wind: number;
+  code: number;
+  high: number;
+  low: number;
+};
+
+const [weather, setWeather] = useState<Record<string, CityWeather>>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -985,7 +996,7 @@ function WeatherApp({ onBack }: { onBack: () => void }) {
 
           return {
             name: city.name,
-            temperature: Math.round(data.current.temperature_2m),
+            const next: Record<string, CityWeather> = {};
             feelsLike: Math.round(data.current.apparent_temperature),
             humidity: data.current.relative_humidity_2m,
             wind: data.current.wind_speed_10m,
