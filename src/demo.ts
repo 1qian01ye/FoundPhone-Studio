@@ -343,8 +343,10 @@ export function createEmptyWork(): Work {
   w.nodes = [];
   w.variables = {};
   w.data = {};
- for (const a of w.apps) {
-   if (a.installed) w.data[a.id] = [];
-}
 
-return w;
+  for (const a of w.apps) {
+    if (a.installed) w.data[a.id] = [];
+  }
+
+  return w;
+}
