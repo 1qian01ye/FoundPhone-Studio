@@ -545,7 +545,7 @@ export function HomeLauncher(p: Props) {
       <div className="street-lights-widget">
         <div className="street-lights-cover">
           <img
-            src="https://upload.wikimedia.org/wikipedia/en/7/74/808s_%26_Heartbreak.png"
+            src="https://coverartarchive.org/release/2e817d2f-34a3-3e6a-97e9-376453421fea/front-500"
             alt="808s & Heartbreak album cover"
           />
         </div>
