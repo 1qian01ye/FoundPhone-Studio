@@ -672,8 +672,7 @@ export function HomeLauncher(p: Props) {
       updateProgress();
     }}
   />
-</div>
-        </div>
+
       </div>
       <div className="launcher-toolbar">
         {editing ? (
@@ -681,15 +680,6 @@ export function HomeLauncher(p: Props) {
             <button
               aria-label="添加小组件"
               onClick={() => setSheet("widgets")}
-            >
-              <Plus size={18} />
-              小组件
-            </button>
-            <button onClick={() => setSheet("layout")}>布局</button>
-            <button onClick={() => setEditing(false)}>完成</button>
-          </>
-        ) : null}
-      </div>
             >
               <Plus size={18} />
               小组件
@@ -708,6 +698,9 @@ export function HomeLauncher(p: Props) {
               e.currentTarget.scrollLeft / e.currentTarget.clientWidth,
             ),
           )
+        }
+      >
+
         }
       >
         {pages.map((cells, n) => (
