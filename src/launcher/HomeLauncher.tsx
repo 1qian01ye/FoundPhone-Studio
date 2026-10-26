@@ -561,7 +561,20 @@ export function HomeLauncher(p: Props) {
           <div className="street-lights-controls">
             <span className="street-lights-heart">♥</span>
             <span className="street-lights-skip">◀◀</span>
-            <span className="street-lights-play">▶</span>
+            <button
+  type="button"
+  className="street-lights-play"
+  aria-label="播放 Street Lights"
+  onClick={(e) => {
+    e.stopPropagation();
+    window.open(
+      "https://music.apple.com/cn/song/1440895179",
+      "_blank",
+    );
+  }}
+>
+  ▶
+</button>
             <span className="street-lights-skip">▶▶</span>
             <span className="street-lights-more">•••</span>
           </div>
