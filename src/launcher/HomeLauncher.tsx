@@ -542,28 +542,32 @@ export function HomeLauncher(p: Props) {
       }}
     >
       
-      <div className="street-lights-widget">
+            <div className="street-lights-widget">
         <div className="street-lights-cover">
           <img
             src="https://coverartarchive.org/release/2e817d2f-34a3-3e6a-97e9-376453421fea/front-500"
             alt="808s & Heartbreak album cover"
           />
         </div>
+
         <div className="street-lights-info">
           <div className="street-lights-heading">
             <span className="street-lights-label">NOW PLAYING</span>
             <span className="street-lights-source">♫ MUSIC</span>
           </div>
+
           <div className="street-lights-song">Street Lights</div>
           <div className="street-lights-artist">Kanye West</div>
           <div className="street-lights-album">808s &amp; Heartbreak</div>
+
           <div className="street-lights-controls">
             <span className="street-lights-heart">♥</span>
             <span className="street-lights-skip">◀◀</span>
+
             <button
               type="button"
               className="street-lights-play"
-             aria-label="播放或暂停 Street Lights"
+              aria-label="播放或暂停 Street Lights"
               onClick={(e) => {
                 e.stopPropagation();
 
@@ -584,96 +588,107 @@ export function HomeLauncher(p: Props) {
             >
               ▶
             </button>
+
             <audio
               id="street-lights-audio"
               src={`${import.meta.env.BASE_URL}street-lights.mp3`}
               preload="none"
             />
+
             <span className="street-lights-skip">▶▶</span>
             <span className="street-lights-more">•••</span>
           </div>
+
           <div
-  className="street-lights-progress"
-  onPointerDown={(e) => {
-    const bar = e.currentTarget;
-    const audio = document.getElementById(
-      "street-lights-audio",
-    ) as HTMLAudioElement | null;
+            className="street-lights-progress"
+            onPointerDown={(e) => {
+              const bar = e.currentTarget;
+              const audio = document.getElementById(
+                "street-lights-audio",
+              ) as HTMLAudioElement | null;
 
-    if (!audio || !Number.isFinite(audio.duration) || audio.duration <= 0) {
-      return;
-    }
+              if (
+                !audio ||
+                !Number.isFinite(audio.duration) ||
+                audio.duration <= 0
+              ) {
+                return;
+              }
 
-    e.preventDefault();
-    bar.setPointerCapture(e.pointerId);
+              e.preventDefault();
+              bar.setPointerCapture(e.pointerId);
 
-    const seek = (clientX: number) => {
-      const rect = bar.getBoundingClientRect();
-      if (rect.width <= 0) return;
+              const seek = (clientX: number) => {
+                const rect = bar.getBoundingClientRect();
+                if (rect.width <= 0) return;
 
-      const ratio = Math.max(
-        0,
-        Math.min(1, (clientX - rect.left) / rect.width),
-      );
+                const ratio = Math.max(
+                  0,
+                  Math.min(1, (clientX - rect.left) / rect.width),
+                );
 
-      audio.currentTime = ratio * audio.duration;
+                audio.currentTime = ratio * audio.duration;
 
-      const fill = bar.querySelector("span");
-      if (fill) {
-        fill.style.width = `${ratio * 100}%`;
-      }
-    };
+                const fill = bar.querySelector("span");
+                if (fill) {
+                  fill.style.width = `${ratio * 100}%`;
+                }
+              };
 
-    seek(e.clientX);
+              const handleMove = (event: globalThis.PointerEvent) => {
+                seek(event.clientX);
+              };
 
-    const handleMove = (event: PointerEvent) => {
-      seek(event.clientX);
-    };
+              const handleEnd = () => {
+                bar.removeEventListener("pointermove", handleMove);
+                bar.removeEventListener("pointerup", handleEnd);
+                bar.removeEventListener("pointercancel", handleEnd);
+                bar.removeEventListener("lostpointercapture", handleEnd);
+              };
 
-    const handleEnd = () => {
-      bar.removeEventListener("pointermove", handleMove);
-      bar.removeEventListener("pointerup", handleEnd);
-      bar.removeEventListener("pointercancel", handleEnd);
-    };
+              seek(e.clientX);
 
-    bar.addEventListener("pointermove", handleMove);
-    bar.addEventListener("pointerup", handleEnd);
-    bar.addEventListener("pointercancel", handleEnd);
-  }}
->
-  <span
-    style={{
-      width: "0%",
-      transition: "width 0.1s linear",
-    }}
-    ref={(el) => {
-      if (!el) return;
+              bar.addEventListener("pointermove", handleMove);
+              bar.addEventListener("pointerup", handleEnd);
+              bar.addEventListener("pointercancel", handleEnd);
+              bar.addEventListener("lostpointercapture", handleEnd);
+            }}
+          >
+            <span
+              style={{
+                width: "0%",
+                transition: "width 0.1s linear",
+              }}
+              ref={(el) => {
+                if (!el) return;
 
-      const audio = document.getElementById(
-        "street-lights-audio",
-      ) as HTMLAudioElement | null;
+                const audio = document.getElementById(
+                  "street-lights-audio",
+                ) as HTMLAudioElement | null;
 
-      if (!audio) return;
+                if (!audio) return;
 
-      const updateProgress = () => {
-        const progress =
-          Number.isFinite(audio.duration) && audio.duration > 0
-            ? (audio.currentTime / audio.duration) * 100
-            : 0;
+                const updateProgress = () => {
+                  const progress =
+                    Number.isFinite(audio.duration) && audio.duration > 0
+                      ? (audio.currentTime / audio.duration) * 100
+                      : 0;
 
-        el.style.width = `${progress}%`;
-      };
+                  el.style.width = `${progress}%`;
+                };
 
-      audio.addEventListener("timeupdate", updateProgress);
-      audio.addEventListener("loadedmetadata", updateProgress);
-      audio.addEventListener("ended", updateProgress);
-      audio.addEventListener("seeked", updateProgress);
+                audio.addEventListener("timeupdate", updateProgress);
+                audio.addEventListener("loadedmetadata", updateProgress);
+                audio.addEventListener("ended", updateProgress);
+                audio.addEventListener("seeked", updateProgress);
 
-      updateProgress();
-    }}
-  />
-
+                updateProgress();
+              }}
+            />
+          </div>
+        </div>
       </div>
+
       <div className="launcher-toolbar">
         {editing ? (
           <>
@@ -689,6 +704,7 @@ export function HomeLauncher(p: Props) {
           </>
         ) : null}
       </div>
+
       <div
         className="home-pages"
         ref={pager}
@@ -698,9 +714,6 @@ export function HomeLauncher(p: Props) {
               e.currentTarget.scrollLeft / e.currentTarget.clientWidth,
             ),
           )
-        }
-      >
-
         }
       >
         {pages.map((cells, n) => (
@@ -726,6 +739,7 @@ export function HomeLauncher(p: Props) {
           </div>
         ))}
       </div>
+
       <div className="launcher-bottom-tools">
         {pages.length > 1 && (
           <div className="home-page-dots">
@@ -741,10 +755,11 @@ export function HomeLauncher(p: Props) {
                   })
                 }
               />
-            ))}
+                       ))}
           </div>
         )}
       </div>
+
       <div data-drop-zone="dock">
         <AppDock>
           {apps
