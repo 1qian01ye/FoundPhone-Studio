@@ -51,7 +51,7 @@ export const useStudio = create<Store>((set, get) => ({
 
       if (musicSongs.length === 0) {
         console.error(
-          "[Music诊断] createWork().data.music 为空，请检查 src/demo.ts 中歌曲是否写入并返回。",
+          "[Music诊断] createWork().data.music 为空，请检查 src/demo.ts。",
         );
       }
 
@@ -65,10 +65,9 @@ export const useStudio = create<Store>((set, get) => ({
         await db.works.put(template);
         works = [template];
 
-        console.info(
-          "[Music诊断] 本地没有旧存档，已保存新模板；音乐数量:",
-          template.data.music?.length ?? 0,
-        );
+        console.info("[Music诊断] 已保存新模板:", {
+          musicCount: template.data.music?.length ?? 0,
+        });
       } else if (musicSongs.length) {
         const updatedWorks: Work[] = [];
 
@@ -94,7 +93,6 @@ export const useStudio = create<Store>((set, get) => ({
 
             console.info("[Music诊断] 已补入歌曲:", {
               workId: work.id,
-              workName: work.name,
               补入数量: missingMusic.length,
               补入歌曲: missingMusic.map((song) => song.title),
               同步后总数: updated.data.music?.length ?? 0,
@@ -104,7 +102,6 @@ export const useStudio = create<Store>((set, get) => ({
 
             console.info("[Music诊断] 此存档无需补歌:", {
               workId: work.id,
-              workName: work.name,
               当前歌曲数量: existingMusic.length,
             });
           }
@@ -118,7 +115,6 @@ export const useStudio = create<Store>((set, get) => ({
 
       console.info("[Music诊断] 加载完成:", {
         workId: selectedWork?.id,
-        workName: selectedWork?.name,
         存档数量: works.length,
         当前存档音乐数量: finalMusic.length,
         当前存档歌曲: finalMusic.map((song) => song.title),
