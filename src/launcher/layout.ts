@@ -227,14 +227,14 @@ const hiddenHomeAppIds = new Set([
   "threads",
   "kakao",
 ]);
-
 export function homeEntries(layout: DeviceLayout): HomeEntry[] {
+  const isTestLayout = layout.workId === "ui-test-phone-v2";
   const apps = layout.apps.filter(
     (a) =>
       a.installed &&
       a.visible &&
       !a.dock &&
-      !hiddenHomeAppIds.has(a.id),
+      (isTestLayout || !hiddenHomeAppIds.has(a.id)),
   );
   const folders = [
     ...new Set(apps.filter((a) => a.folder).map((a) => a.folder)),
