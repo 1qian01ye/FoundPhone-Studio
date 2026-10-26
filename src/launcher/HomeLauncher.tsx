@@ -714,31 +714,7 @@ export function HomeLauncher(p: Props) {
 
                 if (!audio) return;
 
-                const updateProgress = () => {
-                  const progress =
-                    Number.isFinite(audio.duration) && audio.duration > 0
-                      ? (audio.currentTime / audio.duration) * 100
-                      : 0;
-
-                  el.style.width = `${progress}%`;
-                };
-
-                audio.addEventListener("timeupdate", updateProgress);
-                audio.addEventListener("loadedmetadata", updateProgress);
-                audio.addEventListener("ended", updateProgress);
-                audio.addEventListener("seeked", updateProgress);
-
-                updateProgress();
-              }}
-            />
-          </div>
-
-                const audio = document.getElementById(
-                  "street-lights-audio",
-                ) as HTMLAudioElement | null;
-
-                if (!audio) return;
-
+                
                 const updateProgress = () => {
                   const progress =
                     Number.isFinite(audio.duration) && audio.duration > 0
@@ -826,7 +802,7 @@ export function HomeLauncher(p: Props) {
                   })
                 }
               />
-                       ))}
+            ))}
           </div>
         )}
       </div>
@@ -863,6 +839,7 @@ export function HomeLauncher(p: Props) {
                 setUninstall(false);
               }}
               aria-label="关闭App管理"
+
             >
               <ChevronLeft />
               桌面
