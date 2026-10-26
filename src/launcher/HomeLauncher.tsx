@@ -562,19 +562,20 @@ export function HomeLauncher(p: Props) {
             <span className="street-lights-heart">♥</span>
             <span className="street-lights-skip">◀◀</span>
             <button
-  type="button"
-  className="street-lights-play"
-  aria-label="播放 Street Lights"
-  onClick={(e) => {
-    e.stopPropagation();
-    window.open(
-      "https://music.apple.com/cn/song/1440895179",
-      "_blank",
-    );
-  }}
->
-  ▶
-</button>
+              type="button"
+              className="street-lights-play"
+              aria-label="播放 Street Lights"
+              onClick={(e) => {
+                e.stopPropagation();
+                window.open(
+                  "https://music.apple.com/cn/song/1440895179",
+                  "_blank",
+                  "noopener,noreferrer",
+                );
+              }}
+            >
+              ▶
+            </button>
             <span className="street-lights-skip">▶▶</span>
             <span className="street-lights-more">•••</span>
           </div>
@@ -586,7 +587,10 @@ export function HomeLauncher(p: Props) {
       <div className="launcher-toolbar">
         {editing ? (
           <>
-            <button aria-label="添加小组件" onClick={() => setSheet("widgets")}>
+            <button
+              aria-label="添加小组件"
+              onClick={() => setSheet("widgets")}
+            >
               <Plus size={18} />
               小组件
             </button>
