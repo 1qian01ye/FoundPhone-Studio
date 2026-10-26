@@ -882,7 +882,7 @@ console.log("音乐封面调试：", item.title, item.media, src);
 function AppleMusicPlayer({ item }: { item: Item }) {
   const appleMusicUrl =
     item.id === "music-street-lights"
-      ? "https://embed.music.apple.com/us/album/808s-heartbreak/1441410287?theme=auto"
+      ? "https://embed.music.apple.com/cn/song/1440895179?theme=auto"
       : "";
 
   if (!appleMusicUrl) return null;
