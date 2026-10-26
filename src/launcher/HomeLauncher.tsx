@@ -10,7 +10,6 @@ import {
   Battery,
   Download,
   Upload,
-  Play,
 } from "lucide-react";
 import { motion } from "motion/react";
 import { AppDock } from "../vendor/ios-web/Launcher";
