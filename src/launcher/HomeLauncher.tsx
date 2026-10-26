@@ -593,8 +593,38 @@ export function HomeLauncher(p: Props) {
             <span className="street-lights-more">•••</span>
           </div>
           <div className="street-lights-progress">
-            <span />
-          </div>
+  <span
+    style={{
+      width: "0%",
+      transition: "width 0.25s linear",
+    }}
+    ref={(el) => {
+      if (!el) return;
+
+      const audio = document.getElementById(
+        "street-lights-audio",
+      ) as HTMLAudioElement | null;
+
+      if (!audio) return;
+
+      const updateProgress = () => {
+        const progress =
+          Number.isFinite(audio.duration) && audio.duration > 0
+            ? (audio.currentTime / audio.duration) * 100
+            : 0;
+
+        el.style.width = `${progress}%`;
+      };
+
+      audio.addEventListener("timeupdate", updateProgress);
+      audio.addEventListener("loadedmetadata", updateProgress);
+      audio.addEventListener("ended", updateProgress);
+      audio.addEventListener("seeked", updateProgress);
+
+      updateProgress();
+    }}
+  />
+</div>
         </div>
       </div>
       <div className="launcher-toolbar">
