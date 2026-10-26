@@ -542,7 +542,7 @@ export function HomeLauncher(p: Props) {
       }}
     >
       
-            <div className="street-lights-widget">
+                  <div className="street-lights-widget">
         <div className="street-lights-cover">
           <img
             src="https://coverartarchive.org/release/2e817d2f-34a3-3e6a-97e9-376453421fea/front-500"
@@ -559,6 +559,7 @@ export function HomeLauncher(p: Props) {
           <div className="street-lights-song">Street Lights</div>
           <div className="street-lights-artist">Kanye West</div>
           <div className="street-lights-album">808s &amp; Heartbreak</div>
+
           <div className="street-lights-controls">
           <button
             type="button"
