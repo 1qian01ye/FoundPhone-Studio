@@ -878,6 +878,32 @@ console.log("音乐封面调试：", item.title, item.media, src);
     </div>
   );
 }
+
+function AppleMusicPlayer({ item }: { item: Item }) {
+  const appleMusicUrl =
+    item.id === "music-street-lights"
+      ? "https://embed.music.apple.com/us/album/808s-heartbreak/1441410287?theme=auto"
+      : "";
+
+  if (!appleMusicUrl) return null;
+
+  return (
+    <iframe
+      title={`${item.title} - Apple Music`}
+      src={appleMusicUrl}
+      width="100%"
+      height="450"
+      style={{
+        border: 0,
+        borderRadius: 12,
+        width: "100%",
+        maxWidth: 660,
+      }}
+      allow="autoplay *; encrypted-media *; clipboard-write"
+      sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
+    />
+  );
+}
 function AppContent({
   app,
   name,
