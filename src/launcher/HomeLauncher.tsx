@@ -541,6 +541,34 @@ export function HomeLauncher(p: Props) {
           clearTimeout(timer.current);
       }}
     >
+      
+      <div className="street-lights-widget">
+        <div className="street-lights-cover">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/7/74/808s_%26_Heartbreak.png"
+            alt="808s & Heartbreak album cover"
+          />
+        </div>
+        <div className="street-lights-info">
+          <div className="street-lights-heading">
+            <span className="street-lights-label">NOW PLAYING</span>
+            <span className="street-lights-source">♫ MUSIC</span>
+          </div>
+          <div className="street-lights-song">Street Lights</div>
+          <div className="street-lights-artist">Kanye West</div>
+          <div className="street-lights-album">808s &amp; Heartbreak</div>
+          <div className="street-lights-controls">
+            <span className="street-lights-heart">♥</span>
+            <span className="street-lights-skip">◀◀</span>
+            <span className="street-lights-play">▶</span>
+            <span className="street-lights-skip">▶▶</span>
+            <span className="street-lights-more">•••</span>
+          </div>
+          <div className="street-lights-progress">
+            <span />
+          </div>
+        </div>
+      </div>
       <div className="launcher-toolbar">
         {editing ? (
           <>
