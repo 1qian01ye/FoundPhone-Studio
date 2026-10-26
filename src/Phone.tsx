@@ -1004,6 +1004,9 @@ function AppContent({
           {(detail.media || ["media", "social"].includes(app.engine)) && (
             <Media item={detail} />
           )}
+          {app.id === "music" && (
+  <AppleMusicPlayer item={detail} />
+)}
           <RichText value={detail.richText} fallback={detail.body} />
           <dl className="item-metadata">
             {getFields(app.id)
