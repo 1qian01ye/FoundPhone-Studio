@@ -34,6 +34,7 @@ export const useStudio = create<Store>((set, get) => ({
   try {
     const template = createWork();
     const songs = template.data.netease ?? [];
+    console.log("[网易云模板排查]", songs.length, songs.map((item) => item.title));
 
     let works = (
       await db.works.orderBy("updatedAt").reverse().toArray()
