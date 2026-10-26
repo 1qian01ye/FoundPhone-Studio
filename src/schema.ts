@@ -195,10 +195,12 @@ export function makeItem(partial: Partial<Item> = {}): Item {
 export function validateWork(input: unknown): Work {
   return workSchema.parse(input);
 }
+
 export function safeMedia(value: string) {
-  return /^data:(image\/(png|jpeg|webp|gif)|audio\/(mpeg|mp3|wav|ogg|webm|mp4)|video\/(mp4|webm));base64,[a-zA-Z0-9+/=\s]+$/.test(
-    value,
-  )
-    ? value
-    : "";
+  const embeddedMedia =
+    /^data:(image\/(png|jpeg|webp|gif)|audio\/(mpeg|mp3|wav|ogg|webm|mp4)|video\/(mp4|webm));base64,[a-zA-Z0-9+/=\s]+$/;
+
+  const localImage = /^\/music-covers\/[a-zA-Z0-9._-]+\.(jpg|jpeg|png|webp|gif)$/i;
+
+  return embeddedMedia.test(value) || localImage.test(value) ? value : "";
 }
