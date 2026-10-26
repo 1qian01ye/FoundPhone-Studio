@@ -207,7 +207,7 @@ const hiddenHomeAppIds = new Set([
   "health",
   "appstore",
   "mail",
-  "music",
+  "netease",
   "find",
   "delivery",
   "forum",
