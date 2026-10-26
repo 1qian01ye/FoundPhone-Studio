@@ -633,10 +633,19 @@ export function HomeLauncher(p: Props) {
             ))}
           </div>
         )}
-        <button className="home-search" onClick={p.search}>
-          <Search size={12} />
-          搜索
-        </button>
+        <button
+  className="street-lights-play"
+  aria-label="播放 Street Lights"
+  onClick={() => {
+    window.open(
+      "https://music.apple.com/cn/song/1440895179",
+      "_blank",
+      "noopener,noreferrer"
+    );
+  }}
+>
+  <Play size={18} fill="currentColor" />
+</button>
       </div>
       <div data-drop-zone="dock">
         <AppDock>
