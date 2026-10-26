@@ -148,8 +148,15 @@ export function SpotifySkin(p: Props) {
     </div>
   );
 }
-export function NeteaseSkin(p: Props) {
-  const { tab, setTab, q, setQ, items } = useContent(p, "发现");
+console.log(
+  "[网易云排查]",
+  "items:",
+  p.items.length,
+  "songs:",
+  items.length,
+  "titles:",
+  items.map((i) => i.title),
+);
   const [folder, setFolder] = useState(""),
     [track, setTrack] = useTrack(p, items);
   const list = items.filter(
