@@ -1071,10 +1071,6 @@ function WeatherApp({ onBack }: { onBack: () => void }) {
         </button>
       </div>
 
-      <p style={{ color: "#64748b", fontSize: 13 }}>
-        数据来源：Open-Meteo
-      </p>
-
       {error && <p style={{ color: "#dc2626" }}>{error}</p>}
 
       <div
@@ -1140,9 +1136,6 @@ function WeatherApp({ onBack }: { onBack: () => void }) {
         })}
       </div>
 
-      <p style={{ fontSize: 11, color: "#64748b", marginTop: 16 }}>
-        天气信息可能存在更新延迟。数据来源：Open-Meteo。
-      </p>
     </div>
   );
 }
