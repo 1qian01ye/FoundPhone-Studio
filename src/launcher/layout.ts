@@ -197,6 +197,14 @@ export type HomeEntry = {
 };
 
 const hiddenHomeAppIds = new Set([
+  "netflix",
+  "maps",
+  "reminders",
+  "calculator",
+  "settings",
+  "alipay",
+  "files",
+  "health",
   "appstore",
   "mail",
   "music",
