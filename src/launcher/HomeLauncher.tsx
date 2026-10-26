@@ -588,30 +588,29 @@ export function HomeLauncher(p: Props) {
           </button>
 
           <button
-            type="button"
-            className="street-lights-play"
-            aria-label="播放或暂停 Street Lights"
-            onClick={(e) => {
-              e.stopPropagation();
+  type="button"
+  className="street-lights-play"
+  aria-label="播放或暂停 Street Lights"
+  onClick={(e) => {
+    e.stopPropagation();
 
-              const audio = document.getElementById(
-                "street-lights-audio",
-              ) as HTMLAudioElement | null;
+    const audio = document.getElementById(
+      "street-lights-audio",
+    ) as HTMLAudioElement | null;
 
-              if (!audio) return;
+    if (!audio) return;
 
-              if (audio.paused) {
-                void audio.play().catch((error) => {
-                  console.error("音乐播放失败：", error);
-                });
-              } else {
-                audio.pause();
-              }
-            }}
-          >
-            ▶
-          </button>
-
+    if (audio.paused) {
+      void audio.play().catch((error) => {
+        console.error("音乐播放失败：", error);
+      });
+    } else {
+      audio.pause();
+    }
+  }}
+>
+  <span className="street-lights-play-icon">▶</span>
+</button>
           <audio
             id="street-lights-audio"
             src={`${import.meta.env.BASE_URL}street-lights.mp3`}
