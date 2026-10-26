@@ -592,11 +592,59 @@ export function HomeLauncher(p: Props) {
             <span className="street-lights-skip">▶▶</span>
             <span className="street-lights-more">•••</span>
           </div>
-          <div className="street-lights-progress">
+          <div
+  className="street-lights-progress"
+  onPointerDown={(e) => {
+    const bar = e.currentTarget;
+    const audio = document.getElementById(
+      "street-lights-audio",
+    ) as HTMLAudioElement | null;
+
+    if (!audio || !Number.isFinite(audio.duration) || audio.duration <= 0) {
+      return;
+    }
+
+    e.preventDefault();
+    bar.setPointerCapture(e.pointerId);
+
+    const seek = (clientX: number) => {
+      const rect = bar.getBoundingClientRect();
+      if (rect.width <= 0) return;
+
+      const ratio = Math.max(
+        0,
+        Math.min(1, (clientX - rect.left) / rect.width),
+      );
+
+      audio.currentTime = ratio * audio.duration;
+
+      const fill = bar.querySelector("span");
+      if (fill) {
+        fill.style.width = `${ratio * 100}%`;
+      }
+    };
+
+    seek(e.clientX);
+
+    const handleMove = (event: PointerEvent) => {
+      seek(event.clientX);
+    };
+
+    const handleEnd = () => {
+      bar.removeEventListener("pointermove", handleMove);
+      bar.removeEventListener("pointerup", handleEnd);
+      bar.removeEventListener("pointercancel", handleEnd);
+    };
+
+    bar.addEventListener("pointermove", handleMove);
+    bar.addEventListener("pointerup", handleEnd);
+    bar.addEventListener("pointercancel", handleEnd);
+  }}
+>
   <span
     style={{
       width: "0%",
-      transition: "width 0.25s linear",
+      transition: "width 0.1s linear",
     }}
     ref={(el) => {
       if (!el) return;
@@ -633,6 +681,15 @@ export function HomeLauncher(p: Props) {
             <button
               aria-label="添加小组件"
               onClick={() => setSheet("widgets")}
+            >
+              <Plus size={18} />
+              小组件
+            </button>
+            <button onClick={() => setSheet("layout")}>布局</button>
+            <button onClick={() => setEditing(false)}>完成</button>
+          </>
+        ) : null}
+      </div>
             >
               <Plus size={18} />
               小组件
