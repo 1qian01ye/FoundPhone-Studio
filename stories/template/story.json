@@ -358,15 +358,97 @@
       }
     ],
     "music": [
-      {
-        "id": "test-item-music",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
+  {
+    "id": "music-street-lights",
+    "title": "Street Lights",
+    "body": "Street Lights",
+    "sender": "Kanye West",
+    "kind": "text",
+    "folder": "我的歌单",
+    "meta": { "album": "808s & Heartbreak" }
+  },
+  {
+    "id": "music-twenties",
+    "title": "Twenties",
+    "body": "Twenties",
+    "sender": "Bren Joy",
+    "kind": "text",
+    "folder": "我的歌单",
+    "meta": {}
+  },
+  {
+    "id": "music-far-away",
+    "title": "Far away",
+    "body": "Far away",
+    "sender": "RINI",
+    "kind": "text",
+    "folder": "我的歌单",
+    "meta": {}
+  },
+  {
+    "id": "music-bai-tuo-bai-tuo",
+    "title": "拜托拜托",
+    "body": "拜托拜托",
+    "sender": "TF家族",
+    "kind": "text",
+    "folder": "我的歌单",
+    "meta": {}
+  },
+  {
+    "id": "music-always",
+    "title": "Always",
+    "body": "Always",
+    "sender": "keshi",
+    "kind": "text",
+    "folder": "我的歌单",
+    "meta": {}
+  },
+  {
+    "id": "music-lan-ting-xu",
+    "title": "兰亭序",
+    "body": "兰亭序",
+    "sender": "周杰伦",
+    "kind": "text",
+    "folder": "我的歌单",
+    "meta": {}
+  },
+  {
+    "id": "music-one-last-kiss",
+    "title": "One Last Kiss",
+    "body": "One Last Kiss",
+    "sender": "宇多田光",
+    "kind": "text",
+    "folder": "我的歌单",
+    "meta": {}
+  },
+  {
+    "id": "music-drops",
+    "title": "Drops",
+    "body": "Drops",
+    "sender": "FKJ",
+    "kind": "text",
+    "folder": "我的歌单",
+    "meta": {}
+  },
+  {
+    "id": "music-tai-cong-ming",
+    "title": "太聪明",
+    "body": "太聪明",
+    "sender": "陈绮贞",
+    "kind": "text",
+    "folder": "我的歌单",
+    "meta": {}
+  },
+  {
+    "id": "music-hoshi-to-bokura-to",
+    "title": "星と僕らと",
+    "body": "星と僕らと",
+    "sender": "目黒佑介 / tofubeats（河合佑亮）",
+    "kind": "text",
+    "folder": "我的歌单",
+    "meta": {}
+  }
+],
     "maps": [
       {
         "id": "test-item-maps",
