@@ -564,18 +564,32 @@ export function HomeLauncher(p: Props) {
             <button
               type="button"
               className="street-lights-play"
-              aria-label="播放 Street Lights"
+             aria-label="播放或暂停 Street Lights"
               onClick={(e) => {
                 e.stopPropagation();
-                window.open(
-                  "https://music.apple.com/cn/song/1440895179",
-                  "_blank",
-                  "noopener,noreferrer",
-                );
+
+                const audio = document.getElementById(
+                  "street-lights-audio",
+                ) as HTMLAudioElement | null;
+
+                if (!audio) return;
+
+                if (audio.paused) {
+                  void audio.play().catch((error) => {
+                    console.error("音乐播放失败：", error);
+                  });
+                } else {
+                  audio.pause();
+                }
               }}
             >
               ▶
             </button>
+            <audio
+              id="street-lights-audio"
+              src={`${import.meta.env.BASE_URL}street-lights.mp3`}
+              preload="none"
+            />
             <span className="street-lights-skip">▶▶</span>
             <span className="street-lights-more">•••</span>
           </div>
@@ -651,19 +665,6 @@ export function HomeLauncher(p: Props) {
             ))}
           </div>
         )}
-        <button
-  className="street-lights-play"
-  aria-label="播放 Street Lights"
-  onClick={() => {
-    window.open(
-      "https://music.apple.com/cn/song/1440895179",
-      "_blank",
-      "noopener,noreferrer"
-    );
-  }}
->
-  <Play size={18} fill="currentColor" />
-</button>
       </div>
       <div data-drop-zone="dock">
         <AppDock>
