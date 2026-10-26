@@ -152,9 +152,9 @@ export function NeteaseSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "发现");
   const [folder, setFolder] = useState(""),
     [track, setTrack] = useTrack(p, items);
-  const list = folder
-    ? items.filter((i) => (i.folder || "我的歌单") === folder)
-    : items;
+  const list = items.filter(
+  (i) => !folder || (i.folder || "我的歌单") === folder
+);
   return (
     <div className="catalog-skin netease-ui">
       <Header p={p} />
