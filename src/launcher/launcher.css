@@ -716,3 +716,63 @@
 .ios18 .street-lights-controls .street-lights-heart.is-active {
   color: #ff453a;
 }
+
+/* Street Lights：确保音乐控制按钮可见并可交互 */
+.street-lights-controls {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  position: relative;
+  z-index: 5;
+}
+
+.street-lights-controls button {
+  display: inline-flex !important;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  min-height: 32px;
+  padding: 4px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  pointer-events: auto;
+  opacity: 1;
+  visibility: visible;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.street-lights-controls button:hover {
+  opacity: 0.75;
+  background-color: rgb(128 128 128 / 15%);
+  transform: scale(1.08);
+}
+
+.street-lights-controls button:active {
+  transform: scale(0.92);
+}
+
+.street-lights-controls .street-lights-play {
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 50%;
+  background-color: rgb(128 128 128 / 18%);
+}
+
+.street-lights-controls .street-lights-heart.is-active {
+  color: #ff453a;
+}
+
+.street-lights-controls audio {
+  display: none;
+}
