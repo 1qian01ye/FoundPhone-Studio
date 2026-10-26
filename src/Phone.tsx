@@ -1170,23 +1170,32 @@ function AppContent({
     if (!i.password || unlocks.includes(i.id)) onRead(i.id);
   };
   const chats = [...new Set(shown.map((i) => i.title))];
+  
   const back = () => {
     if (detail) setDetail(null);
     else if (thread) setThread("");
     else onBack();
   };
+
   const Skin =
     app.id === "wechat"
       ? WeChatSkin
       : app.id === "whatsapp"
         ? WhatsAppSkin
         : (catalogSkins[app.id as keyof typeof catalogSkins] ?? null);
+
+  // 新增：天气 App 使用专属界面
+  if (app.id === "weather") {
+    return <WeatherApp onBack={onBack} />;
+  }
+
   const detailView = detail ? (
     <div className="phone-content detail-content">
       {detail.password && !creator && !unlocks.includes(detail.id) ? (
         <div className="locked-note">
           <LockKeyhole size={36} />
           <h3>这条内容已锁定</h3>
+
           <input
             type="password"
             placeholder="内容密码"
