@@ -937,22 +937,8 @@ const WEATHER_CITIES = [
   { name: "福州", lat: 26.0745, lon: 119.2965, timezone: "Asia/Shanghai" },
 ];
 
-function weatherDescription(code: number): string {
-  if (code === 0) return "晴朗";
-  if (code === 1) return "大致晴朗";
-  if (code === 2) return "局部多云";
-  if (code === 3) return "阴天";
-  if (code === 45 || code === 48) return "有雾";
-  if ([51, 53, 55, 56, 57].includes(code)) return "毛毛雨";
-  if ([61, 63, 65, 66, 67].includes(code)) return "有雨";
-  if ([71, 73, 75, 77, 85, 86].includes(code)) return "有雪";
-  if ([80, 81, 82].includes(code)) return "阵雨";
-  if ([95, 96, 99].includes(code)) return "雷暴";
-  return "天气状况未知";
-}
 
-function WeatherApp({ onBack }: { onBack: () => void }) {
-  type CityWeather = {
+type CityWeather = {
   name: string;
   temperature: number;
   feelsLike: number;
@@ -963,7 +949,8 @@ function WeatherApp({ onBack }: { onBack: () => void }) {
   low: number;
 };
 
-const [weather, setWeather] = useState<Record<string, CityWeather>>({});
+function WeatherApp({ onBack }: { onBack: () => void }) {
+  const [weather, setWeather] = useState<Record<string, CityWeather>>({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -972,157 +959,157 @@ const [weather, setWeather] = useState<Record<string, CityWeather>>({});
     setError("");
 
     try {
-    const results = await Promise.all(
-      WEATHER_CITIES.map(async (city) => {
-        const params = new URLSearchParams({
-          latitude: String(city.lat),
-          longitude: String(city.lon),
-          current:
-            "temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m",
-          daily: "temperature_2m_max,temperature_2m_min",
-          timezone: city.timezone,
-          forecast_days: "1",
-        });
+      const results = await Promise.all(
+        WEATHER_CITIES.map(async (city) => {
+          const params = new URLSearchParams({
+            latitude: String(city.lat),
+            longitude: String(city.lon),
+            current:
+              "temperature_2m,apparent_temperature,relative_humidity_2m,weather_code,wind_speed_10m",
+            daily: "temperature_2m_max,temperature_2m_min",
+            timezone: city.timezone,
+            forecast_days: "1",
+          });
 
-        const response = await fetch(
-          `https://api.open-meteo.com/v1/forecast?${params.toString()}`
-        );
+          const response = await fetch(
+            `https://api.open-meteo.com/v1/forecast?${params.toString()}`
+          );
 
-        if (!response.ok) {
-          throw new Error(`${city.name}天气请求失败`);
-        }
+          if (!response.ok) {
+            throw new Error(`${city.name}天气请求失败`);
+          }
 
-        const data = await response.json();
+          const data = await response.json();
 
-        return {
-          name: city.name,
-          temperature: Math.round(data.current.temperature_2m),
-          feelsLike: Math.round(data.current.apparent_temperature),
-          humidity: data.current.relative_humidity_2m,
-          wind: data.current.wind_speed_10m,
-          code: data.current.weather_code,
-          high: Math.round(data.daily.temperature_2m_max[0]),
-          low: Math.round(data.daily.temperature_2m_min[0]),
-        };
-      })
-    );
+          return {
+            name: city.name,
+            temperature: Math.round(data.current.temperature_2m),
+            feelsLike: Math.round(data.current.apparent_temperature),
+            humidity: data.current.relative_humidity_2m,
+            wind: data.current.wind_speed_10m,
+            code: data.current.weather_code,
+            high: Math.round(data.daily.temperature_2m_max[0]),
+            low: Math.round(data.daily.temperature_2m_min[0]),
+          } satisfies CityWeather;
+        })
+      );
 
-    const next: Record<string, CityWeather> = {};
+      const next: Record<string, CityWeather> = {};
 
-    results.forEach((item) => {
-      next[item.name] = item;
-    });
+      results.forEach((item) => {
+        next[item.name] = item;
+      });
 
-    setWeather(next);
-  } catch {
-    setError("天气数据加载失败，请检查网络后重试。");
-  } finally {
-    setLoading(false);
+      setWeather(next);
+    } catch (err) {
+      console.error("天气加载失败：", err);
+      setError("天气数据加载失败，请检查网络后重试。");
+    } finally {
+      setLoading(false);
+    }
   }
-}
 
-useEffect(() => {
-  void loadWeather();
-}, []);
+  useEffect(() => {
+    void loadWeather();
+  }, []);
 
-return (
-  <div style={{ padding: 16, color: "var(--text, #1f2937)" }}>
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        gap: 12,
-        marginBottom: 16,
-      }}
-    >
-      <button onClick={onBack}>‹ 返回</button>
-      <strong style={{ fontSize: 20 }}>实时天气</strong>
-      <button onClick={() => void loadWeather()} disabled={loading}>
-        {loading ? "加载中…" : "刷新"}
-      </button>
-    </div>
+  return (
+    <div style={{ padding: 16, color: "var(--text, #1f2937)" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          gap: 12,
+          marginBottom: 16,
+        }}
+      >
+        <button onClick={onBack}>‹ 返回</button>
+        <strong style={{ fontSize: 20 }}>实时天气</strong>
+        <button onClick={() => void loadWeather()} disabled={loading}>
+          {loading ? "加载中…" : "刷新"}
+        </button>
+      </div>
 
-    <p style={{ color: "#64748b", fontSize: 13 }}>
-      数据来源：Open-Meteo
-    </p>
-
-    {error && (
-      <p style={{ color: "#dc2626" }}>
-        {error}
+      <p style={{ color: "#64748b", fontSize: 13 }}>
+        数据来源：Open-Meteo
       </p>
-    )}
 
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(135px, 1fr))",
-        gap: 12,
-      }}
-    >
-      {WEATHER_CITIES.map((city) => {
-        const item = weather[city.name];
+      {error && (
+        <p style={{ color: "#dc2626" }}>{error}</p>
+      )}
 
-        return (
-          <div
-            key={city.name}
-            style={{
-              padding: 14,
-              borderRadius: 14,
-              border: "1px solid var(--border, #e2e8f0)",
-              background: "var(--panel, #f8fafc)",
-              minWidth: 0,
-            }}
-          >
-            <div style={{ fontWeight: 700, marginBottom: 10 }}>
-              {city.name}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(135px, 1fr))",
+          gap: 12,
+        }}
+      >
+        {WEATHER_CITIES.map((city) => {
+          const item = weather[city.name];
+
+          return (
+            <div
+              key={city.name}
+              style={{
+                padding: 14,
+                borderRadius: 14,
+                border: "1px solid var(--border, #e2e8f0)",
+                background: "var(--panel, #f8fafc)",
+                minWidth: 0,
+              }}
+            >
+              <div style={{ fontWeight: 700, marginBottom: 10 }}>
+                {city.name}
+              </div>
+
+              {loading && !item ? (
+                <div style={{ color: "#64748b", fontSize: 13 }}>
+                  正在获取天气…
+                </div>
+              ) : item ? (
+                <>
+                  <div style={{ fontSize: 30, fontWeight: 700 }}>
+                    {item.temperature}°
+                  </div>
+
+                  <div style={{ margin: "5px 0", fontSize: 13 }}>
+                    {weatherDescription(item.code)}
+                  </div>
+
+                  <div
+                    style={{
+                      fontSize: 12,
+                      color: "#64748b",
+                      lineHeight: 1.8,
+                    }}
+                  >
+                    最高 {item.high}° / 最低 {item.low}°
+                    <br />
+                    体感 {item.feelsLike}°
+                    <br />
+                    湿度 {item.humidity}%
+                    <br />
+                    风速 {item.wind} km/h
+                  </div>
+                </>
+              ) : (
+                <div style={{ color: "#64748b", fontSize: 13 }}>
+                  暂无数据
+                </div>
+              )}
             </div>
+          );
+        })}
+      </div>
 
-            {loading && !item ? (
-              <div style={{ color: "#64748b", fontSize: 13 }}>
-                正在获取天气…
-              </div>
-            ) : item ? (
-              <>
-                <div style={{ fontSize: 30, fontWeight: 700 }}>
-                  {item.temperature}°
-                </div>
-
-                <div style={{ margin: "5px 0", fontSize: 13 }}>
-                  {weatherDescription(item.code)}
-                </div>
-
-                <div
-                  style={{
-                    fontSize: 12,
-                    color: "#64748b",
-                    lineHeight: 1.8,
-                  }}
-                >
-                  最高 {item.high}° / 最低 {item.low}°
-                  <br />
-                  体感 {item.feelsLike}°
-                  <br />
-                  湿度 {item.humidity}%
-                  <br />
-                  风速 {item.wind} km/h
-                </div>
-              </>
-            ) : (
-              <div style={{ color: "#64748b", fontSize: 13 }}>
-                暂无数据
-              </div>
-            )}
-          </div>
-        );
-      })}
+      <p style={{ fontSize: 11, color: "#64748b", marginTop: 16 }}>
+        天气信息可能存在更新延迟。使用 Open-Meteo 数据时，请按其许可要求保留数据来源说明。
+      </p>
     </div>
-
-    <p style={{ fontSize: 11, color: "#64748b", marginTop: 16 }}>
-      天气信息可能存在更新延迟。使用 Open-Meteo 数据时，请按其许可要求保留数据来源说明。
-    </p>
-  </div>
-);
+  );
+}
 
 
 function AppContent({
