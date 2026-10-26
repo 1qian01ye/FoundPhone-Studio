@@ -688,3 +688,31 @@
   overflow-y: auto;
   touch-action: pan-y;
 }
+.ios18 .street-lights-controls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 4px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease,
+    color 0.15s ease;
+}
+
+.ios18 .street-lights-controls button:hover {
+  opacity: 0.7;
+  transform: scale(1.12);
+}
+
+.ios18 .street-lights-controls button:active {
+  transform: scale(0.92);
+}
+
+.ios18 .street-lights-controls .street-lights-heart.is-active {
+  color: #ff453a;
+}
