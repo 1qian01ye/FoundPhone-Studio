@@ -29,49 +29,57 @@ export const useStudio = create<Store>((set, get) => ({
   past: [],
   future: [],
   error: "",
+ 
   load: async () => {
-    try {
-let works = (await db.works.orderBy("updatedAt").reverse().toArray()).map(
-  validateWork,
-);
+  try {
+    const template = createWork();
+    const songs = template.data.netease ?? [];
 
-if (!works.length) {
-  const w = createWork();
-  await db.works.put(w);
-  works = [w];
-} else {
-  const songs = createWork().data.netease ?? [];
-  let changed = false;
+    let works = (
+      await db.works.orderBy("updatedAt").reverse().toArray()
+    ).map(validateWork);
 
-  works = works.map((work) => {
-    const existing = work.data.netease ?? [];
-    const existingIds = new Set(existing.map((item) => item.id));
-    const missing = songs.filter((item) => !existingIds.has(item.id));
+    if (!works.length) {
+      await db.works.put(template);
+      works = [template];
+    } else if (songs.length) {
+      const updatedWorks: Work[] = [];
 
-    if (!missing.length) return work;
+      for (const work of works) {
+        const existing = work.data.netease ?? [];
+        const existingIds = new Set(existing.map((item) => item.id));
+        const missing = songs.filter((item) => !existingIds.has(item.id));
 
-    changed = true;
-    return {
-      ...work,
-      data: {
-        ...work.data,
-        netease: [...existing, ...missing],
-      },
-      updatedAt: Date.now(),
-    };
-  });
+        if (missing.length) {
+          const updated: Work = {
+            ...work,
+            data: {
+              ...work.data,
+              netease: [...existing, ...missing],
+            },
+            updatedAt: Date.now(),
+          };
 
-  if (changed) {
-    await db.works.bulkPut(works);
-  }
-}
+          await db.works.put(updated);
+          updatedWorks.push(updated);
+        } else {
+          updatedWorks.push(work);
+        }
+      }
 
-set({ works, work: works[0], status: "已保存到本机" });
-
-    } catch (e) {
-      set({ error: String(e), status: "存储不可用" });
+      works = updatedWorks;
     }
-  },
+
+    set({
+      works,
+      work: works[0],
+      status: "已保存到本机",
+      error: "",
+    });
+  } catch (e) {
+    set({ error: String(e), status: "存储不可用" });
+  }
+},
   select: (id) => {
     void get().flush();
     const work = get().works.find((w) => w.id === id);
