@@ -645,7 +645,8 @@ export function HomeLauncher(p: Props) {
           </button>
         </div>
 
-        <div
+        </div>
+          <div
           className="street-lights-progress"
           role="slider"
           aria-label="播放进度"
