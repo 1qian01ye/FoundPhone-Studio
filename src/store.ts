@@ -31,15 +31,43 @@ export const useStudio = create<Store>((set, get) => ({
   error: "",
   load: async () => {
     try {
-      let works = (await db.works.orderBy("updatedAt").reverse().toArray()).map(
-        validateWork,
-      );
-      if (!works.length) {
-        const w = createWork();
-        await db.works.put(w);
-        works = [w];
-      }
-      set({ works, work: works[0], status: "已保存到本机" });
+let works = (await db.works.orderBy("updatedAt").reverse().toArray()).map(
+  validateWork,
+);
+
+if (!works.length) {
+  const w = createWork();
+  await db.works.put(w);
+  works = [w];
+} else {
+  const songs = createWork().data.netease ?? [];
+  let changed = false;
+
+  works = works.map((work) => {
+    const existing = work.data.netease ?? [];
+    const existingIds = new Set(existing.map((item) => item.id));
+    const missing = songs.filter((item) => !existingIds.has(item.id));
+
+    if (!missing.length) return work;
+
+    changed = true;
+    return {
+      ...work,
+      data: {
+        ...work.data,
+        netease: [...existing, ...missing],
+      },
+      updatedAt: Date.now(),
+    };
+  });
+
+  if (changed) {
+    await db.works.bulkPut(works);
+  }
+}
+
+set({ works, work: works[0], status: "已保存到本机" });
+
     } catch (e) {
       set({ error: String(e), status: "存储不可用" });
     }
