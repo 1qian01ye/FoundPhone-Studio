@@ -365,6 +365,7 @@
     "sender": "Kanye West",
     "kind": "text",
     "folder": "我的歌单",
+    "media": "/music-covers/street-lights.jpg",
     "meta": { "album": "808s & Heartbreak" }
   },
   {
@@ -374,6 +375,7 @@
     "sender": "Bren Joy",
     "kind": "text",
     "folder": "我的歌单",
+    "media": "/music-covers/twenties.jpg",
     "meta": {}
   },
   {
@@ -383,6 +385,7 @@
     "sender": "RINI",
     "kind": "text",
     "folder": "我的歌单",
+    "media": "/music-covers/far-away.jpg",
     "meta": {}
   },
   {
@@ -392,6 +395,7 @@
     "sender": "TF家族",
     "kind": "text",
     "folder": "我的歌单",
+    "media": "/music-covers/baituobaotuo.jpg",
     "meta": {}
   },
   {
@@ -401,6 +405,7 @@
     "sender": "keshi",
     "kind": "text",
     "folder": "我的歌单",
+    "media": "/music-covers/always.jpg",
     "meta": {}
   },
   {
@@ -410,6 +415,7 @@
     "sender": "周杰伦",
     "kind": "text",
     "folder": "我的歌单",
+    "media": "/music-covers/lantingxu.jpg",
     "meta": {}
   },
   {
@@ -419,6 +425,7 @@
     "sender": "宇多田光",
     "kind": "text",
     "folder": "我的歌单",
+    "media": "/music-covers/one-last-kiss.jpg",
     "meta": {}
   },
   {
@@ -428,6 +435,7 @@
     "sender": "FKJ",
     "kind": "text",
     "folder": "我的歌单",
+    "media": "/music-covers/drops.jpg",
     "meta": {}
   },
   {
@@ -437,6 +445,7 @@
     "sender": "陈绮贞",
     "kind": "text",
     "folder": "我的歌单",
+    "media": "/music-covers/tai-cong-ming.jpg",
     "meta": {}
   },
   {
@@ -446,6 +455,7 @@
     "sender": "目黒佑介 / tofubeats（河合佑亮）",
     "kind": "text",
     "folder": "我的歌单",
+    "media": "/music-covers/hoshi-to-bokura.jpg",
     "meta": {}
   }
 ],
