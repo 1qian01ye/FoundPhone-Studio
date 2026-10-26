@@ -560,9 +560,32 @@ export function HomeLauncher(p: Props) {
           <div className="street-lights-artist">Kanye West</div>
           <div className="street-lights-album">808s &amp; Heartbreak</div>
 
-          <div className="street-lights-controls">
-            <span className="street-lights-heart">♥</span>
-            <span className="street-lights-skip">◀◀</span>
+                    <div className="street-lights-controls">
+            <button
+              type="button"
+              className="street-lights-heart"
+              aria-label="收藏 Street Lights"
+              title="收藏"
+              onClick={(e) => {
+                e.stopPropagation();
+                e.currentTarget.classList.toggle("is-active");
+              }}
+            >
+              ♥
+            </button>
+
+            <button
+              type="button"
+              className="street-lights-skip"
+              aria-label="上一首"
+              title="上一首"
+              onClick={(e) => {
+                e.stopPropagation();
+                console.info("目前只有一首本地歌曲");
+              }}
+            >
+              ◀◀
+            </button>
 
             <button
               type="button"
@@ -595,8 +618,31 @@ export function HomeLauncher(p: Props) {
               preload="none"
             />
 
-            <span className="street-lights-skip">▶▶</span>
-            <span className="street-lights-more">•••</span>
+            <button
+              type="button"
+              className="street-lights-skip"
+              aria-label="下一首"
+              title="下一首"
+              onClick={(e) => {
+                e.stopPropagation();
+                console.info("目前只有一首本地歌曲");
+              }}
+            >
+              ▶▶
+            </button>
+
+            <button
+              type="button"
+              className="street-lights-more"
+              aria-label="更多音乐选项"
+              title="更多"
+              onClick={(e) => {
+                e.stopPropagation();
+                window.alert("Street Lights · Kanye West");
+              }}
+            >
+              •••
+            </button>
           </div>
 
           <div
@@ -661,6 +707,31 @@ export function HomeLauncher(p: Props) {
               }}
               ref={(el) => {
                 if (!el) return;
+
+                const audio = document.getElementById(
+                  "street-lights-audio",
+                ) as HTMLAudioElement | null;
+
+                if (!audio) return;
+
+                const updateProgress = () => {
+                  const progress =
+                    Number.isFinite(audio.duration) && audio.duration > 0
+                      ? (audio.currentTime / audio.duration) * 100
+                      : 0;
+
+                  el.style.width = `${progress}%`;
+                };
+
+                audio.addEventListener("timeupdate", updateProgress);
+                audio.addEventListener("loadedmetadata", updateProgress);
+                audio.addEventListener("ended", updateProgress);
+                audio.addEventListener("seeked", updateProgress);
+
+                updateProgress();
+              }}
+            />
+          </div>
 
                 const audio = document.getElementById(
                   "street-lights-audio",
