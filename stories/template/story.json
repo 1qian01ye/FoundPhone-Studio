@@ -470,15 +470,71 @@
       }
     ],
     "weather": [
-      {
-        "id": "test-item-weather",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
+  {
+    "id": "weather-chengdu",
+    "title": "成都",
+    "body": "天气数据待接入",
+    "sender": "Open-Meteo",
+    "kind": "text",
+    "meta": {}
+  },
+  {
+    "id": "weather-chongqing",
+    "title": "重庆",
+    "body": "天气数据待接入",
+    "sender": "Open-Meteo",
+    "kind": "text",
+    "meta": {}
+  },
+  {
+    "id": "weather-langfang",
+    "title": "廊坊",
+    "body": "天气数据待接入",
+    "sender": "Open-Meteo",
+    "kind": "text",
+    "meta": {}
+  },
+  {
+    "id": "weather-dalian",
+    "title": "大连",
+    "body": "天气数据待接入",
+    "sender": "Open-Meteo",
+    "kind": "text",
+    "meta": {}
+  },
+  {
+    "id": "weather-jinan",
+    "title": "济南（山东）",
+    "body": "天气数据待接入",
+    "sender": "Open-Meteo",
+    "kind": "text",
+    "meta": {}
+  },
+  {
+    "id": "weather-hangzhou",
+    "title": "杭州（浙江）",
+    "body": "天气数据待接入",
+    "sender": "Open-Meteo",
+    "kind": "text",
+    "meta": {}
+  },
+  {
+    "id": "weather-tokyo",
+    "title": "东京",
+    "body": "天气数据待接入",
+    "sender": "Open-Meteo",
+    "kind": "text",
+    "meta": {}
+  },
+  {
+    "id": "weather-fuzhou",
+    "title": "福州（福建）",
+    "body": "天气数据待接入",
+    "sender": "Open-Meteo",
+    "kind": "text",
+    "meta": {}
+  }
+],
     "wallet": [
       {
         "id": "test-item-wallet",
