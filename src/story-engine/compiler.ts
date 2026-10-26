@@ -271,7 +271,7 @@ export function compileStory(raw: unknown): { story: Story; work: Work } {
     cover: "",
     updatedAt: s.revision,
     phone: {
-      passcode: "",
+      passcode: "1117",
       wallpaper: "sage",
       theme: "light",
       time: "21:41",
