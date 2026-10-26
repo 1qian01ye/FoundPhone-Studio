@@ -776,3 +776,52 @@
 .street-lights-controls audio {
   display: none;
 }
+```css
+/* Street Lights：修复控制按钮与进度条交互 */
+.ios18 .street-lights-widget {
+  pointer-events: none;
+}
+
+.ios18 .street-lights-controls,
+.ios18 .street-lights-controls button,
+.ios18 .street-lights-progress {
+  pointer-events: auto !important;
+}
+
+.ios18 .street-lights-controls {
+  position: relative;
+  z-index: 10;
+}
+
+.ios18 .street-lights-controls button {
+  position: relative;
+  z-index: 11;
+  min-width: 28px;
+  min-height: 28px;
+}
+
+.ios18 .street-lights-progress {
+  position: relative;
+  z-index: 12;
+  height: 12px;
+  min-height: 12px;
+  margin-top: 4px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.25);
+  cursor: pointer;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.ios18 .street-lights-progress span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.95);
+  pointer-events: none;
+  transition: none;
+}
