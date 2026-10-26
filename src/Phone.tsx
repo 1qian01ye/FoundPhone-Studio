@@ -850,6 +850,7 @@ function AppSearch({
 }
 function Media({ item }: { item: Item }) {
   const src = safeMedia(item.media);
+console.log("音乐封面调试：", item.title, item.media, src);
   return src ? (
     item.kind === "audio" ? (
       <audio controls src={src} />
