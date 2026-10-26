@@ -12,7 +12,7 @@ export function createWork(title = "雨停之前"): Work {
     updatedAt: Date.now(),
     phone: {
       owner: "林知夏",
-      passcode: "",
+      passcode: "1117",
       wallpaper: "sage",
       theme: "light",
       time: "09:41",
