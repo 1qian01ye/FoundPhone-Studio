@@ -594,7 +594,13 @@ export function ClockSkin(p: Props) {
     <div className="catalog-skin native-clock">
       <Header p={p} />
 
-      <div className="catalog-scroll">
+      <div
+  className="catalog-scroll"
+  style={{
+    scrollbarWidth: "none",
+    msOverflowStyle: "none",
+  }}
+>
         <h1>{tab}</h1>
 
         {tab === "世界时钟" ? (
