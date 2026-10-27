@@ -628,7 +628,7 @@ export function SnapchatSkin(p: Props) {
               overflowX: "hidden",
               padding: "10px",
               boxSizing: "border-box",
-              scrollbarWidth: "thin",
+              scrollbarWidth: "none",
             }}
           >
             <div
