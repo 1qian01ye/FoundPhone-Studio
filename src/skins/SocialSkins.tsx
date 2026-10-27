@@ -623,6 +623,11 @@ export function SnapchatSkin(p: Props) {
 
   return (
     <div className="catalog-skin snapchat-ui">
+      <style>{`
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+      `}</style>
       <Header p={p} />
 
       <div className="snap-content">
