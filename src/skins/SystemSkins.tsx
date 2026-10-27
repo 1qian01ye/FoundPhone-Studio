@@ -534,7 +534,7 @@ export function MailSkin(p: Props) {
   );
 }
 export function ClockSkin(p: Props) {
-  const { tab, setTab, items } = useContent(p, "闹钟");
+  const { tab, setTab } = useContent(p, "闹钟");
 
   const alarmData = [
     { time: "06:30", note: "不慌 再眯会" },
