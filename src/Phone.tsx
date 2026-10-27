@@ -1639,6 +1639,7 @@ function UsersIcon() {
 
 
 
+
 function CameraApp({ onBack }: { onBack: () => void }) {
   const [tab, setTab] = useState<"照片" | "视频">("照片");
 
@@ -1654,17 +1655,19 @@ function CameraApp({ onBack }: { onBack: () => void }) {
         minHeight: 0,
         display: "flex",
         flexDirection: "column",
-        background: "#111",
+        background: "#000",
         color: "#fff",
         overflow: "hidden",
       }}
     >
+      {/* 顶部导航 */}
       <div
         style={{
           display: "flex",
           alignItems: "center",
           padding: "12px 16px",
           gap: 12,
+          flexShrink: 0,
         }}
       >
         <button
@@ -1683,6 +1686,7 @@ function CameraApp({ onBack }: { onBack: () => void }) {
         <span style={{ width: 48 }} />
       </div>
 
+      {/* 照片或视频预览 */}
       <div
         style={{
           flex: 1,
@@ -1690,17 +1694,17 @@ function CameraApp({ onBack }: { onBack: () => void }) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          padding: 16,
+          padding: 12,
           overflow: "hidden",
         }}
       >
         {isPhoto ? (
           <img
             src={photoUrl}
-            alt="我的照片"
+            alt="照片预览"
             style={{
-              maxWidth: "100%",
-              maxHeight: "100%",
+              width: "100%",
+              height: "100%",
               objectFit: "contain",
               borderRadius: 12,
             }}
@@ -1713,43 +1717,100 @@ function CameraApp({ onBack }: { onBack: () => void }) {
             style={{
               maxWidth: "100%",
               maxHeight: "100%",
+              width: "100%",
               borderRadius: 12,
             }}
           />
         )}
       </div>
 
+      {/* 照片／视频模式切换 */}
       <div
         style={{
           display: "flex",
           justifyContent: "center",
-          gap: 12,
-          padding: 16,
+          alignItems: "center",
+          gap: 28,
+          padding: "12px 16px",
+          flexShrink: 0,
+        }}
+      >
+        {(["照片", "视频"] as const).map((mode) => (
+          <button
+            key={mode}
+            onClick={() => setTab(mode)}
+            style={{
+              border: 0,
+              background: "transparent",
+              color: tab === mode ? "#ffd54a" : "#aaa",
+              fontSize: 15,
+              fontWeight: tab === mode ? 700 : 400,
+              padding: "8px 12px",
+            }}
+          >
+            {mode}
+          </button>
+        ))}
+      </div>
+
+      {/* 底部拍摄按钮 */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          padding: "8px 16px 28px",
+          flexShrink: 0,
         }}
       >
         <button
-          onClick={() => setTab("照片")}
+          type="button"
+          aria-label={isPhoto ? "拍照" : "录影"}
+          title={isPhoto ? "拍照" : "录影"}
+          onClick={() => {
+            if (!isPhoto) {
+              const video = document.querySelector<HTMLVideoElement>(
+                ".skin-camera video",
+              );
+              if (video) {
+                if (video.paused) void video.play();
+                else video.pause();
+              }
+            }
+          }}
           style={{
-            padding: "10px 24px",
-            borderRadius: 24,
-            border: 0,
-            background: isPhoto ? "#fff" : "#333",
-            color: isPhoto ? "#111" : "#fff",
+            width: 76,
+            height: 76,
+            borderRadius: "50%",
+            border: "4px solid #fff",
+            background: isPhoto ? "#fff" : "#ff3b30",
+            boxShadow: "0 0 0 4px rgba(255,255,255,0.25)",
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
-          照片
-        </button>
-        <button
-          onClick={() => setTab("视频")}
-          style={{
-            padding: "10px 24px",
-            borderRadius: 24,
-            border: 0,
-            background: !isPhoto ? "#fff" : "#333",
-            color: !isPhoto ? "#111" : "#fff",
-          }}
-        >
-          视频
+          {isPhoto ? (
+            <span
+              style={{
+                width: 60,
+                height: 60,
+                borderRadius: "50%",
+                background: "#fff",
+              }}
+            />
+          ) : (
+            <span
+              style={{
+                width: 25,
+                height: 25,
+                borderRadius: 5,
+                background: "#ff3b30",
+                border: "2px solid #fff",
+              }}
+            />
+          )}
         </button>
       </div>
     </div>
