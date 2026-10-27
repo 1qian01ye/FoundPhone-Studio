@@ -535,12 +535,21 @@ export function MailSkin(p: Props) {
 }
 export function ClockSkin(p: Props) {
   const { tab, setTab, items } = useContent(p, "闹钟");
+  const [enabled, setEnabled] = useSkinState<string[]>(p, "alarms", []);
+  const [seconds, setSeconds] = useState(0);
+  const [running, setRunning] = useState(false);
   const [now, setNow] = useState(() => Date.now());
 
   useEffect(() => {
     const timer = window.setInterval(() => setNow(Date.now()), 1000);
     return () => window.clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    if (!running) return;
+    const timer = window.setInterval(() => setSeconds((s) => s + 1), 1000);
+    return () => window.clearInterval(timer);
+  }, [running]);
 
   const cities = [
     { name: "北京", timeZone: "Asia/Shanghai" },
@@ -557,20 +566,15 @@ export function ClockSkin(p: Props) {
       second: "2-digit",
       hour12: false,
     }).format(now);
-  const [enabled, setEnabled] = useSkinState<string[]>(p, "alarms", []),
-    [seconds, setSeconds] = useState(0),
-    [running, setRunning] = useState(false);
-  useEffect(() => {
-    if (!running) return;
-    const timer = setInterval(() => setSeconds((s) => s + 1), 1000);
-    return () => clearInterval(timer);
-  }, [running]);
+
   return (
     <div className="catalog-skin native-clock">
       <Header p={p} />
+
       <div className="catalog-scroll">
         <h1>{tab}</h1>
-                {tab === "世界时钟" ? (
+
+        {tab === "世界时钟" ? (
           <div className="world-clock-list">
             {cities.map((city) => (
               <div className="alarm-row" key={city.name}>
@@ -597,7 +601,7 @@ export function ClockSkin(p: Props) {
               >
                 复位
               </button>
-              <button onClick={() => setRunning(!running)}>
+              <button onClick={() => setRunning((value) => !value)}>
                 {running ? "暂停" : "开始"}
               </button>
             </div>
@@ -609,78 +613,29 @@ export function ClockSkin(p: Props) {
                 <time>{meta(i, "clock", i.time.slice(-5))}</time>
                 <small>{i.title}</small>
               </button>
-              {tab === "闹钟" ? (
-                <button
-                  role="switch"
-                  aria-label={`闹钟${i.title}`}
-                  aria-checked={enabled.includes(i.id)}
-                  className={`native-switch ${enabled.includes(i.id) ? "on" : ""}`}
-                  onClick={() =>
-                    setEnabled(
-                      enabled.includes(i.id)
-                        ? enabled.filter((x) => x !== i.id)
-                        : [...enabled, i.id],
-                    )
-                  }
-                >
-                  <span />
-                </button>
-              ) : (
-                <Clock size={35} />
-              )}
-            </div>
-          ))
-        )}
-            <output>
-              {String(Math.floor(seconds / 60)).padStart(2, "0")}:
-              {String(seconds % 60).padStart(2, "0")}
-            </output>
-            <div>
+
               <button
-                onClick={() => {
-                  setSeconds(0);
-                  setRunning(false);
-                }}
+                role="switch"
+                aria-label={`闹钟${i.title}`}
+                aria-checked={enabled.includes(i.id)}
+                className={`native-switch ${
+                  enabled.includes(i.id) ? "on" : ""
+                }`}
+                onClick={() =>
+                  setEnabled(
+                    enabled.includes(i.id)
+                      ? enabled.filter((x) => x !== i.id)
+                      : [...enabled, i.id],
+                  )
+                }
               >
-                复位
+                <span />
               </button>
-              <button onClick={() => setRunning(!running)}>
-                {running ? "暂停" : "开始"}
-              </button>
-            </div>
-          </div>
-        ) : (
-          items.map((i) => (
-            <div className="alarm-row" key={i.id}>
-              <button onClick={() => p.onItem(i)}>
-                <time>{meta(i, "clock", i.time.slice(-5))}</time>
-                <small>
-                  {tab === "世界时钟" ? meta(i, "city", i.title) : i.title}
-                </small>
-              </button>
-              {tab === "闹钟" ? (
-                <button
-                  role="switch"
-                  aria-label={`闹钟${i.title}`}
-                  aria-checked={enabled.includes(i.id)}
-                  className={`native-switch ${enabled.includes(i.id) ? "on" : ""}`}
-                  onClick={() =>
-                    setEnabled(
-                      enabled.includes(i.id)
-                        ? enabled.filter((x) => x !== i.id)
-                        : [...enabled, i.id],
-                    )
-                  }
-                >
-                  <span />
-                </button>
-              ) : (
-                <Clock size={35} />
-              )}
             </div>
           ))
         )}
       </div>
+
       <Tabs
         tabs={["世界时钟", "闹钟", "秒表"]}
         value={tab}
