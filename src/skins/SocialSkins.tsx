@@ -690,36 +690,77 @@ export function SnapchatSkin(p: Props) {
             )}
           </div>
         ) : tab === "聊天" ? (
+  activeChat ? (
+    <div
+      style={{
+        height: "100%",
+        overflowY: "auto",
+        padding: "12px",
+        display: "flex",
+        flexDirection: "column",
+        gap: "12px",
+        boxSizing: "border-box",
+      }}
+    >
+      <button
+        onClick={() => setActiveChat(null)}
+        style={{ alignSelf: "flex-start", padding: "8px 12px" }}
+      >
+        ← 返回聊天列表
+      </button>
+
+      <h3 style={{ margin: "4px 0" }}>{activeChat}</h3>
+
+      {list
+        .filter((item) => item.sender === activeChat)
+        .map((item) => (
           <div
-  className="snap-chats"
-  style={{
-    display: "flex",
-    flexDirection: "column",
-    gap: "12px",
-    padding: "12px",
-  }}
->
-            {list.map((x) => (
-              <button
-  key={x.id}
-  onClick={() => setActiveChat(x.sender)}
-  style={{
-    minHeight: "88px",
-    padding: "16px",
-    width: "100%",
-    boxSizing: "border-box",
-  }}
->
-                <Avatar name={x.sender} />
-                <div>
-                  <strong>{x.sender}</strong>
-                  <small>{x.body}</small>
-                </div>
-                <Camera size={20} />
-              </button>
-            ))}
+            key={item.id}
+            style={{
+              alignSelf: item.outgoing ? "flex-end" : "flex-start",
+              maxWidth: "80%",
+              padding: "10px 14px",
+              borderRadius: "16px",
+              background: item.outgoing ? "#dcf8c6" : "#ffffff",
+              color: "#222222",
+              overflowWrap: "anywhere",
+            }}
+          >
+            {item.body}
           </div>
-        ) : i ? (
+        ))}
+    </div>
+  ) : (
+    <div
+      className="snap-chats"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "12px",
+        padding: "12px",
+      }}
+    >
+      {list.map((x) => (
+        <button
+          key={x.id}
+          onClick={() => setActiveChat(x.sender)}
+          style={{
+            minHeight: "88px",
+            padding: "16px",
+            width: "100%",
+            boxSizing: "border-box",
+          }}
+        >
+          <Avatar name={x.sender} />
+          <div>
+            <strong>{x.sender}</strong>
+            <small>{x.body}</small>
+          </div>
+          <Camera size={20} />
+        </button>
+      ))}
+    </div>
+  )
           <>
             <Media item={i} />
             <button className="snap-author" onClick={() => p.onItem(i)}>
