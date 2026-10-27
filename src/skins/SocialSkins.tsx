@@ -599,6 +599,7 @@ function FolderIcon() {
 export function SnapchatSkin(p: Props) {
   const { tab, setTab, items } = useContent(p, "快拍");
   const [index, setIndex] = useState(0);
+  const [activeChat, setActiveChat] = useState<string | null>(null);
 
   const memories = items.filter(
     (item) => item.folder === "回忆" || item.favorite,
