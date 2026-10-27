@@ -345,17 +345,19 @@ export function SafariSkin(p: Props) {
           key={item}
           onClick={() => setQ(item)}
           style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "12px",
-            width: "100%",
-            padding: "14px 16px",
-            border: "none",
-            borderBottom: "1px solid #E5E5EA",
-            background: "transparent",
-            textAlign: "left",
-            cursor: "pointer",
-          }}
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "flex-start",
+  gap: "12px",
+  width: "100%",
+  boxSizing: "border-box",
+  padding: "14px 16px",
+  border: "none",
+  borderBottom: "1px solid #E5E5EA",
+  background: "transparent",
+  textAlign: "left",
+  cursor: "pointer",
+}}
         >
           <Search size={18} color="#8E8E93" />
           <span style={{ fontSize: "15px", color: "#1C1C1E" }}>
