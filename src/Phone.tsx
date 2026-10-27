@@ -1246,10 +1246,6 @@ function AppContent({
     return <WeatherApp onBack={onBack} />;
   }
   
-if (app.id === "worldclock" || app.id === "world-clock" || app.id === "clock") {
-  return <WorldClockApp onBack={onBack} />;
-}
-
   // 相机 App：支持选择本地照片和视频
 if (app.id === "camera") {
   return <CameraApp onBack={onBack} />;
