@@ -319,7 +319,13 @@ export function SafariSkin(p: Props) {
   return (
     <div className="catalog-skin native-safari">
       <Header p={p} />
-      <div className="catalog-scroll">
+      <div
+  className="catalog-scroll"
+  style={{
+    scrollbarWidth: "none",
+    msOverflowStyle: "none",
+  }}
+>
         <h1>{tab}</h1>
 
 {tab === "历史记录" ? (
