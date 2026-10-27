@@ -321,17 +321,69 @@ export function SafariSkin(p: Props) {
       <Header p={p} />
       <div className="catalog-scroll">
         <h1>{tab}</h1>
-        <div className="safari-favorites">
-          {items.map((i) => (
-            <button key={i.id} onClick={() => p.onItem(i)}>
-              <span>
-                <Globe size={28} />
-              </span>
-              <strong>{i.title === "测试内容" ? "鬼灭之刃" : i.title}</strong>
-              <small>{meta(i, "url")}</small>
-            </button>
-          ))}
-        </div>
+        <h1>{tab}</h1>
+
+{tab === "历史记录" ? (
+  <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
+    {[
+      "高铭阳 帅",
+      "火影忍者手游忍者强度排行",
+      "neon舞蹈教学",
+      "奶蛙袜子保不保暖",
+      "蓝色系穿搭",
+      "忧郁男生拍照pose",
+      "蜡笔小新盲盒",
+      "猫毛过敏可以摸猫吗",
+      "chiikawa联名",
+      "藤本树精神状态还好吗",
+      "长高训练动作",
+      "30分钟轻松教会自行车",
+    ]
+      .filter((item) => item.toLowerCase().includes(q.toLowerCase()))
+      .map((item, index) => (
+        <button
+          key={item}
+          onClick={() => setQ(item)}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "12px",
+            width: "100%",
+            padding: "14px 16px",
+            border: "none",
+            borderBottom: "1px solid #E5E5EA",
+            background: "transparent",
+            textAlign: "left",
+            cursor: "pointer",
+          }}
+        >
+          <Search size={18} color="#8E8E93" />
+          <span style={{ fontSize: "15px", color: "#1C1C1E" }}>
+            {item}
+          </span>
+        </button>
+      ))}
+  </div>
+) : (
+  <div className="safari-favorites">
+    {items.map((i) => (
+      <button key={i.id} onClick={() => p.onItem(i)}>
+        <span>
+          <Globe size={28} />
+        </span>
+        <strong>
+          {i.title === "测试内容" ? "鬼灭之刃" : i.title}
+        </strong>
+        <small>{meta(i, "url")}</small>
+      </button>
+    ))}
+  </div>
+)}
+
+<Empty
+  items={tab === "历史记录" ? [] : items}
+  label="没有匹配的虚构网页"
+/>
         <Empty items={items} label="没有匹配的虚构网页" />
       </div>
       <label className="safari-address">
