@@ -1,3 +1,5 @@
+import storyTemplate from "../stories/template/story.json";
+import { compileStory } from "./story-engine/compiler";
 import { create } from "zustand";
 import { createWork, createEmptyWork } from "./demo";
 import { uid, validateWork, type Work } from "./schema";
@@ -36,7 +38,7 @@ export const useStudio = create<Store>((set, get) => ({
 
   load: async () => {
     try {
-      const template = createWork();
+      const template = compileStory(storyTemplate).work;
       const musicSongs = template.data.music ?? [];
 
       console.info("[Music诊断] 模板歌曲数量:", musicSongs.length);
