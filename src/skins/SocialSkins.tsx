@@ -659,7 +659,7 @@ export function SnapchatSkin(p: Props) {
                       width: "100%",
                       aspectRatio: "3 / 4",
                       overflow: "hidden",
-                      borderRadius: "10px",
+                      borderRadius: "0",
                     }}
                   >
                     <div
