@@ -722,10 +722,8 @@
     "body": "",
     "sender": "",
     "kind": "image",
-    "meta": {
-      "image": "/snapchat-photo.jpg",
-      "src": "/snapchat-photo.jpg"
-    }
+    "media": "/snapchat-photo.jpg",
+    "meta": {}
   }
 ],
     "facebook": [
