@@ -150,83 +150,95 @@ export function DeviceLock({
           </div>
         </>
       ) : (
-        <div className="device-passcode">
-          <LockKeyhole size={22} />
-          <h2>输入密码</h2>
-          <div
-            className={"passcode-dots " + (error ? "pin-shake" : "")}
-            aria-label={"已输入" + code.length + "位密码"}
+        
+<motion.div
+  className="device-passcode"
+  initial={{ y: "100%" }}
+  animate={{ y: 0 }}
+  transition={{
+    duration: 0.38,
+    ease: [0.32, 0.72, 0, 1],
+  }}
+>
+  <LockKeyhole size={22} />
+  <h2>输入密码</h2>
+
+  <div
+    className={"passcode-dots " + (error ? "pin-shake" : "")}
+    aria-label={"已输入" + code.length + "位密码"}
+  >
+    {Array.from({ length: work.phone.passcode.length }, (_, i) => (
+      <i key={i} className={i < code.length ? "filled" : ""} />
+    ))}
+  </div>
+
+  <input
+    className={
+      /^\d+$/.test(work.phone.passcode)
+        ? "accessible-pin"
+        : "legacy-passcode"
+    }
+    aria-label="锁屏密码"
+    autoComplete="off"
+    inputMode="numeric"
+    type="password"
+    value={code}
+    onChange={(e) => setCode(e.target.value)}
+    onKeyDown={(e) => e.key === "Enter" && onUnlock(code)}
+  />
+
+  <div className="pin-keypad">
+    {["1", "2", "3", "4", "5", "6", "7", "8", "9", "", "0", ""].map(
+      (n, i) =>
+        n ? (
+          <button
+            key={i}
+            aria-label={"密码键" + n}
+            onClick={() => digit(n)}
           >
-            {Array.from({ length: work.phone.passcode.length }, (_, i) => (
-              <i key={i} className={i < code.length ? "filled" : ""} />
-            ))}
-          </div>
-          <input
-            className={
-              /^\d+$/.test(work.phone.passcode)
-                ? "accessible-pin"
-                : "legacy-passcode"
-            }
-            aria-label="锁屏密码"
-            autoComplete="off"
-            inputMode="numeric"
-            type="password"
-            value={code}
-            onChange={(e) => setCode(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && onUnlock(code)}
-          />
-          <div className="pin-keypad">
-            {["1", "2", "3", "4", "5", "6", "7", "8", "9", "", "0", ""].map(
-              (n, i) =>
-                n ? (
-                  <button
-                    key={i}
-                    aria-label={"密码键" + n}
-                    onClick={() => digit(n)}
-                  >
-                    <b>{n}</b>
-                    <small>
-                      {
-                        [
-                          "",
-                          "",
-                          "ABC",
-                          "DEF",
-                          "GHI",
-                          "JKL",
-                          "MNO",
-                          "PQRS",
-                          "TUV",
-                          "WXYZ",
-                        ][Number(n)]
-                      }
-                    </small>
-                  </button>
-                ) : (
-                  <span key={i} />
-                ),
-            )}
-          </div>
-          <span role="status" className="pin-error">
-            {error}
-          </span>
-          {!/^[0-9]+$/.test(work.phone.passcode) && (
-            <button onClick={() => onUnlock(code)}>解锁</button>
-          )}
-          <div className="pin-footer">
-            <button onClick={() => setPinOpen(false)}>取消</button>
-            <button
-              aria-label="删除一位密码"
-              onClick={() => (code ? digit("⌫") : setPinOpen(false))}
-            >
-              {code ? "删除" : "取消"}
-            </button>
-          </div>
-        </div>
-      )}
-    </motion.div>
-  );
-}
+            <b>{n}</b>
+            <small>
+              {
+                [
+                  "",
+                  "",
+                  "ABC",
+                  "DEF",
+                  "GHI",
+                  "JKL",
+                  "MNO",
+                  "PQRS",
+                  "TUV",
+                  "WXYZ",
+                ][Number(n)]
+              }
+            </small>
+          </button>
+        ) : (
+          <span key={i} />
+        ),
+    )}
+  </div>
+
+  <span role="status" className="pin-error">
+    {error}
+  </span>
+
+  {!/^[0-9]+$/.test(work.phone.passcode) && (
+    <button onClick={() => onUnlock(code)}>解锁</button>
+  )}
+
+  <div className="pin-footer">
+    <button onClick={() => setPinOpen(false)}>取消</button>
+    <button
+      aria-label="删除一位密码"
+      onClick={() => (code ? digit("⌫") : setPinOpen(false))}
+    >
+      {code ? "删除" : "取消"}
+    </button>
+  </div>
+</motion.div>
+
 export function ControlCenter({
   battery = 94,
   network,
