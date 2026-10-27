@@ -1219,13 +1219,23 @@ function AppContent({
         ? shown
         : shown.filter((i) => i.folder === tab);
   const read = (i: Item) => {
-    if (creator) {
-      onEdit(i);
-      return;
-    }
-    setDetail(i);
-    if (!i.password || unlocks.includes(i.id)) onRead(i.id);
-  };
+  if (creator) {
+    onEdit(i);
+    return;
+  }
+
+  if (
+    app.id === "snapchat" &&
+    i.folder === "聊天"
+  ) {
+    setThread(i.sender);
+    onRead(i.id);
+    return;
+  }
+
+  setDetail(i);
+  if (!i.password || unlocks.includes(i.id)) onRead(i.id);
+};
   const chats = [...new Set(shown.map((i) => i.title))];
   
   const back = () => {
