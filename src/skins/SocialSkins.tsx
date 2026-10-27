@@ -596,6 +596,7 @@ function FolderIcon() {
   return <Hash size={27} />;
 }
 
+
 export function SnapchatSkin(p: Props) {
   const { tab, setTab, items } = useContent(p, "快拍");
   const [index, setIndex] = useState(0);
@@ -611,6 +612,11 @@ export function SnapchatSkin(p: Props) {
       : tab === "聊天"
         ? item.folder === "聊天"
         : item.folder !== "聊天" && item.folder !== "回忆",
+  );
+
+  const contacts = list.filter(
+    (item, index, arr) =>
+      arr.findIndex((other) => other.title === item.title) === index,
   );
 
   const i = list[index % Math.max(list.length, 1)];
@@ -663,12 +669,7 @@ export function SnapchatSkin(p: Props) {
                       borderRadius: "0",
                     }}
                   >
-                    <div
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                      }}
-                    >
+                    <div style={{ width: "100%", height: "100%" }}>
                       <Media item={item} className="snap-memory-photo" />
                     </div>
                   </div>
@@ -690,77 +691,85 @@ export function SnapchatSkin(p: Props) {
             )}
           </div>
         ) : tab === "聊天" ? (
-  activeChat ? (
-    <div
-      style={{
-        height: "100%",
-        overflowY: "auto",
-        padding: "12px",
-        display: "flex",
-        flexDirection: "column",
-        gap: "12px",
-        boxSizing: "border-box",
-      }}
-    >
-      <button
-        onClick={() => setActiveChat(null)}
-        style={{ alignSelf: "flex-start", padding: "8px 12px" }}
-      >
-        ← 返回聊天列表
-      </button>
+          activeChat ? (
+            <div
+              style={{
+                height: "100%",
+                overflowY: "auto",
+                padding: "12px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "12px",
+                boxSizing: "border-box",
+              }}
+            >
+              <button
+                onClick={() => setActiveChat(null)}
+                style={{ alignSelf: "flex-start", padding: "8px 12px" }}
+              >
+                ← 返回聊天列表
+              </button>
 
-      <h3 style={{ margin: "4px 0" }}>{activeChat}</h3>
+              <h3 style={{ margin: "4px 0" }}>{activeChat}</h3>
 
-      {list
-        .filter((item) => item.sender === activeChat)
-        .map((item) => (
-          <div
-            key={item.id}
-            style={{
-              alignSelf: item.outgoing ? "flex-end" : "flex-start",
-              maxWidth: "80%",
-              padding: "10px 14px",
-              borderRadius: "16px",
-              background: item.outgoing ? "#dcf8c6" : "#ffffff",
-              color: "#222222",
-              overflowWrap: "anywhere",
-            }}
-          >
-            {item.body}
-          </div>
-        ))}
-    </div>
-  ) : (
-    <div
-      className="snap-chats"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "12px",
-        padding: "12px",
-      }}
-    >
-      {list.map((x) => (
-        <button
-          key={x.id}
-          onClick={() => setActiveChat(x.sender)}
-          style={{
-            minHeight: "88px",
-            padding: "16px",
-            width: "100%",
-            boxSizing: "border-box",
-          }}
-        >
-          <Avatar name={x.sender} />
-          <div>
-            <strong>{x.sender}</strong>
-            <small>{x.body}</small>
-          </div>
-          <Camera size={20} />
-        </button>
-      ))}
-    </div>
-  )
+              {list
+                .filter((item) => item.title === activeChat)
+                .map((item) => (
+                  <div
+                    key={item.id}
+                    style={{
+                      alignSelf: item.outgoing ? "flex-end" : "flex-start",
+                      maxWidth: "80%",
+                      padding: "10px 14px",
+                      borderRadius: "16px",
+                      background: item.outgoing ? "#dcf8c6" : "#ffffff",
+                      color: "#222222",
+                      overflowWrap: "anywhere",
+                    }}
+                  >
+                    {item.body}
+                  </div>
+                ))}
+            </div>
+          ) : (
+            <div
+              className="snap-chats"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "12px",
+                padding: "12px",
+                overflowY: "auto",
+                height: "100%",
+                boxSizing: "border-box",
+              }}
+            >
+              {contacts.map((x) => (
+                <button
+                  key={x.title}
+                  onClick={() => setActiveChat(x.title)}
+                  style={{
+                    minHeight: "88px",
+                    padding: "16px",
+                    width: "100%",
+                    boxSizing: "border-box",
+                  }}
+                >
+                  <Avatar name={x.title} />
+                  <div>
+                    <strong>{x.title}</strong>
+                    <small>{x.body}</small>
+                  </div>
+                  <Camera size={20} />
+                </button>
+              ))}
+
+              {contacts.length === 0 && (
+                <p className="catalog-empty">暂无聊天</p>
+              )}
+            </div>
+          )
+        ) : i ? (
           <>
             <Media item={i} />
             <button className="snap-author" onClick={() => p.onItem(i)}>
@@ -786,18 +795,22 @@ export function SnapchatSkin(p: Props) {
         )}
       </div>
 
-      <Tabs
-        tabs={["聊天", "快拍", "回忆"]}
-        value={tab}
-        set={(t) => {
-          setTab(t);
-          setIndex(0);
-        }}
-        icons={[<MessageCircle />, <Camera />, <ImageIcon />]}
-      />
+      {!(tab === "聊天" && activeChat) && (
+        <Tabs
+          tabs={["聊天", "快拍", "回忆"]}
+          value={tab}
+          set={(t) => {
+            setTab(t);
+            setIndex(0);
+            setActiveChat(null);
+          }}
+          icons={[<MessageCircle />, <Camera />, <ImageIcon />]}
+        />
+      )}
     </div>
   );
 }
+
 
 function ImageIcon() {
   return <Grid />;
