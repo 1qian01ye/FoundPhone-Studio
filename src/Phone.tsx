@@ -1055,6 +1055,7 @@ function WeatherApp({ onBack }: { onBack: () => void }) {
 
   return (
   <div
+    className="weather-scroll"
     style={{
       height: "100%",
       minHeight: 0,
@@ -1062,9 +1063,30 @@ function WeatherApp({ onBack }: { onBack: () => void }) {
       overflowX: "hidden",
       boxSizing: "border-box",
       WebkitOverflowScrolling: "touch",
+      scrollbarWidth: "thin",
+      scrollbarColor: "rgba(128, 128, 128, 0.45) transparent",
       padding: 16,
       color: "var(--text, #1f2937)",
     }}
+  >
+    <style>{`
+      .weather-scroll::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      .weather-scroll::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .weather-scroll::-webkit-scrollbar-thumb {
+        background: rgba(128, 128, 128, 0.45);
+        border-radius: 999px;
+      }
+
+      .weather-scroll::-webkit-scrollbar-thumb:hover {
+        background: rgba(128, 128, 128, 0.7);
+      }
+    `}</style>
   >
       <div
         style={{
