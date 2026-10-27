@@ -327,7 +327,7 @@ export function SafariSkin(p: Props) {
               <span>
                 <Globe size={28} />
               </span>
-              <strong>{i.title}</strong>
+              <strong>{i.title === "测试内容" ? "鬼灭之刃" : i.title}</strong>
               <small>{meta(i, "url")}</small>
             </button>
           ))}
