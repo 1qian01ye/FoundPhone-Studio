@@ -1245,6 +1245,11 @@ function AppContent({
   if (app.id === "weather") {
     return <WeatherApp onBack={onBack} />;
   }
+  
+if (app.id === "worldclock" || app.id === "world-clock" || app.id === "clock") {
+  return <WorldClockApp onBack={onBack} />;
+}
+
   // 相机 App：支持选择本地照片和视频
 if (app.id === "camera") {
   return <CameraApp onBack={onBack} />;
@@ -1635,6 +1640,129 @@ if (app.id === "camera") {
 }
 function UsersIcon() {
   return <PhoneIcon size={17} />;
+}
+
+function WorldClockApp({ onBack }: { onBack: () => void }) {
+  const cities = [
+    { name: "北京", timeZone: "Asia/Shanghai" },
+    { name: "纽约", timeZone: "America/New_York" },
+    { name: "东京", timeZone: "Asia/Tokyo" },
+    { name: "首尔", timeZone: "Asia/Seoul" },
+  ];
+
+  const [now, setNow] = useState(() => new Date());
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setNow(new Date());
+    }, 1000);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
+  const getTime = (timeZone: string) =>
+    new Intl.DateTimeFormat("zh-CN", {
+      timeZone,
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false,
+    }).format(now);
+
+  const getDate = (timeZone: string) =>
+    new Intl.DateTimeFormat("zh-CN", {
+      timeZone,
+      month: "long",
+      day: "numeric",
+      weekday: "long",
+    }).format(now);
+
+  const getOffset = (timeZone: string) =>
+    new Intl.DateTimeFormat("en-US", {
+      timeZone,
+      timeZoneName: "longOffset",
+    })
+      .formatToParts(now)
+      .find((part) => part.type === "timeZoneName")?.value ?? "";
+
+  return (
+    <div
+      style={{
+        height: "100%",
+        minHeight: 0,
+        overflowY: "auto",
+        padding: "20px",
+        boxSizing: "border-box",
+        background: "#000",
+        color: "#fff",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          marginBottom: 24,
+        }}
+      >
+        <button
+          onClick={onBack}
+          style={{
+            background: "transparent",
+            border: 0,
+            color: "#ff9f0a",
+            fontSize: 16,
+          }}
+        >
+          ‹ 返回
+        </button>
+        <strong style={{ fontSize: 20 }}>世界时钟</strong>
+        <span style={{ width: 48 }} />
+      </div>
+
+      {cities.map((city) => (
+        <div
+          key={city.name}
+          style={{
+            padding: "18px 0",
+            borderBottom: "1px solid #292929",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              gap: 12,
+            }}
+          >
+            <div>
+              <div style={{ fontSize: 22, fontWeight: 600 }}>
+                {city.name}
+              </div>
+              <div style={{ color: "#999", fontSize: 13, marginTop: 6 }}>
+                {getDate(city.timeZone)}
+              </div>
+              <div style={{ color: "#777", fontSize: 12, marginTop: 4 }}>
+                {getOffset(city.timeZone)}
+              </div>
+            </div>
+
+            <div
+              style={{
+                fontSize: 30,
+                fontWeight: 300,
+                fontVariantNumeric: "tabular-nums",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {getTime(city.timeZone)}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 
