@@ -8,6 +8,14 @@ const photos = [
   "public/snapchat-photo-2.jpg",
   "public/snapchat-photo-3.jpg",
   "public/snapchat-photo-4.jpg",
+  "public/memory-photo-1.jpg",
+  "public/memory-photo-2.jpg",
+  "public/memory-photo-3.jpg",
+  "public/memory-photo-4.jpg",
+  "public/memory-photo-5.jpg",
+  "public/memory-photo-6.jpg",
+  "public/memory-photo-7.jpg",
+  "public/memory-photo-8.jpg",
 ];
 
 const story = JSON.parse(fs.readFileSync(storyPath, "utf8"));
