@@ -819,6 +819,33 @@
     "kind": "image",
     "folder": "回忆",
     "meta": {}
+  },
+  {
+    "id": "snap-chat-1",
+    "title": "赵俊羽",
+    "body": "🥰🥰😘",
+    "sender": "赵俊羽",
+    "folder": "聊天",
+    "kind": "text",
+    "meta": {}
+  },
+  {
+    "id": "snap-chat-2",
+    "title": "陈燊",
+    "body": "🤭🤭🤭",
+    "sender": "陈燊",
+    "folder": "聊天",
+    "kind": "text",
+    "meta": {}
+  },
+  {
+    "id": "snap-chat-3",
+    "title": "杨云皓",
+    "body": "你开心就好",
+    "sender": "杨云皓",
+    "folder": "聊天",
+    "kind": "text",
+    "meta": {}
   }
 ],
     "facebook": [
