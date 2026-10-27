@@ -1637,38 +1637,12 @@ function UsersIcon() {
   return <PhoneIcon size={17} />;
 }
 
+
 function CameraApp({ onBack }: { onBack: () => void }) {
   const [tab, setTab] = useState<"照片" | "视频">("照片");
-  const [photo, setPhoto] = useState<File | null>(null);
-  const [video, setVideo] = useState<File | null>(null);
-  const [photoUrl, setPhotoUrl] = useState("");
-  const [videoUrl, setVideoUrl] = useState("");
 
-  useEffect(() => {
-    if (!photo) {
-      setPhotoUrl("");
-      return;
-    }
-
-    const url = URL.createObjectURL(photo);
-    setPhotoUrl(url);
-
-    return () => URL.revokeObjectURL(url);
-  }, [photo]);
-
-  useEffect(() => {
-    if (!video) {
-      setVideoUrl("");
-      return;
-    }
-
-    const url = URL.createObjectURL(video);
-    setVideoUrl(url);
-
-    return () => URL.revokeObjectURL(url);
-  }, [video]);
-
-  const isPhoto = tab === "照片";
+  const photoSrc = `${import.meta.env.BASE_URL}my-photo.jpg`;
+  const videoSrc = `${import.meta.env.BASE_URL}my-video.mp4`;
 
   return (
     <div
@@ -1684,25 +1658,30 @@ function CameraApp({ onBack }: { onBack: () => void }) {
     >
       <div
         style={{
+          height: 54,
+          flexShrink: 0,
           display: "flex",
           alignItems: "center",
-          padding: "12px 16px",
-          gap: 12,
+          justifyContent: "space-between",
+          padding: "0 16px",
+          borderBottom: "1px solid #333",
         }}
       >
         <button
           onClick={onBack}
-          aria-label="返回"
           style={{
             color: "#fff",
-            background: "transparent",
-            border: 0,
+            background: "none",
+            border: "none",
             fontSize: 16,
+            cursor: "pointer",
           }}
         >
           ‹ 返回
         </button>
-        <strong style={{ flex: 1, textAlign: "center" }}>相机</strong>
+
+        <span style={{ fontSize: 17, fontWeight: 600 }}>相机</span>
+
         <span style={{ width: 48 }} />
       </div>
 
@@ -1713,45 +1692,36 @@ function CameraApp({ onBack }: { onBack: () => void }) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          padding: 16,
+          padding: 12,
+          overflow: "hidden",
         }}
       >
-        {isPhoto ? (
-          photoUrl ? (
-            <img
-              src={photoUrl}
-              alt="已选择的照片"
-              style={{
-                maxWidth: "100%",
-                maxHeight: "100%",
-                objectFit: "contain",
-                borderRadius: 12,
-              }}
-            />
-          ) : (
-            <div style={{ textAlign: "center", color: "#aaa" }}>
-              <div style={{ fontSize: 56, marginBottom: 12 }}>▧</div>
-              <p>尚未选择照片</p>
-              <p style={{ fontSize: 13 }}>选择本地图片即可预览</p>
-            </div>
-          )
-        ) : videoUrl ? (
-          <video
-            src={videoUrl}
-            controls
-            playsInline
+        {tab === "照片" ? (
+          <img
+            src={photoSrc}
+            alt="我的照片"
             style={{
+              display: "block",
               maxWidth: "100%",
               maxHeight: "100%",
+              objectFit: "contain",
               borderRadius: 12,
             }}
           />
         ) : (
-          <div style={{ textAlign: "center", color: "#aaa" }}>
-            <div style={{ fontSize: 56, marginBottom: 12 }}>▷</div>
-            <p>尚未选择视频</p>
-            <p style={{ fontSize: 13 }}>选择本地视频即可播放预览</p>
-          </div>
+          <video
+            key={videoSrc}
+            src={videoSrc}
+            controls
+            playsInline
+            style={{
+              display: "block",
+              width: "100%",
+              maxHeight: "100%",
+              borderRadius: 12,
+              background: "#000",
+            }}
+          />
         )}
       </div>
 
@@ -1760,81 +1730,43 @@ function CameraApp({ onBack }: { onBack: () => void }) {
           display: "flex",
           justifyContent: "center",
           gap: 12,
-          padding: 16,
+          padding: "16px 12px 24px",
+          borderTop: "1px solid #333",
+          flexShrink: 0,
         }}
       >
         <button
           onClick={() => setTab("照片")}
           style={{
-            padding: "10px 24px",
+            padding: "10px 30px",
             borderRadius: 24,
-            border: 0,
-            background: isPhoto ? "#fff" : "#333",
-            color: isPhoto ? "#111" : "#fff",
+            border: "none",
+            background: tab === "照片" ? "#fff" : "#333",
+            color: tab === "照片" ? "#111" : "#fff",
+            fontSize: 15,
+            fontWeight: 600,
+            cursor: "pointer",
           }}
         >
           照片
         </button>
+
         <button
           onClick={() => setTab("视频")}
           style={{
-            padding: "10px 24px",
+            padding: "10px 30px",
             borderRadius: 24,
-            border: 0,
-            background: !isPhoto ? "#fff" : "#333",
-            color: !isPhoto ? "#111" : "#fff",
+            border: "none",
+            background: tab === "视频" ? "#fff" : "#333",
+            color: tab === "视频" ? "#111" : "#fff",
+            fontSize: 15,
+            fontWeight: 600,
+            cursor: "pointer",
           }}
         >
           视频
         </button>
       </div>
-
-      <div style={{ padding: "0 20px 24px", textAlign: "center" }}>
-        <label
-          style={{
-            display: "inline-block",
-            padding: "12px 28px",
-            borderRadius: 24,
-            background: "#fff",
-            color: "#111",
-            fontWeight: 600,
-            cursor: "pointer",
-          }}
-        >
-          {isPhoto ? "选择照片" : "选择视频"}
-          <input
-            type="file"
-            accept={isPhoto ? "image/*" : "video/*"}
-            onChange={(event) => {
-              const file = event.currentTarget.files?.[0];
-              if (!file) return;
-
-              if (isPhoto) {
-                setPhoto(file);
-              } else {
-                setVideo(file);
-              }
-
-              event.currentTarget.value = "";
-            }}
-            style={{ display: "none" }}
-          />
-        </label>
-
-        {(isPhoto ? photo : video) && (
-          <p
-            style={{
-              color: "#aaa",
-              fontSize: 12,
-              marginTop: 12,
-              overflowWrap: "anywhere",
-            }}
-          >
-            {(isPhoto ? photo : video)?.name}
-          </p>
-        )}
-      </div>
     </div>
   );
 }
-
