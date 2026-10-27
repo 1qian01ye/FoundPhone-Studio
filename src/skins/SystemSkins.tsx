@@ -535,6 +535,28 @@ export function MailSkin(p: Props) {
 }
 export function ClockSkin(p: Props) {
   const { tab, setTab, items } = useContent(p, "闹钟");
+  const [now, setNow] = useState(() => Date.now());
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setNow(Date.now()), 1000);
+    return () => window.clearInterval(timer);
+  }, []);
+
+  const cities = [
+    { name: "北京", timeZone: "Asia/Shanghai" },
+    { name: "纽约", timeZone: "America/New_York" },
+    { name: "东京", timeZone: "Asia/Tokyo" },
+    { name: "首尔", timeZone: "Asia/Seoul" },
+  ];
+
+  const formatCityTime = (timeZone: string) =>
+    new Intl.DateTimeFormat("zh-CN", {
+      timeZone,
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: false,
+    }).format(now);
   const [enabled, setEnabled] = useSkinState<string[]>(p, "alarms", []),
     [seconds, setSeconds] = useState(0),
     [running, setRunning] = useState(false);
@@ -548,8 +570,67 @@ export function ClockSkin(p: Props) {
       <Header p={p} />
       <div className="catalog-scroll">
         <h1>{tab}</h1>
-        {tab === "秒表" ? (
+                {tab === "世界时钟" ? (
+          <div className="world-clock-list">
+            {cities.map((city) => (
+              <div className="alarm-row" key={city.name}>
+                <div>
+                  <strong>{city.name}</strong>
+                  <small>{city.timeZone}</small>
+                </div>
+                <time>{formatCityTime(city.timeZone)}</time>
+              </div>
+            ))}
+          </div>
+        ) : tab === "秒表" ? (
           <div className="stopwatch">
+            <output>
+              {String(Math.floor(seconds / 60)).padStart(2, "0")}:
+              {String(seconds % 60).padStart(2, "0")}
+            </output>
+            <div>
+              <button
+                onClick={() => {
+                  setSeconds(0);
+                  setRunning(false);
+                }}
+              >
+                复位
+              </button>
+              <button onClick={() => setRunning(!running)}>
+                {running ? "暂停" : "开始"}
+              </button>
+            </div>
+          </div>
+        ) : (
+          items.map((i) => (
+            <div className="alarm-row" key={i.id}>
+              <button onClick={() => p.onItem(i)}>
+                <time>{meta(i, "clock", i.time.slice(-5))}</time>
+                <small>{i.title}</small>
+              </button>
+              {tab === "闹钟" ? (
+                <button
+                  role="switch"
+                  aria-label={`闹钟${i.title}`}
+                  aria-checked={enabled.includes(i.id)}
+                  className={`native-switch ${enabled.includes(i.id) ? "on" : ""}`}
+                  onClick={() =>
+                    setEnabled(
+                      enabled.includes(i.id)
+                        ? enabled.filter((x) => x !== i.id)
+                        : [...enabled, i.id],
+                    )
+                  }
+                >
+                  <span />
+                </button>
+              ) : (
+                <Clock size={35} />
+              )}
+            </div>
+          ))
+        )}
             <output>
               {String(Math.floor(seconds / 60)).padStart(2, "0")}:
               {String(seconds % 60).padStart(2, "0")}
