@@ -1,7 +1,7 @@
 import storyTemplate from "../stories/template/story.json";
 import { compileStory } from "./story-engine/compiler";
 import { create } from "zustand";
-import { createWork, createEmptyWork } from "./demo";
+import { createEmptyWork } from "./demo";
 import { uid, validateWork, type Work } from "./schema";
 import { db } from "./persistence";
 
