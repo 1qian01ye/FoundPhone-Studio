@@ -1087,7 +1087,7 @@ function WeatherApp({ onBack }: { onBack: () => void }) {
         background: rgba(128, 128, 128, 0.7);
       }
     `}</style>
-  >
+  
       <div
         style={{
           display: "flex",
