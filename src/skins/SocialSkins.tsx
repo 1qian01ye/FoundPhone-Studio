@@ -693,16 +693,19 @@ export function SnapchatSkin(p: Props) {
         ) : tab === "聊天" ? (
           activeChat ? (
             <div
-              style={{
-                height: "100%",
-                overflowY: "auto",
-                padding: "12px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "12px",
-                boxSizing: "border-box",
-              }}
-            >
+  className="hide-scrollbar"
+  style={{
+    height: "100%",
+    overflowY: "auto",
+    padding: "12px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "12px",
+    boxSizing: "border-box",
+    scrollbarWidth: "none",
+    msOverflowStyle: "none",
+  }}
+>
               <button
                 onClick={() => setActiveChat(null)}
                 style={{ alignSelf: "flex-start", padding: "8px 12px" }}
