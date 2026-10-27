@@ -702,7 +702,7 @@ export function SnapchatSkin(p: Props) {
             {list.map((x) => (
               <button
   key={x.id}
-  onClick={() => p.onItem(x)}
+  onClick={() => setActiveChat(x.sender)}
   style={{
     minHeight: "88px",
     padding: "16px",
