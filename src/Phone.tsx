@@ -1223,16 +1223,6 @@ function AppContent({
     onEdit(i);
     return;
   }
-
-  if (
-    app.id === "snapchat" &&
-    i.folder === "聊天"
-  ) {
-    setThread(i.sender);
-    onRead(i.id);
-    return;
-  }
-
   setDetail(i);
   if (!i.password || unlocks.includes(i.id)) onRead(i.id);
 };
