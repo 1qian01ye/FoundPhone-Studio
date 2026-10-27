@@ -1054,7 +1054,18 @@ function WeatherApp({ onBack }: { onBack: () => void }) {
   }, []);
 
   return (
-    <div style={{ padding: 16, color: "var(--text, #1f2937)" }}>
+  <div
+    style={{
+      height: "100%",
+      minHeight: 0,
+      overflowY: "auto",
+      overflowX: "hidden",
+      boxSizing: "border-box",
+      WebkitOverflowScrolling: "touch",
+      padding: 16,
+      color: "var(--text, #1f2937)",
+    }}
+  >
       <div
         style={{
           display: "flex",
