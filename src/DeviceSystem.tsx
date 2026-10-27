@@ -238,6 +238,10 @@ export function DeviceLock({
     </button>
   </div>
 </motion.div>
+      )}
+    </motion.div>
+  );
+}
 
 export function ControlCenter({
   battery = 94,
