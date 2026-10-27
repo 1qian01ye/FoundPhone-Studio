@@ -821,32 +821,269 @@
     "meta": {}
   },
   {
-    "id": "snap-chat-1",
-    "title": "赵俊羽",
-    "body": "🥰🥰😘",
-    "sender": "赵俊羽",
-    "folder": "聊天",
-    "kind": "text",
-    "meta": {}
-  },
-  {
-    "id": "snap-chat-2",
-    "title": "陈燊",
-    "body": "🤭🤭🤭",
-    "sender": "陈燊",
-    "folder": "聊天",
-    "kind": "text",
-    "meta": {}
-  },
-  {
-    "id": "snap-chat-3",
-    "title": "杨云皓",
-    "body": "你开心就好",
-    "sender": "杨云皓",
-    "folder": "聊天",
-    "kind": "text",
-    "meta": {}
-  }
+  "id": "snap-zjy-01",
+  "title": "赵俊羽",
+  "body": "出片了出片了",
+  "sender": "赵俊羽",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": false,
+  "meta": {}
+},
+{
+  "id": "snap-zjy-02",
+  "title": "赵俊羽",
+  "body": "这个软件好好用啊",
+  "sender": "赵俊羽",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": false,
+  "meta": {}
+},
+{
+  "id": "snap-zjy-03",
+  "title": "赵俊羽",
+  "body": "完全欧美diva",
+  "sender": "林秋水",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": true,
+  "meta": {}
+},
+{
+  "id": "snap-zjy-04",
+  "title": "赵俊羽",
+  "body": "礼貌申请格莱美",
+  "sender": "林秋水",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": true,
+  "meta": {}
+},
+{
+  "id": "snap-zjy-05",
+  "title": "赵俊羽",
+  "body": "🥰🥰😘",
+  "sender": "赵俊羽",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": false,
+  "meta": {}
+},
+{
+  "id": "snap-cs-01",
+  "title": "陈燊",
+  "body": "为什么要给我拍成一个邪恶老婆婆",
+  "sender": "陈燊",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": false,
+  "meta": {}
+},
+{
+  "id": "snap-cs-02",
+  "title": "陈燊",
+  "body": "很ins啊，你不懂别乱说",
+  "sender": "林秋水",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": true,
+  "meta": {}
+},
+{
+  "id": "snap-cs-03",
+  "title": "陈燊",
+  "body": "你不是看不上吗怎么又下载下来了",
+  "sender": "林秋水",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": true,
+  "meta": {}
+},
+{
+  "id": "snap-cs-04",
+  "title": "陈燊",
+  "body": "绝不是来看你都有在玩些什么软件的",
+  "sender": "陈燊",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": false,
+  "meta": {}
+},
+{
+  "id": "snap-cs-05",
+  "title": "陈燊",
+  "body": "别自作多情",
+  "sender": "陈燊",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": false,
+  "meta": {}
+},
+{
+  "id": "snap-cs-06",
+  "title": "陈燊",
+  "body": "哦哦",
+  "sender": "林秋水",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": true,
+  "meta": {}
+},
+{
+  "id": "snap-cs-07",
+  "title": "陈燊",
+  "body": "你回忆里那张给吕政熙拍的照片为什么那么好看，都没有用这些搞怪特效，给我的就这么丑",
+  "sender": "陈燊",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": false,
+  "meta": {}
+},
+{
+  "id": "snap-cs-08",
+  "title": "陈燊",
+  "body": "你睁大眼睛好好看看啊",
+  "sender": "林秋水",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": true,
+  "meta": {}
+},
+{
+  "id": "snap-cs-09",
+  "title": "陈燊",
+  "body": "明明就用了恩宰豆那个眼距特效",
+  "sender": "林秋水",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": true,
+  "meta": {}
+},
+{
+  "id": "snap-cs-10",
+  "title": "陈燊",
+  "body": "难道说他已经和恩宰豆融为一体了？",
+  "sender": "林秋水",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": true,
+  "meta": {}
+},
+{
+  "id": "snap-cs-11",
+  "title": "陈燊",
+  "body": "你中有我我中有你",
+  "sender": "林秋水",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": true,
+  "meta": {}
+},
+{
+  "id": "snap-cs-12",
+  "title": "陈燊",
+  "body": "哈哈哈哈哈哈哈哈哈哈哈哈他自己都没发现",
+  "sender": "陈燊",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": false,
+  "meta": {}
+},
+{
+  "id": "snap-cs-13",
+  "title": "陈燊",
+  "body": "刚刚就是他给我炫耀说你给他拍的很帅的",
+  "sender": "陈燊",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": false,
+  "meta": {}
+},
+{
+  "id": "snap-cs-14",
+  "title": "陈燊",
+  "body": "🤭🤭🤭",
+  "sender": "林秋水",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": true,
+  "meta": {}
+},
+{
+  "id": "snap-yyh-01",
+  "title": "杨云皓",
+  "body": "不是说好的你在看风景看风景的人在看你吗？",
+  "sender": "杨云皓",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": false,
+  "meta": {}
+},
+{
+  "id": "snap-yyh-02",
+  "title": "杨云皓",
+  "body": "这张照片是不是有点太傻了",
+  "sender": "杨云皓",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": false,
+  "meta": {}
+},
+{
+  "id": "snap-yyh-03",
+  "title": "杨云皓",
+  "body": "有吗，我觉得很好看啊，你看看笑得多开心",
+  "sender": "林秋水",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": true,
+  "meta": {}
+},
+{
+  "id": "snap-yyh-04",
+  "title": "杨云皓",
+  "body": "就是胡子还不够浓密",
+  "sender": "林秋水",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": true,
+  "meta": {}
+},
+{
+  "id": "snap-yyh-05",
+  "title": "杨云皓",
+  "body": "你开心就好",
+  "sender": "杨云皓",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "",
+  "outgoing": false,
+  "meta": {}
+}
 ],
     "facebook": [
       {
