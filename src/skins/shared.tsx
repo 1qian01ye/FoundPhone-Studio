@@ -128,6 +128,15 @@ export function Media({
   loading="lazy"
   alt={item.title}
   src={src}
+  style={
+    className.includes("snap-memory-photo")
+      ? {
+          width: "100%",
+          height: "100%",
+          objectFit: "contain",
+        }
+      : undefined
+  }
 />
     )
   ) : (
