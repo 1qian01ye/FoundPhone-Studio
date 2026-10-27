@@ -697,11 +697,15 @@ const fixedAlarmIds = alarmData.map((_, index) => `fixed-alarm-${index}`);
   </div>
 
   <button
-    type="button"
-    role="switch"
-    aria-label={`${alarm.time} ${alarm.note}`}
-    aria-checked={isEnabled}
-    className={`native-switch ${isEnabled ? "on" : ""}`}
+  type="button"
+  role="switch"
+  aria-label={`${alarm.time} ${alarm.note}`}
+  aria-checked={isEnabled}
+  className={`native-switch ${isEnabled ? "on" : ""}`}
+  style={{
+    backgroundColor: isEnabled ? "#34C759" : "#E5E5EA",
+    borderColor: isEnabled ? "#34C759" : "#E5E5EA",
+  }}
     onClick={() =>
       setEnabled((previous) =>
         previous.includes(id)
