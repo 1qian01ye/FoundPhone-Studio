@@ -668,7 +668,7 @@ export function SnapchatSkin(p: Props) {
                         height: "100%",
                       }}
                     >
-                      <Media item={item} />
+                      <Media item={item} className="snap-memory-photo" />
                     </div>
                   </div>
                   <div
