@@ -550,10 +550,12 @@ export function ClockSkin(p: Props) {
   ];
 
   const [enabled, setEnabled] = useSkinState<string[]>(
-    p,
-    "alarms",
-    alarmData.map((_, index) => `fixed-alarm-${index}`),
-  );
+  p,
+  "alarms",
+  alarmData.map((_, index) => `fixed-alarm-${index}`),
+);
+
+const fixedAlarmIds = alarmData.map((_, index) => `fixed-alarm-${index}`);
 
   const [seconds, setSeconds] = useState(0);
   const [running, setRunning] = useState(false);
