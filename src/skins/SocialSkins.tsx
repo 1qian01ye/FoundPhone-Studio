@@ -689,9 +689,26 @@ export function SnapchatSkin(p: Props) {
             )}
           </div>
         ) : tab === "聊天" ? (
-          <div className="snap-chats">
+          <div
+  className="snap-chats"
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    gap: "12px",
+    padding: "12px",
+  }}
+>
             {list.map((x) => (
-              <button key={x.id} onClick={() => p.onItem(x)}>
+              <button
+  key={x.id}
+  onClick={() => p.onItem(x)}
+  style={{
+    minHeight: "88px",
+    padding: "16px",
+    width: "100%",
+    boxSizing: "border-box",
+  }}
+>
                 <Avatar name={x.sender} />
                 <div>
                   <strong>{x.sender}</strong>
