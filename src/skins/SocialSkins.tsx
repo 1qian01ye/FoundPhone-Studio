@@ -595,22 +595,100 @@ export function ForumSkin(p: Props) {
 function FolderIcon() {
   return <Hash size={27} />;
 }
+
 export function SnapchatSkin(p: Props) {
   const { tab, setTab, items } = useContent(p, "快拍");
   const [index, setIndex] = useState(0);
-  const list = items.filter((i) =>
-    tab === "回忆"
-      ? i.favorite || i.folder === "回忆"
-      : tab === "聊天"
-        ? i.folder === "聊天"
-        : i.folder !== "聊天",
+
+  const memories = items.filter(
+    (item) => item.folder === "回忆" || item.favorite,
   );
+
+  const list = items.filter((item) =>
+    tab === "回忆"
+      ? item.folder === "回忆" || item.favorite
+      : tab === "聊天"
+        ? item.folder === "聊天"
+        : item.folder !== "聊天" && item.folder !== "回忆",
+  );
+
   const i = list[index % Math.max(list.length, 1)];
+
   return (
     <div className="catalog-skin snapchat-ui">
       <Header p={p} />
+
       <div className="snap-content">
-        {tab === "聊天" ? (
+        {tab === "回忆" ? (
+          <div
+            style={{
+              height: "100%",
+              maxHeight: "100%",
+              overflowY: "auto",
+              overflowX: "hidden",
+              padding: "10px",
+              boxSizing: "border-box",
+              scrollbarWidth: "thin",
+            }}
+          >
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+                gap: "10px",
+                alignItems: "start",
+              }}
+            >
+              {memories.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => p.onItem(item)}
+                  style={{
+                    display: "block",
+                    width: "100%",
+                    minWidth: 0,
+                    padding: 0,
+                    border: "none",
+                    background: "transparent",
+                    textAlign: "left",
+                    cursor: "pointer",
+                  }}
+                >
+                  <div
+                    style={{
+                      width: "100%",
+                      aspectRatio: "3 / 4",
+                      overflow: "hidden",
+                      borderRadius: "10px",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                      }}
+                    >
+                      <Media item={item} />
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      padding: "5px 2px",
+                      fontSize: "12px",
+                      overflowWrap: "anywhere",
+                    }}
+                  >
+                    {item.title}
+                  </div>
+                </button>
+              ))}
+            </div>
+
+            {memories.length === 0 && (
+              <p className="catalog-empty">暂无回忆</p>
+            )}
+          </div>
+        ) : tab === "聊天" ? (
           <div className="snap-chats">
             {list.map((x) => (
               <button key={x.id} onClick={() => p.onItem(x)}>
@@ -634,7 +712,7 @@ export function SnapchatSkin(p: Props) {
               className="snap-next"
               aria-label="下一条快拍"
               onClick={() => {
-                setIndex((n) => n + 1);
+                setIndex((n) => (n + 1) % list.length);
                 p.onRead(i.id);
               }}
             >
@@ -648,6 +726,7 @@ export function SnapchatSkin(p: Props) {
           <p className="catalog-empty">暂无{tab}</p>
         )}
       </div>
+
       <Tabs
         tabs={["聊天", "快拍", "回忆"]}
         value={tab}
@@ -660,6 +739,7 @@ export function SnapchatSkin(p: Props) {
     </div>
   );
 }
+
 function ImageIcon() {
   return <Grid />;
 }
