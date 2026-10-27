@@ -1638,11 +1638,14 @@ function UsersIcon() {
 }
 
 
+
 function CameraApp({ onBack }: { onBack: () => void }) {
   const [tab, setTab] = useState<"照片" | "视频">("照片");
 
-  const photoSrc = `${import.meta.env.BASE_URL}my-photo.jpg`;
-  const videoSrc = `${import.meta.env.BASE_URL}my-video.mp4`;
+  const photoUrl = `${import.meta.env.BASE_URL}my-photo.jpg`;
+  const videoUrl = `${import.meta.env.BASE_URL}my-video.mp4`;
+
+  const isPhoto = tab === "照片";
 
   return (
     <div
@@ -1658,30 +1661,25 @@ function CameraApp({ onBack }: { onBack: () => void }) {
     >
       <div
         style={{
-          height: 54,
-          flexShrink: 0,
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
-          padding: "0 16px",
-          borderBottom: "1px solid #333",
+          padding: "12px 16px",
+          gap: 12,
         }}
       >
         <button
           onClick={onBack}
+          aria-label="返回"
           style={{
             color: "#fff",
-            background: "none",
-            border: "none",
+            background: "transparent",
+            border: 0,
             fontSize: 16,
-            cursor: "pointer",
           }}
         >
           ‹ 返回
         </button>
-
-        <span style={{ fontSize: 17, fontWeight: 600 }}>相机</span>
-
+        <strong style={{ flex: 1, textAlign: "center" }}>相机</strong>
         <span style={{ width: 48 }} />
       </div>
 
@@ -1692,16 +1690,15 @@ function CameraApp({ onBack }: { onBack: () => void }) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          padding: 12,
+          padding: 16,
           overflow: "hidden",
         }}
       >
-        {tab === "照片" ? (
+        {isPhoto ? (
           <img
-            src={photoSrc}
+            src={photoUrl}
             alt="我的照片"
             style={{
-              display: "block",
               maxWidth: "100%",
               maxHeight: "100%",
               objectFit: "contain",
@@ -1710,16 +1707,13 @@ function CameraApp({ onBack }: { onBack: () => void }) {
           />
         ) : (
           <video
-            key={videoSrc}
-            src={videoSrc}
+            src={videoUrl}
             controls
             playsInline
             style={{
-              display: "block",
-              width: "100%",
+              maxWidth: "100%",
               maxHeight: "100%",
               borderRadius: 12,
-              background: "#000",
             }}
           />
         )}
@@ -1730,38 +1724,29 @@ function CameraApp({ onBack }: { onBack: () => void }) {
           display: "flex",
           justifyContent: "center",
           gap: 12,
-          padding: "16px 12px 24px",
-          borderTop: "1px solid #333",
-          flexShrink: 0,
+          padding: 16,
         }}
       >
         <button
           onClick={() => setTab("照片")}
           style={{
-            padding: "10px 30px",
+            padding: "10px 24px",
             borderRadius: 24,
-            border: "none",
-            background: tab === "照片" ? "#fff" : "#333",
-            color: tab === "照片" ? "#111" : "#fff",
-            fontSize: 15,
-            fontWeight: 600,
-            cursor: "pointer",
+            border: 0,
+            background: isPhoto ? "#fff" : "#333",
+            color: isPhoto ? "#111" : "#fff",
           }}
         >
           照片
         </button>
-
         <button
           onClick={() => setTab("视频")}
           style={{
-            padding: "10px 30px",
+            padding: "10px 24px",
             borderRadius: 24,
-            border: "none",
-            background: tab === "视频" ? "#fff" : "#333",
-            color: tab === "视频" ? "#111" : "#fff",
-            fontSize: 15,
-            fontWeight: 600,
-            cursor: "pointer",
+            border: 0,
+            background: !isPhoto ? "#fff" : "#333",
+            color: !isPhoto ? "#111" : "#fff",
           }}
         >
           视频
