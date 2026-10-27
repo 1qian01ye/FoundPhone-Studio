@@ -381,10 +381,9 @@ export function SafariSkin(p: Props) {
   </div>
 )}
 
-<Empty
-  items={tab === "历史记录" ? [] : items}
-  label="没有匹配的虚构网页"
-/>
+{tab !== "历史记录" && (
+  <Empty items={items} label="没有匹配的虚构网页" />
+)}
       </div>
       <label className="safari-address">
         <LockKeyhole size={13} />
