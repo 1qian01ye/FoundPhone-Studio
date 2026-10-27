@@ -340,7 +340,7 @@ export function SafariSkin(p: Props) {
       "30分钟轻松教会自行车",
     ]
       .filter((item) => item.toLowerCase().includes(q.toLowerCase()))
-      .map((item, index) => (
+      .map((item) => (
         <button
           key={item}
           onClick={() => setQ(item)}
