@@ -717,11 +717,35 @@
     ],
     "snapchat": [
   {
-    "id": "test-item-snapchat",
-    "title": "测试内容",
+    "id": "snap-photo-1",
+    "title": "我的照片 1",
     "body": "🐣",
     "sender": "林秋水",
-    "kind": "text",
+    "kind": "image",
+    "meta": {}
+  },
+  {
+    "id": "snap-photo-2",
+    "title": "我的照片 2",
+    "body": "🐣",
+    "sender": "林秋水",
+    "kind": "image",
+    "meta": {}
+  },
+  {
+    "id": "snap-photo-3",
+    "title": "我的照片 3",
+    "body": "🐣",
+    "sender": "林秋水",
+    "kind": "image",
+    "meta": {}
+  },
+  {
+    "id": "snap-photo-4",
+    "title": "我的照片 4",
+    "body": "🐣",
+    "sender": "林秋水",
+    "kind": "image",
     "meta": {}
   }
 ],
