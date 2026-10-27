@@ -638,33 +638,73 @@ export function ClockSkin(p: Props) {
               const isEnabled = enabled.includes(id);
 
               return (
-                <div className="alarm-row" key={id}>
-                  <div className="fixed-alarm-info">
-                    <time className="fixed-alarm-time">
-                      {alarm.time}
-                    </time>
-                    <small className="fixed-alarm-note">
-                      {alarm.note}
-                    </small>
-                  </div>
+                <div
+  className="alarm-row"
+  key={id}
+  style={{
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    gap: "16px",
+  }}
+>
+  <div
+    className="fixed-alarm-info"
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "flex-start",
+      justifyContent: "center",
+      gap: "4px",
+      flex: 1,
+      minWidth: 0,
+    }}
+  >
+    <time
+      className="fixed-alarm-time"
+      style={{
+        display: "block",
+        fontSize: "36px",
+        lineHeight: 1.15,
+        fontWeight: 400,
+        fontVariantNumeric: "tabular-nums",
+      }}
+    >
+      {alarm.time}
+    </time>
 
-                  <button
-                    type="button"
-                    role="switch"
-                    aria-label={`${alarm.time} ${alarm.note}`}
-                    aria-checked={isEnabled}
-                    className={`native-switch ${isEnabled ? "on" : ""}`}
-                    onClick={() =>
-                      setEnabled((previous) =>
-                        previous.includes(id)
-                          ? previous.filter((item) => item !== id)
-                          : [...previous, id],
-                      )
-                    }
-                  >
-                    <span />
-                  </button>
-                </div>
+    <small
+      className="fixed-alarm-note"
+      style={{
+        display: "block",
+        fontSize: "13px",
+        lineHeight: 1.4,
+        color: "#8e8e93",
+        whiteSpace: "normal",
+        overflowWrap: "anywhere",
+      }}
+    >
+      {alarm.note}
+    </small>
+  </div>
+
+  <button
+    type="button"
+    role="switch"
+    aria-label={`${alarm.time} ${alarm.note}`}
+    aria-checked={isEnabled}
+    className={`native-switch ${isEnabled ? "on" : ""}`}
+    onClick={() =>
+      setEnabled((previous) =>
+        previous.includes(id)
+          ? previous.filter((item) => item !== id)
+          : [...previous, id],
+      )
+    }
+  >
+    <span />
+  </button>
+</div>
               );
             })}
           </div>
