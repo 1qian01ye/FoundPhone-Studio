@@ -1638,7 +1638,7 @@ function UsersIcon() {
   return <PhoneIcon size={17} />;
 }
 
-function WorldClockApp({ onBack }: { onBack: () => void }) {
+function _WorldClockApp({ onBack }: { onBack: () => void }) {
   const cities = [
     { name: "北京", timeZone: "Asia/Shanghai" },
     { name: "纽约", timeZone: "America/New_York" },
