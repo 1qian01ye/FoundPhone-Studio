@@ -1,21 +1,43 @@
 
 import fs from "node:fs";
 
-const imagePath = "public/snapchat-photo.jpg";
 const storyPath = "stories/template/story.json";
 
-const image = fs.readFileSync(imagePath);
-const base64 = image.toString("base64");
-const media = `data:image/jpeg;base64,${base64}`;
+const photos = [
+  "public/snapchat-photo.jpg",
+  "public/snapchat-photo-2.jpg",
+  "public/snapchat-photo-3.jpg",
+  "public/snapchat-photo-4.jpg",
+];
 
 const story = JSON.parse(fs.readFileSync(storyPath, "utf8"));
 
-if (!story.content?.snapchat?.length) {
-  throw new Error("没有找到 content.snapchat 数据");
+if (!story.content?.snapchat || story.content.snapchat.length < photos.length) {
+  throw new Error(
+    `Snapchat 快拍数量不足：需要至少 ${photos.length} 条，请先在 story.json 中添加 4 条快拍数据`,
+  );
 }
 
-story.content.snapchat[0].media = media;
-story.content.snapchat[0].kind = "image";
+photos.forEach((imagePath, index) => {
+  if (!fs.existsSync(imagePath)) {
+    throw new Error(`找不到照片：${imagePath}`);
+  }
+
+  const image = fs.readFileSync(imagePath);
+  const ext = imagePath.split(".").pop()?.toLowerCase();
+
+  const mime =
+    ext === "png"
+      ? "image/png"
+      : ext === "webp"
+        ? "image/webp"
+        : "image/jpeg";
+
+  const media = `data:${mime};base64,${image.toString("base64")}`;
+
+  story.content.snapchat[index].media = media;
+  story.content.snapchat[index].kind = "image";
+});
 
 fs.writeFileSync(
   storyPath,
@@ -23,4 +45,4 @@ fs.writeFileSync(
   "utf8",
 );
 
-console.log("已将 Snapchat 图片转换为内嵌 Base64 格式");
+console.log(`已将 ${photos.length} 张 Snapchat 照片转换为内嵌 Base64 格式`);
