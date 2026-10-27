@@ -321,7 +321,6 @@ export function SafariSkin(p: Props) {
       <Header p={p} />
       <div className="catalog-scroll">
         <h1>{tab}</h1>
-        <h1>{tab}</h1>
 
 {tab === "历史记录" ? (
   <div style={{ display: "flex", flexDirection: "column", gap: "0px" }}>
@@ -386,7 +385,6 @@ export function SafariSkin(p: Props) {
   items={tab === "历史记录" ? [] : items}
   label="没有匹配的虚构网页"
 />
-        <Empty items={items} label="没有匹配的虚构网页" />
       </div>
       <label className="safari-address">
         <LockKeyhole size={13} />
