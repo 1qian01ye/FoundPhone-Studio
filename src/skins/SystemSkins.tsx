@@ -557,8 +557,7 @@ export function ClockSkin(p: Props) {
 
 useEffect(() => {
   setEnabled(alarmData.map((_, index) => `fixed-alarm-${index}`));
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-}, []);
+}, [setEnabled, alarmData]);
 
   const [seconds, setSeconds] = useState(0);
   const [running, setRunning] = useState(false);
