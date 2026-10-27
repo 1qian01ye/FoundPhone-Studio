@@ -535,7 +535,26 @@ export function MailSkin(p: Props) {
 }
 export function ClockSkin(p: Props) {
   const { tab, setTab, items } = useContent(p, "闹钟");
-  const [enabled, setEnabled] = useSkinState<string[]>(p, "alarms", []);
+
+  const alarmData = [
+    { time: "06:30", note: "不慌 再眯会" },
+    { time: "06:35", note: "醒醒 这个世界需要你" },
+    {
+      time: "06:40",
+      note: "努力不一定会被看到 但迟到一定会",
+    },
+    { time: "06:45", note: "帅哥请起床" },
+    { time: "06:50", note: "现在起床变帅一百倍" },
+    { time: "06:55", note: "立马起床奶蛙送你去上学" },
+    { time: "07:00", note: "面对疾风吧" },
+  ];
+
+  const [enabled, setEnabled] = useSkinState<string[]>(
+    p,
+    "alarms",
+    alarmData.map((_, index) => `fixed-alarm-${index}`),
+  );
+
   const [seconds, setSeconds] = useState(0);
   const [running, setRunning] = useState(false);
   const [now, setNow] = useState(() => Date.now());
@@ -547,7 +566,11 @@ export function ClockSkin(p: Props) {
 
   useEffect(() => {
     if (!running) return;
-    const timer = window.setInterval(() => setSeconds((s) => s + 1), 1000);
+
+    const timer = window.setInterval(() => {
+      setSeconds((s) => s + 1);
+    }, 1000);
+
     return () => window.clearInterval(timer);
   }, [running]);
 
@@ -592,6 +615,7 @@ export function ClockSkin(p: Props) {
               {String(Math.floor(seconds / 60)).padStart(2, "0")}:
               {String(seconds % 60).padStart(2, "0")}
             </output>
+
             <div>
               <button
                 onClick={() => {
@@ -601,38 +625,49 @@ export function ClockSkin(p: Props) {
               >
                 复位
               </button>
+
               <button onClick={() => setRunning((value) => !value)}>
                 {running ? "暂停" : "开始"}
               </button>
             </div>
           </div>
         ) : (
-          items.map((i) => (
-            <div className="alarm-row" key={i.id}>
-              <button onClick={() => p.onItem(i)}>
-                <time>{meta(i, "clock", i.time.slice(-5))}</time>
-                <small>{i.title}</small>
-              </button>
+          <div className="world-clock-list">
+            {alarmData.map((alarm, index) => {
+              const id = `fixed-alarm-${index}`;
+              const isEnabled = enabled.includes(id);
 
-              <button
-                role="switch"
-                aria-label={`闹钟${i.title}`}
-                aria-checked={enabled.includes(i.id)}
-                className={`native-switch ${
-                  enabled.includes(i.id) ? "on" : ""
-                }`}
-                onClick={() =>
-                  setEnabled(
-                    enabled.includes(i.id)
-                      ? enabled.filter((x) => x !== i.id)
-                      : [...enabled, i.id],
-                  )
-                }
-              >
-                <span />
-              </button>
-            </div>
-          ))
+              return (
+                <div className="alarm-row" key={id}>
+                  <div className="fixed-alarm-info">
+                    <time className="fixed-alarm-time">
+                      {alarm.time}
+                    </time>
+                    <small className="fixed-alarm-note">
+                      {alarm.note}
+                    </small>
+                  </div>
+
+                  <button
+                    type="button"
+                    role="switch"
+                    aria-label={`${alarm.time} ${alarm.note}`}
+                    aria-checked={isEnabled}
+                    className={`native-switch ${isEnabled ? "on" : ""}`}
+                    onClick={() =>
+                      setEnabled((previous) =>
+                        previous.includes(id)
+                          ? previous.filter((item) => item !== id)
+                          : [...previous, id],
+                      )
+                    }
+                  >
+                    <span />
+                  </button>
+                </div>
+              );
+            })}
+          </div>
         )}
       </div>
 
