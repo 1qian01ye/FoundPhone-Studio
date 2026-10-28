@@ -44,9 +44,35 @@ import {
 } from "./shared";
 export function PhoneSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "最近通话");
-  const [digits, setDigits] = useState(""),
-    [call, setCall] = useState("");
-  const list = tab === "收藏" ? items.filter((i) => i.favorite) : items;
+const [digits, setDigits] = useState(""),
+  [call, setCall] = useState("");
+
+const favoriteNames = [
+  "Mother",
+  "Father",
+  "飞总",
+  "老师",
+  "杨云皓",
+  "小胖同学",
+];
+
+const favoriteItems = favoriteNames.map((name, index) => {
+  const existing = items.find((i) => i.title === name);
+
+  return (
+    existing ?? {
+      id: `phone-favorite-${index}`,
+      title: name,
+      body: `${name}的联系人`,
+      sender: "",
+      time: "2026-10-28",
+      kind: "contact",
+      favorite: true,
+    }
+  );
+});
+
+const list = tab === "收藏" ? favoriteItems : items;
   return (
     <div className="catalog-skin native-phone">
       <Header p={p} />
