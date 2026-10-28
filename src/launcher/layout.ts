@@ -217,6 +217,7 @@ const hiddenHomeAppIds = new Set([
   "twitter",
   "telegram",
   "discord",
+  "weibo",
   "contacts",
   "calendar",
   "wallet",
