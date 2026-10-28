@@ -181,10 +181,16 @@ export function compileStory(raw: unknown): { story: Story; work: Work } {
     unique(chat.id, `chats.${n}.id`);
     if (!registry.some((a) => a.id === chat.app && a.engine === "messaging"))
       fail(`chats.${n}.app`, "需要聊天 App");
-    chat.participants.forEach((c, j) => {
-      if (!contacts.has(c) && c !== "owner")
-        fail(`chats.${n}.participants.${j}`, "联系人不存在: " + c);
-    });
+    
+chat.participants.forEach((c, j) => {
+  if (
+    !contacts.has(c) &&
+    c !== "owner" &&
+    chat.app !== "messages"
+  )
+    fail(`chats.${n}.participants.${j}`, "联系人不存在: " + c);
+});
+
     chat.messages.forEach((m, j) => {
       if (
         m.senderId &&
@@ -199,9 +205,9 @@ export function compileStory(raw: unknown): { story: Story; work: Work } {
           ...item,
           title: chat.title,
           sender:
-            senderId === "owner"
-              ? s.phone.owner
-              : contacts.get(senderId || "")?.name || m.sender || s.phone.owner,
+  senderId === "owner"
+    ? s.phone.owner
+    : contacts.get(senderId || "")?.name || chat.title || m.sender || s.phone.owner,
           avatar: m.avatar || contacts.get(senderId || "")?.avatar || "",
           outgoing: senderId === "owner" || m.outgoing,
           meta: {
