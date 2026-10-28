@@ -221,67 +221,102 @@ export function NativeDetail({
             >
               {safariSection === "首页" ? (
                 <>
+                  
                   <div
                     style={{
+                      position: "relative",
+                      overflow: "hidden",
+                      minHeight: 245,
                       padding: "28px 20px 24px",
-                      background:
-                        "linear-gradient(145deg, #171717 0%, #381719 55%, #8b2424 100%)",
                       color: "#fff",
+                      background:
+                        "linear-gradient(90deg, rgba(20,8,10,.96), rgba(35,10,14,.72)), linear-gradient(145deg, #171717, #8b2424)",
                     }}
                   >
                     <div
                       style={{
-                        fontSize: 11,
-                        letterSpacing: 3,
-                        color: "#f5b9b9",
-                        marginBottom: 12,
-                      }}
-                    >
-                      KIMETSU NO YAIBA
-                    </div>
-                    <h1
-                      style={{
-                        fontSize: 36,
-                        lineHeight: 1.2,
-                        margin: "0 0 12px",
-                        fontWeight: 900,
-                      }}
-                    >
-                      鬼灭之刃
-                    </h1>
-                    <p
-                      style={{
-                        fontSize: 13,
-                        lineHeight: 1.9,
-                        margin: 0,
-                        color: "#f3dddd",
-                      }}
-                    >
-                      跨越黑暗，挥刀守护重要的人。
-                    </p>
-                    <div
-                      style={{
+                        position: "absolute",
+                        inset: 0,
                         display: "flex",
-                        gap: 8,
-                        marginTop: 22,
-                        flexWrap: "wrap",
+                        alignItems: "flex-end",
+                        justifyContent: "flex-end",
+                        pointerEvents: "none",
                       }}
                     >
-                      {["热血", "冒险", "羁绊"].map((tag) => (
-                        <span
-                          key={tag}
+                      {demonSlayerCharacters.map((character) => (
+                        <img
+                          key={character.name}
+                          src={character.image}
+                          alt=""
                           style={{
-                            border: "1px solid #ffffff55",
-                            borderRadius: 20,
-                            padding: "5px 12px",
-                            fontSize: 12,
+                            width: "25%",
+                            height: 210,
+                            objectFit: "contain",
+                            objectPosition: "bottom",
                           }}
-                        >
-                          {tag}
-                        </span>
+                        />
                       ))}
                     </div>
+
+                    <div style={{ position: "relative", zIndex: 1 }}>
+                      <div
+                        style={{
+                          fontSize: 11,
+                          letterSpacing: 3,
+                          color: "#f5b9b9",
+                          marginBottom: 12,
+                        }}
+                      >
+                        KIMETSU NO YAIBA
+                      </div>
+
+                      <h1
+                        style={{
+                          fontSize: 36,
+                          lineHeight: 1.2,
+                          margin: "0 0 12px",
+                          fontWeight: 900,
+                        }}
+                      >
+                        鬼灭之刃
+                      </h1>
+
+                      <p
+                        style={{
+                          fontSize: 13,
+                          lineHeight: 1.9,
+                          margin: 0,
+                          color: "#f3dddd",
+                        }}
+                      >
+                        跨越黑暗，挥刀守护重要的人。
+                      </p>
+
+                      <div
+                        style={{
+                          display: "flex",
+                          gap: 8,
+                          marginTop: 22,
+                          flexWrap: "wrap",
+                        }}
+                      >
+                        {["热血", "冒险", "羁绊"].map((tag) => (
+                          <span
+                            key={tag}
+                            style={{
+                              border: "1px solid #ffffff55",
+                              borderRadius: 20,
+                              padding: "5px 12px",
+                              fontSize: 12,
+                            }}
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
                   </div>
+
 
                   <div style={{ padding: "22px 18px" }}>
                     <h2 style={{ fontSize: 21, margin: "0 0 12px" }}>
