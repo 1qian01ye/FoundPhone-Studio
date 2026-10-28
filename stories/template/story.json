@@ -946,57 +946,6 @@
   }
 ]
 },
-{
-  "id": "qq-lv-zhenxi",
-  "app": "qq",
-  "title": "吕政熙",
-  "participants": ["owner", "qq-lv-zhenxi"],
-  "messages": [
-    {"id":"qq-lv-msg-001","time":"2026-08-17 17:57","body":"打不打","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-002","time":"2026-08-17 17:57","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"owner"},
-    {"id":"qq-lv-msg-003","time":"2026-08-23 18:45","body":"上号","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-004","time":"2026-08-23 18:45","body":"等会","senderId":"owner"},
-    {"id":"qq-lv-msg-005","time":"2026-08-23 20:30","body":"来","senderId":"owner"},
-    {"id":"qq-lv-msg-006","time":"2026-08-23 20:30","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-007","time":"2026-09-04 13:23","body":"来不来","senderId":"owner"},
-    {"id":"qq-lv-msg-008","time":"2026-09-04 13:23","body":"等一下马上","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-009","time":"2026-09-04 13:34","body":"来","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-010","time":"2026-09-10 16:00","body":"玩不玩","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-011","time":"2026-09-10 16:00","body":"今天玩不了","senderId":"owner"},
-    {"id":"qq-lv-msg-012","time":"2026-09-16 17:10","body":"上号","senderId":"owner"},
-    {"id":"qq-lv-msg-013","time":"2026-09-16 17:10","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-014","time":"2026-09-30 19:28","body":"终于放假了","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-015","time":"2026-09-30 19:28","body":"爽玩","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-016","time":"2026-09-30 19:28","body":"来了","senderId":"owner"},
-    {"id":"qq-lv-msg-017","time":"2026-10-07 22:33","body":"粥","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-018","time":"2026-10-07 22:33","body":"明天出去玩不来了早睡","senderId":"owner"},
-    {"id":"qq-lv-msg-019","time":"2026-10-07 22:33","body":"和谁","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-020","time":"2026-10-07 22:33","body":"沈子航智恩涵，去青龙湖耍","senderId":"owner"},
-    {"id":"qq-lv-msg-021","time":"2026-10-07 22:33","body":"哦…","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-022","time":"2026-10-07 22:33","body":"咋了","senderId":"owner"},
-    {"id":"qq-lv-msg-023","time":"2026-10-07 22:33","body":"我前两天也去了那里玩","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-024","time":"2026-10-07 22:33","body":"好玩不","senderId":"owner"},
-    {"id":"qq-lv-msg-025","time":"2026-10-07 22:33","body":"还可以","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-026","time":"2026-10-07 22:33","body":"OK下次再一起去","senderId":"owner"},
-    {"id":"qq-lv-msg-027","time":"2026-10-07 22:33","body":"好","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-028","time":"2026-10-11 16:37","body":"我想玩下和平精英","senderId":"owner"},
-    {"id":"qq-lv-msg-029","time":"2026-10-11 16:37","body":"来哥带你","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-030","time":"2026-10-11 17:45","body":"你好菜","senderId":"owner"},
-    {"id":"qq-lv-msg-031","time":"2026-10-11 17:45","body":"失误","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-032","time":"2026-10-14 18:56","body":"https://peace-squad.invalid/invite/H8mQ3vZ6","senderId":"owner"},
-    {"id":"qq-lv-msg-033","time":"2026-10-15 17:38","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-034","time":"2026-10-18 14:39","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-035","time":"2026-10-23 16:27","body":"https://peace-squad.invalid/invite/H8mQ3vZ6","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-036","time":"2026-10-27 22:46","body":"你的心情是否还和四月一样","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-037","time":"2026-10-27 22:46","body":"啥意思现在不是十月吗","senderId":"owner"},
-    {"id":"qq-lv-msg-038","time":"2026-10-27 22:46","body":"不愧是四川人十四不分","senderId":"owner"},
-    {"id":"qq-lv-msg-039","time":"2026-10-27 22:46","body":"没事","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-040","time":"2026-10-27 22:46","body":"和平精英走起","senderId":"owner"},
-    {"id":"qq-lv-msg-041","time":"2026-11-05 17:22","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"owner"},
-    {"id":"qq-lv-msg-042","time":"2026-11-08 18:45","body":"https://peace-squad.invalid/invite/H8mQ3vZ6","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-043","time":"2026-11-15 12:55","body":"https://peace-squad.invalid/invite/H8mQ3vZ6","senderId":"owner"}
-  ]
-},
     {
   "id": "qq-chen-shen",
   "app": "qq",
@@ -1150,15 +1099,367 @@
   ]
 },
 {
-  "id": "qq-yang-yunhao",
+  "id": "qq-lv-zhenxi",
   "app": "qq",
-  "title": "杨云皓",
-  "participants": ["owner", "qq-yang-yunhao"],
+  "title": "吕政熙",
+  "participants": ["owner", "qq-lv-zhenxi"],
+  "messages": [
+    {"id":"qq-lv-msg-001","time":"2026-08-17 17:57","body":"打不打","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-002","time":"2026-08-17 17:57","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"owner"},
+    {"id":"qq-lv-msg-003","time":"2026-08-23 18:45","body":"上号","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-004","time":"2026-08-23 18:45","body":"等会","senderId":"owner"},
+    {"id":"qq-lv-msg-005","time":"2026-08-23 20:30","body":"来","senderId":"owner"},
+    {"id":"qq-lv-msg-006","time":"2026-08-23 20:30","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-007","time":"2026-09-04 13:23","body":"来不来","senderId":"owner"},
+    {"id":"qq-lv-msg-008","time":"2026-09-04 13:23","body":"等一下马上","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-009","time":"2026-09-04 13:34","body":"来","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-010","time":"2026-09-10 16:00","body":"玩不玩","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-011","time":"2026-09-10 16:00","body":"今天玩不了","senderId":"owner"},
+    {"id":"qq-lv-msg-012","time":"2026-09-16 17:10","body":"上号","senderId":"owner"},
+    {"id":"qq-lv-msg-013","time":"2026-09-16 17:10","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-014","time":"2026-09-30 19:28","body":"终于放假了","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-015","time":"2026-09-30 19:28","body":"爽玩","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-016","time":"2026-09-30 19:28","body":"来了","senderId":"owner"},
+    {"id":"qq-lv-msg-017","time":"2026-10-07 22:33","body":"粥","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-018","time":"2026-10-07 22:33","body":"明天出去玩不来了早睡","senderId":"owner"},
+    {"id":"qq-lv-msg-019","time":"2026-10-07 22:33","body":"和谁","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-020","time":"2026-10-07 22:33","body":"沈子航智恩涵，去青龙湖耍","senderId":"owner"},
+    {"id":"qq-lv-msg-021","time":"2026-10-07 22:33","body":"哦…","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-022","time":"2026-10-07 22:33","body":"咋了","senderId":"owner"},
+    {"id":"qq-lv-msg-023","time":"2026-10-07 22:33","body":"我前两天也去了那里玩","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-024","time":"2026-10-07 22:33","body":"好玩不","senderId":"owner"},
+    {"id":"qq-lv-msg-025","time":"2026-10-07 22:33","body":"还可以","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-026","time":"2026-10-07 22:33","body":"OK下次再一起去","senderId":"owner"},
+    {"id":"qq-lv-msg-027","time":"2026-10-07 22:33","body":"好","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-028","time":"2026-10-11 16:37","body":"我想玩下和平精英","senderId":"owner"},
+    {"id":"qq-lv-msg-029","time":"2026-10-11 16:37","body":"来哥带你","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-030","time":"2026-10-11 17:45","body":"你好菜","senderId":"owner"},
+    {"id":"qq-lv-msg-031","time":"2026-10-11 17:45","body":"失误","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-032","time":"2026-10-14 18:56","body":"https://peace-squad.invalid/invite/H8mQ3vZ6","senderId":"owner"},
+    {"id":"qq-lv-msg-033","time":"2026-10-15 17:38","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-034","time":"2026-10-18 14:39","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-035","time":"2026-10-23 16:27","body":"https://peace-squad.invalid/invite/H8mQ3vZ6","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-036","time":"2026-10-27 22:46","body":"你的心情是否还和四月一样","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-037","time":"2026-10-27 22:46","body":"啥意思现在不是十月吗","senderId":"owner"},
+    {"id":"qq-lv-msg-038","time":"2026-10-27 22:46","body":"不愧是四川人十四不分","senderId":"owner"},
+    {"id":"qq-lv-msg-039","time":"2026-10-27 22:46","body":"没事","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-040","time":"2026-10-27 22:46","body":"和平精英走起","senderId":"owner"},
+    {"id":"qq-lv-msg-041","time":"2026-11-05 17:22","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"owner"},
+    {"id":"qq-lv-msg-042","time":"2026-11-08 18:45","body":"https://peace-squad.invalid/invite/H8mQ3vZ6","senderId":"qq-lv-zhenxi"},
+    {"id":"qq-lv-msg-043","time":"2026-11-15 12:55","body":"https://peace-squad.invalid/invite/H8mQ3vZ6","senderId":"owner"}
+  ]
+},
+{
+  "id": "qq-zhu-yingchen",
+  "app": "qq",
+  "title": "朱映宸",
+  "participants": ["owner", "qq-zhu-yingchen"],
   "messages": [
     {
-      "id": "qq-yang-yunhao-msg-1",
-      "body": "明天见！",
-      "senderId": "qq-yang-yunhao"
+      "id": "qq-zhu-yc-msg-001",
+      "time": "2026-09-02 16:42",
+      "body": "来蛋仔？",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-002",
+      "time": "2026-09-02 16:43",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-003",
+      "time": "2026-09-02 16:48",
+      "body": "来",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-004",
+      "time": "2026-09-06 19:15",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-005",
+      "time": "2026-09-06 19:16",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-006",
+      "time": "2026-09-06 19:19",
+      "body": "等我一下",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-007",
+      "time": "2026-09-10 17:32",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-008",
+      "time": "2026-09-10 17:34",
+      "body": "上号",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-009",
+      "time": "2026-09-10 17:38",
+      "body": "来了",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-010",
+      "time": "2026-09-14 20:06",
+      "body": "蛋仔走起",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-011",
+      "time": "2026-09-14 20:07",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-012",
+      "time": "2026-09-14 20:12",
+      "body": "马上",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-013",
+      "time": "2026-09-18 15:24",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-014",
+      "time": "2026-09-18 15:26",
+      "body": "来不来",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-015",
+      "time": "2026-09-18 15:31",
+      "body": "来啦",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-016",
+      "time": "2026-09-18 15:32",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-017",
+      "time": "2026-09-23 18:47",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-018",
+      "time": "2026-09-23 18:49",
+      "body": "开一把",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-019",
+      "time": "2026-09-23 18:50",
+      "body": "拉我",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-020",
+      "time": "2026-09-27 20:12",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-021",
+      "time": "2026-09-27 20:13",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-022",
+      "time": "2026-09-27 20:16",
+      "body": "来了",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-023",
+      "time": "2026-10-01 16:08",
+      "body": "蛋仔？",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-024",
+      "time": "2026-10-01 16:09",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-025",
+      "time": "2026-10-01 16:13",
+      "body": "来了来了",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-026",
+      "time": "2026-10-05 19:41",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-027",
+      "time": "2026-10-05 19:42",
+      "body": "快点",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-028",
+      "time": "2026-10-05 19:45",
+      "body": "好",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-029",
+      "time": "2026-10-09 17:18",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-030",
+      "time": "2026-10-09 17:20",
+      "body": "上线",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-031",
+      "time": "2026-10-09 17:23",
+      "body": "拉一下",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-032",
+      "time": "2026-10-13 20:21",
+      "body": "来玩蛋仔",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-033",
+      "time": "2026-10-13 20:22",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-034",
+      "time": "2026-10-13 20:26",
+      "body": "来",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-035",
+      "time": "2026-10-18 15:37",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-036",
+      "time": "2026-10-18 15:39",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-037",
+      "time": "2026-10-18 15:43",
+      "body": "马上",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-038",
+      "time": "2026-10-22 18:54",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-039",
+      "time": "2026-10-22 18:55",
+      "body": "开吗",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-040",
+      "time": "2026-10-22 18:59",
+      "body": "开",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-041",
+      "time": "2026-10-27 16:34",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-042",
+      "time": "2026-10-27 16:35",
+      "body": "来不来",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-043",
+      "time": "2026-10-27 16:39",
+      "body": "来",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-044",
+      "time": "2026-11-01 19:06",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-045",
+      "time": "2026-11-01 19:08",
+      "body": "上线",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-046",
+      "time": "2026-11-01 19:11",
+      "body": "来了",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-047",
+      "time": "2026-11-06 17:26",
+      "body": "来蛋仔",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-048",
+      "time": "2026-11-06 17:27",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-049",
+      "time": "2026-11-06 17:31",
+      "body": "来",
+      "senderId": "owner"
+    },
+    {
+      "id": "qq-zhu-yc-msg-050",
+      "time": "2026-11-11 20:03",
+      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+      "senderId": "qq-zhu-yingchen"
+    },
+    {
+      "id": "qq-zhu-yc-msg-051",
+      "time": "2026-11-11 20:05",
+      "body": "好，来了",
+      "senderId": "owner"
     }
   ]
 },
