@@ -376,8 +376,6 @@ export function NativeDetail({
     color: "#637c8d",
     image: "https://asia.sega.com/kimetsu_hinokami/en/assets/img/sub/character/chara4_thumb.png",
   },
-]}
-
                       ].map((character) => (
                         <button
                           key={character.name}
