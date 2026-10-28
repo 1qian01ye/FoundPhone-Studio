@@ -188,51 +188,51 @@
   ]
 },
 {
-  "id": "chat-zhienhan-oct07",
+  "id": "chat-contact-zhi-enhan-oct07",
   "app": "messages",
   "title": "智恩涵",
-  "participants": ["owner", "zhienhan"],
+  "participants": ["owner", "contact-zhi-enhan"],
   "messages": [
     {
-      "id": "msg-zhienhan-oct07-1",
+      "id": "msg-contact-zhi-enhan-oct07-1",
       "body": "这里信号好差",
-      "senderId": "zhienhan"
+      "senderId": "contact-zhi-enhan"
     },
     {
-      "id": "msg-zhienhan-oct07-2",
+      "id": "msg-contact-zhi-enhan-oct07-2",
       "body": "你快过来了吗，自行车已经给你扫好了",
-      "senderId": "zhienhan"
+      "senderId": "contact-zhi-enhan"
     },
     {
-      "id": "msg-zhienhan-oct07-3",
+      "id": "msg-contact-zhi-enhan-oct07-3",
       "body": "马上过来",
       "senderId": "owner"
     },
     {
-      "id": "msg-zhienhan-oct07-4",
+      "id": "msg-contact-zhi-enhan-oct07-4",
       "body": "可是我不会骑自行车",
       "senderId": "owner"
     },
     {
-      "id": "msg-zhienhan-oct07-5",
+      "id": "msg-contact-zhi-enhan-oct07-5",
       "body": "没事儿，我还拿了代步车，你先过来吧",
-      "senderId": "zhienhan"
+      "senderId": "contact-zhi-enhan"
     }
   ]
 },
 {
-  "id": "chat-lvzhengxi-oct06",
+  "id": "chat-contact-lv-zhengxi-oct06",
   "app": "messages",
   "title": "吕政熙",
-  "participants": ["owner", "lvzhengxi"],
+  "participants": ["owner", "contact-lv-zhengxi"],
   "messages": [
     {
-      "id": "msg-lvzhengxi-oct06-1",
+      "id": "msg-contact-lv-zhengxi-oct06-1",
       "body": "你快到了吗？",
-      "senderId": "lvzhengxi"
+      "senderId": "contact-lv-zhengxi"
     },
     {
-      "id": "msg-lvzhengxi-oct06-2",
+      "id": "msg-contact-lv-zhengxi-oct06-2",
       "body": "我马上就到",
       "senderId": "owner"
     }
@@ -265,23 +265,23 @@
   ]
 },
 {
-  "id": "chat-chen-shen-sep25",
+  "id": "chat-contact-chen-shen-sep25",
   "app": "messages",
   "title": "陈燊",
-  "participants": ["owner", "chen-shen"],
+  "participants": ["owner", "contact-chen-shen"],
   "messages": [
     {
-      "id": "msg-chen-shen-sep25-1",
+      "id": "msg-contact-chen-shen-sep25-1",
       "body": "你怎么不回我微信",
-      "senderId": "chen-shen"
+      "senderId": "contact-chen-shen"
     },
     {
-      "id": "msg-chen-shen-sep25-2",
+      "id": "msg-contact-chen-shen-sep25-2",
       "body": "明天你穿什么颜色的衣服",
-      "senderId": "chen-shen"
+      "senderId": "contact-chen-shen"
     },
     {
-      "id": "msg-chen-shen-sep25-3",
+      "id": "msg-contact-chen-shen-sep25-3",
       "body": "你就等着就行了",
       "senderId": "owner"
     }
