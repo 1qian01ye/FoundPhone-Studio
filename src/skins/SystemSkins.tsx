@@ -27,7 +27,7 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { download } from "../io";
-import { safeMedia, type Item } from "../schema";
+import { makeItem, safeMedia, type Item } from "../schema";
 import {
   Add,
   Avatar,
@@ -74,24 +74,20 @@ const [digits, setDigits] = useState(""),
     "智恩涵",
   ];
 
-  const contactItems: Item[] = contactNames.map((name, index) => {
-    const existing = items.find((i) => i.title === name);
+  const contactItems: Item[] = contactNames.map((name) => {
+    const id = `contact-item-${name}`;
+    const existing = items.find((item) => item.id === id);
+
     if (existing) return existing;
 
-    return {
-      id: `contact-item-${index}`,
+    return makeItem({
+      id,
       title: name,
       body: "",
-      richText: "",
-      meta: {},
-      time: "",
       sender: name,
-      avatar: "",
-      kind: "text",
-      media: [],
-      hidden: false,
-      comments: [],
-    } as Item;
+      time: "",
+      favorite: favoriteNames.includes(name),
+    });
   });
 
   const favoriteItems = favoriteNames
