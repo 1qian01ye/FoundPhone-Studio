@@ -208,7 +208,7 @@ export function QQSkin(p: Props) {
             {!p.thread && (
         <div className="qq-profile-bar">
          <img
-  src="/linqiushui.jpg"
+  src={`${import.meta.env.BASE_URL}linqiushui.jpg`}
   alt="林秋水"
   style={{
     width: 40,
