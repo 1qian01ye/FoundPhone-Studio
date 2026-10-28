@@ -57,21 +57,9 @@ const favoriteNames = [
   "小胖同学",
 ];
 
-const favoriteItems = favoriteNames.map((name, index) => {
-  const existing = items.find((i) => i.title === name);
-
-  return (
-    existing ?? {
-      id: `phone-favorite-${index}`,
-      title: name,
-      body: `${name}的联系人`,
-      sender: "",
-      time: "2026-10-28",
-      kind: "contact",
-      favorite: true,
-    }
-  );
-});
+const favoriteItems = favoriteNames
+  .map((name) => items.find((i) => i.title === name))
+  .filter((i) => i !== undefined);
 
 const list = tab === "收藏" ? favoriteItems : items;
   return (
