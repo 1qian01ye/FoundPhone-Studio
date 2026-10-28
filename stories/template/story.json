@@ -175,7 +175,6 @@
 ],
   "chats": [
     {
-      {
   "id": "spam-hokage",
   "app": "messages",
   "title": "火影忍者手游",
@@ -378,10 +377,9 @@
       "senderId": "spam-video-sender"
     }
   ]
-}
-    {
-      "id": "test-chat-wechat",
-      "app": "wechat",
+},
+{
+  "id": "test-chat-wechat",
       "title": "测试会话",
       "participants": [
         "owner",
