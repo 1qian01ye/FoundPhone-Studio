@@ -4982,3 +4982,50 @@ label {
   align-items: center;
   justify-content: center;
 }
+
+/* 最近通话：完整显示姓名、时间和接听方向 */
+.call-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.call-row-info {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: visible;
+}
+
+.call-row-info strong {
+  display: block;
+  white-space: normal;
+  overflow: visible;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-overflow: clip;
+}
+
+.call-row-info small {
+  display: block;
+  white-space: normal;
+}
+
+.call-row time {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.call-direction-icon {
+  display: flex;
+  flex: 0 0 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-direction-icon.missed,
+.missed-text {
+  color: #e5484d;
+}
+
