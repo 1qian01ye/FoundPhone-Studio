@@ -346,31 +346,38 @@ export function NativeDetail({
                         gap: 12,
                       }}
                     >
-                      {[
-                        {
-                          name: "灶门炭治郎",
-                          desc: "温柔坚毅的鬼杀队剑士",
-                          symbol: "炭",
-                          color: "#285b53",
-                        },
-                        {
-                          name: "灶门祢豆子",
-                          desc: "努力守护人类的鬼",
-                          symbol: "禰",
-                          color: "#a84d70",
-                        },
-                        {
-                          name: "我妻善逸",
-                          desc: "关键时刻爆发的剑士",
-                          symbol: "雷",
-                          color: "#b58a24",
-                        },
-                        {
-                          name: "嘴平伊之助",
-                          desc: "勇猛直率的山中少年",
-                          symbol: "猪",
-                          color: "#637c8d",
-                        },
+                      
+{[
+  {
+    name: "灶门炭治郎",
+    desc: "温柔坚毅的鬼杀队剑士",
+    symbol: "炭",
+    color: "#285b53",
+    image: "https://asia.sega.com/kimetsu_hinokami/en/assets/img/sub/character/chara1_thumb.png",
+  },
+  {
+    name: "灶门祢豆子",
+    desc: "努力守护人类的鬼",
+    symbol: "禰",
+    color: "#a84d70",
+    image: "https://asia.sega.com/kimetsu_hinokami/en/assets/img/sub/character/chara2_thumb.png",
+  },
+  {
+    name: "我妻善逸",
+    desc: "关键时刻爆发的剑士",
+    symbol: "雷",
+    color: "#b58a24",
+    image: "https://asia.sega.com/kimetsu_hinokami/en/assets/img/sub/character/chara3_thumb.png",
+  },
+  {
+    name: "嘴平伊之助",
+    desc: "勇猛直率的山中少年",
+    symbol: "猪",
+    color: "#637c8d",
+    image: "https://asia.sega.com/kimetsu_hinokami/en/assets/img/sub/character/chara4_thumb.png",
+  },
+]}
+
                       ].map((character) => (
                         <button
                           key={character.name}
