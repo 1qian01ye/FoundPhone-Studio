@@ -165,6 +165,12 @@
     "name": "智恩涵",
     "phone": "",
     "bio": ""
+  }，
+  {
+    "id": "test-contact",
+    "name": "测试联系人",
+    "phone": "",
+    "bio": "这是一条测试内容。"
   }
 ],
   "chats": [
