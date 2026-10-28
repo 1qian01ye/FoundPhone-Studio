@@ -264,3 +264,79 @@
 .ios18 .qq-transfer-top > div { min-width:0; flex:1; }
 .ios18 .qq-transfer-top strong { white-space:nowrap; }
 .phone-shell.ios18:has(.qq-native-thread) .status-bar { background:#f8f7fa; color:#111; }
+
+/* QQ 游戏邀请卡片 */
+.qq-game-invite {
+  width: 248px;
+  max-width: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #20252b;
+  text-align: left;
+}
+
+.qq-game-invite-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 12px;
+}
+
+.qq-game-invite-icon {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+}
+
+.qq-game-invite-info {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.qq-game-invite-info strong {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.qq-game-invite-info span {
+  color: #777f89;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.qq-game-invite-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  border-top: 1px solid #edf0f3;
+  background: #fafbfc;
+  font-size: 11px;
+  color: #8a929c;
+}
+
+.qq-game-invite-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #0099ff;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.qq-native-bubble:has(.qq-game-invite) {
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+  border: 1px solid #e7ebef;
+}
