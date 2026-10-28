@@ -4963,3 +4963,22 @@ label {
   border-radius: 50%;
   object-fit: cover;
 }
+
+/* 收藏和通讯录的首字母头像固定为正圆 */
+.native-phone .call-row > .avatar,
+.native-phone .call-row > div:first-child,
+.native-phone .call-row > span:first-child {
+  flex: 0 0 40px;
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  border-radius: 50%;
+  aspect-ratio: 1 / 1;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
