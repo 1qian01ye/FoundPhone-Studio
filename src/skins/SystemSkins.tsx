@@ -94,8 +94,8 @@ const [digits, setDigits] = useState(""),
     .map((name) => items.find((i) => i.title === name))
     .filter((i): i is Item => i !== undefined);
 
-  const list =
-      const getContactInitial = (name: string): string => {
+  
+  const getContactInitial = (name: string): string => {
     const initials: Record<string, string> = {
       "陈燊": "C",
       Father: "F",
@@ -118,6 +118,8 @@ const [digits, setDigits] = useState(""),
   const contactGroups = Array.from(
     new Set(contactItems.map((item) => getContactInitial(item.title))),
   ).sort((a, b) => a.localeCompare(b));
+
+  const list =
     tab === "收藏"
       ? favoriteItems
       : tab === "通讯录"
