@@ -51,7 +51,7 @@ function Bubbles({
         lastDate = date;
 
         return (
-          <React.Fragment key={i.id}>
+          <div key={`message-group-${i.id}`}>
             {showDate && (
               <time className="bubble-date">
                 {new Date(`${date}T12:00:00`).toLocaleDateString(
@@ -140,7 +140,7 @@ function Bubbles({
                 </>
               )}
             </div>
-          </React.Fragment>
+          </div>
         );
       })}
     </div>
