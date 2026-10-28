@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   ChevronLeft,
   Menu,
@@ -57,7 +58,14 @@ const gameInvite = i.body.includes("delta-squad.invalid")
         color: "#d5e9ff",
         game: "peace",
       }
-    : null;
+     : i.body.includes("egg-party.invalid")
+      ? {
+          name: "蛋仔派对",
+          description: "邀请你一起玩蛋仔",
+          color: "#ffe2ed",
+          game: "egg",
+        }
+      : null;
           return (
             <div key={i.id}>
               {(n === 0 ||
