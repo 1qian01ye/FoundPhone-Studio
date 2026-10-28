@@ -57,11 +57,24 @@ const favoriteNames = [
   "小胖同学",
 ];
 
+
+const contactItems = items.filter((i) =>
+  i.id.startsWith("contact-item-")
+);
+
 const favoriteItems = favoriteNames
   .map((name) => items.find((i) => i.title === name))
   .filter((i) => i !== undefined);
 
-const list = tab === "收藏" ? favoriteItems : items;
+const list =
+  tab === "收藏"
+    ? favoriteItems
+    : tab === "通讯录"
+      ? contactItems
+      : tab === "最近通话"
+        ? items.filter((i) => !i.id.startsWith("contact-item-"))
+        : items;
+
   return (
     <div className="catalog-skin native-phone">
       <Header p={p} />
