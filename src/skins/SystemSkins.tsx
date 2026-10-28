@@ -107,14 +107,6 @@ const [digits, setDigits] = useState(""),
           ? items.filter((i) => !i.id.startsWith("contact-item-"))
           : items;
 
-  tab === "收藏"
-    ? favoriteItems
-    : tab === "通讯录"
-      ? contactItems
-      : tab === "最近通话"
-        ? items.filter((i) => !i.id.startsWith("contact-item-"))
-        : items;
-
   return (
     <div className="catalog-skin native-phone">
       <Header p={p} />
