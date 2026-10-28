@@ -44,9 +44,22 @@ export function QQThread(p: Props) {
           return (
             <div key={i.id}>
               {(n === 0 ||
-                i.time.slice(-5) !== messages[n - 1].time.slice(-5)) && (
-                <time className="qq-message-time">{i.time.slice(-5)}</time>
-              )}
+  i.time.slice(0, 10) !== messages[n - 1].time.slice(0, 10) ||
+  i.time.slice(-5) !== messages[n - 1].time.slice(-5)) && (
+  <time className="qq-message-time">
+    {(() => {
+      const match = i.time.match(
+        /^(?:\d{4}-)?(\d{1,2})-(\d{1,2})\s+(\d{1,2}:\d{2})$/,
+      );
+
+      if (match) {
+        return `${Number(match[1])}月${Number(match[2])}日 ${match[3]}`;
+      }
+
+      return i.time;
+    })()}
+  </time>
+)}
               <div
                 className={
                   "qq-native-message " + (i.outgoing ? "outgoing" : "")
