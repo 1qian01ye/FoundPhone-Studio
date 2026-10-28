@@ -199,60 +199,129 @@ export function MessagesSkin(p: Props) {
     </div>
   );
 }
+
 export function QQSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "消息");
-  const list = items.filter((i) => i.folder !== "空间" && i.kind !== "post");
+
+  const list = items.filter(
+    (i) => i.folder !== "空间" && i.kind !== "post",
+  );
+
+  const contactGroups = [
+    {
+      title: "特别关心",
+      names: ["吕政熙"],
+    },
+    {
+      title: "同学",
+      names: [
+        "A同学", "B同学", "C同学", "D同学",
+        "E同学", "F同学", "G同学", "H同学",
+        "I同学", "J同学", "K同学", "L同学",
+        "M同学", "N同学", "O同学", "P同学",
+        "Q同学", "R同学", "S同学", "T同学",
+        "U同学", "V同学", "W同学", "X同学",
+        "Y同学", "Z同学",
+      ],
+    },
+    {
+      title: "sdfj",
+      names: ["吕政熙", "杨云皓", "陈燊", "朱映宸"],
+    },
+    {
+      title: "群聊",
+      names: ["八年级二班班级群", "星途舞社通知群"],
+    },
+  ];
+
+  const matchesSearch = (name: string) =>
+    name.toLowerCase().includes(q.trim().toLowerCase());
+
   return (
     <div className="catalog-skin qq-ui">
       {!p.thread && <Header p={p} />}
-            {!p.thread && (
+
+      {!p.thread && (
         <div className="qq-profile-bar">
-         <img
-  src={`${import.meta.env.BASE_URL}linqiushui.jpg`}
-  alt="林秋水"
-  style={{
-    width: 40,
-    height: 40,
-    borderRadius: "50%",
-    objectFit: "cover",
-    flexShrink: 0,
-  }}
-/>
+          <img
+            src={`${import.meta.env.BASE_URL}linqiushui.jpg`}
+            alt="林秋水"
+            style={{
+              width: 40,
+              height: 40,
+              borderRadius: "50%",
+              objectFit: "cover",
+              flexShrink: 0,
+            }}
+          />
           <div>
             <strong>林秋水</strong>
             <small>QQ</small>
           </div>
         </div>
       )}
+
       {p.thread ? (
         <QQThread {...p} />
       ) : (
         <>
           <div className="catalog-scroll">
             <SearchBox value={q} set={setQ} />
+
             {tab === "消息" ? (
               <ChatRows p={p} items={list} />
             ) : tab === "联系人" ? (
-              <>
-                {[...new Set(list.map((i) => i.sender))].map((s) => (
-                  <button
-                    key={s}
-                    className="qq-contact"
-                    onClick={() => {
-                      const i = list.find((i) => i.sender === s);
-                      if (i) p.onThread(i.title);
-                    }}
-                  >
-                    <Avatar name={s} />
-                    {s}
-                  </button>
-                ))}
-              </>
+              <div className="qq-contacts-list">
+                {contactGroups.map((group) => {
+                  const names = group.names.filter(matchesSearch);
+
+                  if (names.length === 0) return null;
+
+                  return (
+                    <section key={group.title}>
+                      <h4 className="native-section">
+                        {group.title}（{names.length}）
+                      </h4>
+
+                      {names.map((name) => (
+                        <button
+                          key={`${group.title}-${name}`}
+                          className="qq-contact"
+                          onClick={() => {
+                            p.onThread(name);
+                            p.onRead(name);
+                          }}
+                          style={{
+                            width: "100%",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 12,
+                            padding: "10px 16px",
+                            textAlign: "left",
+                          }}
+                        >
+                          <Avatar name={name} />
+                          <span>
+                            <strong>{name}</strong>
+                            <small style={{ display: "block" }}>
+                              {group.title === "群聊"
+                                ? "QQ群聊"
+                                : "QQ好友"}
+                            </small>
+                          </span>
+                        </button>
+                      ))}
+                    </section>
+                  );
+                })}
+              </div>
             ) : (
               <div className="qq-space">
                 <h2>好友动态</h2>
                 {items
-                  .filter((i) => i.folder === "空间" || i.kind === "post")
+                  .filter(
+                    (i) => i.folder === "空间" || i.kind === "post",
+                  )
                   .map((i) => (
                     <button key={i.id} onClick={() => p.onItem(i)}>
                       <Avatar name={i.sender} src={i.avatar} />
@@ -266,6 +335,7 @@ export function QQSkin(p: Props) {
               </div>
             )}
           </div>
+
           <Tabs
             tabs={["消息", "联系人", "空间"]}
             value={tab}
@@ -277,6 +347,7 @@ export function QQSkin(p: Props) {
     </div>
   );
 }
+
 export function TelegramSkin(p: Props) {
   const { q, setQ, items } = useContent(p, "全部");
   const [folder, setFolder] = useState("全部");
