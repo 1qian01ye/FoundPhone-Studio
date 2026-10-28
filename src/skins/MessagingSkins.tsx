@@ -207,14 +207,10 @@ export function QQSkin(p: Props) {
       {!p.thread && <Header p={p} />}
             {!p.thread && (
         <div className="qq-profile-bar">
-          <img
+         <img
   src="/linqiushui.jpg"
   alt="林秋水"
-  onError={(e) => {
-    console.error("QQ 头像加载失败：", e.currentTarget.src);
-  }}
   style={{
-    display: "block",
     width: 40,
     height: 40,
     borderRadius: "50%",
