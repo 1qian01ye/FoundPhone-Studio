@@ -72,7 +72,21 @@ const [digits, setDigits] = useState(""),
     "杨云皓",
     "哲哲",
     "智恩涵",
-  ];
+    "侯王子",
+    "刘禹辰",
+    "余政霖",
+    "杨子豪",
+    "宋金泽",
+    "皮子渝",
+    "朱映宸",
+    "张誉严",
+    "陈璟翊",
+    "胡阿米",
+    "魏新航",
+    "佟弋",
+    "刘瀚辰",
+    "越艺晨",
+    ];
 
   const contactItems: Item[] = contactNames.map((name) => {
     const id = `contact-item-${name}`;
@@ -109,6 +123,20 @@ const favoriteItems = favoriteNames
       "杨云皓": "Y",
       "哲哲": "Z",
       "智恩涵": "Z",
+      "侯王子": "H",
+      "刘禹辰": "L",
+      "余政霖": "Y",
+      "杨子豪": "Y",
+      "宋金泽": "S",
+      "皮子渝": "P",
+      "朱映宸": "Z",
+      "张誉严": "Z",
+      "陈璟翊": "C",
+      "胡阿米": "H",
+      "魏新航": "W",
+      "佟弋": "T",
+      "刘瀚辰": "L",
+      "越艺晨": "Y",
     };
 
     return initials[name] ?? name.charAt(0).toUpperCase();
@@ -284,6 +312,20 @@ export function ContactsSkin(p: Props) {
       "杨云皓": "Y",
       "哲哲": "Z",
       "智恩涵": "Z",
+      "侯王子": "H",
+      "刘禹辰": "L",
+      "余政霖": "Y",
+      "杨子豪": "Y",
+      "宋金泽": "S",
+      "皮子渝": "P",
+      "朱映宸": "Z",
+      "张誉严": "Z",
+      "陈璟翊": "C",
+      "胡阿米": "H",
+      "魏新航": "W",
+      "佟弋": "T",
+      "刘瀚辰": "L",
+      "越艺晨": "Y",
     };
 
     return initials[name] ?? name.charAt(0).toUpperCase();
