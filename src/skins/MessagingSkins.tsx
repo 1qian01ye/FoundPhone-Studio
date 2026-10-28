@@ -205,11 +205,21 @@ export function QQSkin(p: Props) {
   return (
     <div className="catalog-skin qq-ui">
       {!p.thread && <Header p={p} />}
-      {!p.thread && (
+            {!p.thread && (
         <div className="qq-profile-bar">
-          <Avatar name={p.owner ?? "我"} />
+          <img
+            src="/linqiushui.jpg"
+            alt="林秋水"
+            style={{
+              width: 40,
+              height: 40,
+              borderRadius: "50%",
+              objectFit: "cover",
+              flexShrink: 0,
+            }}
+          />
           <div>
-            <strong>{p.thread || p.owner || "我的QQ"}</strong>
+            <strong>林秋水</strong>
             <small>QQ</small>
           </div>
         </div>
