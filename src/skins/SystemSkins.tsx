@@ -164,10 +164,7 @@ const [digits, setDigits] = useState(""),
                 <Phone size={17} />
                 <span>
                   <strong>{i.title}</strong>
-                  <small>
-                    {meta(i, "number", i.sender)} ·{" "}
-                    {meta(i, "status", "通话记录")}
-                  </small>
+                  <small>通话记录</small>
                 </span>
                 <time>{i.time ? i.time.slice(5, 10) : ""}</time>
               </button>
