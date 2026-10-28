@@ -108,6 +108,81 @@ const favoriteItems = favoriteNames
   .map((name) => contactItems.find((i) => i.title === name))
   .filter((i): i is Item => i !== undefined);
   
+const callRecordData: {
+  time: string;
+  name: string;
+  direction: "呼入" | "呼出";
+  status: "已接" | "未接";
+  number: string;
+  stranger?: boolean;
+}[] = [
+  { time: "2026-10-28 15:43", name: "Father", direction: "呼入", status: "已接", number: "1380001001" },
+  { time: "2026-10-28 15:42", name: "Father", direction: "呼入", status: "未接", number: "1380001001" },
+  { time: "2026-10-27 22:16", name: "021-8310472", direction: "呼入", status: "未接", number: "021-8310472", stranger: true },
+  { time: "2026-10-26 20:19", name: "Mother", direction: "呼入", status: "已接", number: "1380001002" },
+  { time: "2026-10-26 20:18", name: "Mother", direction: "呼入", status: "未接", number: "1380001002" },
+  { time: "2026-10-25 11:32", name: "5831047296", direction: "呼入", status: "未接", number: "5831047296", stranger: true },
+  { time: "2026-10-24 17:07", name: "飞总", direction: "呼入", status: "已接", number: "1380001003" },
+  { time: "2026-10-24 17:06", name: "飞总", direction: "呼入", status: "未接", number: "1380001003" },
+  { time: "2026-10-22 12:31", name: "老师", direction: "呼入", status: "已接", number: "1380001004" },
+  { time: "2026-10-21 09:47", name: "010-2938164", direction: "呼入", status: "未接", number: "010-2938164", stranger: true },
+  { time: "2026-10-20 21:48", name: "哲哲", direction: "呼入", status: "已接", number: "1380001005" },
+  { time: "2026-10-20 21:47", name: "哲哲", direction: "呼入", status: "未接", number: "1380001005" },
+  { time: "2026-10-19 18:05", name: "7162938405", direction: "呼入", status: "未接", number: "7162938405", stranger: true },
+  { time: "2026-10-18 09:15", name: "杨云皓", direction: "呼出", status: "已接", number: "1380001006" },
+  { time: "2026-10-16 18:53", name: "小胖同学", direction: "呼入", status: "已接", number: "1380001007" },
+  { time: "2026-10-16 18:52", name: "小胖同学", direction: "呼入", status: "未接", number: "1380001007" },
+  { time: "2026-10-15 20:41", name: "4928173056", direction: "呼入", status: "未接", number: "4928173056", stranger: true },
+  { time: "2026-10-14 16:03", name: "吕政熙", direction: "呼出", status: "已接", number: "1380001008" },
+  { time: "2026-10-12 19:27", name: "沈子航", direction: "呼入", status: "已接", number: "1380001009" },
+  { time: "2026-10-12 19:26", name: "沈子航", direction: "呼入", status: "未接", number: "1380001009" },
+  { time: "2026-10-11 13:24", name: "8305716294", direction: "呼入", status: "未接", number: "8305716294", stranger: true },
+  { time: "2026-10-10 08:44", name: "小羽", direction: "呼出", status: "已接", number: "1380001010" },
+  { time: "2026-10-08 22:10", name: "智恩涵", direction: "呼入", status: "已接", number: "1380001011" },
+  { time: "2026-10-06 14:29", name: "朱映宸", direction: "呼入", status: "已接", number: "1380001012" },
+  { time: "2026-10-06 14:28", name: "朱映宸", direction: "呼入", status: "未接", number: "1380001012" },
+  { time: "2026-10-04 11:09", name: "Mother", direction: "呼出", status: "已接", number: "1380001013" },
+  { time: "2026-09-28 16:52", name: "075-2841937", direction: "呼入", status: "未接", number: "075-2841937", stranger: true },
+  { time: "2026-09-18 08:36", name: "023-1729486", direction: "呼入", status: "未接", number: "023-1729486", stranger: true },
+  { time: "2026-09-02 19:13", name: "9517306284", direction: "呼入", status: "未接", number: "9517306284", stranger: true },
+  { time: "2026-08-22 14:16", name: "Father", direction: "呼出", status: "已接", number: "1380001014" },
+  { time: "2026-08-17 14:29", name: "3071849265", direction: "呼入", status: "未接", number: "3071849265", stranger: true },
+  { time: "2026-08-15 10:03", name: "飞总", direction: "呼入", status: "已接", number: "1380001015" },
+];
+
+const callRecords: Item[] = callRecordData.map((record, index) =>
+  makeItem({
+    id: `phone-call-record-${index + 1}`,
+    title: record.name,
+    body: `${record.direction}电话`,
+    sender: record.name,
+    time: record.time,
+    kind: "call",
+    outgoing: record.direction === "呼出",
+    favorite: false,
+    meta: {
+      number: record.number,
+      direction: record.direction,
+      status: record.status,
+      stranger: record.stranger ? "true" : "false",
+    },
+  }),
+);
+
+const filteredCallRecords = callRecords
+  .filter((item) =>
+    (
+      item.title +
+      item.sender +
+      item.time +
+      Object.values(item.meta ?? {}).join(" ")
+    )
+      .toLowerCase()
+      .includes(q.toLowerCase()),
+  )
+  .sort((a, b) => b.time.localeCompare(a.time));
+
+  
   const getContactInitial = (name: string): string => {
     const initials: Record<string, string> = {
       "陈燊": "C",
@@ -146,14 +221,14 @@ const favoriteItems = favoriteNames
     new Set(contactItems.map((item) => getContactInitial(item.title))),
   ).sort((a, b) => a.localeCompare(b));
 
-  const list =
-    tab === "收藏"
-      ? favoriteItems
-      : tab === "通讯录"
-        ? contactItems
-        : tab === "最近通话"
-          ? items.filter((i) => !i.id.startsWith("contact-item-"))
-          : items;
+const list =
+  tab === "收藏"
+    ? favoriteItems
+    : tab === "通讯录"
+      ? contactItems
+      : tab === "最近通话"
+        ? filteredCallRecords
+        : items;
 
   return (
     <div className="catalog-skin native-phone">
@@ -255,16 +330,16 @@ const favoriteItems = favoriteNames
                     key={i.id}
                     onClick={() => p.onItem(i)}
                   >
-                   {tab === "收藏" ? (
-  <Avatar name={i.title} />
-) : (
-  <Phone size={17} />
-)}
-                    <span>
-                      <strong>{i.title}</strong>
-                      <small>通话记录</small>
-                    </span>
-                    <time>{i.time ? i.time.slice(5, 10) : ""}</time>
+                   
+{tab === "收藏" ? <Avatar name={i.title} /> : null}
+<span>
+  <strong>{i.title}</strong>
+  <small>
+    {meta(i, "direction", "通话")} · {meta(i, "status", "已接")}
+  </small>
+</span>
+<time>{i.time ? i.time.slice(5, 16) : ""}</time>
+
                   </button>
                 ))}
                 <Empty items={list} />
