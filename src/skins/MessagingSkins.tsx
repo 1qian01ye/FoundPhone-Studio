@@ -27,6 +27,7 @@ import {
   useContent,
   type Props,
 } from "./shared";
+
 function Bubbles({
   p,
   items,
@@ -43,18 +44,36 @@ function Bubbles({
         <div
           className={`catalog-message ${i.outgoing ? "outgoing" : ""}`}
           key={i.id}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: i.outgoing ? "flex-end" : "flex-start",
+          }}
         >
-          <button onClick={() => (p.creator ? p.onItem(i) : p.onRead(i.id))}>
+          <button
+            onClick={() => (p.creator ? p.onItem(i) : p.onRead(i.id))}
+          >
             {["image", "video", "audio"].includes(i.kind) ? (
               <Media item={i} />
             ) : (
               i.body
             )}
-            <small>
-              {i.time.slice(-5)}
-              {i.read && <CheckCheck size={10} />}
-            </small>
           </button>
+          <small
+            style={{
+              display: "block",
+              alignSelf: i.outgoing ? "flex-start" : "flex-end",
+              fontSize: "11px",
+              lineHeight: "14px",
+              color: "#8e8e93",
+              marginTop: "2px",
+              paddingLeft: "3px",
+              paddingRight: "3px",
+            }}
+          >
+            {i.time.slice(-5)}
+            {i.read && <CheckCheck size={10} />}
+          </small>
         </div>
       ))}
     </div>
