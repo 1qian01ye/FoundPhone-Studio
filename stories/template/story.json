@@ -418,14 +418,533 @@
   "id": "qq-class-group",
   "app": "qq",
   "title": "八年级二班班级群",
-  "participants": ["owner", "qq-class-group"],
+  
+"participants": [
+  "owner",
+  "qq-class-group",
+  "qq-chinese-rep",
+  "qq-math-rep",
+  "qq-english-rep",
+  "qq-history-rep",
+  "qq-politics-rep",
+  "qq-chemistry-rep",
+  "qq-physics-rep",
+  "qq-geography-rep",
+  "qq-biology-rep"
+]
+
   "messages": [
-    {
-      "id": "qq-class-group-msg-1",
-      "body": "欢迎来到八年级二班班级群！",
-      "senderId": "qq-class-group"
-    }
-  ]
+  {
+    "id": "qq-class-group-hw-20261015-chinese",
+    "body": "【10月15日｜语文作业】精读课文，摘抄5处关键句并分别写一句赏析。",
+    "senderId": "qq-chinese-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261015-english",
+    "body": "【10月15日｜英语作业】背诵本单元重点单词，每个写一遍，并用5个词造句。",
+    "senderId": "qq-english-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261015-politics",
+    "body": "【10月15日｜政治作业】整理本课三个核心观点，并各配一个生活实例。",
+    "senderId": "qq-politics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261015-physics",
+    "body": "【10月15日｜物理作业】整理光的反射定律，完成课堂练习第1—6题。",
+    "senderId": "qq-physics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261016-history",
+    "body": "【周五作业及周末任务】制作汉武帝巩固大一统的知识卡片，并完成课后题。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261016-politics",
+    "body": "【周五作业及周末任务】完成道德与法治课本材料题2道，答案结合材料作答。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-politics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261016-chemistry",
+    "body": "【周五作业及周末任务】完成实验室常见仪器名称与用途配对练习。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-chemistry-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261016-physics",
+    "body": "【周五作业及周末任务】完成平面镜成像实验报告，画出实验示意图。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-physics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261016-geography",
+    "body": "【周五作业及周末任务】整理我国主要河流的发源地、流向和注入海洋。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-geography-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261016-biology",
+    "body": "【周五作业及周末任务】整理食物中的营养物质及作用，完成课后填空。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-biology-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261019-physics",
+    "body": "【10月19日｜物理作业】画出光从空气进入水中的光路图，标注入射角和折射角。",
+    "senderId": "qq-physics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261019-biology",
+    "body": "【10月19日｜生物作业】制作人体呼吸系统结构图，写出气体交换发生的位置。",
+    "senderId": "qq-biology-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261019-math",
+    "body": "【10月19日｜数学作业】完成函数增减性练习10题，并用图像验证其中两题。",
+    "senderId": "qq-math-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261019-history",
+    "body": "【10月19日｜历史作业】画出三国两晋南北朝政权更迭简表。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261020-chinese",
+    "body": "【10月20日｜语文作业】完成说明文阅读，标出说明方法并分析其作用。",
+    "senderId": "qq-chinese-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261020-english",
+    "body": "【10月20日｜英语作业】完成语法专项练习10题，错题写出正确理由。",
+    "senderId": "qq-english-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261020-politics",
+    "body": "【10月20日｜政治作业】整理易混概念6组，分别写出区别。",
+    "senderId": "qq-politics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261020-physics",
+    "body": "【10月20日｜物理作业】完成凸透镜基础作图题6道，标出光心与焦点。",
+    "senderId": "qq-physics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261021-history",
+    "body": "【10月21日｜历史作业】比较隋唐制度的特点，完成一张对比表。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261021-chemistry",
+    "body": "【10月21日｜化学作业】完成化学实验基本操作判断题10道，订正错误操作。",
+    "senderId": "qq-chemistry-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261021-geography",
+    "body": "【10月21日｜地理作业】整理季风气候的特点，解释其对降水的影响。",
+    "senderId": "qq-geography-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261021-chinese",
+    "body": "【10月21日｜语文作业】写一段200字人物描写，至少运用动作和心理描写。",
+    "senderId": "qq-chinese-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261022-physics",
+    "body": "【10月22日｜物理作业】完成光学作图纠错练习，重新画出错误光路。",
+    "senderId": "qq-physics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261022-biology",
+    "body": "【10月22日｜生物作业】整理神经系统的基本组成，完成课本思考题。",
+    "senderId": "qq-biology-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261022-math",
+    "body": "【10月22日｜数学作业】完成课本例题变式题6道，注明每题使用的知识点。",
+    "senderId": "qq-math-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261022-history",
+    "body": "【10月22日｜历史作业】整理唐朝经济与文化发展的表现，各列三项。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261023-chinese",
+    "body": "【周五作业及周末任务】阅读课外名著指定章节，写300字读书摘记。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-chinese-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261023-math",
+    "body": "【周五作业及周末任务】完成函数实际情境题8道，注意自变量取值范围。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-math-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261023-english",
+    "body": "【周五作业及周末任务】完成单词词性归类表，选8个词写例句。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-english-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261023-history",
+    "body": "【周五作业及周末任务】梳理唐朝由盛转衰的过程，标注关键事件。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261023-politics",
+    "body": "【周五作业及周末任务】阅读一则社会生活案例，写出涉及的权利或义务。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-politics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261023-chemistry",
+    "body": "【周五作业及周末任务】整理分子与原子的区别，分别用图示表达。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-chemistry-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261026-history",
+    "body": "【10月26日｜历史作业】制作宋代经济发展的分类表，分农业、手工业、商业。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261026-chemistry",
+    "body": "【10月26日｜化学作业】完成化学式读写基础练习12题，检查元素符号大小写。",
+    "senderId": "qq-chemistry-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261026-geography",
+    "body": "【10月26日｜地理作业】整理我国人口分布特点，并结合地图说明原因。",
+    "senderId": "qq-geography-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261026-chinese",
+    "body": "【10月26日｜语文作业】完成散文阅读，分析景物描写与情感表达的关系。",
+    "senderId": "qq-chinese-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261027-physics",
+    "body": "【10月27日｜物理作业】完成质量与体积关系计算题8道，统一单位。",
+    "senderId": "qq-physics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261027-biology",
+    "body": "【10月27日｜生物作业】完成人体健康相关选择题10道，解释两道错题。",
+    "senderId": "qq-biology-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261027-math",
+    "body": "【10月27日｜数学作业】完成函数图像信息读取练习9题，写出变化趋势。",
+    "senderId": "qq-math-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261027-history",
+    "body": "【10月27日｜历史作业】整理元朝统一与民族交融的相关内容，回答课后问题。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261028-chinese",
+    "body": "【10月28日｜语文作业】完成议论文阅读，分别找出论点、论据和论证方法。",
+    "senderId": "qq-chinese-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261028-english",
+    "body": "【10月28日｜英语作业】写一封约80词的英文邮件，介绍校园活动。",
+    "senderId": "qq-english-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261028-politics",
+    "body": "【10月28日｜政治作业】整理依法行使权利与履行义务的相关知识。",
+    "senderId": "qq-politics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261028-physics",
+    "body": "【10月28日｜物理作业】画出测量液体密度的实验流程图并标注关键步骤。",
+    "senderId": "qq-physics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261029-history",
+    "body": "【10月29日｜历史作业】完成历史材料题3道，每题引用材料信息作答。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261029-chemistry",
+    "body": "【10月29日｜化学作业】整理常见实验安全注意事项，写出错误操作的后果。",
+    "senderId": "qq-chemistry-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261029-geography",
+    "body": "【10月29日｜地理作业】制作我国自然资源分类表，分别列举实例。",
+    "senderId": "qq-geography-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261029-chinese",
+    "body": "【10月29日｜语文作业】写一篇600字记叙文，要求有具体细节和完整情节。",
+    "senderId": "qq-chinese-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261030-physics",
+    "body": "【周五作业及周末任务】整理测量工具的使用方法，写出天平使用注意事项。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-physics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261030-geography",
+    "body": "【周五作业及周末任务】完成地理材料题2道，答案结合地图信息。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-geography-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261030-biology",
+    "body": "【周五作业及周末任务】制作人体器官与功能配对卡片12张，自测一遍。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-biology-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261030-chinese",
+    "body": "【周五作业及周末任务】完成古诗鉴赏练习3首，分析意象与情感。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-chinese-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261030-math",
+    "body": "【周五作业及周末任务】完成函数与不等式综合题7道，写出关键推理。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-math-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261030-english",
+    "body": "【周五作业及周末任务】整理本单元易错句型，自己仿写6个句子。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-english-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261102-chinese",
+    "body": "【11月2日｜语文作业】整理常见病句类型，自己写出并修改5个病句。",
+    "senderId": "qq-chinese-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261102-english",
+    "body": "【11月2日｜英语作业】完成两篇阅读训练，给每道题划出原文依据。",
+    "senderId": "qq-english-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261102-politics",
+    "body": "【11月2日｜政治作业】制作本单元关键词卡片8张，配简短解释。",
+    "senderId": "qq-politics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261102-physics",
+    "body": "【11月2日｜物理作业】完成光学知识综合练习，解释两道易错题。",
+    "senderId": "qq-physics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261103-history",
+    "body": "【11月3日｜历史作业】整理重要历史名词8个，每个写一句解释。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261103-chemistry",
+    "body": "【11月3日｜化学作业】完成实验现象描述练习，注意现象和结论分开写。",
+    "senderId": "qq-chemistry-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261103-geography",
+    "body": "【11月3日｜地理作业】完成中国区域地图定位练习10处。",
+    "senderId": "qq-geography-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261103-chinese",
+    "body": "【11月3日｜语文作业】完成文言文对比阅读，写出两篇材料的异同。",
+    "senderId": "qq-chinese-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261104-physics",
+    "body": "【11月4日｜物理作业】完成物理概念辨析题10道，区分易混概念。",
+    "senderId": "qq-physics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261104-biology",
+    "body": "【11月4日｜生物作业】整理神经调节的基础知识，画出简单反应流程。",
+    "senderId": "qq-biology-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261104-math",
+    "body": "【11月4日｜数学作业】完成计算专项练习12题，检查符号与括号。",
+    "senderId": "qq-math-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261104-history",
+    "body": "【11月4日｜历史作业】完成课本课后问答，答案用完整句表达。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261105-chinese",
+    "body": "【11月5日｜语文作业】完成课外阅读题，给每道题标出原文依据。",
+    "senderId": "qq-chinese-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261105-english",
+    "body": "【11月5日｜英语作业】完成一篇完形填空，整理10个不熟悉的表达。",
+    "senderId": "qq-english-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261105-politics",
+    "body": "【11月5日｜政治作业】比较两个相近概念，分别举出一个生活例子。",
+    "senderId": "qq-politics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261105-physics",
+    "body": "【11月5日｜物理作业】复习实验步骤和结论，独立写出一份实验报告提纲。",
+    "senderId": "qq-physics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261106-history",
+    "body": "【周五作业及周末任务】完成选择题练习12道，把错误选项的原因写下来。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261106-politics",
+    "body": "【周五作业及周末任务】阅读课本案例，归纳解决问题的合理步骤。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-politics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261106-chemistry",
+    "body": "【周五作业及周末任务】制作常见元素符号与名称表，遮住一栏自测。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-chemistry-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261106-physics",
+    "body": "【周五作业及周末任务】完成密度与体积综合应用题6道，检查单位换算。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-physics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261106-geography",
+    "body": "【周五作业及周末任务】完成地理选择题12道，错题标注相关地图位置。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-geography-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261106-biology",
+    "body": "【周五作业及周末任务】写出三个健康生活习惯，并用生物知识解释原因。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-biology-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261109-physics",
+    "body": "【11月9日｜物理作业】整理本阶段物理知识图谱，连接概念与公式。",
+    "senderId": "qq-physics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261109-biology",
+    "body": "【11月9日｜生物作业】整理本阶段重要概念，制作一页复习提纲。",
+    "senderId": "qq-biology-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261109-math",
+    "body": "【11月9日｜数学作业】完成函数综合卷一张，订正时标注考查知识点。",
+    "senderId": "qq-math-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261109-history",
+    "body": "【11月9日｜历史作业】整理一项制度的背景、内容和影响。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261110-chinese",
+    "body": "【11月10日｜语文作业】完成作文修改稿，重点检查结构、过渡和错别字。",
+    "senderId": "qq-chinese-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261110-english",
+    "body": "【11月10日｜英语作业】完成一篇英文短文并自查拼写、标点和时态。",
+    "senderId": "qq-english-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261110-politics",
+    "body": "【11月10日｜政治作业】完成两道情境判断题，说明判断依据。",
+    "senderId": "qq-politics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261110-physics",
+    "body": "【11月10日｜物理作业】完成实验装置选择题8道，并说明选择依据。",
+    "senderId": "qq-physics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261111-history",
+    "body": "【11月11日｜历史作业】制作一页单元复习提纲，标出仍不熟悉的知识点。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261111-chemistry",
+    "body": "【11月11日｜化学作业】整理溶液、溶质和溶剂的基本概念并举例。",
+    "senderId": "qq-chemistry-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261111-geography",
+    "body": "【11月11日｜地理作业】完成人口、资源与环境相关练习，写出依据。",
+    "senderId": "qq-geography-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261111-chinese",
+    "body": "【11月11日｜语文作业】阅读一篇人物通讯，概括人物事迹并写两点感受。",
+    "senderId": "qq-chinese-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261112-physics",
+    "body": "【11月12日｜物理作业】写出两个生活中的物理现象并用课堂知识解释。",
+    "senderId": "qq-physics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261112-biology",
+    "body": "【11月12日｜生物作业】复习实验步骤与变量控制，完成基础判断题。",
+    "senderId": "qq-biology-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261112-math",
+    "body": "【11月12日｜数学作业】完成比例、方程或函数混合练习10题，按步骤书写。",
+    "senderId": "qq-math-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261112-history",
+    "body": "【11月12日｜历史作业】比较两次重要历史事件的原因和结果。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261113-chinese",
+    "body": "【周五作业及周末任务】整理本阶段阅读题答题方法，给出两个例题。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-chinese-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261113-math",
+    "body": "【周五作业及周末任务】整理本单元公式与方法，配一道自编例题。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-math-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261113-english",
+    "body": "【周五作业及周末任务】完成阅读理解两篇，归纳每篇的主旨大意。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-english-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261113-history",
+    "body": "【周五作业及周末任务】复习历史时间与人物对应关系，完成自测表。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261113-politics",
+    "body": "【周五作业及周末任务】复习本阶段易错题，重新独立完成并订正。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-politics-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261113-chemistry",
+    "body": "【周五作业及周末任务】整理本阶段实验操作流程，写出关键注意事项。周六、周日完成并自行检查，周一交齐；周末不另发新的作业通知。",
+    "senderId": "qq-chemistry-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261116-history",
+    "body": "【11月16日｜历史作业】完成阶段练习卷并订正，整理5个易混知识点。",
+    "senderId": "qq-history-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261116-chemistry",
+    "body": "【11月16日｜化学作业】完成化学基础综合练习一页，错题注明知识点。",
+    "senderId": "qq-chemistry-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261116-geography",
+    "body": "【11月16日｜地理作业】整理本阶段地图易错点，完成一次空白地图自测。",
+    "senderId": "qq-geography-rep"
+  },
+  {
+    "id": "qq-class-group-hw-20261116-chinese",
+    "body": "【11月16日｜语文作业】完成一篇600字作文，主题为“那一次，我懂得了责任”。",
+    "senderId": "qq-chinese-rep"
+  }
+]
 },
 {
   "id": "qq-lv-zhenxi",
