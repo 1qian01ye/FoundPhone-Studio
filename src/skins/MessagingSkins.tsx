@@ -300,7 +300,18 @@ export function QQSkin(p: Props) {
                             textAlign: "left",
                           }}
                         >
-                          <Avatar name={name} />
+                          <Avatar
+  name={name}
+  src={
+    name === "陈燊"
+      ? `${import.meta.env.BASE_URL}chenshenQQ.jpg`
+      : name === "吕政熙"
+        ? `${import.meta.env.BASE_URL}lvzhengxiQQ.jpg`
+        : name === "朱映宸"
+          ? `${import.meta.env.BASE_URL}zhuyingchenQQ.jpg`
+          : ""
+  }
+/>
                           <span>
                             <strong>{name}</strong>
                             <small style={{ display: "block" }}>
