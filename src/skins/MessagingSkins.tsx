@@ -166,7 +166,11 @@ function ChatRows({
   items: Item[];
   round?: boolean;
 }) {
-  const names = [...new Set(items.map((i) => i.title))];
+  const names = [...new Set(items.map((i) => i.title))].sort((a, b) => {
+  if (a.includes("陈燊")) return -1;
+  if (b.includes("陈燊")) return 1;
+  return 0;
+});
   return (
     <>
       {names.map((name) => {
