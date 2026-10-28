@@ -300,18 +300,27 @@ export function QQSkin(p: Props) {
                             textAlign: "left",
                           }}
                         >
-                          <Avatar
-  name={name}
-  src={
-    name === "陈燊"
-      ? `${import.meta.env.BASE_URL}chenshenQQ.jpg`
-      : name === "吕政熙"
-        ? `${import.meta.env.BASE_URL}lvzhengxiQQ.jpg`
-        : name === "朱映宸"
-          ? `${import.meta.env.BASE_URL}zhuyingchenQQ.jpg`
-          : ""
-  }
-/>
+                          {["陈燊", "吕政熙", "朱映宸"].includes(name) ? (
+  <img
+    src={`${import.meta.env.BASE_URL}${
+      name === "陈燊"
+        ? "chenshenQQ.jpg"
+        : name === "吕政熙"
+          ? "lvzhengxiQQ.jpg"
+          : "zhuyingchenQQ.jpg"
+    }`}
+    alt={name}
+    style={{
+      width: 40,
+      height: 40,
+      borderRadius: "50%",
+      objectFit: "cover",
+      flexShrink: 0,
+    }}
+  />
+) : (
+  <Avatar name={name} />
+)}
                           <span>
                             <strong>{name}</strong>
                             <small style={{ display: "block" }}>
