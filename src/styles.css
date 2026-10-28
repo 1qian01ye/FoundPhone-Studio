@@ -4926,3 +4926,22 @@ label {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.phone-contact-group {
+  margin-top: 16px;
+}
+
+.phone-contact-letter {
+  margin: 0 0 8px;
+  padding: 0 12px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.phone-contact-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+}
