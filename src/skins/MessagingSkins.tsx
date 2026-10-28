@@ -41,41 +41,77 @@ function Bubbles({
     <div className={`catalog-bubbles ${className}`}>
       <time className="bubble-date">{items[0]?.time.slice(0, 10)}</time>
       {items.map((i) => (
-        <div
-          className={`catalog-message ${i.outgoing ? "outgoing" : ""}`}
-          key={i.id}
+  <div
+    className={`catalog-message ${i.outgoing ? "outgoing" : ""}`}
+    key={i.id}
+    style={{
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "flex-end",
+      justifyContent: i.outgoing ? "flex-end" : "flex-start",
+      gap: "6px",
+      width: "100%",
+    }}
+  >
+    {!i.outgoing && (
+      <>
+        <button
+          onClick={() => (p.creator ? p.onItem(i) : p.onRead(i.id))}
+        >
+          {["image", "video", "audio"].includes(i.kind) ? (
+            <Media item={i} />
+          ) : (
+            i.body
+          )}
+        </button>
+        <small
           style={{
             display: "flex",
-            flexDirection: "column",
-            alignItems: i.outgoing ? "flex-end" : "flex-start",
+            alignItems: "center",
+            gap: "2px",
+            flexShrink: 0,
+            fontSize: "11px",
+            lineHeight: "14px",
+            color: "#8e8e93",
+            paddingBottom: "2px",
           }}
         >
-          <button
-            onClick={() => (p.creator ? p.onItem(i) : p.onRead(i.id))}
-          >
-            {["image", "video", "audio"].includes(i.kind) ? (
-              <Media item={i} />
-            ) : (
-              i.body
-            )}
-          </button>
-          <small
-            style={{
-              display: "block",
-              alignSelf: i.outgoing ? "flex-start" : "flex-end",
-              fontSize: "11px",
-              lineHeight: "14px",
-              color: "#8e8e93",
-              marginTop: "2px",
-              paddingLeft: "3px",
-              paddingRight: "3px",
-            }}
-          >
-            {i.time.slice(-5)}
-            {i.read && <CheckCheck size={10} />}
-          </small>
-        </div>
-      ))}
+          {i.time.slice(-5)}
+          {i.read && <CheckCheck size={10} />}
+        </small>
+      </>
+    )}
+
+    {i.outgoing && (
+      <>
+        <small
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "2px",
+            flexShrink: 0,
+            fontSize: "11px",
+            lineHeight: "14px",
+            color: "#8e8e93",
+            paddingBottom: "2px",
+          }}
+        >
+          {i.time.slice(-5)}
+          {i.read && <CheckCheck size={10} />}
+        </small>
+        <button
+          onClick={() => (p.creator ? p.onItem(i) : p.onRead(i.id))}
+        >
+          {["image", "video", "audio"].includes(i.kind) ? (
+            <Media item={i} />
+          ) : (
+            i.body
+          )}
+        </button>
+      </>
+    )}
+  </div>
+))}
     </div>
   );
 }
