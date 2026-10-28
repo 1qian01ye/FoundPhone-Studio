@@ -47,54 +47,66 @@ export function PhoneSkin(p: Props) {
 const [digits, setDigits] = useState(""),
   [call, setCall] = useState("");
 
-const favoriteNames = [
-  "Mother",
-  "Father",
-  "飞总",
-  "老师",
-  "杨云皓",
-  "哲哲",
-  "小胖同学",
-];
 
+  const favoriteNames = [
+    "Mother",
+    "Father",
+    "飞总",
+    "老师",
+    "杨云皓",
+    "哲哲",
+    "小胖同学",
+  ];
 
+  const contactNames = [
+    "陈燊",
+    "Father",
+    "飞总",
+    "老师",
+    "吕政熙",
+    "Mother",
+    "沈子航",
+    "小胖同学",
+    "小羽",
+    "杨林好",
+    "杨云皓",
+    "哲哲",
+    "智恩涵",
+  ];
 
-const contactNames = [
-  "陈燊",
-  "Father",
-  "飞总",
-  "老师",
-  "吕政熙",
-  "Mother",
-  "沈子航",
-  "小胖同学",
-  "小羽",
-  "杨林好",
-  "杨云皓",
-  "哲哲",
-  "智恩涵",
-];
+  const contactItems: Item[] = contactNames.map((name, index) => {
+    const existing = items.find((i) => i.title === name);
+    if (existing) return existing;
 
-const contactItems = contactNames.map((name, index) => {
-  const existing = items.find((i) => i.title === name);
+    return {
+      id: `contact-item-${index}`,
+      title: name,
+      body: "",
+      richText: "",
+      meta: {},
+      time: "",
+      sender: name,
+      avatar: "",
+      kind: "text",
+      media: [],
+      hidden: false,
+      comments: [],
+    } as Item;
+  });
 
-  return existing ?? {
-    id: `contact-item-${index}`,
-    title: name,
-    body: "",
-    sender: name,
-    kind: "text",
-    meta: {},
-    time: "",
-  };
-});
+  const favoriteItems = favoriteNames
+    .map((name) => items.find((i) => i.title === name))
+    .filter((i): i is Item => i !== undefined);
 
+  const list =
+    tab === "收藏"
+      ? favoriteItems
+      : tab === "通讯录"
+        ? contactItems
+        : tab === "最近通话"
+          ? items.filter((i) => !i.id.startsWith("contact-item-"))
+          : items;
 
-const favoriteItems = favoriteNames
-  .map((name) => items.find((i) => i.title === name))
-  .filter((i) => i !== undefined);
-
-const list =
   tab === "收藏"
     ? favoriteItems
     : tab === "通讯录"
