@@ -32,10 +32,42 @@ export function NativeDetail({
   item: Item;
   back: () => void;
 }) {
-  const [favorite, setFavorite] = useState(item.favorite),
+    const [favorite, setFavorite] = useState(item.favorite),
   [copied, setCopied] = useState(false),
   [call, setCall] = useState(false),
   [safariSection, setSafariSection] = useState("首页");
+
+  const demonSlayerCharacters = [
+    {
+      name: "灶门炭治郎",
+      desc: "温柔坚毅的鬼杀队剑士",
+      symbol: "炭",
+      color: "#285b53",
+      image: "https://asia.sega.com/kimetsu_hinokami/en/assets/img/sub/character/chara1_thumb.png",
+    },
+    {
+      name: "灶门祢豆子",
+      desc: "努力守护人类的鬼",
+      symbol: "禰",
+      color: "#a84d70",
+      image: "https://asia.sega.com/kimetsu_hinokami/en/assets/img/sub/character/chara2_thumb.png",
+    },
+    {
+      name: "我妻善逸",
+      desc: "关键时刻爆发的剑士",
+      symbol: "雷",
+      color: "#b58a24",
+      image: "https://asia.sega.com/kimetsu_hinokami/en/assets/img/sub/character/chara3_thumb.png",
+    },
+    {
+      name: "嘴平伊之助",
+      desc: "勇猛直率的山中少年",
+      symbol: "猪",
+      color: "#637c8d",
+      image: "https://asia.sega.com/kimetsu_hinokami/en/assets/img/sub/character/chara4_thumb.png",
+    },
+  ];
+
   const media = safeMedia(item.media),
     name =
       app === "notes"
