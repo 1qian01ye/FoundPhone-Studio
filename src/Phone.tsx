@@ -928,6 +928,8 @@ function AppleMusicPlayer({ item }: { item: Item }) {
 
 const WEATHER_CITIES = [
   { name: "成都", lat: 30.5728, lon: 104.0668, timezone: "Asia/Shanghai" },
+  { name: "宜宾", lat: 28.7518, lon: 104.6430, timezone: "Asia/Shanghai" },
+  { name: "眉山", lat: 30.0754, lon: 103.8485, timezone: "Asia/Shanghai" },
   { name: "重庆", lat: 29.4316, lon: 106.9123, timezone: "Asia/Shanghai" },
   { name: "廊坊", lat: 39.537, lon: 116.6838, timezone: "Asia/Shanghai" },
   { name: "大连", lat: 38.914, lon: 121.6147, timezone: "Asia/Shanghai" },
