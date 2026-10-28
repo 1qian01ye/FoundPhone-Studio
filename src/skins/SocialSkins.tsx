@@ -734,8 +734,31 @@ export function SnapchatSkin(p: Props) {
                       color: "#222222",
                       overflowWrap: "anywhere",
                     }}
-                  >
-                    {item.body}
+                                    >
+                    <div>{item.body}</div>
+
+                    {item.time && (
+                      <div
+                        style={{
+                          marginTop: "5px",
+                          fontSize: "11px",
+                          color: "#777777",
+                          textAlign: "right",
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        {new Date(item.time.replace(" ", "T")).toLocaleString(
+                          "zh-CN",
+                          {
+                            month: "long",
+                            day: "numeric",
+                            hour: "2-digit",
+                            minute: "2-digit",
+                            hour12: false,
+                          },
+                        )}
+                      </div>
+                    )}
                   </div>
                 ))}
             </div>
