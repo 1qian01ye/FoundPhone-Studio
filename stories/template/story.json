@@ -959,6 +959,12 @@
     }
   ]
 },
+    {
+  "id": "qq-chen-shen",
+  "app": "qq",
+  "title": "陈燊",
+  "participants": ["owner", "qq-chen-shen"],
+  "messages": [
   {
     "id": "qq-chen-20260823-001",
     "time": "2026-08-23 19:57",
@@ -1103,7 +1109,7 @@
     "body": "…喜欢",
     "senderId": "owner"
   }
-]
+  ]
 },
 {
   "id": "qq-yang-yunhao",
