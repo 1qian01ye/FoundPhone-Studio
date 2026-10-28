@@ -89,11 +89,10 @@ const [digits, setDigits] = useState(""),
       favorite: favoriteNames.includes(name),
     });
   });
-
-  const favoriteItems = favoriteNames
-    .map((name) => items.find((i) => i.title === name))
-    .filter((i): i is Item => i !== undefined);
-
+  
+const favoriteItems = favoriteNames
+  .map((name) => contactItems.find((i) => i.title === name))
+  .filter((i): i is Item => i !== undefined);
   
   const getContactInitial = (name: string): string => {
     const initials: Record<string, string> = {
