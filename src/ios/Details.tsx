@@ -386,20 +386,31 @@ export function NativeDetail({
                             cursor: "pointer",
                           }}
                         >
+                          
                           <div
                             style={{
-                              height: 92,
+                              height: 125,
                               display: "flex",
                               alignItems: "center",
                               justifyContent: "center",
+                              overflow: "hidden",
                               background: `linear-gradient(145deg, ${character.color}, #191919)`,
-                              color: "#fff",
-                              fontSize: 40,
-                              fontWeight: 900,
                             }}
                           >
-                            {character.symbol}
+                            <img
+                              src={character.image}
+                              alt={character.name}
+                              loading="lazy"
+                              style={{
+                                width: "100%",
+                                height: "100%",
+                                display: "block",
+                                objectFit: "contain",
+                                objectPosition: "center bottom",
+                              }}
+                            />
                           </div>
+
                           <div style={{ padding: "11px 10px 13px" }}>
                             <strong
                               style={{
