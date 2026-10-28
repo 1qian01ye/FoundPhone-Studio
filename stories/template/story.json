@@ -413,22 +413,59 @@
         }
       ]
     },
+    
+{
+  "id": "qq-class-group",
+  "app": "qq",
+  "title": "八年级二班班级群",
+  "participants": ["owner", "qq-class-group"],
+  "messages": [
     {
-      "id": "test-chat-qq",
-      "app": "qq",
-      "title": "测试会话",
-      "participants": [
-        "owner",
-        "test-contact"
-      ],
-      "messages": [
-        {
-          "id": "test-message-qq",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
-    },
+      "id": "qq-class-group-msg-1",
+      "body": "欢迎来到八年级二班班级群！",
+      "senderId": "qq-class-group"
+    }
+  ]
+},
+{
+  "id": "qq-lv-zhenxi",
+  "app": "qq",
+  "title": "吕政熙",
+  "participants": ["owner", "qq-lv-zhenxi"],
+  "messages": [
+    {
+      "id": "qq-lv-zhenxi-msg-1",
+      "body": "在吗？",
+      "senderId": "qq-lv-zhenxi"
+    }
+  ]
+},
+{
+  "id": "qq-chen-shen",
+  "app": "qq",
+  "title": "陈燊",
+  "participants": ["owner", "qq-chen-shen"],
+  "messages": [
+    {
+      "id": "qq-chen-shen-msg-1",
+      "body": "你好！",
+      "senderId": "qq-chen-shen"
+    }
+  ]
+},
+{
+  "id": "qq-yang-yunhao",
+  "app": "qq",
+  "title": "杨云皓",
+  "participants": ["owner", "qq-yang-yunhao"],
+  "messages": [
+    {
+      "id": "qq-yang-yunhao-msg-1",
+      "body": "明天见！",
+      "senderId": "qq-yang-yunhao"
+    }
+  ]
+}
     {
       "id": "test-chat-whatsapp",
       "app": "whatsapp",
