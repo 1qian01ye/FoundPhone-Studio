@@ -182,14 +182,16 @@ export function compileStory(raw: unknown): { story: Story; work: Work } {
     if (!registry.some((a) => a.id === chat.app && a.engine === "messaging"))
       fail(`chats.${n}.app`, "需要聊天 App");
     
-chat.participants.forEach((c, j) => {
-  if (
-    !contacts.has(c) &&
-    c !== "owner" &&
-    chat.app !== "messages"
-  )
-    fail(`chats.${n}.participants.${j}`, "联系人不存在: " + c);
-});
+
+    chat.participants.forEach((c, j) => {
+      if (
+        !contacts.has(c) &&
+        c !== "owner" &&
+        chat.app !== "messages" &&
+        chat.app !== "qq"
+      )
+        fail(`chats.${n}.participants.${j}`, "联系人不存在: " + c);
+    });
 
     chat.messages.forEach((m, j) => {
       if (
