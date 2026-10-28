@@ -724,8 +724,15 @@ export function SafariSkin(p: Props) {
   </div>
 ) : (
   <div className="safari-favorites">
-    {items.map((i) => (
-      <button key={i.id} onClick={() => p.onItem(i)}>
+  {items.map((i) => (
+    <button
+      key={i.id}
+      onClick={() => {
+        const url = meta(i, "url", "");
+        setQ(url || i.title);
+        p.onItem(i);
+      }}
+    >
         <span>
           <Globe size={28} />
         </span>
