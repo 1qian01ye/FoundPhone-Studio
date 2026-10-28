@@ -155,14 +155,41 @@ const list = tab === "收藏" ? favoriteItems : items;
     </div>
   );
 }
+
 export function ContactsSkin(p: Props) {
   const { q, setQ, items } = useContent(p, "所有联系人");
+
+  const getInitial = (name: string) => {
+    const initials: Record<string, string> = {
+      "陈燊": "C",
+      Father: "F",
+      "飞总": "F",
+      "老师": "L",
+      "吕政熙": "L",
+      Mother: "M",
+      "沈子航": "S",
+      "小胖同学": "X",
+      "小羽": "X",
+      "杨林好": "Y",
+      "杨云皓": "Y",
+      "哲哲": "Z",
+      "智恩涵": "Z",
+    };
+
+    return initials[name] ?? name.charAt(0).toUpperCase();
+  };
+
+  const groups = Array.from(
+    new Set(items.map((i) => getInitial(i.title)))
+  ).sort((a, b) => a.localeCompare(b));
+
   return (
     <div className="catalog-skin native-contacts">
       <Header p={p} />
       <div className="catalog-scroll">
         <h1>通讯录</h1>
         <SearchBox value={q} set={setQ} />
+
         <button
           className="contact-self"
           onClick={() => {
@@ -176,12 +203,16 @@ export function ContactsSkin(p: Props) {
             <small>我的名片</small>
           </span>
         </button>
-        {groupItems(items, "所有联系人").map((g) => (
-          <section key={g}>
-            <h4 className="native-section">{g}</h4>
+
+        {groups.map((letter) => (
+          <section key={letter}>
+            <h4 className="native-section">{letter}</h4>
+
             {items
-              .filter((i) => (i.folder || "所有联系人") === g)
-              .sort((a, b) => a.title.localeCompare(b.title, "zh-CN"))
+              .filter((i) => getInitial(i.title) === letter)
+              .sort((a, b) =>
+                a.title.localeCompare(b.title, "zh-CN")
+              )
               .map((i) => (
                 <Row
                   key={i.id}
@@ -192,11 +223,13 @@ export function ContactsSkin(p: Props) {
               ))}
           </section>
         ))}
+
         <Empty items={items} />
       </div>
     </div>
   );
 }
+
 export function PhotosSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "图库");
   const [album, setAlbum] = useState("");
