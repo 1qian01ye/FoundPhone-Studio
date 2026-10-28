@@ -385,50 +385,73 @@ const list =
   );
 }
 
+
 export function ContactsSkin(p: Props) {
   const { q, setQ, items } = useContent(p, "所有联系人");
 
-  const getInitial = (name: string) => {
-    const initials: Record<string, string> = {
-      "陈燊": "C",
-      Father: "F",
-      "飞总": "F",
-      "老师": "L",
-      "吕政熙": "L",
-      Mother: "M",
-      "沈子航": "S",
-      "小胖同学": "X",
-      "小羽": "X",
-      "杨林好": "Y",
-      "杨云皓": "Y",
-      "哲哲": "Z",
-      "智恩涵": "Z",
-      "侯王子": "H",
-      "刘禹辰": "L",
-      "余政霖": "Y",
-      "杨子豪": "Y",
-      "宋金泽": "S",
-      "皮子渝": "P",
-      "朱映宸": "Z",
-      "张誉严": "Z",
-      "陈璟翊": "C",
-      "胡阿米": "H",
-      "魏新航": "W",
-      "佟弋": "T",
-      "刘瀚辰": "L",
-      "越艺晨": "Y",
-    };
+  const [expandedGroups, setExpandedGroups] = useState<string[]>([
+    "特别关心",
+    "同学",
+    "sdfj",
+  ]);
 
-    return initials[name] ?? name.charAt(0).toUpperCase();
+  const groups = [
+    {
+      name: "特别关心",
+      contacts: ["吕政熙"],
+    },
+    {
+      name: "同学",
+      contacts: "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        .split("")
+        .map((letter) => `${letter}同学`),
+    },
+    {
+      name: "sdfj",
+      contacts: ["吕政熙", "杨云皓", "陈燊", "朱映宸"],
+    },
+  ];
+
+  const toggleGroup = (name: string) => {
+    setExpandedGroups((previous) =>
+      previous.includes(name)
+        ? previous.filter((group) => group !== name)
+        : [...previous, name],
+    );
   };
 
-  const groups = Array.from(
-    new Set(items.map((i) => getInitial(i.title)))
-  ).sort((a, b) => a.localeCompare(b));
+  const getContactItem = (name: string): Item => {
+    const existing = items.find(
+      (item) =>
+        item.title === name ||
+        item.id === `contact-item-${name}`,
+    );
+
+    if (existing) return existing;
+
+    return makeItem({
+      id: `contact-item-${name}`,
+      title: name,
+      body: "",
+      sender: name,
+      time: "",
+      favorite: name === "吕政熙",
+    });
+  };
+
+  const filteredGroups = groups
+    .map((group) => ({
+      ...group,
+      contacts: group.contacts.filter((name) =>
+        name.toLowerCase().includes(q.trim().toLowerCase()),
+      ),
+    }))
+    .filter((group) => group.contacts.length > 0);
 
   return (
     <div className="catalog-skin native-contacts">
       <Header p={p} />
+
       <div className="catalog-scroll">
         <h1>通讯录</h1>
         <SearchBox value={q} set={setQ} />
@@ -447,31 +470,64 @@ export function ContactsSkin(p: Props) {
           </span>
         </button>
 
-        {groups.map((letter) => (
-          <section key={letter}>
-            <h4 className="native-section">{letter}</h4>
+        {filteredGroups.map((group) => {
+          const expanded = expandedGroups.includes(group.name);
 
-            {items
-              .filter((i) => getInitial(i.title) === letter)
-              .sort((a, b) =>
-                a.title.localeCompare(b.title, "zh-CN")
-              )
-              .map((i) => (
-                <Row
-                  key={i.id}
-                  item={i}
-                  onItem={p.onItem}
-                  leading={<Avatar name={i.title} />}
-                />
-              ))}
-          </section>
-        ))}
+          return (
+            <section key={group.name}>
+              <button
+                type="button"
+                onClick={() => toggleGroup(group.name)}
+                aria-expanded={expanded}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  width: "100%",
+                  padding: "14px 16px",
+                  border: "none",
+                  borderBottom: "1px solid var(--border, #e5e5ea)",
+                  background: "transparent",
+                  textAlign: "left",
+                  cursor: "pointer",
+                  fontSize: "15px",
+                  fontWeight: 600,
+                }}
+              >
+                <span>{expanded ? "▾" : "▸"}</span>
+                <span style={{ flex: 1 }}>{group.name}</span>
+                <small style={{ fontWeight: 400, opacity: 0.65 }}>
+                  {group.contacts.length} 人
+                </small>
+              </button>
 
-        <Empty items={items} />
+              {expanded &&
+                group.contacts.map((name) => {
+                  const item = getContactItem(name);
+
+                  return (
+                    <Row
+                      key={`${group.name}-${name}`}
+                      item={item}
+                      onItem={p.onItem}
+                      leading={<Avatar name={name} />}
+                    />
+                  );
+                })}
+            </section>
+          );
+        })}
+
+        {filteredGroups.length === 0 && (
+          <p style={{ padding: "20px", textAlign: "center", opacity: 0.6 }}>
+            没有找到联系人
+          </p>
+        )}
       </div>
     </div>
   );
 }
+
 
 export function PhotosSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "图库");
