@@ -88,13 +88,85 @@
     "kakao"
   ],
   "contacts": [
-    {
-      "id": "test-contact",
-      "name": "测试联系人",
-      "phone": "",
-      "bio": "这是一条测试内容。"
-    }
-  ],
+  {
+    "id": "contact-chen-shen",
+    "name": "陈燊",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-father",
+    "name": "Father",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-fei-zong",
+    "name": "飞总",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-laoshi",
+    "name": "老师",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-lv-zhengxi",
+    "name": "吕政熙",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-mother",
+    "name": "Mother",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-shen-zihang",
+    "name": "沈子航",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-xiaopang",
+    "name": "小胖同学",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-xiaoyu",
+    "name": "小羽",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-yang-linhao",
+    "name": "杨林好",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-yang-yunhao",
+    "name": "杨云皓",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-zhezhe",
+    "name": "哲哲",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-zhi-enhan",
+    "name": "智恩涵",
+    "phone": "",
+    "bio": ""
+  }
+],
   "chats": [
     {
       "id": "test-chat-messages",
