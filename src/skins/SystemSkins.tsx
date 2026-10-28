@@ -227,7 +227,11 @@ const favoriteItems = favoriteNames
                     key={i.id}
                     onClick={() => p.onItem(i)}
                   >
-                    <Phone size={17} />
+                   {tab === "收藏" ? (
+  <Avatar name={i.title} />
+) : (
+  <Phone size={17} />
+)}
                     <span>
                       <strong>{i.title}</strong>
                       <small>通话记录</small>
