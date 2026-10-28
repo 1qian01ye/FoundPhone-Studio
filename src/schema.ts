@@ -200,7 +200,8 @@ export function safeMedia(value: string) {
   const embeddedMedia =
     /^data:(image\/(png|jpeg|webp|gif)|audio\/(mpeg|mp3|wav|ogg|webm|mp4)|video\/(mp4|webm));base64,[a-zA-Z0-9+/=\s]+$/;
 
-  const localImage = /^\/music-covers\/[a-zA-Z0-9._-]+\.(jpg|jpeg|png|webp|gif)$/i;
+  const localImage =
+  /^\/(?:music-covers\/)?[a-zA-Z0-9._-]+\.(jpg|jpeg|png|webp|gif)$/i;
 
   return embeddedMedia.test(value) || localImage.test(value) ? value : "";
 }
