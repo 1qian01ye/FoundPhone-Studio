@@ -2169,6 +2169,17 @@
   "outgoing": true,
   "meta": {}
 },
+ {
+  "id": "snap-cs-15",
+  "title": "陈燊",
+  "body": "生日快乐！",
+  "sender": "陈燊",
+  "folder": "聊天",
+  "kind": "text",
+  "time": "2026-11-17 00:00",
+  "outgoing": false,
+  "meta": {}
+},
 {
   "id": "snap-yyh-01",
   "title": "杨云皓",
