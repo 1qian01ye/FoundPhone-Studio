@@ -90,7 +90,28 @@ const gameInvite = i.body.includes("delta-squad.invalid")
                   "qq-native-message " + (i.outgoing ? "outgoing" : "")
                 }
               >
-                <Avatar name={i.sender} src={i.avatar} />
+                {["陈燊", "吕政熙", "朱映宸"].includes(i.sender) ? (
+  <img
+    src={`${import.meta.env.BASE_URL}${
+      i.sender === "陈燊"
+        ? "chenshenQQ.jpg"
+        : i.sender === "吕政熙"
+          ? "lvzhengxiQQ.jpg"
+          : "zhuyingchenQQ.jpg"
+    }`}
+    alt={i.sender}
+    className="skin-avatar"
+    style={{
+      width: 40,
+      height: 40,
+      borderRadius: "50%",
+      objectFit: "cover",
+      flexShrink: 0,
+    }}
+  />
+) : (
+  <Avatar name={i.sender} src={i.avatar} />
+)}
                 <div className="qq-message-stack">
                   {i.meta.badge && <small>{i.meta.badge}</small>}
                   <button
