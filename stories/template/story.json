@@ -174,210 +174,230 @@
   }
 ],
   "chats": [
-    {
-  "id": "spam-hokage",
-  "app": "messages",
-  "title": "火影忍者手游",
-  "participants": ["owner", "spam-hokage-sender"],
-  "messages": [
-    {
-      "id": "spam-hokage-msg-1",
-      "body": "【火影忍者】忍者集结活动即将结束！本周限时任务和活动奖励已开放，请登录游戏查看详情。",
-      "senderId": "spam-hokage-sender"
-    }
-  ]
-},
-{
-  "id": "chat-contact-zhi-enhan-oct07",
-  "app": "messages",
-  "title": "智恩涵",
-  "participants": ["owner", "contact-zhi-enhan"],
-  "messages": [
-    {
-      "id": "msg-contact-zhi-enhan-oct07-1",
-      "body": "这里信号好差",
-      "senderId": "contact-zhi-enhan"
-    },
-    {
-      "id": "msg-contact-zhi-enhan-oct07-2",
-      "body": "你快过来了吗，自行车已经给你扫好了",
-      "senderId": "contact-zhi-enhan"
-    },
-    {
-      "id": "msg-contact-zhi-enhan-oct07-3",
-      "body": "马上过来",
-      "senderId": "owner"
-    },
-    {
-      "id": "msg-contact-zhi-enhan-oct07-4",
-      "body": "可是我不会骑自行车",
-      "senderId": "owner"
-    },
-    {
-      "id": "msg-contact-zhi-enhan-oct07-5",
-      "body": "没事儿，我还拿了代步车，你先过来吧",
-      "senderId": "contact-zhi-enhan"
-    }
-  ]
-},
-{
-  "id": "chat-contact-lv-zhengxi-oct06",
-  "app": "messages",
-  "title": "吕政熙",
-  "participants": ["owner", "contact-lv-zhengxi"],
-  "messages": [
-    {
-      "id": "msg-contact-lv-zhengxi-oct06-1",
-      "body": "你快到了吗？",
-      "senderId": "contact-lv-zhengxi"
-    },
-    {
-      "id": "msg-contact-lv-zhengxi-oct06-2",
-      "body": "我马上就到",
-      "senderId": "owner"
-    }
-  ]
-},
-{
-  "id": "spam-cainiao",
-  "app": "messages",
-  "title": "菜鸟裹裹",
-  "participants": ["owner", "spam-cainiao-sender"],
-  "messages": [
-    {
-      "id": "spam-cainiao-msg-1",
-      "body": "【菜鸟裹裹】您有新的包裹物流动态，请前往官方应用查看。若非本人包裹，请注意核实。",
-      "senderId": "spam-cainiao-sender"
-    }
-  ]
-},
-{
-  "id": "spam-lottery",
-  "app": "messages",
-  "title": "幸运抽奖通知",
-  "participants": ["owner", "spam-lottery-sender"],
-  "messages": [
-    {
-      "id": "spam-lottery-msg-1",
-      "body": "您获得了一次模拟抽奖机会！本条为演示用营销短信，请勿据此提供付款信息。",
-      "senderId": "spam-lottery-sender"
-    }
-  ]
-},
-{
-  "id": "chat-contact-chen-shen-sep25",
-  "app": "messages",
-  "title": "陈燊",
-  "participants": ["owner", "contact-chen-shen"],
-  "messages": [
-    {
-      "id": "msg-contact-chen-shen-sep25-1",
-      "body": "你怎么不回我微信",
-      "senderId": "contact-chen-shen"
-    },
-    {
-      "id": "msg-contact-chen-shen-sep25-2",
-      "body": "明天你穿什么颜色的衣服",
-      "senderId": "contact-chen-shen"
-    },
-    {
-      "id": "msg-contact-chen-shen-sep25-3",
-      "body": "你就等着就行了",
-      "senderId": "owner"
-    }
-  ]
-},
-{
-  "id": "spam-egg",
-  "app": "messages",
-  "title": "蛋仔派对福利中心",
-  "participants": ["owner", "spam-egg-sender"],
-  "messages": [
-    {
-      "id": "spam-egg-msg-1",
-      "body": "【蛋仔派对】蛋仔岛本周活动已更新，限时外观和惊喜礼包等你查看！",
-      "senderId": "spam-egg-sender"
-    }
-  ]
-},
-{
-  "id": "spam-genshin",
-  "app": "messages",
-  "title": "原神活动通知",
-  "participants": ["owner", "spam-genshin-sender"],
-  "messages": [
-    {
-      "id": "spam-genshin-msg-1",
-      "body": "【原神】旅行者，限时活动即将结束！请进入游戏查看活动进度与可领取奖励。",
-      "senderId": "spam-genshin-sender"
-    }
-  ]
-},
-{
-  "id": "spam-meituan",
-  "app": "messages",
-  "title": "美团优惠通知",
-  "participants": ["owner", "spam-meituan-sender"],
-  "messages": [
-    {
-      "id": "spam-meituan-msg-1",
-      "body": "【美团】今日专属优惠已更新，外卖和团购活动限时开放，打开官方应用查看。",
-      "senderId": "spam-meituan-sender"
-    }
-  ]
-},
-{
-  "id": "spam-shopping",
-  "app": "messages",
-  "title": "购物优惠中心",
-  "participants": ["owner", "spam-shopping-sender"],
-  "messages": [
-    {
-      "id": "spam-shopping-msg-1",
-      "body": "会员专属折扣已更新，多款商品正在限时促销，活动详情请前往购物应用查看。",
-      "senderId": "spam-shopping-sender"
-    }
-  ]
-},
-{
-  "id": "spam-game",
-  "app": "messages",
-  "title": "游戏礼包中心",
-  "participants": ["owner", "spam-game-sender"],
-  "messages": [
-    {
-      "id": "spam-game-msg-1",
-      "body": "游戏限时礼包正在活动中，登录游戏即可查看本期任务和奖励内容。",
-      "senderId": "spam-game-sender"
-    }
-  ]
-},
-{
-  "id": "spam-points",
-  "app": "messages",
-  "title": "积分兑换提醒",
-  "participants": ["owner", "spam-points-sender"],
-  "messages": [
-    {
-      "id": "spam-points-msg-1",
-      "body": "您的积分兑换活动即将结束，请进入对应官方应用查看积分规则。请勿向陌生人提供验证码。",
-      "senderId": "spam-points-sender"
-    }
-  ]
-},
-{
-  "id": "spam-video",
-  "app": "messages",
-  "title": "短视频会员中心",
-  "participants": ["owner", "spam-video-sender"],
-  "messages": [
-    {
-      "id": "spam-video-msg-1",
-      "body": "本周会员活动已上线！热门内容和限时权益等你查看，详情请打开官方应用。",
-      "senderId": "spam-video-sender"
-    }
-  ]
-},
+  {
+    "id": "spam-hokage",
+    "app": "messages",
+    "title": "火影忍者手游",
+    "participants": ["owner", "spam-hokage-sender"],
+    "messages": [
+      {
+        "id": "spam-hokage-msg-1",
+        "body": "【火影忍者】忍者集结活动即将结束！本周限时任务和活动奖励已开放，请登录游戏查看详情。",
+        "senderId": "spam-hokage-sender",
+        "time": "2026-10-12 10:18"
+      }
+    ]
+  },
+  {
+    "id": "chat-contact-zhi-enhan-oct07",
+    "app": "messages",
+    "title": "智恩涵",
+    "participants": ["owner", "contact-zhi-enhan"],
+    "messages": [
+      {
+        "id": "msg-contact-zhi-enhan-oct07-1",
+        "body": "这里信号好差",
+        "senderId": "contact-zhi-enhan",
+        "time": "2026-10-07 09:10"
+      },
+      {
+        "id": "msg-contact-zhi-enhan-oct07-2",
+        "body": "你快过来了吗，自行车已经给你扫好了",
+        "senderId": "contact-zhi-enhan",
+        "time": "2026-10-07 09:12"
+      },
+      {
+        "id": "msg-contact-zhi-enhan-oct07-3",
+        "body": "马上过来",
+        "senderId": "owner",
+        "time": "2026-10-07 09:17"
+      },
+      {
+        "id": "msg-contact-zhi-enhan-oct07-4",
+        "body": "可是我不会骑自行车",
+        "senderId": "owner",
+        "time": "2026-10-07 09:18"
+      },
+      {
+        "id": "msg-contact-zhi-enhan-oct07-5",
+        "body": "没事儿，我还拿了代步车，你先过来吧",
+        "senderId": "contact-zhi-enhan",
+        "time": "2026-10-07 09:20"
+      }
+    ]
+  },
+  {
+    "id": "chat-contact-lv-zhengxi-oct06",
+    "app": "messages",
+    "title": "吕政熙",
+    "participants": ["owner", "contact-lv-zhengxi"],
+    "messages": [
+      {
+        "id": "msg-contact-lv-zhengxi-oct06-1",
+        "body": "你快到了吗？",
+        "senderId": "contact-lv-zhengxi",
+        "time": "2026-10-06 19:40"
+      },
+      {
+        "id": "msg-contact-lv-zhengxi-oct06-2",
+        "body": "我马上就到",
+        "senderId": "owner",
+        "time": "2026-10-06 19:42"
+      }
+    ]
+  },
+  {
+    "id": "spam-cainiao",
+    "app": "messages",
+    "title": "菜鸟裹裹",
+    "participants": ["owner", "spam-cainiao-sender"],
+    "messages": [
+      {
+        "id": "spam-cainiao-msg-1",
+        "body": "【菜鸟裹裹】您有新的包裹物流动态，请前往官方应用查看。若非本人包裹，请注意核实。",
+        "senderId": "spam-cainiao-sender",
+        "time": "2026-10-04 11:25"
+      }
+    ]
+  },
+  {
+    "id": "spam-lottery",
+    "app": "messages",
+    "title": "幸运抽奖通知",
+    "participants": ["owner", "spam-lottery-sender"],
+    "messages": [
+      {
+        "id": "spam-lottery-msg-1",
+        "body": "您获得了一次模拟抽奖机会！本条为演示用营销短信，请勿据此提供付款信息。",
+        "senderId": "spam-lottery-sender",
+        "time": "2026-09-28 16:40"
+      }
+    ]
+  },
+  {
+    "id": "chat-contact-chen-shen-sep25",
+    "app": "messages",
+    "title": "陈燊",
+    "participants": ["owner", "contact-chen-shen"],
+    "messages": [
+      {
+        "id": "msg-contact-chen-shen-sep25-1",
+        "body": "你怎么不回我微信",
+        "senderId": "contact-chen-shen",
+        "time": "2026-09-25 20:10"
+      },
+      {
+        "id": "msg-contact-chen-shen-sep25-2",
+        "body": "明天你穿什么颜色的衣服",
+        "senderId": "contact-chen-shen",
+        "time": "2026-09-25 20:15"
+      },
+      {
+        "id": "msg-contact-chen-shen-sep25-3",
+        "body": "你就等着就行了",
+        "senderId": "owner",
+        "time": "2026-09-25 20:45"
+      }
+    ]
+  },
+  {
+    "id": "spam-egg",
+    "app": "messages",
+    "title": "蛋仔派对福利中心",
+    "participants": ["owner", "spam-egg-sender"],
+    "messages": [
+      {
+        "id": "spam-egg-msg-1",
+        "body": "【蛋仔派对】蛋仔岛本周活动已更新，限时外观和惊喜礼包等你查看！",
+        "senderId": "spam-egg-sender",
+        "time": "2026-09-24 13:20"
+      }
+    ]
+  },
+  {
+    "id": "spam-genshin",
+    "app": "messages",
+    "title": "原神活动通知",
+    "participants": ["owner", "spam-genshin-sender"],
+    "messages": [
+      {
+        "id": "spam-genshin-msg-1",
+        "body": "【原神】旅行者，限时活动即将结束！请进入游戏查看活动进度与可领取奖励。",
+        "senderId": "spam-genshin-sender",
+        "time": "2026-09-21 18:35"
+      }
+    ]
+  },
+  {
+    "id": "spam-meituan",
+    "app": "messages",
+    "title": "美团优惠通知",
+    "participants": ["owner", "spam-meituan-sender"],
+    "messages": [
+      {
+        "id": "spam-meituan-msg-1",
+        "body": "【美团】今日专属优惠已更新，外卖和团购活动限时开放，打开官方应用查看。",
+        "senderId": "spam-meituan-sender",
+        "time": "2026-09-18 12:05"
+      }
+    ]
+  },
+  {
+    "id": "spam-shopping",
+    "app": "messages",
+    "title": "购物优惠中心",
+    "participants": ["owner", "spam-shopping-sender"],
+    "messages": [
+      {
+        "id": "spam-shopping-msg-1",
+        "body": "会员专属折扣已更新，多款商品正在限时促销，活动详情请前往购物应用查看。",
+        "senderId": "spam-shopping-sender",
+        "time": "2026-09-15 15:48"
+      }
+    ]
+  },
+  {
+    "id": "spam-game",
+    "app": "messages",
+    "title": "游戏礼包中心",
+    "participants": ["owner", "spam-game-sender"],
+    "messages": [
+      {
+        "id": "spam-game-msg-1",
+        "body": "游戏限时礼包正在活动中，登录游戏即可查看本期任务和奖励内容。",
+        "senderId": "spam-game-sender",
+        "time": "2026-09-11 20:15"
+      }
+    ]
+  },
+  {
+    "id": "spam-points",
+    "app": "messages",
+    "title": "积分兑换提醒",
+    "participants": ["owner", "spam-points-sender"],
+    "messages": [
+      {
+        "id": "spam-points-msg-1",
+        "body": "您的积分兑换活动即将结束，请进入对应官方应用查看积分规则。请勿向陌生人提供验证码。",
+        "senderId": "spam-points-sender",
+        "time": "2026-09-06 09:30"
+      }
+    ]
+  },
+  {
+    "id": "spam-video",
+    "app": "messages",
+    "title": "短视频会员中心",
+    "participants": ["owner", "spam-video-sender"],
+    "messages": [
+      {
+        "id": "spam-video-msg-1",
+        "body": "本周会员活动已上线！热门内容和限时权益等你查看，详情请打开官方应用。",
+        "senderId": "spam-video-sender",
+        "time": "2026-09-02 17:55"
+      }
+    ]
+  },
 {
   "id": "test-chat-wechat",
       "title": "测试会话",
