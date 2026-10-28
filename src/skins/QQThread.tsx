@@ -1,4 +1,3 @@
-import { useState } from "react";
 import {
   ChevronLeft,
   Menu,
@@ -9,6 +8,8 @@ import {
   Plus,
   Check,
   Video,
+  Gamepad2,
+  ArrowRight,
 } from "lucide-react";
 import { NativeComposer } from "../DeviceSystem";
 import { Avatar, Media, meta, type Props } from "./shared";
@@ -40,7 +41,23 @@ export function QQThread(p: Props) {
       <div className="qq-thread-messages">
         {messages.map((i, n) => {
           const quoted = messages.find((x) => x.id === i.meta.replyTo),
-            quote = i.meta.reply || quoted?.body;
+  quote = i.meta.reply || quoted?.body;
+
+const gameInvite = i.body.includes("delta-squad.invalid")
+  ? {
+      name: "三角洲行动",
+      description: "邀请你加入小队",
+      color: "#d6e5d2",
+      game: "delta",
+    }
+  : i.body.includes("peace-squad.invalid")
+    ? {
+        name: "和平精英",
+        description: "邀请你一起游戏",
+        color: "#d5e9ff",
+        game: "peace",
+      }
+    : null;
           return (
             <div key={i.id}>
               {(n === 0 ||
@@ -109,10 +126,33 @@ export function QQThread(p: Props) {
                           </span>
                         )}
                         {["image", "video", "audio"].includes(i.kind) ? (
-                          <Media item={i} />
-                        ) : (
-                          i.body
-                        )}
+  <Media item={i} />
+) : gameInvite ? (
+  <div className="qq-game-invite">
+    <div className="qq-game-invite-main">
+      <div
+        className={`qq-game-invite-icon ${gameInvite.game}`}
+        style={{ backgroundColor: gameInvite.color }}
+      >
+        <Gamepad2 size={32} color="#263746" />
+      </div>
+
+      <div className="qq-game-invite-info">
+        <strong>{gameInvite.name}</strong>
+        <span>{gameInvite.description}</span>
+      </div>
+    </div>
+
+    <div className="qq-game-invite-footer">
+      <span>游戏邀请</span>
+      <span className="qq-game-invite-action">
+        加入游戏 <ArrowRight size={15} />
+      </span>
+    </div>
+  </div>
+) : (
+  i.body
+)}
                       </>
                     )}
                   </button>
