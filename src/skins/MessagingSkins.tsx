@@ -184,29 +184,7 @@ function ChatRows({
               p.onRead(name);
             }}
           >
-            {["陈燊", "吕政熙", "朱映宸", "杨云皓"].includes(name) ? (
-  <img
-    src={`${import.meta.env.BASE_URL}${
-      name === "陈燊"
-        ? "chenshenQQ.jpg"
-        : name === "吕政熙"
-          ? "lvzhengxiQQ.jpg"
-          : name === "朱映宸"
-            ? "zhuyingchenQQ.jpg"
-            : "yangyunhaoQQ.jpg"
-    }`}
-    alt={name}
-    style={{
-      width: 48,
-      height: 48,
-      borderRadius: "50%",
-      objectFit: "cover",
-      flexShrink: 0,
-    }}
-  />
-) : (
-  <Avatar name={name} src={last.avatar} round={round} />
-)}
+            <Avatar name={name} round={round} />
             <span>
               <strong>{name}</strong>
               <p>{last.body}</p>
