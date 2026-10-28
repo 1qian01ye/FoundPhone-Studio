@@ -414,521 +414,523 @@
       ]
     },
     
-{
-  "id": "qq-class-group",
-  "app": "qq",
-  "title": "八年级二班班级群",
-  
-"participants": [
-  "owner",
-  "qq-class-group",
-  "qq-chinese-rep",
-  "qq-math-rep",
-  "qq-english-rep",
-  "qq-history-rep",
-  "qq-politics-rep",
-  "qq-chemistry-rep",
-  "qq-physics-rep",
-  "qq-geography-rep",
-  "qq-biology-rep"
-],
-
-  "messages": [
+  "chats": [
     {
-  "id": "qq-chen-shen",
-  "app": "qq",
-  "title": "陈燊",
-  "participants": ["owner", "qq-chen-shen"],
-  "messages": [
-  {
-    "id": "qq-chen-20260823-001",
-    "time": "08-23 19:57",
-    "body": "我已成功添加你为好友！",
-    "senderId": "owner"
-  },
-  {
-    "id": "qq-chen-20260823-002",
-    "time": "08-23 20:12",
-    "body": "不是说了现在都不用QQ了吗，非要加",
-    "senderId": "owner"
-  },
-  {
-    "id": "qq-chen-20260823-003",
-    "time": "08-23 20:12",
-    "body": "你这个骗子我又骗我",
-    "senderId": "qq-chen-shen"
-  },
-  {
-    "id": "qq-chen-20260823-004",
-    "time": "08-23 20:12",
-    "body": "？",
-    "senderId": "owner"
-  },
-  {
-    "id": "qq-chen-20260823-005",
-    "time": "08-23 20:12",
-    "body": "结束的时候在车上我明明就听见你有QQ好友特别关心的消息提醒",
-    "senderId": "qq-chen-shen"
-  },
-  {
-    "id": "qq-chen-20260823-006",
-    "time": "08-23 20:12",
-    "body": "骗子骗子骗子",
-    "senderId": "qq-chen-shen"
-  },
-  {
-    "id": "qq-chen-20260823-007",
-    "time": "08-23 20:12",
-    "body": "那是吕政熙的消息提醒啊",
-    "senderId": "owner"
-  },
-  {
-    "id": "qq-chen-20260823-008",
-    "time": "08-23 20:12",
-    "body": "你不仅加了他的好友还设置特别关心给他",
-    "senderId": "qq-chen-shen"
-  },
-  {
-    "id": "qq-chen-20260823-009",
-    "time": "08-23 20:12",
-    "body": "还骗我说你不玩QQ",
-    "senderId": "qq-chen-shen"
-  },
-  {
-    "id": "qq-chen-20260823-010",
-    "time": "08-23 20:12",
-    "body": "我还没说完你急什么",
-    "senderId": "owner"
-  },
-  {
-    "id": "qq-chen-20260823-011",
-    "time": "08-23 20:12",
-    "body": "那是因为我们一起打三角洲",
-    "senderId": "owner"
-  },
-  {
-    "id": "qq-chen-20260823-012",
-    "time": "08-23 20:12",
-    "body": "他给我发邀请的时候我老是没提醒",
-    "senderId": "owner"
-  },
-  {
-    "id": "qq-chen-20260823-013",
-    "time": "08-23 20:12",
-    "body": "就设置了这个方便快速上号知道吗",
-    "senderId": "owner"
-  },
-  {
-    "id": "qq-chen-20260823-014",
-    "time": "08-23 20:12",
-    "body": "真的吗？",
-    "senderId": "qq-chen-shen"
-  },
-  {
-    "id": "qq-chen-20260823-015",
-    "time": "08-23 20:12",
-    "body": "随你怎么想",
-    "senderId": "owner"
-  },
-  {
-    "id": "qq-chen-20260823-016",
-    "time": "08-23 20:12",
-    "body": "好吧，我错了",
-    "senderId": "qq-chen-shen"
-  },
-  {
-    "id": "qq-chen-20260823-017",
-    "time": "08-23 20:34",
-    "body": "你生气了吗",
-    "senderId": "qq-chen-shen"
-  },
-  {
-    "id": "qq-chen-20260823-018",
-    "time": "08-23 20:57",
-    "body": "刚打完游戏",
-    "senderId": "owner"
-  },
-  {
-    "id": "qq-chen-20260823-019",
-    "time": "08-23 20:57",
-    "body": "……",
-    "senderId": "qq-chen-shen"
-  },
-  {
-    "id": "qq-chen-20261117-001",
-    "time": "2026-11-17 00:00",
-    "body": "生日快乐！🎂",
-    "senderId": "qq-chen-shen"
-  },
-  {
-    "id": "qq-chen-20261117-002",
-    "time": "2026-11-17 00:13",
-    "body": "怎么还全平台都要发啊",
-    "senderId": "owner"
-  },
-  {
-    "id": "qq-chen-20261117-003",
-    "time": "2026-11-17 00:13",
-    "body": "幼稚",
-    "senderId": "owner"
-  },
-  {
-    "id": "qq-chen-20261117-004",
-    "time": "2026-11-17 00:14",
-    "body": "那你喜不喜欢嘛😎",
-    "senderId": "qq-chen-shen"
-  },
-  {
-    "id": "qq-chen-20261117-005",
-    "time": "2026-11-17 00:14",
-    "body": "…喜欢",
-    "senderId": "owner"
-  }
-  ]
-},
-  {
-    "id": "qq-class-group-hw-20260928-chinese",
-    "time": "2026-09-28 18:00",
-    "body": "【语文作业】复习本周课文，整理重点词语和段落大意，完成课后练习。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20260928-math",
-    "time": "2026-09-28 18:06",
-    "body": "【数学作业】完成函数基础练习8题，写清解题步骤并订正错题。",
-    "senderId": "qq-math-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20260929-english",
-    "time": "2026-09-29 18:00",
-    "body": "【英语作业】复习本单元单词和短语，每个重点单词抄写一遍，并完成课后练习。",
-    "senderId": "qq-english-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20260929-physics",
-    "time": "2026-09-29 18:07",
-    "body": "【物理作业】整理光学基础知识，完成课堂练习并订正错题。",
-    "senderId": "qq-physics-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20260930-national-day",
-    "time": "2026-09-30 18:00",
-    "body": "【国庆假期作业】语文：完成一篇假期阅读摘记；数学：完成综合练习12题；英语：整理本单元重点词汇并造句；历史：制作一张单元知识梳理表。假期内完成并自行检查，返校后统一提交。国庆假期期间不再另发新的作业通知。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261008-chinese",
-    "time": "2026-10-08 18:00",
-    "body": "【语文作业】完成课文重点段落赏析，摘抄3处关键句并写出自己的感受。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261008-math",
-    "time": "2026-10-08 18:06",
-    "body": "【数学作业】完成综合练习10题，重点检查计算过程和书写格式。",
-    "senderId": "qq-math-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261009-english",
-    "time": "2026-10-09 18:00",
-    "body": "【英语作业】复习本单元单词，完成阅读理解练习，并整理不会的词汇。",
-    "senderId": "qq-english-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261009-history",
-    "time": "2026-10-09 18:07",
-    "body": "【历史作业】整理本课知识点，按时间顺序列出重要事件并完成课后练习。",
-    "senderId": "qq-history-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261010-math",
-    "time": "2026-10-10 18:00",
-    "body": "【数学作业】完成函数专题练习8题，订正错题，并标出仍然不理解的题目。",
-    "senderId": "qq-math-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261012-chinese",
-    "time": "2026-10-12 18:00",
-    "body": "【语文作业】完成一篇课外阅读练习，回答问题时注意结合原文内容。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261012-math",
-    "time": "2026-10-12 18:06",
-    "body": "【数学作业】复习本周知识点，完成基础练习10题并独立检查。",
-    "senderId": "qq-math-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261013-english",
-    "time": "2026-10-13 18:00",
-    "body": "【英语作业】完成一篇阅读理解，整理文章中的重点短语，并用其中5个短语造句。",
-    "senderId": "qq-english-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261013-physics",
-    "time": "2026-10-13 18:07",
-    "body": "【物理作业】完成光学练习题，画出相关光路图并标注关键位置。",
-    "senderId": "qq-physics-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261014-chinese",
-    "time": "2026-10-14 18:00",
-    "body": "【语文作业】整理本课生字词，完成课后练习，并背诵老师要求的段落。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261014-math",
-    "time": "2026-10-14 18:06",
-    "body": "【数学作业】完成函数图像相关练习8题，注意分析图像与表达式之间的关系。",
-    "senderId": "qq-math-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261015-english",
-    "time": "2026-10-15 18:00",
-    "body": "【英语作业】复习本单元语法，完成课本练习，并整理3个容易混淆的知识点。",
-    "senderId": "qq-english-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261015-physics",
-    "time": "2026-10-15 18:07",
-    "body": "【物理作业】整理课堂笔记，完成相关计算题，并在错题旁写出原因。",
-    "senderId": "qq-physics-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261016-weekend",
-    "time": "2026-10-16 18:00",
-    "body": "【周五作业及周末任务】语文：完成一篇阅读练习；数学：完成综合练习10题；英语：复习本周单词和语法；物理：整理本周知识点并订正错题。周末完成后检查一遍。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261019-chinese",
-    "time": "2026-10-19 18:00",
-    "body": "【语文作业】完成课文内容梳理，概括文章中心思想，并摘抄3处优美语句。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261019-math",
-    "time": "2026-10-19 18:06",
-    "body": "【数学作业】完成基础训练10题，要求步骤完整，做完后检查计算结果。",
-    "senderId": "qq-math-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261020-english",
-    "time": "2026-10-20 18:00",
-    "body": "【英语作业】背诵本单元重点词汇，完成句型转换练习，并朗读课文一遍。",
-    "senderId": "qq-english-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261020-history",
-    "time": "2026-10-20 18:07",
-    "body": "【历史作业】完成课后练习，整理本课重要人物、事件及其影响。",
-    "senderId": "qq-history-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261021-chinese",
-    "time": "2026-10-21 18:00",
-    "body": "【语文作业】完成一篇阅读理解，回答问题时写清依据，并检查语言表达。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261021-math",
-    "time": "2026-10-21 18:06",
-    "body": "【数学作业】完成函数应用题6道，尝试用不同方法检验答案。",
-    "senderId": "qq-math-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261022-english",
-    "time": "2026-10-22 18:00",
-    "body": "【英语作业】完成课本阅读练习，整理重点句型，并复习本单元语法。",
-    "senderId": "qq-english-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261022-physics",
-    "time": "2026-10-22 18:07",
-    "body": "【物理作业】完成本节练习题，整理公式及适用条件，订正错误答案。",
-    "senderId": "qq-physics-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261023-weekend",
-    "time": "2026-10-23 18:00",
-    "body": "【周五作业及周末任务】语文：完成阅读练习并积累好词好句；数学：完成综合练习12题；英语：复习本周词汇和语法；历史：整理本周课堂笔记。请合理安排时间，按时完成。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261026-chinese",
-    "time": "2026-10-26 18:00",
-    "body": "【语文作业】复习本周课文，整理重点段落的含义，并完成课后练习。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261026-math",
-    "time": "2026-10-26 18:06",
-    "body": "【数学作业】完成函数专题练习10题，整理两道典型错题并写出正确解法。",
-    "senderId": "qq-math-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261027-english",
-    "time": "2026-10-27 18:00",
-    "body": "【英语作业】复习本单元单词和短语，完成语法练习，并用5个重点词汇造句。",
-    "senderId": "qq-english-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261027-physics",
-    "time": "2026-10-27 18:07",
-    "body": "【物理作业】整理光学和相关实验知识，完成练习题并写出实验结论。",
-    "senderId": "qq-physics-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261028-chinese",
-    "time": "2026-10-28 18:00",
-    "body": "【语文作业】完成课外阅读练习，概括文章内容，并摘抄3处关键语句。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261028-math",
-    "time": "2026-10-28 18:06",
-    "body": "【数学作业】完成综合练习10题，重点检查函数图像、计算和解题步骤。",
-    "senderId": "qq-math-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261029-english",
-    "time": "2026-10-29 18:00",
-    "body": "【英语作业】完成阅读理解和句型转换练习，整理错题并复习相关语法。",
-    "senderId": "qq-english-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261029-history",
-    "time": "2026-10-29 18:07",
-    "body": "【历史作业】完成本课练习，整理重要事件的时间、原因和影响。",
-    "senderId": "qq-history-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261030-weekend",
-    "time": "2026-10-30 18:00",
-    "body": "【周五作业及周末任务】语文：完成一篇阅读练习；数学：完成综合练习12题；英语：复习本周词汇和语法；物理：整理公式并订正错题。周末结束前完成自查。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261102-chinese",
-    "time": "2026-11-02 18:00",
-    "body": "【语文作业】梳理本周课文结构，概括各段大意，并完成课后阅读题。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261102-math",
-    "time": "2026-11-02 18:06",
-    "body": "【数学作业】完成基础练习10题，整理错题并标明对应的知识点。",
-    "senderId": "qq-math-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261103-english",
-    "time": "2026-11-03 18:00",
-    "body": "【英语作业】复习重点词汇和短语，完成课本练习，并朗读指定课文。",
-    "senderId": "qq-english-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261103-physics",
-    "time": "2026-11-03 18:07",
-    "body": "【物理作业】完成课堂配套练习，整理公式、单位及使用条件。",
-    "senderId": "qq-physics-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261104-chinese",
-    "time": "2026-11-04 18:00",
-    "body": "【语文作业】完成阅读理解练习，结合文章内容分析人物特点或作者情感。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261104-math",
-    "time": "2026-11-04 18:06",
-    "body": "【数学作业】完成函数综合题8道，写出关键步骤并检查答案。",
-    "senderId": "qq-math-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261105-english",
-    "time": "2026-11-05 18:00",
-    "body": "【英语作业】完成一篇阅读理解，整理生词，并用重点短语各造一个句子。",
-    "senderId": "qq-english-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261105-history",
-    "time": "2026-11-05 18:07",
-    "body": "【历史作业】整理本课知识框架，完成课后练习并复习上节课内容。",
-    "senderId": "qq-history-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261106-weekend",
-    "time": "2026-11-06 18:00",
-    "body": "【周五作业及周末任务】语文：完成课外阅读并写摘记；数学：完成综合练习12题；英语：复习本周单词和语法；物理：完成练习并订正错题。请在周末内完成。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261109-chinese",
-    "time": "2026-11-09 18:00",
-    "body": "【语文作业】复习课文重点内容，整理好词好句，并完成阅读练习。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261109-math",
-    "time": "2026-11-09 18:06",
-    "body": "【数学作业】完成基础训练10题，检查计算过程并订正所有错题。",
-    "senderId": "qq-math-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261110-english",
-    "time": "2026-11-10 18:00",
-    "body": "【英语作业】复习本单元词汇和语法，完成句型转换练习，并背诵指定内容。",
-    "senderId": "qq-english-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261110-physics",
-    "time": "2026-11-10 18:07",
-    "body": "【物理作业】完成本节练习题，整理实验步骤、实验现象和结论。",
-    "senderId": "qq-physics-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261111-chinese",
-    "time": "2026-11-11 18:00",
-    "body": "【语文作业】完成一篇阅读理解，整理答题思路，并检查答案是否结合原文。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261111-math",
-    "time": "2026-11-11 18:06",
-    "body": "【数学作业】完成函数综合练习8题，整理一道典型题的解题过程。",
-    "senderId": "qq-math-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261112-english",
-    "time": "2026-11-12 18:00",
-    "body": "【英语作业】完成阅读和语法练习，整理本周易错词汇及句型。",
-    "senderId": "qq-english-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261112-history",
-    "time": "2026-11-12 18:07",
-    "body": "【历史作业】复习本单元知识点，制作一张知识梳理表并完成课后练习。",
-    "senderId": "qq-history-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261113-weekend",
-    "time": "2026-11-13 18:00",
-    "body": "【周五作业及周末任务】语文：完成阅读练习并整理摘记；数学：完成综合练习12题；英语：复习本周词汇、语法；物理：整理本周知识点并订正错题。完成后自行检查。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261116-chinese",
-    "time": "2026-11-16 18:00",
-    "body": "【语文作业】完成课文复习，整理重点段落和中心思想，并完成课后练习。",
-    "senderId": "qq-chinese-rep"
-  },
-  {
-    "id": "qq-class-group-hw-20261116-math",
-    "time": "2026-11-16 18:06",
-    "body": "【数学作业】完成综合练习10题，订正错题并标记需要进一步复习的知识点。",
-    "senderId": "qq-math-rep"
-  }
-]
+      "id": "qq-chen-shen",
+      "app": "qq",
+      "title": "陈燊",
+      "participants": [
+        "owner",
+        "qq-chen-shen"
+      ],
+      "messages": [
+        {
+          "id": "qq-chen-20260823-001",
+          "time": "08-23 19:57",
+          "body": "我已成功添加你为好友！",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-chen-20260823-002",
+          "time": "08-23 20:12",
+          "body": "不是说了现在都不用QQ了吗，非要加",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-chen-20260823-003",
+          "time": "08-23 20:12",
+          "body": "你这个骗子我又骗我",
+          "senderId": "qq-chen-shen"
+        },
+        {
+          "id": "qq-chen-20260823-004",
+          "time": "08-23 20:12",
+          "body": "？",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-chen-20260823-005",
+          "time": "08-23 20:12",
+          "body": "结束的时候在车上我明明就听见你有QQ好友特别关心的消息提醒",
+          "senderId": "qq-chen-shen"
+        },
+        {
+          "id": "qq-chen-20260823-006",
+          "time": "08-23 20:12",
+          "body": "骗子骗子骗子",
+          "senderId": "qq-chen-shen"
+        },
+        {
+          "id": "qq-chen-20260823-007",
+          "time": "08-23 20:12",
+          "body": "那是吕政熙的消息提醒啊",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-chen-20260823-008",
+          "time": "08-23 20:12",
+          "body": "你不仅加了他的好友还设置特别关心给他",
+          "senderId": "qq-chen-shen"
+        },
+        {
+          "id": "qq-chen-20260823-009",
+          "time": "08-23 20:12",
+          "body": "还骗我说你不玩QQ",
+          "senderId": "qq-chen-shen"
+        },
+        {
+          "id": "qq-chen-20260823-010",
+          "time": "08-23 20:12",
+          "body": "我还没说完你急什么",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-chen-20260823-011",
+          "time": "08-23 20:12",
+          "body": "那是因为我们一起打三角洲",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-chen-20260823-012",
+          "time": "08-23 20:12",
+          "body": "他给我发邀请的时候我老是没提醒",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-chen-20260823-013",
+          "time": "08-23 20:12",
+          "body": "就设置了这个方便快速上号知道吗",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-chen-20260823-014",
+          "time": "08-23 20:12",
+          "body": "真的吗？",
+          "senderId": "qq-chen-shen"
+        },
+        {
+          "id": "qq-chen-20260823-015",
+          "time": "08-23 20:12",
+          "body": "随你怎么想",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-chen-20260823-016",
+          "time": "08-23 20:12",
+          "body": "好吧，我错了",
+          "senderId": "qq-chen-shen"
+        },
+        {
+          "id": "qq-chen-20260823-017",
+          "time": "08-23 20:34",
+          "body": "你生气了吗",
+          "senderId": "qq-chen-shen"
+        },
+        {
+          "id": "qq-chen-20260823-018",
+          "time": "08-23 20:57",
+          "body": "刚打完游戏",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-chen-20260823-019",
+          "time": "08-23 20:57",
+          "body": "……",
+          "senderId": "qq-chen-shen"
+        },
+        {
+          "id": "qq-chen-20261117-001",
+          "time": "2026-11-17 00:00",
+          "body": "生日快乐！🎂",
+          "senderId": "qq-chen-shen"
+        },
+        {
+          "id": "qq-chen-20261117-002",
+          "time": "2026-11-17 00:13",
+          "body": "怎么还全平台都要发啊",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-chen-20261117-003",
+          "time": "2026-11-17 00:13",
+          "body": "幼稚",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-chen-20261117-004",
+          "time": "2026-11-17 00:14",
+          "body": "那你喜不喜欢嘛😎",
+          "senderId": "qq-chen-shen"
+        },
+        {
+          "id": "qq-chen-20261117-005",
+          "time": "2026-11-17 00:14",
+          "body": "…喜欢",
+          "senderId": "owner"
+        }
+      ]
+    },
+    {
+      "id": "qq-class-group",
+      "app": "qq",
+      "title": "八年级二班班级群",
+      "participants": [
+        "owner",
+        "qq-class-group",
+        "qq-chinese-rep",
+        "qq-math-rep",
+        "qq-english-rep",
+        "qq-history-rep",
+        "qq-politics-rep",
+        "qq-chemistry-rep",
+        "qq-physics-rep",
+        "qq-geography-rep",
+        "qq-biology-rep"
+      ],
+      "messages": [
+        {
+          "id": "qq-class-group-hw-20260928-chinese",
+          "time": "2026-09-28 18:00",
+          "body": "【语文作业】复习本周课文，整理重点词语和段落大意，完成课后练习。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20260928-math",
+          "time": "2026-09-28 18:06",
+          "body": "【数学作业】完成函数基础练习8题，写清解题步骤并订正错题。",
+          "senderId": "qq-math-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20260929-english",
+          "time": "2026-09-29 18:00",
+          "body": "【英语作业】复习本单元单词和短语，每个重点单词抄写一遍，并完成课后练习。",
+          "senderId": "qq-english-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20260929-physics",
+          "time": "2026-09-29 18:07",
+          "body": "【物理作业】整理光学基础知识，完成课堂练习并订正错题。",
+          "senderId": "qq-physics-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20260930-national-day",
+          "time": "2026-09-30 18:00",
+          "body": "【国庆假期作业】语文：完成一篇假期阅读摘记；数学：完成综合练习12题；英语：整理本单元重点词汇并造句；历史：制作一张单元知识梳理表。假期内完成并自行检查，返校后统一提交。国庆假期期间不再另发新的作业通知。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261008-chinese",
+          "time": "2026-10-08 18:00",
+          "body": "【语文作业】完成课文重点段落赏析，摘抄3处关键句并写出自己的感受。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261008-math",
+          "time": "2026-10-08 18:06",
+          "body": "【数学作业】完成综合练习10题，重点检查计算过程和书写格式。",
+          "senderId": "qq-math-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261009-english",
+          "time": "2026-10-09 18:00",
+          "body": "【英语作业】复习本单元单词，完成阅读理解练习，并整理不会的词汇。",
+          "senderId": "qq-english-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261009-history",
+          "time": "2026-10-09 18:07",
+          "body": "【历史作业】整理本课知识点，按时间顺序列出重要事件并完成课后练习。",
+          "senderId": "qq-history-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261010-math",
+          "time": "2026-10-10 18:00",
+          "body": "【数学作业】完成函数专题练习8题，订正错题，并标出仍然不理解的题目。",
+          "senderId": "qq-math-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261012-chinese",
+          "time": "2026-10-12 18:00",
+          "body": "【语文作业】完成一篇课外阅读练习，回答问题时注意结合原文内容。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261012-math",
+          "time": "2026-10-12 18:06",
+          "body": "【数学作业】复习本周知识点，完成基础练习10题并独立检查。",
+          "senderId": "qq-math-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261013-english",
+          "time": "2026-10-13 18:00",
+          "body": "【英语作业】完成一篇阅读理解，整理文章中的重点短语，并用其中5个短语造句。",
+          "senderId": "qq-english-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261013-physics",
+          "time": "2026-10-13 18:07",
+          "body": "【物理作业】完成光学练习题，画出相关光路图并标注关键位置。",
+          "senderId": "qq-physics-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261014-chinese",
+          "time": "2026-10-14 18:00",
+          "body": "【语文作业】整理本课生字词，完成课后练习，并背诵老师要求的段落。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261014-math",
+          "time": "2026-10-14 18:06",
+          "body": "【数学作业】完成函数图像相关练习8题，注意分析图像与表达式之间的关系。",
+          "senderId": "qq-math-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261015-english",
+          "time": "2026-10-15 18:00",
+          "body": "【英语作业】复习本单元语法，完成课本练习，并整理3个容易混淆的知识点。",
+          "senderId": "qq-english-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261015-physics",
+          "time": "2026-10-15 18:07",
+          "body": "【物理作业】整理课堂笔记，完成相关计算题，并在错题旁写出原因。",
+          "senderId": "qq-physics-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261016-weekend",
+          "time": "2026-10-16 18:00",
+          "body": "【周五作业及周末任务】语文：完成一篇阅读练习；数学：完成综合练习10题；英语：复习本周单词和语法；物理：整理本周知识点并订正错题。周末完成后检查一遍。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261019-chinese",
+          "time": "2026-10-19 18:00",
+          "body": "【语文作业】完成课文内容梳理，概括文章中心思想，并摘抄3处优美语句。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261019-math",
+          "time": "2026-10-19 18:06",
+          "body": "【数学作业】完成基础训练10题，要求步骤完整，做完后检查计算结果。",
+          "senderId": "qq-math-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261020-english",
+          "time": "2026-10-20 18:00",
+          "body": "【英语作业】背诵本单元重点词汇，完成句型转换练习，并朗读课文一遍。",
+          "senderId": "qq-english-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261020-history",
+          "time": "2026-10-20 18:07",
+          "body": "【历史作业】完成课后练习，整理本课重要人物、事件及其影响。",
+          "senderId": "qq-history-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261021-chinese",
+          "time": "2026-10-21 18:00",
+          "body": "【语文作业】完成一篇阅读理解，回答问题时写清依据，并检查语言表达。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261021-math",
+          "time": "2026-10-21 18:06",
+          "body": "【数学作业】完成函数应用题6道，尝试用不同方法检验答案。",
+          "senderId": "qq-math-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261022-english",
+          "time": "2026-10-22 18:00",
+          "body": "【英语作业】完成课本阅读练习，整理重点句型，并复习本单元语法。",
+          "senderId": "qq-english-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261022-physics",
+          "time": "2026-10-22 18:07",
+          "body": "【物理作业】完成本节练习题，整理公式及适用条件，订正错误答案。",
+          "senderId": "qq-physics-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261023-weekend",
+          "time": "2026-10-23 18:00",
+          "body": "【周五作业及周末任务】语文：完成阅读练习并积累好词好句；数学：完成综合练习12题；英语：复习本周词汇和语法；历史：整理本周课堂笔记。请合理安排时间，按时完成。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261026-chinese",
+          "time": "2026-10-26 18:00",
+          "body": "【语文作业】复习本周课文，整理重点段落的含义，并完成课后练习。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261026-math",
+          "time": "2026-10-26 18:06",
+          "body": "【数学作业】完成函数专题练习10题，整理两道典型错题并写出正确解法。",
+          "senderId": "qq-math-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261027-english",
+          "time": "2026-10-27 18:00",
+          "body": "【英语作业】复习本单元单词和短语，完成语法练习，并用5个重点词汇造句。",
+          "senderId": "qq-english-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261027-physics",
+          "time": "2026-10-27 18:07",
+          "body": "【物理作业】整理光学和相关实验知识，完成练习题并写出实验结论。",
+          "senderId": "qq-physics-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261028-chinese",
+          "time": "2026-10-28 18:00",
+          "body": "【语文作业】完成课外阅读练习，概括文章内容，并摘抄3处关键语句。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261028-math",
+          "time": "2026-10-28 18:06",
+          "body": "【数学作业】完成综合练习10题，重点检查函数图像、计算和解题步骤。",
+          "senderId": "qq-math-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261029-english",
+          "time": "2026-10-29 18:00",
+          "body": "【英语作业】完成阅读理解和句型转换练习，整理错题并复习相关语法。",
+          "senderId": "qq-english-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261029-history",
+          "time": "2026-10-29 18:07",
+          "body": "【历史作业】完成本课练习，整理重要事件的时间、原因和影响。",
+          "senderId": "qq-history-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261030-weekend",
+          "time": "2026-10-30 18:00",
+          "body": "【周五作业及周末任务】语文：完成一篇阅读练习；数学：完成综合练习12题；英语：复习本周词汇和语法；物理：整理公式并订正错题。周末结束前完成自查。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261102-chinese",
+          "time": "2026-11-02 18:00",
+          "body": "【语文作业】梳理本周课文结构，概括各段大意，并完成课后阅读题。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261102-math",
+          "time": "2026-11-02 18:06",
+          "body": "【数学作业】完成基础练习10题，整理错题并标明对应的知识点。",
+          "senderId": "qq-math-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261103-english",
+          "time": "2026-11-03 18:00",
+          "body": "【英语作业】复习重点词汇和短语，完成课本练习，并朗读指定课文。",
+          "senderId": "qq-english-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261103-physics",
+          "time": "2026-11-03 18:07",
+          "body": "【物理作业】完成课堂配套练习，整理公式、单位及使用条件。",
+          "senderId": "qq-physics-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261104-chinese",
+          "time": "2026-11-04 18:00",
+          "body": "【语文作业】完成阅读理解练习，结合文章内容分析人物特点或作者情感。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261104-math",
+          "time": "2026-11-04 18:06",
+          "body": "【数学作业】完成函数综合题8道，写出关键步骤并检查答案。",
+          "senderId": "qq-math-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261105-english",
+          "time": "2026-11-05 18:00",
+          "body": "【英语作业】完成一篇阅读理解，整理生词，并用重点短语各造一个句子。",
+          "senderId": "qq-english-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261105-history",
+          "time": "2026-11-05 18:07",
+          "body": "【历史作业】整理本课知识框架，完成课后练习并复习上节课内容。",
+          "senderId": "qq-history-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261106-weekend",
+          "time": "2026-11-06 18:00",
+          "body": "【周五作业及周末任务】语文：完成课外阅读并写摘记；数学：完成综合练习12题；英语：复习本周单词和语法；物理：完成练习并订正错题。请在周末内完成。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261109-chinese",
+          "time": "2026-11-09 18:00",
+          "body": "【语文作业】复习课文重点内容，整理好词好句，并完成阅读练习。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261109-math",
+          "time": "2026-11-09 18:06",
+          "body": "【数学作业】完成基础训练10题，检查计算过程并订正所有错题。",
+          "senderId": "qq-math-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261110-english",
+          "time": "2026-11-10 18:00",
+          "body": "【英语作业】复习本单元词汇和语法，完成句型转换练习，并背诵指定内容。",
+          "senderId": "qq-english-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261110-physics",
+          "time": "2026-11-10 18:07",
+          "body": "【物理作业】完成本节练习题，整理实验步骤、实验现象和结论。",
+          "senderId": "qq-physics-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261111-chinese",
+          "time": "2026-11-11 18:00",
+          "body": "【语文作业】完成一篇阅读理解，整理答题思路，并检查答案是否结合原文。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261111-math",
+          "time": "2026-11-11 18:06",
+          "body": "【数学作业】完成函数综合练习8题，整理一道典型题的解题过程。",
+          "senderId": "qq-math-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261112-english",
+          "time": "2026-11-12 18:00",
+          "body": "【英语作业】完成阅读和语法练习，整理本周易错词汇及句型。",
+          "senderId": "qq-english-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261112-history",
+          "time": "2026-11-12 18:07",
+          "body": "【历史作业】复习本单元知识点，制作一张知识梳理表并完成课后练习。",
+          "senderId": "qq-history-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261113-weekend",
+          "time": "2026-11-13 18:00",
+          "body": "【周五作业及周末任务】语文：完成阅读练习并整理摘记；数学：完成综合练习12题；英语：复习本周词汇、语法；物理：整理本周知识点并订正错题。完成后自行检查。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261116-chinese",
+          "time": "2026-11-16 18:00",
+          "body": "【语文作业】完成课文复习，整理重点段落和中心思想，并完成课后练习。",
+          "senderId": "qq-chinese-rep"
+        },
+        {
+          "id": "qq-class-group-hw-20261116-math",
+          "time": "2026-11-16 18:06",
+          "body": "【数学作业】完成综合练习10题，订正错题并标记需要进一步复习的知识点。",
+          "senderId": "qq-math-rep"
+        }
+      ]
     },
 {
   "id": "qq-lv-zhenxi",
