@@ -19,6 +19,8 @@ import {
   MapPin,
   Music,
   Phone,
+  PhoneIncoming,
+  PhoneOutgoing,
   Search,
   SkipForward,
   Star,
@@ -331,14 +333,28 @@ const list =
                     onClick={() => p.onItem(i)}
                   >
                    
-{tab === "收藏" ? <Avatar name={i.title} /> : null}
-<span>
-  <strong>{i.title}</strong>
-  <small>
+
+{tab === "收藏" ? (
+  <Avatar name={i.title} />
+) : tab === "最近通话" ? (
+  <span className={`call-direction-icon ${meta(i, "status") === "未接" ? "missed" : ""}`}>
+    {meta(i, "direction") === "呼出" ? (
+      <PhoneOutgoing size={19} />
+    ) : (
+      <PhoneIncoming size={19} />
+    )}
+  </span>
+) : null}
+
+<span className="call-row-info">
+  <strong title={i.title}>{i.title}</strong>
+  <small className={meta(i, "status") === "未接" ? "missed-text" : ""}>
     {meta(i, "direction", "通话")} · {meta(i, "status", "已接")}
   </small>
 </span>
+
 <time>{i.time ? i.time.slice(5, 16) : ""}</time>
+
 
                   </button>
                 ))}
