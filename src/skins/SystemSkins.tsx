@@ -58,9 +58,37 @@ const favoriteNames = [
 ];
 
 
-const contactItems = items.filter((i) =>
-  i.id.startsWith("contact-item-")
-);
+
+const contactNames = [
+  "陈燊",
+  "Father",
+  "飞总",
+  "老师",
+  "吕政熙",
+  "Mother",
+  "沈子航",
+  "小胖同学",
+  "小羽",
+  "杨林好",
+  "杨云皓",
+  "哲哲",
+  "智恩涵",
+];
+
+const contactItems = contactNames.map((name, index) => {
+  const existing = items.find((i) => i.title === name);
+
+  return existing ?? {
+    id: `contact-item-${index}`,
+    title: name,
+    body: "",
+    sender: name,
+    kind: "text",
+    meta: {},
+    time: "",
+  };
+});
+
 
 const favoriteItems = favoriteNames
   .map((name) => items.find((i) => i.title === name))
@@ -141,7 +169,7 @@ const list =
                     {meta(i, "status", "通话记录")}
                   </small>
                 </span>
-                <time>{i.time.slice(5, 10)}</time>
+                <time>{i.time ? i.time.slice(5, 10) : ""}</time>
               </button>
             ))}
             <Empty items={list} />
