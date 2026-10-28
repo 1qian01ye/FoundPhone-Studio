@@ -336,15 +336,20 @@
       }
     ],
     "contacts": [
-      {
-        "id": "test-item-contacts",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
+  {"id":"contact-item-chen-shen","title":"陈燊","body":"","sender":"陈燊","kind":"text","meta":{}},
+  {"id":"contact-item-father","title":"Father","body":"","sender":"Father","kind":"text","meta":{}},
+  {"id":"contact-item-fei-zong","title":"飞总","body":"","sender":"飞总","kind":"text","meta":{}},
+  {"id":"contact-item-laoshi","title":"老师","body":"","sender":"老师","kind":"text","meta":{}},
+  {"id":"contact-item-lv-zhengxi","title":"吕政熙","body":"","sender":"吕政熙","kind":"text","meta":{}},
+  {"id":"contact-item-mother","title":"Mother","body":"","sender":"Mother","kind":"text","meta":{}},
+  {"id":"contact-item-shen-zihang","title":"沈子航","body":"","sender":"沈子航","kind":"text","meta":{}},
+  {"id":"contact-item-xiaopang","title":"小胖同学","body":"","sender":"小胖同学","kind":"text","meta":{}},
+  {"id":"contact-item-xiaoyu","title":"小羽","body":"","sender":"小羽","kind":"text","meta":{}},
+  {"id":"contact-item-yang-linhao","title":"杨林好","body":"","sender":"杨林好","kind":"text","meta":{}},
+  {"id":"contact-item-yang-yunhao","title":"杨云皓","body":"","sender":"杨云皓","kind":"text","meta":{}},
+  {"id":"contact-item-zhezhe","title":"哲哲","body":"","sender":"哲哲","kind":"text","meta":{}},
+  {"id":"contact-item-zhi-enhan","title":"智恩涵","body":"","sender":"智恩涵","kind":"text","meta":{}}
+],
     "photos": [
       {
         "id": "test-item-photos",
