@@ -95,6 +95,29 @@ const [digits, setDigits] = useState(""),
     .filter((i): i is Item => i !== undefined);
 
   const list =
+      const getContactInitial = (name: string): string => {
+    const initials: Record<string, string> = {
+      "陈燊": "C",
+      Father: "F",
+      "飞总": "F",
+      "老师": "L",
+      "吕政熙": "L",
+      Mother: "M",
+      "沈子航": "S",
+      "小胖同学": "X",
+      "小羽": "X",
+      "杨林好": "Y",
+      "杨云皓": "Y",
+      "哲哲": "Z",
+      "智恩涵": "Z",
+    };
+
+    return initials[name] ?? name.charAt(0).toUpperCase();
+  };
+
+  const contactGroups = Array.from(
+    new Set(contactItems.map((item) => getContactInitial(item.title))),
+  ).sort((a, b) => a.localeCompare(b));
     tab === "收藏"
       ? favoriteItems
       : tab === "通讯录"
@@ -155,21 +178,65 @@ const [digits, setDigits] = useState(""),
         ) : (
           <>
             <SearchBox value={q} set={setQ} />
-            {list.map((i) => (
-              <button
-                className={`call-row ${meta(i, "status") === "未接" ? "missed" : ""}`}
-                key={i.id}
-                onClick={() => p.onItem(i)}
-              >
-                <Phone size={17} />
-                <span>
-                  <strong>{i.title}</strong>
-                  <small>通话记录</small>
-                </span>
-                <time>{i.time ? i.time.slice(5, 10) : ""}</time>
-              </button>
-            ))}
-            <Empty items={list} />
+                        {tab === "通讯录" ? (
+              <>
+                {contactGroups.map((letter) => {
+                  const groupItems = contactItems
+                    .filter(
+                      (item) => getContactInitial(item.title) === letter,
+                    )
+                    .filter((item) =>
+                      item.title.toLowerCase().includes(q.toLowerCase()),
+                    )
+                    .sort((a, b) => a.title.localeCompare(b.title, "zh-CN"));
+
+                  if (groupItems.length === 0) return null;
+
+                  return (
+                    <section key={letter} className="phone-contact-group">
+                      <h2 className="phone-contact-letter">{letter}</h2>
+
+                      {groupItems.map((i) => (
+                        <button
+                          className="call-row phone-contact-row"
+                          key={i.id}
+                          onClick={() => p.onItem(i)}
+                        >
+                          <Avatar name={i.title} />
+                          <span>
+                            <strong>{i.title}</strong>
+                            <small>通话记录</small>
+                          </span>
+                        </button>
+                      ))}
+                    </section>
+                  );
+                })}
+                <Empty
+                  items={contactItems.filter((item) =>
+                    item.title.toLowerCase().includes(q.toLowerCase()),
+                  )}
+                />
+              </>
+            ) : (
+              <>
+                {list.map((i) => (
+                  <button
+                    className={`call-row ${meta(i, "status") === "未接" ? "missed" : ""}`}
+                    key={i.id}
+                    onClick={() => p.onItem(i)}
+                  >
+                    <Phone size={17} />
+                    <span>
+                      <strong>{i.title}</strong>
+                      <small>通话记录</small>
+                    </span>
+                    <time>{i.time ? i.time.slice(5, 10) : ""}</time>
+                  </button>
+                ))}
+                <Empty items={list} />
+              </>
+            )}
           </>
         )}
       </div>
