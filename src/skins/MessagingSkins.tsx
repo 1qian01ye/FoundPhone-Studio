@@ -152,7 +152,7 @@ export function MessagesSkin(p: Props) {
           <Composer p={p} />
         </>
       ) : (
-        <div className="catalog-scroll">
+        <div className="catalog-scroll messages-no-scrollbar">
           <SearchBox value={q} set={setQ} />
           <ChatRows
             p={p}
