@@ -322,14 +322,16 @@ export function QQSkin(p: Props) {
                             textAlign: "left",
                           }}
                         >
-                          {["陈燊", "吕政熙", "朱映宸"].includes(name) ? (
+                          {["陈燊", "吕政熙", "朱映宸", "杨云皓"].includes(name) ? (
   <img
     src={`${import.meta.env.BASE_URL}${
       name === "陈燊"
         ? "chenshenQQ.jpg"
         : name === "吕政熙"
           ? "lvzhengxiQQ.jpg"
-          : "zhuyingchenQQ.jpg"
+          : name === "朱映宸"
+            ? "zhuyingchenQQ.jpg"
+            : "yangyunhaoQQ.jpg"
     }`}
     alt={name}
     style={{
