@@ -173,7 +173,7 @@ export function NativeDetail({
             </div>
           ))}
         </div>
-            ) : app === "safari" ? (
+      ) : app === "safari" ? (
         <>
           {item.title === "测试内容" ||
           item.title === "鬼灭之刃" ||
@@ -468,6 +468,7 @@ export function NativeDetail({
             </>
           )}
         </>
+              ) : (
         <div className="native-detail-scroll native-file-preview">
           <Folder size={64} color="#007aff" />
           <h2>{item.title}</h2>
