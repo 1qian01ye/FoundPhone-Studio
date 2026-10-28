@@ -5028,4 +5028,12 @@ label {
 .missed-text {
   color: #e5484d;
 }
+/* 隐藏 Messages 列表滚动条，但保留滚动功能 */
+.messages-no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 
+.messages-no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
