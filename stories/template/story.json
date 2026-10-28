@@ -1625,6 +1625,22 @@
     "meta": {}
   },
   {
+  "id": "weather-yibin",
+  "title": "宜宾",
+  "body": "天气数据待接入",
+  "sender": "Open-Meteo",
+  "kind": "text",
+  "meta": {}
+ },
+ {
+  "id": "weather-meishan",
+  "title": "眉山",
+  "body": "天气数据待接入",
+  "sender": "Open-Meteo",
+  "kind": "text",
+  "meta": {}
+  },
+  {
     "id": "weather-chongqing",
     "title": "重庆",
     "body": "天气数据待接入",
