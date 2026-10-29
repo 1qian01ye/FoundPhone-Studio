@@ -1335,9 +1335,34 @@ if (app.id === "camera") {
 
     <h2>{detail.title}</h2>
 
-    {(detail.media || ["media", "social"].includes(app.engine)) && (
-      <Media item={detail} />
-    )}
+    {app.id === "redbook" ? (
+  <div className="redbook-detail-images">
+    {(detail.images?.length
+      ? detail.images
+      : detail.media
+        ? [detail.media]
+        : []
+    ).map((image, index) => (
+      <div
+        className="redbook-detail-image"
+        key={`${detail.id}-${index}`}
+      >
+        <Media
+          item={{
+            ...detail,
+            id: `${detail.id}-image-${index}`,
+            media: image,
+            kind: "image",
+          }}
+        />
+      </div>
+    ))}
+  </div>
+) : (
+  (detail.media || ["media", "social"].includes(app.engine)) && (
+    <Media item={detail} />
+  )
+)}
 
     {app.id === "music" && (
       <AppleMusicPlayer item={detail} />
