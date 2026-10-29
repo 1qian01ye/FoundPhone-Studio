@@ -2062,15 +2062,61 @@
       }
     ],
     "taobao": [
-      {
-        "id": "test-item-taobao",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
+  {
+    "id": "taobao-chiikawa-blindbox",
+    "title": "Chiikawa盲盒",
+    "body": "这是一条测试内容。",
+    "sender": "测试用户",
+    "kind": "image",
+    "media": "/淘宝盲盒.jpg",
+    "meta": {}
+  },
+  {
+    "id": "taobao-blue-pants",
+    "title": "蓝色裤子",
+    "body": "这是一条测试内容。",
+    "sender": "测试用户",
+    "kind": "image",
+    "media": "/淘宝裤子.jpg",
+    "meta": {}
+  },
+  {
+    "id": "taobao-muichiro-doll",
+    "title": "时透无一郎棉花娃娃",
+    "body": "这是一条测试内容。",
+    "sender": "测试用户",
+    "kind": "image",
+    "media": "/淘宝娃娃.jpg",
+    "meta": {}
+  },
+  {
+    "id": "taobao-mountain-bike",
+    "title": "山地自行车",
+    "body": "这是一条测试内容。",
+    "sender": "测试用户",
+    "kind": "image",
+    "media": "/淘宝自行车.jpg",
+    "meta": {}
+  },
+  {
+    "id": "taobao-frog-foot-pillow",
+    "title": "奶蛙的脚抱枕",
+    "body": "这是一条测试内容。",
+    "sender": "测试用户",
+    "kind": "image",
+    "media": "/淘宝抱枕.jpg",
+    "meta": {}
+  },
+  {
+    "id": "taobao-pure-milk",
+    "title": "纯牛奶",
+    "body": "这是一条测试内容。",
+    "sender": "测试用户",
+    "kind": "image",
+    "media": "/淘宝牛奶.jpg",
+    "meta": {}
+  }
+],
     "netease": [
       {
         "id": "test-item-netease",
