@@ -1758,15 +1758,53 @@
       }
     ],
     "redbook": [
-      {
-        "id": "test-item-redbook",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
+  {
+    "id": "some-blue",
+    "title": "some blue",
+    "body": "一些让人心情愉悦的蓝色系穿搭\n\n#fitcheck #Ootd #男士穿搭 #蓝色系穿搭",
+    "richText": "",
+    "time": "2026-10-26 12:30",
+    "sender": "厚嘴皮儿",
+    "avatar": "/小红书头像1.jpg",
+    "kind": "post",
+    "media": "/some blue1.jpg",
+    "hidden": false,
+    "unlock": "",
+    "password": "",
+    "folder": "",
+    "favorite": true,
+    "outgoing": false,
+    "read": true,
+    "likes": 1286,
+    "comments": [
+      "林秋水：发型也要学吗老师",
+      "小满今天穿什么：第三套真的好适合夏天啊，清爽又有少年感",
+      "阿哲不迟到：蓝色系果然是男生穿搭的神，干净又显白",
+      "云朵汽水：第二套的配色好舒服，有没有同款推荐呀",
+      "木木：求第一套外套链接！这个颜色也太好看了",
+      "今天也要开心：这种穿搭真的很加分，感觉整个人都温柔了",
+      "周周：第三套配浅色裤子绝了，直接抄作业💙",
+      "一颗薄荷糖：蓝色穿好了真的有种很清爽的感觉，不会太刻意",
+      "陈同学：就应该这么穿，简单但很有质感",
+      "晚风不晚：收藏了！下次买衣服照着搭配",
+      "小鱼游啊游：有没有适合学生党的平价版本，真的很喜欢这个风格",
+      "柠檬冰美式：第四套也好看！这种低饱和蓝色好戳我",
+      "林间有风：想知道鞋子是什么牌子的，搭得好好看",
+      "别叫我早睡：原来蓝色和白色这么搭，学到了学到了"
     ],
+    "meta": {
+      "image2": "/some blue2.jpg",
+      "image3": "/some blue3.jpg",
+      "image4": "/some blue4.jpg",
+      "image5": "/some blue5.jpg",
+      "image6": "/some blue6.jpg",
+      "image7": "/some blue7.jpg",
+      "image8": "/some blue8.jpg",
+      "image9": "/some blue9.jpg",
+      "image10": "/some blue10.jpg"
+    }
+  }
+],
     "douyin": [
       {
         "id": "test-item-douyin",
