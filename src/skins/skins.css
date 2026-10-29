@@ -4456,3 +4456,17 @@
   overflow-wrap: anywhere;
   border-bottom: 1px solid var(--border, #e5e7eb);
 }
+.redbook-detail-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 12px 0 20px;
+}
+
+.redbook-detail-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
