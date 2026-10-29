@@ -93,6 +93,7 @@ export function AlipaySkin(p: Props) {
 export function TaobaoSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "商品");
   const [status, setStatus] = useState("全部");
+
   const list = items
     .filter((i) =>
       tab === "商品"
@@ -100,12 +101,15 @@ export function TaobaoSkin(p: Props) {
         : i.folder === tab,
     )
     .filter((i) => status === "全部" || meta(i, "status") === status);
+
   return (
     <div className="catalog-skin taobao-ui">
       <Header p={p} />
+
       <div className="taobao-search">
         <SearchBox value={q} set={setQ} placeholder="搜索商品或订单" />
       </div>
+
       <div className="catalog-scroll taobao-scroll">
         {tab === "商品" ? (
           <div className="taobao-products">
@@ -133,6 +137,7 @@ export function TaobaoSkin(p: Props) {
                 </button>
               ))}
             </div>
+
             {list.map((i) => (
               <button
                 className="taobao-order"
@@ -144,31 +149,33 @@ export function TaobaoSkin(p: Props) {
                   <strong>{i.sender}</strong>
                   <small>{meta(i, "status", "订单记录")}</small>
                 </div>
+
                 <section>
                   <Media item={i} />
                   <span>
                     <strong>{i.title}</strong>
-                    <p>
-                      {tab === "物流" ? meta(i, "tracking", i.body) : i.body}
-                    </p>
+                    <p>{i.body}</p>
                     <b>¥ {meta(i, "price", "—")}</b>
                   </span>
                 </section>
+
                 <footer>{meta(i, "number", i.time)}</footer>
               </button>
             ))}
           </>
         )}
+
         <Empty items={list} />
       </div>
+
       <Tabs
-        tabs={["商品", "订单", "物流"]}
+        tabs={["商品", "订单"]}
         value={tab}
         set={(t) => {
           setTab(t);
           setStatus("全部");
         }}
-        icons={[<Home />, <ShoppingBag />, <Truck />]}
+        icons={[<Home />, <ShoppingBag />]}
       />
     </div>
   );
