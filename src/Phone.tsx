@@ -1284,38 +1284,95 @@ if (app.id === "camera") {
         </div>
       ) : (
         <>
-          <small className="detail-meta">
-            {detail.time} · {detail.sender}
-          </small>
-          <h2>{detail.title}</h2>
-          {(detail.media || ["media", "social"].includes(app.engine)) && (
-            <Media item={detail} />
-          )}
-          {app.id === "music" && (
-  <AppleMusicPlayer item={detail} />
+          {app.id === "redbook" ? (
+  <div className="redbook-detail">
+    <small className="detail-meta">
+      {detail.time} · {detail.sender}
+    </small>
+
+    <div className="redbook-detail-images">
+      {(detail.images?.length
+        ? detail.images
+        : detail.media
+          ? [detail.media]
+          : []
+      ).map((image, index) => (
+        <div className="redbook-detail-image" key={`${image}-${index}`}>
+          <Media
+            item={{
+              ...detail,
+              id: `${detail.id}-image-${index}`,
+              media: image,
+              kind: "image",
+            }}
+          />
+        </div>
+      ))}
+    </div>
+
+    <h2>{detail.title}</h2>
+
+    <RichText
+      value={detail.richText}
+      fallback={detail.body}
+    />
+
+    <section className="redbook-comments">
+      <h3>全部评论（{detail.comments.length}）</h3>
+
+      {detail.comments.map((comment, index) => (
+        <p key={`${detail.id}-comment-${index}`} className="comment">
+          {comment}
+        </p>
+      ))}
+    </section>
+  </div>
+) : (
+  <>
+    <small className="detail-meta">
+      {detail.time} · {detail.sender}
+    </small>
+
+    <h2>{detail.title}</h2>
+
+    {(detail.media || ["media", "social"].includes(app.engine)) && (
+      <Media item={detail} />
+    )}
+
+    {app.id === "music" && (
+      <AppleMusicPlayer item={detail} />
+    )}
+
+    <RichText
+      value={detail.richText}
+      fallback={detail.body}
+    />
+
+    <dl className="item-metadata">
+      {getFields(app.id)
+        .filter((f) => detail.meta?.[f.key])
+        .map((f) => (
+          <div key={f.key}>
+            <dt>{f.label}</dt>
+            <dd>{detail.meta[f.key]}</dd>
+          </div>
+        ))}
+    </dl>
+
+    {detail.folder && (
+      <span className="folder-label">
+        <Folder size={12} />
+        {detail.folder}
+      </span>
+    )}
+
+    {detail.comments.map((comment, index) => (
+      <p key={index} className="comment">
+        {comment}
+      </p>
+    ))}
+  </>
 )}
-          <RichText value={detail.richText} fallback={detail.body} />
-          <dl className="item-metadata">
-            {getFields(app.id)
-              .filter((f) => detail.meta?.[f.key])
-              .map((f) => (
-                <div key={f.key}>
-                  <dt>{f.label}</dt>
-                  <dd>{detail.meta[f.key]}</dd>
-                </div>
-              ))}
-          </dl>
-          {detail.folder && (
-            <span className="folder-label">
-              <Folder size={12} />
-              {detail.folder}
-            </span>
-          )}
-          {detail.comments.map((c, i) => (
-            <p key={i} className="comment">
-              {c}
-            </p>
-          ))}
         </>
       )}
     </div>
