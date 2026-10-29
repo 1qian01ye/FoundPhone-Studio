@@ -330,14 +330,12 @@ export function RedbookSkin(p: Props) {
   const list =
     tab === "收藏"
       ? items.filter((i) => i.favorite)
-      : tab === "关注"
-        ? items.filter((i) => i.folder === "关注")
         : items;
   return (
     <div className="catalog-skin redbook-ui">
       <Header p={p} />
       <div className="redbook-top">
-        {["关注", "发现", "收藏"].map((t) => (
+        {["发现", "收藏"].map((t) => (
           <button
             key={t}
             className={tab === t ? "selected" : ""}
