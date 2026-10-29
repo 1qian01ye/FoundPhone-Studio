@@ -396,17 +396,6 @@ console.log("[B站历史检查]", {
     <span />
   </div>
 </div>
-      <div className="bili-categories">
-        {["推荐", "动画", "音乐", "生活"].map((c) => (
-          <button
-            key={c}
-            className={category === c ? "selected" : ""}
-            onClick={() => setCategory(c)}
-          >
-            {c}
-          </button>
-        ))}
-      </div>
       <div className="catalog-scroll messages-no-scrollbar">
         
 {tab === "历史" ? (
