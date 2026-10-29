@@ -398,7 +398,40 @@ console.log(
         ))}
       </div>
       <div className="catalog-scroll messages-no-scrollbar">
-        {tab === "动态" ? (
+        
+{tab === "历史" ? (
+  <div className="bili-history-list">
+    {[...list]
+      .sort(
+        (a, b) =>
+          new Date(b.time ?? 0).getTime() -
+          new Date(a.time ?? 0).getTime()
+      )
+      .map((i) => (
+        <button
+          className="bili-history-item"
+          key={i.id}
+          onClick={() => p.onItem(i)}
+        >
+          <div className="bili-history-cover">
+            <Media item={i} />
+          </div>
+
+          <div className="bili-history-info">
+            <strong>{i.title}</strong>
+            <span>{i.sender} · {i.body}</span>
+            <time>{i.time}</time>
+            <div className="bili-history-progress">
+              <div />
+            </div>
+            <small>
+              {String(i.meta?.watchStatus ?? "观看记录")}
+            </small>
+          </div>
+        </button>
+      ))}
+  </div>
+) : tab === "动态" ? (
   <div className="bili-dynamic-list">
     {[...list]
       .sort(
