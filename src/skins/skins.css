@@ -4375,3 +4375,17 @@
   color: #888;
   font-size: 12px;
 }
+.bili-history-cover {
+  width: 160px;
+  aspect-ratio: 16 / 9;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.bili-history-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
