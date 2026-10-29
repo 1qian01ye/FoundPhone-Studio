@@ -4420,53 +4420,34 @@
 .taobao-ui .taobao-scroll::-webkit-scrollbar {
   display: none;
 }
-.redbook-detail {
-  padding-bottom: 24px;
-}
 
 .redbook-detail-images {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: row;
+  gap: 0;
   margin: 12px 0 20px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.redbook-detail-images::-webkit-scrollbar {
+  display: none;
+}
+
+.redbook-detail-image {
+  flex: 0 0 100%;
+  min-width: 0;
+  scroll-snap-align: start;
 }
 
 .redbook-detail-image img {
   display: block;
   width: 100%;
   height: auto;
-  object-fit: contain;
-  border-radius: 10px;
-}
-
-.redbook-comments {
-  margin-top: 24px;
-}
-
-.redbook-comments h3 {
-  margin-bottom: 16px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.redbook-comments .comment {
-  margin: 0;
-  padding: 12px 0;
-  line-height: 1.6;
-  overflow-wrap: anywhere;
-  border-bottom: 1px solid var(--border, #e5e7eb);
-}
-.redbook-detail-images {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 12px 0 20px;
-}
-
-.redbook-detail-image img {
-  display: block;
-  width: 100%;
-  height: auto;
+  max-height: 520px;
   object-fit: contain;
   border-radius: 10px;
 }
