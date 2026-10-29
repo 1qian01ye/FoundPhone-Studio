@@ -330,15 +330,12 @@ console.log(
     2,
   ),
 );
-  const [category, setCategory] = useState("推荐");
   const list =
   tab === "历史"
     ? items.filter((i) => i.folder?.trim() === "历史")
     : tab === "动态"
       ? items.filter((i) => i.folder?.trim() === "动态")
-      : category === "推荐"
-        ? items
-        : items.filter((i) => i.folder === category);
+      : items;
 
 console.log("[B站历史检查]", {
   currentTab: tab,
