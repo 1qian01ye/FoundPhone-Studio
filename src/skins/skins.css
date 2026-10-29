@@ -3171,6 +3171,78 @@
   color: #aaa;
   margin-top: 5px;
 }
+
+/* B站首页增强：仅作用于 BilibiliSkin */
+.bilibili-ui {
+  background: #fff;
+  color: #282832;
+}
+
+.bilibili-ui .bili-search {
+  gap: 9px;
+  padding: 10px 12px;
+}
+
+.bilibili-ui .bili-categories {
+  justify-content: space-between;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 4px 14px 10px;
+  scrollbar-width: none;
+}
+
+.bilibili-ui .bili-categories > button {
+  flex-shrink: 0;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.bilibili-ui .bili-categories > .selected {
+  color: #fb7299;
+  border-color: #fb7299;
+  font-weight: 700;
+}
+
+.bilibili-ui .bili-grid {
+  gap: 16px 10px;
+  padding: 12px 10px 20px;
+}
+
+.bilibili-ui .bili-grid > button {
+  border-radius: 8px;
+  background: #fff;
+}
+
+.bilibili-ui .bili-grid img,
+.bilibili-ui .bili-grid video,
+.bilibili-ui .bili-grid .catalog-art {
+  height: 112px;
+  border-radius: 8px;
+}
+
+.bilibili-ui .bili-grid strong {
+  font-size: 11px;
+  line-height: 1.55;
+  margin: 7px 2px 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.bilibili-ui .bili-grid > button > span {
+  font-size: 9px;
+  margin: 5px 2px 0;
+}
+
+.bilibili-ui .bili-grid > button > div > small {
+  font-size: 9px;
+}
+
+.bilibili-ui .catalog-tabs {
+  background: #fff;
+  border-top: 1px solid #f0f0f0;
+}
 .douyin-ui,
 .tiktok-ui {
   background: #0c0c0e;
