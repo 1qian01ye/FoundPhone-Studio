@@ -2118,6 +2118,7 @@
     }
   },
   {
+      {
     "id": "taobao-pure-milk",
     "title": "纯牛奶",
     "body": "这是一条测试内容。",
@@ -2127,9 +2128,39 @@
     "meta": {
       "price": "56"
     }
+  },
+  {
+    "id": "taobao-order-hand-warmer",
+    "title": "暖手宝",
+    "body": "冬天暖手，方便携带",
+    "sender": "暖冬生活馆",
+    "kind": "image",
+    "folder": "订单",
+    "time": "2026-10-28",
+    "media": "/暖手宝.jpg",
+    "meta": {
+      "price": "39.90",
+      "status": "待收货",
+      "number": "TB202610280001"
+    }
+  },
+  {
+    "id": "taobao-order-bike-grip",
+    "title": "自行车防滑棉",
+    "body": "骑行防滑配件",
+    "sender": "骑行装备社",
+    "kind": "image",
+    "folder": "订单",
+    "time": "2026-10-27",
+    "media": "/自行车防滑棉.jpg",
+    "meta": {
+      "price": "18.80",
+      "status": "待收货",
+      "number": "TB202610270002"
+    }
   }
 ],
-    "netease": [
+"netease": [
       {
         "id": "test-item-netease",
         "title": "测试内容",
