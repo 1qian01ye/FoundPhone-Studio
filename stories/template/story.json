@@ -1768,13 +1768,19 @@
     "avatar": "/小红书头像1.jpg",
     "kind": "post",
     "media": "/some blue1.jpg",
-    "hidden": false,
-    "unlock": "",
-    "password": "",
-    "folder": "",
+    "images": [
+      "/some blue1.jpg",
+      "/some blue2.jpg",
+      "/some blue3.jpg",
+      "/some blue4.jpg",
+      "/some blue5.jpg",
+      "/some blue6.jpg",
+      "/some blue7.jpg",
+      "/some blue8.jpg",
+      "/some blue9.jpg",
+      "/some blue10.jpg"
+    ],
     "favorite": true,
-    "outgoing": false,
-    "read": true,
     "likes": 1286,
     "comments": [
       "林秋水：发型也要学吗老师",
@@ -1792,16 +1798,7 @@
       "林间有风：想知道鞋子是什么牌子的，搭得好好看",
       "别叫我早睡：原来蓝色和白色这么搭，学到了学到了"
     ],
-    "meta": {
-      "image2": "/some blue2.jpg",
-      "image3": "/some blue3.jpg",
-      "image4": "/some blue4.jpg",
-      "image5": "/some blue5.jpg",
-      "image6": "/some blue6.jpg",
-      "image7": "/some blue7.jpg",
-      "image8": "/some blue8.jpg",
-      "image9": "/some blue9.jpg",
-      "image10": "/some blue10.jpg"
+    "meta": {}
     }
   }
 ],
