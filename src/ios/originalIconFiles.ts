@@ -48,4 +48,8 @@ export const originalIconFiles: Record<string, string> = {
   line: "line.jpg",
   reminders: "reminders.jpg",
   kakao: "kakao.jpg",
+  naruto: "naruto.jpg",
+  genshin: "genshin.jpg",
+  deltaForce: "delta-force.jpg",
+  eggyParty: "eggy-party.jpg",
 };
