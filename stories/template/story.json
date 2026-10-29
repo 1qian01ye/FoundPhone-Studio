@@ -2038,8 +2038,9 @@
     "action": "追番记录",
     "progress": "前两季",
     "watchStatus": "已看完"
-      }
-  ],
+    }
+  }
+],
     "alipay": [
       {
         "id": "test-item-alipay",
