@@ -158,6 +158,12 @@ export function HomeLauncher(p: Props) {
       active: boolean;
     } | null>(null);
   const pages = packHome(homeEntries(p.layout), p.layout.positions),
+    const extraGames = [
+  { id: "static-genshin", name: "原神", icon: genshinIcon },
+  { id: "static-delta", name: "三角洲", icon: deltaForceIcon },
+  { id: "static-eggy", name: "蛋仔派对", icon: eggyPartyIcon },
+  { id: "static-naruto", name: "火影忍者", icon: narutoIcon },
+];
     apps = p.layout.apps,
     active = apps.find((a) => a.id === selected);
   if (editing && pages.length < 20) pages.push([]);
@@ -866,17 +872,41 @@ export function HomeLauncher(p: Props) {
             key={n}
           >
             {cells.map(({ entry, x, y, w, h }) => (
-              <div
-                className="launcher-slot"
-                key={entry.key}
-                style={{
-                  gridColumn: `${x + 1} / span ${w}`,
-                  gridRow: `${y + 1} / span ${h}`,
-                }}
-              >
-                {cell(entry)}
-              </div>
-            ))}
+  <div
+    className="launcher-slot"
+    key={entry.key}
+    style={{
+      gridColumn: `${x + 1} / span ${w}`,
+      gridRow: `${y + 1} / span ${h}`,
+    }}
+  >
+    {cell(entry)}
+  </div>
+))}
+                        {n === 0 &&
+              [
+                { id: "static-genshin", name: "原神", icon: genshinIcon },
+                { id: "static-delta", name: "三角洲", icon: deltaForceIcon },
+                { id: "static-eggy", name: "蛋仔派对", icon: eggyPartyIcon },
+                { id: "static-naruto", name: "火影忍者", icon: narutoIcon },
+              ].map((game) => (
+                <div className="launcher-slot" key={game.id}>
+                  <div className="launcher-cell">
+                    <img
+                      src={game.icon}
+                      alt={game.name}
+                      draggable={false}
+                      style={{
+                        width: 56,
+                        height: 56,
+                        objectFit: "cover",
+                        borderRadius: 13,
+                      }}
+                    />
+                    <span>{game.name}</span>
+                  </div>
+                </div>
+              ))}
           </div>
         ))}
       </div>
