@@ -4302,3 +4302,76 @@
   object-fit: cover;
   flex-shrink: 0;
 }
+/* B站个人动态时间线 */
+.bili-dynamic-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+}
+
+.bili-dynamic-card {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 4%);
+}
+
+.bili-dynamic-avatar img {
+  display: block;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.bili-dynamic-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.bili-dynamic-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.bili-dynamic-header strong {
+  color: #00a1d6;
+  font-size: 14px;
+}
+
+.bili-dynamic-header time {
+  color: #999;
+  font-size: 11px;
+}
+
+.bili-dynamic-content h3 {
+  margin: 12px 0 6px;
+  color: #222;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.bili-dynamic-content p {
+  margin: 0;
+  color: #444;
+  font-size: 13px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.bili-dynamic-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #f2f2f2;
+  color: #888;
+  font-size: 12px;
+}
