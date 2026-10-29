@@ -2039,18 +2039,7 @@
     "progress": "前两季",
     "watchStatus": "已看完"
       }
-    }
   ],
-"alipay": [
-  {
-    "id": "test-item-alipay",
-    "title": "测试内容",
-    "body": "这是一条测试内容。",
-    "sender": "测试用户",
-    "kind": "text",
-    "meta": {}
-  }
-],
     "alipay": [
       {
         "id": "test-item-alipay",
