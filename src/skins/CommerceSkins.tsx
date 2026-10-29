@@ -93,13 +93,21 @@ export function TaobaoSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "商品");
   const [status, setStatus] = useState("全部");
 
-  const list = items
-    .filter((i) =>
-      tab === "商品"
-        ? i.folder !== "订单" && i.folder !== "物流"
-        : i.folder === tab,
-    )
-    .filter((i) => status === "全部" || meta(i, "status") === status);
+  const list = items.filter((i) => {
+  if (tab === "商品") {
+    return i.folder !== "订单" && i.folder !== "物流";
+  }
+
+  if (i.folder !== "订单") {
+    return false;
+  }
+
+  if (status === "全部") {
+    return true;
+  }
+
+  return meta(i, "status").trim() === status;
+});
 
   return (
     <div className="catalog-skin taobao-ui">
