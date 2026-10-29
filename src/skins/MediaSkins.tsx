@@ -342,10 +342,46 @@ console.log(
   return (
     <div className="catalog-skin bilibili-ui">
       <Header p={p} />
-      <div className="bili-search">
-        <Avatar name={p.owner ?? "我"} />
-        <SearchBox value={q} set={setQ} />
-      </div>
+      
+<div className="bili-search">
+  <Avatar name={p.owner ?? "我"} />
+  <SearchBox value={q} set={setQ} />
+</div>
+
+<div className="bili-hero">
+  <img
+    className="bili-hero-image"
+    src="/images/naruto-banner.jpg"
+    alt="火影忍者推荐"
+    onError={(e) => {
+      e.currentTarget.style.display = "none";
+    }}
+  />
+
+  <div className="bili-hero-overlay">
+    <span className="bili-hero-label">热门推荐 · 动漫</span>
+    <h2>火影忍者</h2>
+    <p>热血、羁绊与永不放弃的忍道</p>
+    <button
+      className="bili-hero-button"
+      onClick={() => {
+        const target = items.find((i) =>
+          /火影忍者|鸣人|佐助/.test(i.title)
+        );
+        if (target) p.onItem(target);
+      }}
+    >
+      <Play size={14} fill="currentColor" />
+      立即观看
+    </button>
+  </div>
+
+  <div className="bili-hero-dots">
+    <span className="active" />
+    <span />
+    <span />
+  </div>
+</div>
       <div className="bili-categories">
         {["推荐", "动画", "音乐", "生活"].map((c) => (
           <button
