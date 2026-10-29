@@ -1835,70 +1835,146 @@
     }
   },
     {
-    "id": "bili-dynamic-001",
-    "title": "终于加入哔哩哔哩啦！",
-    "body": "正式入驻 B 站，以后就在这里追番、看视频啦！",
-    "sender": "林秋水",
-    "kind": "text",
-    "folder": "动态",
-    "time": "2026-10-29 12:00",
-    "outgoing": true,
-    "meta": {
-      "category": "动态"
-    }
-  },
-  {
-    "id": "bili-dynamic-002",
-    "title": "成功开通大会员",
-    "body": "大会员终于开通啦！接下来要好好享受追番时光。",
-    "sender": "林秋水",
-    "kind": "text",
-    "folder": "动态",
-    "time": "2026-10-29 12:10",
-    "outgoing": true,
-    "meta": {
-      "category": "动态"
-    }
-  },
-  {
-    "id": "bili-dynamic-003",
-    "title": "最近在追《火影忍者》",
-    "body": "重新看火影还是觉得很热血，鸣人一路成长真的很让人感动。",
-    "sender": "林秋水",
-    "kind": "text",
-    "folder": "动态",
-    "time": "2026-10-29 12:30",
-    "outgoing": true,
-    "meta": {
-      "category": "动态"
-    }
-  },
-  {
-    "id": "bili-dynamic-004",
-    "title": "今日追番打卡",
-    "body": "今天又看了几集动漫，不知不觉就追到停不下来了！",
-    "sender": "林秋水",
-    "kind": "text",
-    "folder": "动态",
-    "time": "2026-10-29 13:00",
-    "outgoing": true,
-    "meta": {
-      "category": "动态"
-    }
-  },
-  {
-  "id": "bili-dynamic-005",
-  "title": "收藏了喜欢的视频",
-  "body": "发现了好多有意思的视频，先收藏起来，慢慢看！",
+  "id": "bili-dynamic-001",
+  "title": "正式加入哔哩哔哩",
+  "body": "2024 年，终于注册了 B 站！以后可以在这里看番、刷视频、收藏喜欢的内容啦。",
   "sender": "林秋水",
   "kind": "text",
   "folder": "动态",
-  "time": "2026-10-29 13:15",
+  "time": "2024-06-18 16:30",
   "outgoing": true,
   "meta": {
-    "category": "动态"
+    "category": "动态",
+    "action": "注册账号"
   }
-}
+},
+{
+  "id": "bili-dynamic-002",
+  "title": "开通大会员啦！",
+  "body": "终于开通大会员了，以后追番更方便了，希望能发现更多喜欢的作品！",
+  "sender": "林秋水",
+  "kind": "text",
+  "folder": "动态",
+  "time": "2025-03-08 20:15",
+  "outgoing": true,
+  "meta": {
+    "category": "动态",
+    "action": "开通大会员"
+  }
+},
+{
+  "id": "bili-dynamic-003",
+  "title": "看完了《鬼灭之刃》",
+  "body": "最近终于看了《鬼灭之刃》！炭治郎真的很温柔，战斗场面也太燃了，第一次追番就遇到这么喜欢的作品。",
+  "sender": "林秋水",
+  "kind": "text",
+  "folder": "动态",
+  "time": "2025-10-12 21:20",
+  "outgoing": true,
+  "meta": {
+    "category": "动态",
+    "action": "看过番剧",
+    "anime": "鬼灭之刃"
+  }
+},
+{
+  "id": "bili-dynamic-004",
+  "title": "收藏了一期喜欢的视频",
+  "body": "刷到一个特别有意思的视频，先收藏起来，等有空的时候再慢慢看！",
+  "sender": "林秋水",
+  "kind": "text",
+  "folder": "动态",
+  "time": "2025-11-06 19:42",
+  "outgoing": true,
+  "meta": {
+    "category": "动态",
+    "action": "收藏视频"
+  }
+},
+{
+  "id": "bili-dynamic-005",
+  "title": "给喜欢的 UP 主点了赞",
+  "body": "今天刷到一个很用心的作品，必须点个赞支持一下！认真做视频的人值得被看见。",
+  "sender": "林秋水",
+  "kind": "text",
+  "folder": "动态",
+  "time": "2025-12-21 18:36",
+  "outgoing": true,
+  "meta": {
+    "category": "动态",
+    "action": "点赞视频"
+  }
+},
+{
+  "id": "bili-dynamic-006",
+  "title": "开始看《蜡笔小新》",
+  "body": "第二部看的番剧是《蜡笔小新》！小新真的太搞笑了，明明看过很多片段，认真追起来还是很有意思。",
+  "sender": "林秋水",
+  "kind": "text",
+  "folder": "动态",
+  "time": "2026-01-17 14:25",
+  "outgoing": true,
+  "meta": {
+    "category": "动态",
+    "action": "看过番剧",
+    "anime": "蜡笔小新"
+  }
+},
+{
+  "id": "bili-dynamic-007",
+  "title": "收藏夹又多了几个视频",
+  "body": "最近收藏了好多动漫剪辑和有趣的视频，收藏夹越来越丰富了，感觉以后有得补了。",
+  "sender": "林秋水",
+  "kind": "text",
+  "folder": "动态",
+  "time": "2026-03-02 22:08",
+  "outgoing": true,
+  "meta": {
+    "category": "动态",
+    "action": "收藏视频"
+  }
+},
+{
+  "id": "bili-dynamic-008",
+  "title": "发现了一个宝藏 UP 主",
+  "body": "偶然刷到一个特别喜欢的 UP 主，视频风格很对胃口，已经准备把之前的作品也补一遍了。",
+  "sender": "林秋水",
+  "kind": "text",
+  "folder": "动态",
+  "time": "2026-06-14 17:50",
+  "outgoing": true,
+  "meta": {
+    "category": "动态",
+    "action": "发现 UP 主"
+  }
+},
+{
+  "id": "bili-dynamic-009",
+  "title": "给喜欢的动漫视频点赞",
+  "body": "看到喜欢的动漫剪辑又忍不住点了赞，有时候短短几十秒就能把一部作品的感觉表达出来。",
+  "sender": "林秋水",
+  "kind": "text",
+  "folder": "动态",
+  "time": "2026-09-09 20:41",
+  "outgoing": true,
+  "meta": {
+    "category": "动态",
+    "action": "点赞视频"
+  }
+},
+{
+  "id": "bili-dynamic-010",
+  "title": "记录一下最近的追番生活",
+  "body": "从注册 B 站到现在，已经看了不少有趣的内容，也认识了喜欢的作品。以后继续追番、收藏视频，慢慢记录自己的日常！",
+  "sender": "林秋水",
+  "kind": "text",
+  "folder": "动态",
+  "time": "2026-11-11 11:11",
+  "outgoing": true,
+  "meta": {
+    "category": "动态",
+    "action": "日常记录"
+  }
 ],
 "alipay": [
   {
