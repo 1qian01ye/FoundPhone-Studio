@@ -158,12 +158,6 @@ export function HomeLauncher(p: Props) {
       active: boolean;
     } | null>(null);
   const pages = packHome(homeEntries(p.layout), p.layout.positions),
-    const extraGames = [
-  { id: "static-genshin", name: "原神", icon: genshinIcon },
-  { id: "static-delta", name: "三角洲", icon: deltaForceIcon },
-  { id: "static-eggy", name: "蛋仔派对", icon: eggyPartyIcon },
-  { id: "static-naruto", name: "火影忍者", icon: narutoIcon },
-];
     apps = p.layout.apps,
     active = apps.find((a) => a.id === selected);
   if (editing && pages.length < 20) pages.push([]);
