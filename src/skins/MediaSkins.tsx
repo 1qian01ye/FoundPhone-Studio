@@ -332,13 +332,26 @@ console.log(
 );
   const [category, setCategory] = useState("推荐");
   const list =
-    tab === "历史"
-      ? items.filter((i) => i.folder === "历史")
-      : tab === "动态"
-        ? items.filter((i) => i.folder === "动态")
-        : category === "推荐"
-          ? items
-          : items.filter((i) => i.folder === category);
+  tab === "历史"
+    ? items.filter((i) => i.folder?.trim() === "历史")
+    : tab === "动态"
+      ? items.filter((i) => i.folder?.trim() === "动态")
+      : category === "推荐"
+        ? items
+        : items.filter((i) => i.folder === category);
+
+console.log("[B站历史检查]", {
+  currentTab: tab,
+  totalItems: items.length,
+  historyItems: items
+    .filter((i) => i.folder?.trim() === "历史")
+    .map((i) => ({
+      id: i.id,
+      title: i.title,
+      folder: i.folder,
+    })),
+  displayedItems: list.length,
+});
   return (
     <div className="catalog-skin bilibili-ui">
       <Header p={p} />
