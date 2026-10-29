@@ -312,16 +312,23 @@ export function YouTubeSkin(p: Props) {
 }
 export function BilibiliSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "首页");
-  console.log(
-  "[B站首页内容]",
-  items.map((i) => ({
-    id: i.id,
-    title: i.title,
-    folder: i.folder,
-    kind: i.kind,
-    media: i.media,
-    meta: i.meta,
-  })),
+  
+console.log(
+  "[B站首页内容详情]",
+  JSON.stringify(
+    items.map((i) => ({
+      id: i.id,
+      title: i.title,
+      body: i.body,
+      sender: i.sender,
+      folder: i.folder,
+      kind: i.kind,
+      media: i.media,
+      meta: i.meta,
+    })),
+    null,
+    2,
+  ),
 );
   const [category, setCategory] = useState("推荐");
   const list =
