@@ -24,6 +24,10 @@ import {
   type AppConfig,
   type Widget,
 } from "./layout";
+import genshinIcon from "../../assets/app-icons/genshin.jpg";
+import deltaForceIcon from "../../assets/app-icons/delta-force.jpg";
+import eggyPartyIcon from "../../assets/app-icons/eggy-party.jpg";
+import narutoIcon from "../../assets/app-icons/naruto.jpg";
 type Props = {
   work: Work;
   storeOpen?: boolean;
