@@ -103,6 +103,7 @@ export function Avatar({
     </span>
   );
 }
+
 export function Media({
   item,
   className = "",
@@ -111,33 +112,39 @@ export function Media({
   className?: string;
 }) {
   const src = safeMedia(item.media);
+
+  // 自动适配 GitHub Pages 的 /FoundPhone-Studio/ 部署路径
+  const mediaSrc = src.startsWith("/")
+    ? `${import.meta.env.BASE_URL}${src.slice(1)}`
+    : src;
+
   return src ? (
     item.kind === "audio" ? (
-      <audio className={className} controls src={src} />
+      <audio className={className} controls src={mediaSrc} />
     ) : item.kind === "video" ? (
       <video
         className={className}
         controls
         playsInline
-        src={src}
+        src={mediaSrc}
         onClick={(e) => e.stopPropagation()}
       />
     ) : (
       <img
-  className={className}
-  loading="lazy"
-  alt={item.title}
-  src={src}
-  style={
-    className.includes("snap-memory-photo")
-      ? {
-          width: "100%",
-          height: "100%",
-          objectFit: "contain",
+        className={className}
+        loading="lazy"
+        alt={item.title}
+        src={mediaSrc}
+        style={
+          className.includes("snap-memory-photo")
+            ? {
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+              }
+            : undefined
         }
-      : undefined
-  }
-/>
+      />
     )
   ) : (
     <div className={`catalog-art ${className}`}>
