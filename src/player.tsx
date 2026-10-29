@@ -12,11 +12,23 @@ function Player() {
         if (!r.ok) throw Error("缺少 work.json");
         return r.json();
       })
-      .then((x) => {
-        const w = validateWork(x);
-        document.title = w.title;
-        setWork(w);
-      })
+      
+.then((x) => {
+  const w = validateWork(x);
+
+  console.log(
+    "[播放器 B 站媒体检查]",
+    w.data["Bilibili"]?.map((item) => ({
+      id: item.id,
+      title: item.title,
+      kind: item.kind,
+      media: item.media,
+    })),
+  );
+
+  document.title = w.title;
+  setWork(w);
+})
       .catch((e) => setError(String(e)));
   }, []);
   return (
