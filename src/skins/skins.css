@@ -4421,9 +4421,13 @@
   display: none;
 }
 
+
 .redbook-detail-images {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   gap: 0;
   margin: 12px 0 20px;
   overflow-x: auto;
@@ -4439,7 +4443,9 @@
 
 .redbook-detail-image {
   flex: 0 0 100%;
-  min-width: 0;
+  width: 100%;
+  min-width: 100%;
+  box-sizing: border-box;
   scroll-snap-align: start;
 }
 
@@ -4451,3 +4457,4 @@
   object-fit: contain;
   border-radius: 10px;
 }
+
