@@ -4410,3 +4410,13 @@
   color: #888;
   font-size: 12px;
 }
+/* 隐藏淘宝页面滚动条，保留滑动功能 */
+.taobao-ui .taobao-scroll {
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.taobao-ui .taobao-scroll::-webkit-scrollbar {
+  display: none;
+}
