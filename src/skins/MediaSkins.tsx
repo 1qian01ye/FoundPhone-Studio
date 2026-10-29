@@ -393,7 +393,7 @@ console.log(
           </button>
         ))}
       </div>
-      <div className="catalog-scroll">
+      <div className="catalog-scroll messages-no-scrollbar">
         <div className="bili-grid">
           {list.map((i) => (
             <button key={i.id} onClick={() => p.onItem(i)}>
