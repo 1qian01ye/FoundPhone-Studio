@@ -1784,7 +1784,7 @@
     "body": "动漫解说 · 剧情分析",
     "sender": "动漫观察室",
     "kind": "text",
-    "media": "FoundPhone-Studio/bilibili电锯人.jpg",
+    "media": "/bilibili电锯人.jpg",
     "meta": {
       "views": "128.6万",
       "danmaku": "3281",
@@ -1798,7 +1798,7 @@
     "body": "舞蹈教学 · 编舞练习",
     "sender": "编舞练习室",
     "kind": "text",
-    "media": "FoundPhone-Studio/bilibili练舞.jpg",
+    "media": "/bilibili练舞.jpg",
     "meta": {
       "views": "32.8万",
       "danmaku": "856",
@@ -1812,7 +1812,7 @@
     "body": "动漫 · 搞笑日常",
     "sender": "童年放映厅",
     "kind": "text",
-    "media": "FoundPhone-Studio/bilibili蜡笔小新.jpg",
+    "media": "/bilibili蜡笔小新.jpg",
     "meta": {
       "views": "86.2万",
       "danmaku": "2160",
@@ -1826,7 +1826,7 @@
     "body": "原神 · 角色趣味排名",
     "sender": "提瓦特研究所",
     "kind": "text",
-    "media": "FoundPhone-Studio/bilibili原神.jpg",
+    "media": "/bilibili原神.jpg",
     "meta": {
       "views": "54.7万",
       "danmaku": "1432",
