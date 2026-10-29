@@ -1887,18 +1887,28 @@
     }
   },
   {
-    "id": "bili-dynamic-005",
-    "title": "收藏了喜欢的视频",
-    "body": "发现了好多有意思的视频，先收藏起来，慢慢看！",
-    "sender": "林秋水",
+  "id": "bili-dynamic-005",
+  "title": "收藏了喜欢的视频",
+  "body": "发现了好多有意思的视频，先收藏起来，慢慢看！",
+  "sender": "林秋水",
+  "kind": "text",
+  "folder": "动态",
+  "time": "2026-10-29 13:15",
+  "outgoing": true,
+  "meta": {
+    "category": "动态"
+  }
+}
+],
+"alipay": [
+  {
+    "id": "test-item-alipay",
+    "title": "测试内容",
+    "body": "这是一条测试内容。",
+    "sender": "测试用户",
     "kind": "text",
-    "folder": "动态",
-    "time": "2026-10-29 13:15",
-    "outgoing": true,
-    "meta": {
-      "category": "动态"
-    }
-  },
+    "meta": {}
+  }
 ],
     "alipay": [
       {
