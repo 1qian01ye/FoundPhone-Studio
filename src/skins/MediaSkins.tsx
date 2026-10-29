@@ -351,7 +351,7 @@ console.log(
 <div className="bili-hero">
   <img
     className="bili-hero-image"
-    src="/bilibili火影.jpg"
+    src={`${import.meta.env.BASE_URL}bilibili火影.jpg`}
     alt="火影忍者推荐"
     onError={(e) => {
       e.currentTarget.style.display = "none";
