@@ -398,22 +398,59 @@ console.log(
         ))}
       </div>
       <div className="catalog-scroll messages-no-scrollbar">
-        <div className="bili-grid">
-          {list.map((i) => (
-            <button key={i.id} onClick={() => p.onItem(i)}>
-              <div>
-                <Media item={i} />
-                <small>
-                  <Play size={10} />
-                  {meta(i, "views", "—")}
-                  <time>{meta(i, "duration")}</time>
-                </small>
-              </div>
-              <strong>{i.title}</strong>
-              <span>UP · {i.sender}</span>
-            </button>
-          ))}
+        {tab === "动态" ? (
+  <div className="bili-dynamic-list">
+    {[...list]
+      .sort(
+        (a, b) =>
+          new Date(b.time ?? 0).getTime() -
+          new Date(a.time ?? 0).getTime()
+      )
+      .map((i) => (
+        <article className="bili-dynamic-card" key={i.id}>
+          <div className="bili-dynamic-avatar">
+            <img
+              src={`${import.meta.env.BASE_URL}linqiushui.jpg`}
+              alt="林秋水"
+            />
+          </div>
+
+          <div className="bili-dynamic-content">
+            <div className="bili-dynamic-header">
+              <strong>林秋水</strong>
+              <time>{i.time}</time>
+            </div>
+
+            <h3>{i.title}</h3>
+            <p>{i.body}</p>
+
+            <div className="bili-dynamic-actions">
+              <span>♡ 点赞</span>
+              <span>☆ 收藏</span>
+              <span>评论</span>
+            </div>
+          </div>
+        </article>
+      ))}
+  </div>
+) : (
+  <div className="bili-grid">
+    {list.map((i) => (
+      <button key={i.id} onClick={() => p.onItem(i)}>
+        <div>
+          <Media item={i} />
+          <small>
+            <Play size={10} />
+            {meta(i, "views", "—")}
+            <time>{meta(i, "duration")}</time>
+          </small>
         </div>
+        <strong>{i.title}</strong>
+        <span>UP · {i.sender}</span>
+      </button>
+    ))}
+  </div>
+)}
         <Empty items={list} />
       </div>
       <Tabs
