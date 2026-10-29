@@ -431,16 +431,9 @@ console.log("[B站历史检查]", {
           </div>
 
           <div className="bili-history-info">
-            <strong>{i.title}</strong>
-            <span>{i.sender} · {i.body}</span>
-            <time>{i.time}</time>
-            <div className="bili-history-progress">
-              <div />
-            </div>
-            <small>
-              {String(i.meta?.watchStatus ?? "观看记录")}
-            </small>
-          </div>
+  <strong>{i.title}</strong>
+  <span>已看完</span>
+</div>
         </button>
       ))}
   </div>
