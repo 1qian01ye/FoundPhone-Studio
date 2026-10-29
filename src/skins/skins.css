@@ -4389,3 +4389,24 @@
   height: 100%;
   object-fit: cover;
 }
+/* B站历史记录文字 */
+.bili-history-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+}
+
+.bili-history-info strong {
+  color: #222;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.bili-history-info span {
+  color: #888;
+  font-size: 12px;
+}
