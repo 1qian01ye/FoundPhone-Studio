@@ -521,14 +521,62 @@
     ],
     "taobao": [
       {
-        "id": "test-item-taobao",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
+        "taobao": [
+  {
+    "id": "taobao-chiikawa-blindbox",
+    "title": "Chiikawa盲盒",
+    "body": "Chiikawa系列盲盒",
+    "sender": "小琪杂货铺",
+    "kind": "image",
+    "media": "/淘宝盲盒.jpg",
+    "meta": { "price": "69" }
+  },
+  {
+    "id": "taobao-blue-pants",
+    "title": "蓝色裤子",
+    "body": "蓝色休闲裤",
+    "sender": "蓝调衣橱",
+    "kind": "image",
+    "media": "/淘宝裤子.jpg",
+    "meta": { "price": "209" }
+  },
+  {
+    "id": "taobao-muichiro-doll",
+    "title": "时透无一郎棉花娃娃",
+    "body": "时透无一郎棉花娃娃",
+    "sender": "云杉玩偶屋",
+    "kind": "image",
+    "media": "/淘宝娃娃.jpg",
+    "meta": { "price": "59" }
+  },
+  {
+    "id": "taobao-mountain-bike",
+    "title": "山地自行车",
+    "body": "山地自行车",
+    "sender": "骑行装备社",
+    "kind": "image",
+    "media": "/淘宝自行车.jpg",
+    "meta": { "price": "3888" }
+  },
+  {
+    "id": "taobao-frog-foot-pillow",
+    "title": "奶蛙的脚抱枕",
+    "body": "奶蛙的脚抱枕",
+    "sender": "奶蛙小铺",
+    "kind": "image",
+    "media": "/淘宝抱枕.jpg",
+    "meta": { "price": "19.8" }
+  },
+  {
+    "id": "taobao-pure-milk",
+    "title": "纯牛奶",
+    "body": "纯牛奶",
+    "sender": "每日牧场",
+    "kind": "image",
+    "media": "/淘宝牛奶.jpg",
+    "meta": { "price": "56" }
+  }
+],
     "netease": [
       {
         "id": "test-item-netease",
