@@ -344,7 +344,11 @@ console.log(
       <Header p={p} />
       
 <div className="bili-search">
-  <Avatar name={p.owner ?? "我"} />
+  <img
+    className="bili-avatar"
+    src={`${import.meta.env.BASE_URL}linqiushui.jpg`}
+    alt="林秋水"
+  />
   <SearchBox value={q} set={setQ} />
 </div>
 
