@@ -451,16 +451,64 @@
         "meta": {}
       }
     ],
-    "bilibili": [
-      {
-        "id": "test-item-bilibili",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
+   "bilibili": [
+  {
+    "id": "bili-chainsaw-man",
+    "title": "电锯人动漫解说：电次的故事到底有多疯狂？",
+    "body": "动漫解说 · 剧情分析",
+    "sender": "动漫观察室",
+    "kind": "text",
+    "media": "/bilibili电锯人.jpg",
+    "meta": {
+      "views": "128.6万",
+      "danmaku": "3281",
+      "duration": "08:42",
+      "category": "动画"
+    }
+  },
+  {
+    "id": "bili-dance-choreo",
+    "title": "零基础编舞练习｜跟着节奏学会这段舞",
+    "body": "舞蹈教学 · 编舞练习",
+    "sender": "编舞练习室",
+    "kind": "text",
+    "media": "/bilibili练舞.jpg",
+    "meta": {
+      "views": "32.8万",
+      "danmaku": "856",
+      "duration": "03:26",
+      "category": "音乐"
+    }
+  },
+  {
+    "id": "bili-shinchan",
+    "title": "蜡笔小新：小新今天又闯祸了！",
+    "body": "动漫 · 搞笑日常",
+    "sender": "童年放映厅",
+    "kind": "text",
+    "media": "/bilibili蜡笔小新.jpg",
+    "meta": {
+      "views": "86.2万",
+      "danmaku": "2160",
+      "duration": "05:18",
+      "category": "动画"
+    }
+  },
+  {
+    "id": "bili-genshin-ranking",
+    "title": "原神旅行者从夯到拉排名，你认同吗？",
+    "body": "原神 · 角色趣味排名",
+    "sender": "提瓦特研究所",
+    "kind": "text",
+    "media": "/bilibili原神.jpg",
+    "meta": {
+      "views": "54.7万",
+      "danmaku": "1432",
+      "duration": "06:51",
+      "category": "游戏"
+    }
+  }
+],
     "alipay": [
       {
         "id": "test-item-alipay",
