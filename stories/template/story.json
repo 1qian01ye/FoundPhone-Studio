@@ -1833,7 +1833,72 @@
       "duration": "06:51",
       "category": "游戏"
     }
-  }
+  },
+    {
+    "id": "bili-dynamic-001",
+    "title": "终于加入哔哩哔哩啦！",
+    "body": "正式入驻 B 站，以后就在这里追番、看视频啦！",
+    "sender": "林秋水",
+    "kind": "text",
+    "folder": "动态",
+    "time": "2026-10-29 12:00",
+    "outgoing": true,
+    "meta": {
+      "category": "动态"
+    }
+  },
+  {
+    "id": "bili-dynamic-002",
+    "title": "成功开通大会员",
+    "body": "大会员终于开通啦！接下来要好好享受追番时光。",
+    "sender": "林秋水",
+    "kind": "text",
+    "folder": "动态",
+    "time": "2026-10-29 12:10",
+    "outgoing": true,
+    "meta": {
+      "category": "动态"
+    }
+  },
+  {
+    "id": "bili-dynamic-003",
+    "title": "最近在追《火影忍者》",
+    "body": "重新看火影还是觉得很热血，鸣人一路成长真的很让人感动。",
+    "sender": "林秋水",
+    "kind": "text",
+    "folder": "动态",
+    "time": "2026-10-29 12:30",
+    "outgoing": true,
+    "meta": {
+      "category": "动态"
+    }
+  },
+  {
+    "id": "bili-dynamic-004",
+    "title": "今日追番打卡",
+    "body": "今天又看了几集动漫，不知不觉就追到停不下来了！",
+    "sender": "林秋水",
+    "kind": "text",
+    "folder": "动态",
+    "time": "2026-10-29 13:00",
+    "outgoing": true,
+    "meta": {
+      "category": "动态"
+    }
+  },
+  {
+    "id": "bili-dynamic-005",
+    "title": "收藏了喜欢的视频",
+    "body": "发现了好多有意思的视频，先收藏起来，慢慢看！",
+    "sender": "林秋水",
+    "kind": "text",
+    "folder": "动态",
+    "time": "2026-10-29 13:15",
+    "outgoing": true,
+    "meta": {
+      "category": "动态"
+    }
+  },
 ],
     "alipay": [
       {
