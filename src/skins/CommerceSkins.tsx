@@ -106,7 +106,7 @@ export function TaobaoSkin(p: Props) {
       <div className="taobao-search">
         <SearchBox value={q} set={setQ} placeholder="搜索商品或订单" />
       </div>
-      <div className="catalog-scroll">
+      <div className="catalog-scroll taobao-scroll">
         {tab === "商品" ? (
           <div className="taobao-products">
             {list.map((i) => (
