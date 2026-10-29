@@ -850,10 +850,13 @@ function AppSearch({
 }
 function Media({ item }: { item: Item }) {
   const rawSrc = safeMedia(item.media);
-const src = rawSrc.startsWith("/music-covers/")
-  ? `${import.meta.env.BASE_URL}${rawSrc.slice(1)}`
-  : rawSrc;
-console.log("音乐封面调试：", item.title, item.media, src);
+
+  // 自动适配 GitHub Pages 子路径下的本地图片、音频和视频
+  const src = rawSrc.startsWith("/")
+    ? `${import.meta.env.BASE_URL}${rawSrc.slice(1)}`
+    : rawSrc;
+
+  console.log("媒体路径调试：", item.title, item.media, src);
   return src ? (
     item.kind === "audio" ? (
       <audio controls src={src} />
