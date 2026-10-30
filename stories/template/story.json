@@ -2274,7 +2274,17 @@
     "time": "2026-10-24",
     "media": "/8高会9.jpg",
     "meta": {}
-  }
+  },
+      {
+  "id": "photo-20261117-1",
+  "title": "生日",
+  "body": "",
+  "sender": "机主",
+  "kind": "image",
+  "time": "2026-11-17",
+  "media": "/生日.jpg",
+  "meta": {}
+}
 ],
     "camera": [
       {
