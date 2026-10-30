@@ -4458,3 +4458,124 @@
   border-radius: 10px;
 }
 
+/* 小红书评论区 */
+.redbook-comments {
+  padding: 12px;
+  color: #333;
+}
+
+.redbook-comments h3 {
+  margin: 0 0 18px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.redbook-comment {
+  margin-bottom: 22px;
+}
+
+.redbook-comment-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.redbook-comment-avatar {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.redbook-avatar-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0e8e4;
+  color: #9b7568;
+  font-size: 15px;
+}
+
+.redbook-comment-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.redbook-comment-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 6px;
+  color: #999;
+  font-size: 13px;
+}
+
+.redbook-comment-name small,
+.redbook-comment-reply small {
+  padding: 1px 4px;
+  border-radius: 3px;
+  background: #fff0e8;
+  color: #e58b65;
+  font-size: 10px;
+}
+
+.redbook-comment-content > p {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.redbook-comment-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+  color: #999;
+  font-size: 11px;
+}
+
+.redbook-comment-replies {
+  margin-top: 12px;
+  padding-left: 10px;
+  border-left: 2px solid #f2f2f2;
+}
+
+.redbook-comment-reply {
+  margin-bottom: 10px;
+  color: #555;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.redbook-comment-reply > strong {
+  color: #999;
+  font-weight: 500;
+}
+
+.redbook-comment-likes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  flex: 0 0 30px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #999;
+  cursor: pointer;
+}
+
+.redbook-comment-likes span {
+  font-size: 18px;
+}
+
+.redbook-comment-likes small {
+  font-size: 10px;
+}
+
+.redbook-comment-likes.liked {
+  color: #ff2442;
+}
