@@ -556,7 +556,7 @@ export function PhotosSkin(p: Props) {
         <SearchBox value={q} set={setQ} />
 
         {dates.map((date) => {
-          const [year, month, day] = date.split("-");
+          const [, month, day] = date.split("-");
 
           const photos = list.filter(
             (i) => i.time.slice(0, 10) === date,
