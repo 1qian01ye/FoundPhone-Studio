@@ -69,6 +69,11 @@ export function NativeDetail({
   ];
 
   const media = safeMedia(item.media),
+  mediaSrc = media
+    ? media.startsWith("/")
+      ? `${import.meta.env.BASE_URL}${media.slice(1)}`
+      : media
+    : "",
     name =
       app === "notes"
         ? "备忘录"
@@ -116,7 +121,7 @@ export function NativeDetail({
         <>
           <div className="native-photo-stage">
             {media ? (
-              <img src={media} alt={item.title} />
+              <img src={mediaSrc} alt={item.title} />
             ) : (
               <div className="native-photo-caption">
                 <h2>{item.title}</h2>
