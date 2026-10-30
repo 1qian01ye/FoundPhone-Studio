@@ -1765,15 +1765,27 @@
       }
     ],
     "photos": [
-      {
-        "id": "test-item-photos",
-        "title": "测试内容",
-        "body": "这是一条测试内容。",
-        "sender": "测试用户",
-        "kind": "text",
-        "meta": {}
-      }
-    ],
+  {
+    "id": "photo-20260805-1",
+    "title": "1高会1",
+    "body": "",
+    "sender": "机主",
+    "kind": "image",
+    "time": "2026-08-05",
+    "media": "/1高会1.png",
+    "meta": {}
+  },
+  {
+    "id": "photo-20260805-2",
+    "title": "1高会2",
+    "body": "",
+    "sender": "机主",
+    "kind": "image",
+    "time": "2026-08-05",
+    "media": "/1高会2.png",
+    "meta": {}
+  }
+],
     "camera": [
       {
         "id": "test-item-camera",
