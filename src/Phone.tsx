@@ -1205,6 +1205,26 @@ function AppContent({
   work: Work;
 }) {
   const [detail, setDetail] = useState<Item | null>(null);
+  const toggleRedbookCommentLike = (commentId: string) => {
+  setDetail((current) => {
+    if (!current) return current;
+
+    return {
+      ...current,
+      redbookComments: current.redbookComments.map((comment) => {
+        if (comment.id !== commentId) return comment;
+
+        const liked = !comment.liked;
+
+        return {
+          ...comment,
+          liked,
+          likes: Math.max(0, comment.likes + (liked ? 1 : -1)),
+        };
+      }),
+    };
+  });
+};
   const [thread, setThread] = useState("");
   const [tab, setTab] = useState(app.tabs[0]);
   const [q, setQ] = useState("");
@@ -1386,10 +1406,17 @@ if (app.id === "camera") {
               )}
             </div>
 
-            <div className="redbook-comment-likes">
-              <span>{comment.liked ? "♥" : "♡"}</span>
-              <small>{comment.likes}</small>
-            </div>
+            <button
+  type="button"
+  className={`redbook-comment-likes ${
+    comment.liked ? "liked" : ""
+  }`}
+  aria-label={comment.liked ? "取消点赞" : "点赞"}
+  onClick={() => toggleRedbookCommentLike(comment.id)}
+>
+  <span>{comment.liked ? "♥" : "♡"}</span>
+  <small>{comment.likes}</small>
+</button>
           </div>
         </article>
       ))}
