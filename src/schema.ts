@@ -37,24 +37,34 @@ export const itemSchema = z.object({
   read: z.boolean().default(false),
   likes: z.number().default(0),
 
-  // 兼容旧评论字符串，同时支持小红书评论对象
-  comments: z
-    .array(
-      z.union([
-        z.string(),
-        z.object({
-          id: z.string(),
-          nickname: z.string(),
-          userId: z.string(),
-          avatar: z.string().default(""),
-          content: z.string(),
-          time: z.string().default("刚刚"),
-          location: z.string().default(""),
-          likes: z.number().default(0),
-        }),
-      ]),
-    )
-    .default([]),
+comments: z.array(z.string()).default([]),
+
+redbookComments: z.array(
+  z.object({
+    id: z.string(),
+    nickname: z.string(),
+    userId: z.string(),
+    avatar: z.string().default(""),
+    content: z.string(),
+    time: z.string().default("刚刚"),
+    location: z.string().default(""),
+    likes: z.number().default(0),
+    liked: z.boolean().default(false),
+    replies: z.array(
+      z.object({
+        id: z.string(),
+        nickname: z.string(),
+        userId: z.string(),
+        avatar: z.string().default(""),
+        content: z.string(),
+        time: z.string().default("刚刚"),
+        location: z.string().default(""),
+        likes: z.number().default(0),
+        liked: z.boolean().default(false),
+      }),
+    ).default([]),
+  }),
+).default([]),
 });
 
 export type Item = z.infer<typeof itemSchema>;
