@@ -1759,47 +1759,309 @@
     ],
     "redbook": [
   {
-    "id": "some-blue",
-    "title": "some blue",
-    "body": "一些让人心情愉悦的蓝色系穿搭\n\n#fitcheck #Ootd #男士穿搭 #蓝色系穿搭",
-    "richText": "",
-    "time": "2026-10-26 12:30",
-    "sender": "厚嘴皮儿",
-    "avatar": "/小红书头像1.jpg",
-    "kind": "post",
-    "media": "/some blue1.jpg",
-    "images": [
-      "/some blue1.jpg",
-      "/some blue2.jpg",
-      "/some blue3.jpg",
-      "/some blue4.jpg",
-      "/some blue5.jpg",
-      "/some blue6.jpg",
-      "/some blue7.jpg",
-      "/some blue8.jpg",
-      "/some blue9.jpg",
-      "/some blue10.jpg"
-    ],
-    "favorite": true,
-    "likes": 1286,
-    "comments": [
-      "林秋水：发型也要学吗老师",
-      "小满今天穿什么：第三套真的好适合夏天啊，清爽又有少年感",
-      "阿哲不迟到：蓝色系果然是男生穿搭的神，干净又显白",
-      "云朵汽水：第二套的配色好舒服，有没有同款推荐呀",
-      "木木：求第一套外套链接！这个颜色也太好看了",
-      "今天也要开心：这种穿搭真的很加分，感觉整个人都温柔了",
-      "周周：第三套配浅色裤子绝了，直接抄作业💙",
-      "一颗薄荷糖：蓝色穿好了真的有种很清爽的感觉，不会太刻意",
-      "陈同学：就应该这么穿，简单但很有质感",
-      "晚风不晚：收藏了！下次买衣服照着搭配",
-      "小鱼游啊游：有没有适合学生党的平价版本，真的很喜欢这个风格",
-      "柠檬冰美式：第四套也好看！这种低饱和蓝色好戳我",
-      "林间有风：想知道鞋子是什么牌子的，搭得好好看",
-      "别叫我早睡：原来蓝色和白色这么搭，学到了学到了"
-    ],
-    "meta": {}
+  "id": "some-blue",
+  "title": "some blue",
+  "body": "一些让人心情愉悦的蓝色系穿搭\n\n#fitcheck #Ootd #男士穿搭 #蓝色系穿搭",
+  "richText": "",
+  "time": "2026-10-26 12:30",
+  "sender": "厚嘴皮儿",
+  "avatar": "/小红书头像1.jpg",
+  "kind": "post",
+  "media": "/some blue1.jpg",
+  "images": [
+    "/some blue1.jpg",
+    "/some blue2.jpg",
+    "/some blue3.jpg",
+    "/some blue4.jpg",
+    "/some blue5.jpg",
+    "/some blue6.jpg",
+    "/some blue7.jpg",
+    "/some blue8.jpg",
+    "/some blue9.jpg",
+    "/some blue10.jpg"
+  ],
+  "favorite": true,
+  "likes": 1286,
+  "comments": [
+    "林秋水：发型也要学吗老师",
+    "小满今天穿什么：第三套真的好适合夏天啊，清爽又有少年感",
+    "阿哲不迟到：蓝色系果然是男生穿搭的神，干净又显白",
+    "云朵汽水：第二套的配色好舒服，有没有同款推荐呀",
+    "木木：求第一套外套链接！这个颜色也太好看了",
+    "今天也要开心：这种穿搭真的很加分，感觉整个人都温柔了",
+    "周周：第三套配浅色裤子绝了，直接抄作业💙",
+    "一颗薄荷糖：蓝色穿好了真的有种很清爽的感觉，不会太刻意",
+    "陈同学：就应该这么穿，简单但很有质感",
+    "晚风不晚：收藏了！下次买衣服照着搭配",
+    "小鱼游啊游：有没有适合学生党的平价版本，真的很喜欢这个风格",
+    "柠檬冰美式：第四套也好看！这种低饱和蓝色好戳我",
+    "林间有风：想知道鞋子是什么牌子的，搭得好好看",
+    "别叫我早睡：原来蓝色和白色这么搭，学到了学到了"
+  ],
+  "redbookComments": [
+    {
+      "id": "rb-comment-001",
+  "nickname": "林秋水",
+  "userId": "rb-user-001",
+  "avatar": "/linqiushui.jpg",
+  "content": "发型也要学吗老师",
+  "time": "2小时前",
+  "location": "四川",
+  "likes": 26,
+  "liked": false,
+  "isAuthor": false,
+  "replies": [
+    {
+      "id": "rb-reply-001",
+      "nickname": "可可嘻呖",
+      "userId": "rb-user-keke",
+      "avatar": "lvzhengxiQQ.jpg",
+      "content": "偶遇",
+      "time": "1小时前",
+      "location": "四川",
+      "likes": 0,
+      "liked": false,
+      "isAuthor": false
+        }
+      ]
+    },
+    {
+      "id": "rb-comment-002",
+      "nickname": "小满今天穿什么",
+      "userId": "rb-user-002",
+      "avatar": "",
+      "content": "第三套真的好适合夏天啊，清爽又有少年感",
+      "time": "3小时前",
+      "location": "浙江",
+      "likes": 58,
+      "liked": false,
+      "isAuthor": false,
+      "replies": [
+        {
+          "id": "rb-reply-003",
+          "nickname": "厚嘴皮儿",
+          "userId": "rb-author",
+          "avatar": "/小红书头像1.jpg",
+          "content": "第三套我自己也很喜欢，夏天穿刚刚好。",
+          "time": "2小时前",
+          "location": "广东",
+          "likes": 12,
+          "liked": false,
+          "isAuthor": true
+        }
+      ]
+    },
+    {
+      "id": "rb-comment-003",
+      "nickname": "阿哲不迟到",
+      "userId": "rb-user-003",
+      "avatar": "",
+      "content": "蓝色系果然是男生穿搭的神，干净又显白",
+      "time": "4小时前",
+      "location": "江苏",
+      "likes": 42,
+      "liked": false,
+      "isAuthor": false,
+      "replies": []
+    },
+    {
+      "id": "rb-comment-004",
+      "nickname": "云朵汽水",
+      "userId": "rb-user-004",
+      "avatar": "",
+      "content": "第二套的配色好舒服，有没有同款推荐呀",
+      "time": "5小时前",
+      "location": "上海",
+      "likes": 31,
+      "liked": false,
+      "isAuthor": false,
+      "replies": [
+        {
+          "id": "rb-reply-004",
+          "nickname": "厚嘴皮儿",
+          "userId": "rb-author",
+          "avatar": "/小红书头像1.jpg",
+          "content": "第二套可以试试浅蓝衬衫搭配米白色长裤。",
+          "time": "3小时前",
+          "location": "广东",
+          "likes": 6,
+          "liked": false,
+          "isAuthor": true
+        }
+      ]
+    },
+    {
+      "id": "rb-comment-005",
+      "nickname": "木木",
+      "userId": "rb-user-005",
+      "avatar": "",
+      "content": "求第一套外套链接！这个颜色也太好看了",
+      "time": "6小时前",
+      "location": "北京",
+      "likes": 19,
+      "liked": false,
+      "isAuthor": false,
+      "replies": []
+    },
+    {
+      "id": "rb-comment-006",
+      "nickname": "今天也要开心",
+      "userId": "rb-user-006",
+      "avatar": "",
+      "content": "这种穿搭真的很加分，感觉整个人都温柔了",
+      "time": "7小时前",
+      "location": "四川",
+      "likes": 15,
+      "liked": false,
+      "isAuthor": false,
+      "replies": [
+        {
+          "id": "rb-reply-005",
+          "nickname": "小满今天穿什么",
+          "userId": "rb-user-002",
+          "avatar": "",
+          "content": "真的！颜色选对了气质会很不一样。",
+          "time": "6小时前",
+          "location": "浙江",
+          "likes": 4,
+          "liked": false,
+          "isAuthor": false
+        }
+      ]
+    },
+    {
+      "id": "rb-comment-007",
+      "nickname": "周周",
+      "userId": "rb-user-007",
+      "avatar": "",
+      "content": "第三套配浅色裤子绝了，直接抄作业💙",
+      "time": "8小时前",
+      "location": "湖北",
+      "likes": 67,
+      "liked": false,
+      "isAuthor": false,
+      "replies": []
+    },
+    {
+      "id": "rb-comment-008",
+      "nickname": "一颗薄荷糖",
+      "userId": "rb-user-008",
+      "avatar": "",
+      "content": "蓝色穿好了真的有种很清爽的感觉，不会太刻意",
+      "time": "9小时前",
+      "location": "福建",
+      "likes": 23,
+      "liked": false,
+      "isAuthor": false,
+      "replies": []
+    },
+    {
+      "id": "rb-comment-009",
+      "nickname": "陈同学",
+      "userId": "rb-user-009",
+      "avatar": "",
+      "content": "就应该这么穿，简单但很有质感",
+      "time": "10小时前",
+      "location": "湖南",
+      "likes": 12,
+      "liked": false,
+      "isAuthor": false,
+      "replies": []
+    },
+    {
+      "id": "rb-comment-010",
+      "nickname": "晚风不晚",
+      "userId": "rb-user-010",
+      "avatar": "",
+      "content": "收藏了！下次买衣服照着搭配",
+      "time": "昨天",
+      "location": "山东",
+      "likes": 9,
+      "liked": false,
+      "isAuthor": false,
+      "replies": []
+    },
+    {
+      "id": "rb-comment-011",
+      "nickname": "小鱼游啊游",
+      "userId": "rb-user-011",
+      "avatar": "",
+      "content": "有没有适合学生党的平价版本，真的很喜欢这个风格",
+      "time": "昨天",
+      "location": "河南",
+      "likes": 36,
+      "liked": false,
+      "isAuthor": false,
+      "replies": [
+        {
+          "id": "rb-reply-006",
+          "nickname": "厚嘴皮儿",
+          "userId": "rb-author",
+          "avatar": "/小红书头像1.jpg",
+          "content": "学生党可以先从基础款入手，浅蓝色上衣和白色裤子就很好搭。",
+          "time": "昨天",
+          "location": "广东",
+          "likes": 11,
+          "liked": false,
+          "isAuthor": true
+        }
+      ]
+    },
+    {
+      "id": "rb-comment-012",
+      "nickname": "柠檬冰美式",
+      "userId": "rb-user-012",
+      "avatar": "",
+      "content": "第四套也好看！这种低饱和蓝色好戳我",
+      "time": "昨天",
+      "location": "重庆",
+      "likes": 28,
+      "liked": false,
+      "isAuthor": false,
+      "replies": []
+    },
+    {
+      "id": "rb-comment-013",
+      "nickname": "林间有风",
+      "userId": "rb-user-013",
+      "avatar": "",
+      "content": "想知道鞋子是什么牌子的，搭得好好看",
+      "time": "昨天",
+      "location": "云南",
+      "likes": 17,
+      "liked": false,
+      "isAuthor": false,
+      "replies": [
+        {
+          "id": "rb-reply-007",
+          "nickname": "厚嘴皮儿",
+          "userId": "rb-author",
+          "avatar": "/小红书头像1.jpg",
+          "content": "鞋子是比较基础的白色休闲鞋，类似款也可以搭配。",
+          "time": "昨天",
+          "location": "广东",
+          "likes": 5,
+          "liked": false,
+          "isAuthor": true
+        }
+      ]
+    },
+    {
+      "id": "rb-comment-014",
+      "nickname": "别叫我早睡",
+      "userId": "rb-user-014",
+      "avatar": "",
+      "content": "原来蓝色和白色这么搭，学到了学到了",
+      "time": "昨天",
+      "location": "安徽",
+      "likes": 21,
+      "liked": false,
+      "isAuthor": false,
+      "replies": []
     }
+  ],
+  "meta": {}
+}
 ],
     "douyin": [
       {
