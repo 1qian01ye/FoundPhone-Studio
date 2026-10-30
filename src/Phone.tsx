@@ -1512,6 +1512,7 @@ if (app.id === "camera") {
           </Suspense>
         </div>
         {detail &&
+            (
           app.id !== "redbook" &&
 socialDetailApps.has(app.id) &&
           (!detail.password || unlocks.includes(detail.id)) ? (
@@ -1537,7 +1538,7 @@ socialDetailApps.has(app.id) &&
               </div>
               {detailView}
             </>
-          )}
+          ))}
       </>
     );
   return (
