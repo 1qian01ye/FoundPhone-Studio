@@ -209,15 +209,10 @@ export function SocialDetail(p: {
         {tab === "评论" ? (
   <div className="post-detail-comments">
     {replies.map((c, index) => {
-      const text = typeof c === "string" ? c : c.content;
-      const split = text.search(/[：:]/),
-        hasName = split > 0 && split < 24,
-        name = hasName
-          ? text.slice(0, split)
-          : typeof c === "string"
-            ? "用户"
-            : c.nickname,
-        body = hasName ? text.slice(split + 1) : text;
+      const split = c.search(/[：:]/),
+  hasName = split > 0 && split < 24,
+  name = hasName ? c.slice(0, split) : "用户",
+  body = hasName ? c.slice(split + 1) : c;
 
       return (
         <article key={index} className="post-detail-comment">
