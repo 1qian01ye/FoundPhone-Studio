@@ -330,7 +330,7 @@ export function RedbookSkin(p: Props) {
   const list =
     tab === "收藏"
       ? items.filter((i) => i.favorite)
-        : items;
+        : items.filter((i) => !i.favorite);
   return (
     <div className="catalog-skin redbook-ui">
       <Header p={p} />
