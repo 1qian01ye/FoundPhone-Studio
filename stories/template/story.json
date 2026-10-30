@@ -3629,7 +3629,20 @@
             "likes": 240,
             "liked": false,
             "isAuthor": false,
-            "replies": []
+            "replies": [
+  {
+    "id": "salmon-dream-reply-006-001",
+    "nickname": "三文鱼胶囊",
+    "userId": "salmon-dream-author",
+    "avatar": "",
+    "content": "爱你么老公🥺好想求他每天都给我唱首歌！",
+    "time": "5小时前",
+    "location": "",
+    "likes": 224,
+    "liked": false,
+    "isAuthor": true
+  }
+]
           },
           {
             "id": "salmon-dream-comment-007",
