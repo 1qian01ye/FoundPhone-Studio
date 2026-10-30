@@ -535,60 +535,43 @@ export function ContactsSkin(p: Props) {
 
 export function PhotosSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "图库");
-  const [album, setAlbum] = useState("");
+
   const list =
     tab === "收藏"
       ? items.filter((i) => i.favorite)
-      : album
-        ? items.filter((i) => (i.folder || "未分类") === album)
-        : items;
+      : items;
+
   return (
     <div className="catalog-skin native-photos">
       <Header p={p} />
+
       <div className="catalog-scroll">
-        <h1>{album || tab}</h1>
-        {tab === "相簿" && !album ? (
-          <div className="album-grid">
-            {groupItems(items, "未分类").map((g) => (
-              <button key={g} onClick={() => setAlbum(g)}>
-                <Media
-                  item={items.find((i) => (i.folder || "未分类") === g)!}
-                />
-                <strong>{g}</strong>
-                <small>
-                  {items.filter((i) => (i.folder || "未分类") === g).length} 项
-                </small>
-              </button>
-            ))}
-          </div>
-        ) : (
-          <>
-            <SearchBox value={q} set={setQ} />
-            <div className="photo-mosaic">
-              {list.map((i) => (
-                <button
-                  aria-label={`查看${i.title}`}
-                  key={i.id}
-                  onClick={() => p.onItem(i)}
-                >
-                  <Media item={i} />
-                  {i.favorite && <Heart size={12} fill="white" />}
-                </button>
-              ))}
-            </div>
-            <p className="media-count">{list.length} 个项目</p>
-          </>
-        )}
+        <h1>{tab}</h1>
+
+        <SearchBox value={q} set={setQ} />
+
+        <div className="photo-mosaic">
+          {list.map((i) => (
+            <button
+              aria-label={`查看${i.title}`}
+              key={i.id}
+              onClick={() => p.onItem(i)}
+            >
+              <Media item={i} />
+              {i.favorite && <Heart size={12} fill="white" />}
+            </button>
+          ))}
+        </div>
+
+        <p className="media-count">{list.length} 个项目</p>
         <Empty items={list} />
       </div>
+
       <Tabs
-        tabs={["图库", "相簿", "收藏"]}
+        tabs={["图库", "收藏"]}
         value={tab}
-        set={(t) => {
-          setTab(t);
-          setAlbum("");
-        }}
-        icons={[<Image />, <Folder />, <Heart />]}
+        set={setTab}
+        icons={[<Image />, <Heart />]}
       />
     </div>
   );
