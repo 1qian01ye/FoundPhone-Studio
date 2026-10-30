@@ -335,7 +335,11 @@ console.log(
     ? items.filter((i) => i.folder?.trim() === "历史")
     : tab === "动态"
       ? items.filter((i) => i.folder?.trim() === "动态")
-      : items;
+      : items.filter(
+          (i) =>
+            i.folder?.trim() !== "历史" &&
+            i.folder?.trim() !== "动态"
+        );
 
 console.log("[B站历史检查]", {
   currentTab: tab,
