@@ -1383,24 +1383,36 @@ if (app.id === "camera") {
                 <div className="redbook-comment-replies">
                   {comment.replies.map((reply) => (
                     <div
-                      className="redbook-comment-reply"
-                      key={reply.id}
-                    >
-                      <strong>{reply.nickname}</strong>
+  className="redbook-comment-reply"
+  key={reply.id}
+>
+  {reply.avatar ? (
+    <img
+      className="redbook-comment-avatar"
+      src={reply.avatar}
+      alt=""
+    />
+  ) : (
+    <div className="redbook-comment-avatar redbook-avatar-placeholder">
+      {reply.nickname.slice(0, 1)}
+    </div>
+  )}
 
-                      {reply.isAuthor && (
-                        <small>作者</small>
-                      )}
+  <div className="redbook-reply-content">
+    <strong>{reply.nickname}</strong>
 
-                      <span>：{reply.content}</span>
+    {reply.isAuthor && <small>作者</small>}
 
-                      <div className="redbook-comment-meta">
-                        <span>{reply.time}</span>
-                        {reply.location && (
-                          <span>IP属地：{reply.location}</span>
-                        )}
-                      </div>
-                    </div>
+    <span>：{reply.content}</span>
+
+    <div className="redbook-comment-meta">
+      <span>{reply.time}</span>
+      {reply.location && (
+        <span>IP属地：{reply.location}</span>
+      )}
+    </div>
+  </div>
+</div>
                   ))}
                 </div>
               )}
