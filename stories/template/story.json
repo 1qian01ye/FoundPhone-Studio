@@ -88,324 +88,363 @@
     "kakao"
   ],
   "contacts": [
-  {
-    "id": "contact-chen-shen",
-    "name": "陈燊",
-    "phone": "",
-    "bio": ""
-  },
-  {
-    "id": "contact-father",
-    "name": "Father",
-    "phone": "",
-    "bio": ""
-  },
-  {
-    "id": "contact-fei-zong",
-    "name": "飞总",
-    "phone": "",
-    "bio": ""
-  },
-  {
-    "id": "contact-laoshi",
-    "name": "老师",
-    "phone": "",
-    "bio": ""
-  },
-  {
-    "id": "contact-lv-zhengxi",
-    "name": "吕政熙",
-    "phone": "",
-    "bio": ""
-  },
-  {
-    "id": "contact-mother",
-    "name": "Mother",
-    "phone": "",
-    "bio": ""
-  },
-  {
-    "id": "contact-shen-zihang",
-    "name": "沈子航",
-    "phone": "",
-    "bio": ""
-  },
-  {
-    "id": "contact-xiaopang",
-    "name": "小胖同学",
-    "phone": "",
-    "bio": ""
-  },
-  {
-    "id": "contact-xiaoyu",
-    "name": "小羽",
-    "phone": "",
-    "bio": ""
-  },
-  {
-    "id": "contact-yang-linhao",
-    "name": "杨林好",
-    "phone": "",
-    "bio": ""
-  },
-  {
-    "id": "contact-yang-yunhao",
-    "name": "杨云皓",
-    "phone": "",
-    "bio": ""
-  },
-  {
-    "id": "contact-zhezhe",
-    "name": "哲哲",
-    "phone": "",
-    "bio": ""
-  },
-  {
-    "id": "contact-zhi-enhan",
-    "name": "智恩涵",
-    "phone": "",
-    "bio": ""
-  },
-  {
-    "id": "test-contact",
-    "name": "测试联系人",
-    "phone": "",
-    "bio": "这是一条测试内容。"
-  }
-],
+    {
+      "id": "contact-chen-shen",
+      "name": "陈燊",
+      "phone": "",
+      "bio": ""
+    },
+    {
+      "id": "contact-father",
+      "name": "Father",
+      "phone": "",
+      "bio": ""
+    },
+    {
+      "id": "contact-fei-zong",
+      "name": "飞总",
+      "phone": "",
+      "bio": ""
+    },
+    {
+      "id": "contact-laoshi",
+      "name": "老师",
+      "phone": "",
+      "bio": ""
+    },
+    {
+      "id": "contact-lv-zhengxi",
+      "name": "吕政熙",
+      "phone": "",
+      "bio": ""
+    },
+    {
+      "id": "contact-mother",
+      "name": "Mother",
+      "phone": "",
+      "bio": ""
+    },
+    {
+      "id": "contact-shen-zihang",
+      "name": "沈子航",
+      "phone": "",
+      "bio": ""
+    },
+    {
+      "id": "contact-xiaopang",
+      "name": "小胖同学",
+      "phone": "",
+      "bio": ""
+    },
+    {
+      "id": "contact-xiaoyu",
+      "name": "小羽",
+      "phone": "",
+      "bio": ""
+    },
+    {
+      "id": "contact-yang-linhao",
+      "name": "杨林好",
+      "phone": "",
+      "bio": ""
+    },
+    {
+      "id": "contact-yang-yunhao",
+      "name": "杨云皓",
+      "phone": "",
+      "bio": ""
+    },
+    {
+      "id": "contact-zhezhe",
+      "name": "哲哲",
+      "phone": "",
+      "bio": ""
+    },
+    {
+      "id": "contact-zhi-enhan",
+      "name": "智恩涵",
+      "phone": "",
+      "bio": ""
+    },
+    {
+      "id": "test-contact",
+      "name": "测试联系人",
+      "phone": "",
+      "bio": "这是一条测试内容。"
+    }
+  ],
   "chats": [
-  {
-    "id": "spam-hokage",
-    "app": "messages",
-    "title": "火影忍者手游",
-    "participants": ["owner", "spam-hokage-sender"],
-    "messages": [
-      {
-        "id": "spam-hokage-msg-1",
-        "body": "【火影忍者】忍者集结活动即将结束！本周限时任务和活动奖励已开放，请登录游戏查看详情。",
-        "senderId": "spam-hokage-sender",
-        "time": "2026-10-12 10:18"
-      }
-    ]
-  },
-  {
-    "id": "chat-contact-zhi-enhan-oct07",
-    "app": "messages",
-    "title": "智恩涵",
-    "participants": ["owner", "contact-zhi-enhan"],
-    "messages": [
-      {
-        "id": "msg-contact-zhi-enhan-oct07-1",
-        "body": "这里信号好差",
-        "senderId": "contact-zhi-enhan",
-        "time": "2026-10-07 09:10"
-      },
-      {
-        "id": "msg-contact-zhi-enhan-oct07-2",
-        "body": "你快过来了吗，自行车已经给你扫好了",
-        "senderId": "contact-zhi-enhan",
-        "time": "2026-10-07 09:12"
-      },
-      {
-        "id": "msg-contact-zhi-enhan-oct07-3",
-        "body": "马上过来",
-        "senderId": "owner",
-        "time": "2026-10-07 09:17"
-      },
-      {
-        "id": "msg-contact-zhi-enhan-oct07-4",
-        "body": "可是我不会骑自行车",
-        "senderId": "owner",
-        "time": "2026-10-07 09:18"
-      },
-      {
-        "id": "msg-contact-zhi-enhan-oct07-5",
-        "body": "没事儿，我还拿了代步车，你先过来吧",
-        "senderId": "contact-zhi-enhan",
-        "time": "2026-10-07 09:20"
-      }
-    ]
-  },
-  {
-    "id": "chat-contact-lv-zhengxi-oct06",
-    "app": "messages",
-    "title": "吕政熙",
-    "participants": ["owner", "contact-lv-zhengxi"],
-    "messages": [
-      {
-        "id": "msg-contact-lv-zhengxi-oct06-1",
-        "body": "你快到了吗？",
-        "senderId": "contact-lv-zhengxi",
-        "time": "2026-10-06 19:40"
-      },
-      {
-        "id": "msg-contact-lv-zhengxi-oct06-2",
-        "body": "我马上就到",
-        "senderId": "owner",
-        "time": "2026-10-06 19:42"
-      }
-    ]
-  },
-  {
-    "id": "spam-cainiao",
-    "app": "messages",
-    "title": "菜鸟裹裹",
-    "participants": ["owner", "spam-cainiao-sender"],
-    "messages": [
-      {
-        "id": "spam-cainiao-msg-1",
-        "body": "【菜鸟裹裹】您有新的包裹物流动态，请前往官方应用查看。若非本人包裹，请注意核实。",
-        "senderId": "spam-cainiao-sender",
-        "time": "2026-10-04 11:25"
-      }
-    ]
-  },
-  {
-    "id": "spam-lottery",
-    "app": "messages",
-    "title": "幸运抽奖通知",
-    "participants": ["owner", "spam-lottery-sender"],
-    "messages": [
-      {
-        "id": "spam-lottery-msg-1",
-        "body": "您获得了一次模拟抽奖机会！本条为演示用营销短信，请勿据此提供付款信息。",
-        "senderId": "spam-lottery-sender",
-        "time": "2026-09-28 16:40"
-      }
-    ]
-  },
-  {
-    "id": "chat-contact-chen-shen-sep25",
-    "app": "messages",
-    "title": "陈燊",
-    "participants": ["owner", "contact-chen-shen"],
-    "messages": [
-      {
-        "id": "msg-contact-chen-shen-sep25-1",
-        "body": "你怎么不回我微信",
-        "senderId": "contact-chen-shen",
-        "time": "2026-09-25 20:10"
-      },
-      {
-        "id": "msg-contact-chen-shen-sep25-2",
-        "body": "明天你穿什么颜色的衣服",
-        "senderId": "contact-chen-shen",
-        "time": "2026-09-25 20:15"
-      },
-      {
-        "id": "msg-contact-chen-shen-sep25-3",
-        "body": "你就等着就行了",
-        "senderId": "owner",
-        "time": "2026-09-25 20:45"
-       },
-       {
-        "id": "msg-contact-chen-shen-nov17-1",
-        "body": "生日快乐！",
-        "senderId": "contact-chen-shen",
-        "time": "2026-11-17 00:00"
-      }
-    ]
-  },
-  {
-    "id": "spam-egg",
-    "app": "messages",
-    "title": "蛋仔派对福利中心",
-    "participants": ["owner", "spam-egg-sender"],
-    "messages": [
-      {
-        "id": "spam-egg-msg-1",
-        "body": "【蛋仔派对】蛋仔岛本周活动已更新，限时外观和惊喜礼包等你查看！",
-        "senderId": "spam-egg-sender",
-        "time": "2026-09-24 13:20"
-      }
-    ]
-  },
-  {
-    "id": "spam-genshin",
-    "app": "messages",
-    "title": "原神活动通知",
-    "participants": ["owner", "spam-genshin-sender"],
-    "messages": [
-      {
-        "id": "spam-genshin-msg-1",
-        "body": "【原神】旅行者，限时活动即将结束！请进入游戏查看活动进度与可领取奖励。",
-        "senderId": "spam-genshin-sender",
-        "time": "2026-09-21 18:35"
-      }
-    ]
-  },
-  {
-    "id": "spam-meituan",
-    "app": "messages",
-    "title": "美团优惠通知",
-    "participants": ["owner", "spam-meituan-sender"],
-    "messages": [
-      {
-        "id": "spam-meituan-msg-1",
-        "body": "【美团】今日专属优惠已更新，外卖和团购活动限时开放，打开官方应用查看。",
-        "senderId": "spam-meituan-sender",
-        "time": "2026-09-18 12:05"
-      }
-    ]
-  },
-  {
-    "id": "spam-shopping",
-    "app": "messages",
-    "title": "购物优惠中心",
-    "participants": ["owner", "spam-shopping-sender"],
-    "messages": [
-      {
-        "id": "spam-shopping-msg-1",
-        "body": "会员专属折扣已更新，多款商品正在限时促销，活动详情请前往购物应用查看。",
-        "senderId": "spam-shopping-sender",
-        "time": "2026-09-15 15:48"
-      }
-    ]
-  },
-  {
-    "id": "spam-game",
-    "app": "messages",
-    "title": "游戏礼包中心",
-    "participants": ["owner", "spam-game-sender"],
-    "messages": [
-      {
-        "id": "spam-game-msg-1",
-        "body": "游戏限时礼包正在活动中，登录游戏即可查看本期任务和奖励内容。",
-        "senderId": "spam-game-sender",
-        "time": "2026-09-11 20:15"
-      }
-    ]
-  },
-  {
-    "id": "spam-points",
-    "app": "messages",
-    "title": "积分兑换提醒",
-    "participants": ["owner", "spam-points-sender"],
-    "messages": [
-      {
-        "id": "spam-points-msg-1",
-        "body": "您的积分兑换活动即将结束，请进入对应官方应用查看积分规则。请勿向陌生人提供验证码。",
-        "senderId": "spam-points-sender",
-        "time": "2026-09-06 09:30"
-      }
-    ]
-  },
-  {
-    "id": "spam-video",
-    "app": "messages",
-    "title": "短视频会员中心",
-    "participants": ["owner", "spam-video-sender"],
-    "messages": [
-      {
-        "id": "spam-video-msg-1",
-        "body": "本周会员活动已上线！热门内容和限时权益等你查看，详情请打开官方应用。",
-        "senderId": "spam-video-sender",
-        "time": "2026-09-02 17:55"
-      }
-    ]
-  },
-{
-  "id": "test-chat-wechat",
+    {
+      "id": "spam-hokage",
+      "app": "messages",
+      "title": "火影忍者手游",
+      "participants": [
+        "owner",
+        "spam-hokage-sender"
+      ],
+      "messages": [
+        {
+          "id": "spam-hokage-msg-1",
+          "body": "【火影忍者】忍者集结活动即将结束！本周限时任务和活动奖励已开放，请登录游戏查看详情。",
+          "senderId": "spam-hokage-sender",
+          "time": "2026-10-12 10:18"
+        }
+      ]
+    },
+    {
+      "id": "chat-contact-zhi-enhan-oct07",
+      "app": "messages",
+      "title": "智恩涵",
+      "participants": [
+        "owner",
+        "contact-zhi-enhan"
+      ],
+      "messages": [
+        {
+          "id": "msg-contact-zhi-enhan-oct07-1",
+          "body": "这里信号好差",
+          "senderId": "contact-zhi-enhan",
+          "time": "2026-10-07 09:10"
+        },
+        {
+          "id": "msg-contact-zhi-enhan-oct07-2",
+          "body": "你快过来了吗，自行车已经给你扫好了",
+          "senderId": "contact-zhi-enhan",
+          "time": "2026-10-07 09:12"
+        },
+        {
+          "id": "msg-contact-zhi-enhan-oct07-3",
+          "body": "马上过来",
+          "senderId": "owner",
+          "time": "2026-10-07 09:17"
+        },
+        {
+          "id": "msg-contact-zhi-enhan-oct07-4",
+          "body": "可是我不会骑自行车",
+          "senderId": "owner",
+          "time": "2026-10-07 09:18"
+        },
+        {
+          "id": "msg-contact-zhi-enhan-oct07-5",
+          "body": "没事儿，我还拿了代步车，你先过来吧",
+          "senderId": "contact-zhi-enhan",
+          "time": "2026-10-07 09:20"
+        }
+      ]
+    },
+    {
+      "id": "chat-contact-lv-zhengxi-oct06",
+      "app": "messages",
+      "title": "吕政熙",
+      "participants": [
+        "owner",
+        "contact-lv-zhengxi"
+      ],
+      "messages": [
+        {
+          "id": "msg-contact-lv-zhengxi-oct06-1",
+          "body": "你快到了吗？",
+          "senderId": "contact-lv-zhengxi",
+          "time": "2026-10-06 19:40"
+        },
+        {
+          "id": "msg-contact-lv-zhengxi-oct06-2",
+          "body": "我马上就到",
+          "senderId": "owner",
+          "time": "2026-10-06 19:42"
+        }
+      ]
+    },
+    {
+      "id": "spam-cainiao",
+      "app": "messages",
+      "title": "菜鸟裹裹",
+      "participants": [
+        "owner",
+        "spam-cainiao-sender"
+      ],
+      "messages": [
+        {
+          "id": "spam-cainiao-msg-1",
+          "body": "【菜鸟裹裹】您有新的包裹物流动态，请前往官方应用查看。若非本人包裹，请注意核实。",
+          "senderId": "spam-cainiao-sender",
+          "time": "2026-10-04 11:25"
+        }
+      ]
+    },
+    {
+      "id": "spam-lottery",
+      "app": "messages",
+      "title": "幸运抽奖通知",
+      "participants": [
+        "owner",
+        "spam-lottery-sender"
+      ],
+      "messages": [
+        {
+          "id": "spam-lottery-msg-1",
+          "body": "您获得了一次模拟抽奖机会！本条为演示用营销短信，请勿据此提供付款信息。",
+          "senderId": "spam-lottery-sender",
+          "time": "2026-09-28 16:40"
+        }
+      ]
+    },
+    {
+      "id": "chat-contact-chen-shen-sep25",
+      "app": "messages",
+      "title": "陈燊",
+      "participants": [
+        "owner",
+        "contact-chen-shen"
+      ],
+      "messages": [
+        {
+          "id": "msg-contact-chen-shen-sep25-1",
+          "body": "你怎么不回我微信",
+          "senderId": "contact-chen-shen",
+          "time": "2026-09-25 20:10"
+        },
+        {
+          "id": "msg-contact-chen-shen-sep25-2",
+          "body": "明天你穿什么颜色的衣服",
+          "senderId": "contact-chen-shen",
+          "time": "2026-09-25 20:15"
+        },
+        {
+          "id": "msg-contact-chen-shen-sep25-3",
+          "body": "你就等着就行了",
+          "senderId": "owner",
+          "time": "2026-09-25 20:45"
+        },
+        {
+          "id": "msg-contact-chen-shen-nov17-1",
+          "body": "生日快乐！",
+          "senderId": "contact-chen-shen",
+          "time": "2026-11-17 00:00"
+        }
+      ]
+    },
+    {
+      "id": "spam-egg",
+      "app": "messages",
+      "title": "蛋仔派对福利中心",
+      "participants": [
+        "owner",
+        "spam-egg-sender"
+      ],
+      "messages": [
+        {
+          "id": "spam-egg-msg-1",
+          "body": "【蛋仔派对】蛋仔岛本周活动已更新，限时外观和惊喜礼包等你查看！",
+          "senderId": "spam-egg-sender",
+          "time": "2026-09-24 13:20"
+        }
+      ]
+    },
+    {
+      "id": "spam-genshin",
+      "app": "messages",
+      "title": "原神活动通知",
+      "participants": [
+        "owner",
+        "spam-genshin-sender"
+      ],
+      "messages": [
+        {
+          "id": "spam-genshin-msg-1",
+          "body": "【原神】旅行者，限时活动即将结束！请进入游戏查看活动进度与可领取奖励。",
+          "senderId": "spam-genshin-sender",
+          "time": "2026-09-21 18:35"
+        }
+      ]
+    },
+    {
+      "id": "spam-meituan",
+      "app": "messages",
+      "title": "美团优惠通知",
+      "participants": [
+        "owner",
+        "spam-meituan-sender"
+      ],
+      "messages": [
+        {
+          "id": "spam-meituan-msg-1",
+          "body": "【美团】今日专属优惠已更新，外卖和团购活动限时开放，打开官方应用查看。",
+          "senderId": "spam-meituan-sender",
+          "time": "2026-09-18 12:05"
+        }
+      ]
+    },
+    {
+      "id": "spam-shopping",
+      "app": "messages",
+      "title": "购物优惠中心",
+      "participants": [
+        "owner",
+        "spam-shopping-sender"
+      ],
+      "messages": [
+        {
+          "id": "spam-shopping-msg-1",
+          "body": "会员专属折扣已更新，多款商品正在限时促销，活动详情请前往购物应用查看。",
+          "senderId": "spam-shopping-sender",
+          "time": "2026-09-15 15:48"
+        }
+      ]
+    },
+    {
+      "id": "spam-game",
+      "app": "messages",
+      "title": "游戏礼包中心",
+      "participants": [
+        "owner",
+        "spam-game-sender"
+      ],
+      "messages": [
+        {
+          "id": "spam-game-msg-1",
+          "body": "游戏限时礼包正在活动中，登录游戏即可查看本期任务和奖励内容。",
+          "senderId": "spam-game-sender",
+          "time": "2026-09-11 20:15"
+        }
+      ]
+    },
+    {
+      "id": "spam-points",
+      "app": "messages",
+      "title": "积分兑换提醒",
+      "participants": [
+        "owner",
+        "spam-points-sender"
+      ],
+      "messages": [
+        {
+          "id": "spam-points-msg-1",
+          "body": "您的积分兑换活动即将结束，请进入对应官方应用查看积分规则。请勿向陌生人提供验证码。",
+          "senderId": "spam-points-sender",
+          "time": "2026-09-06 09:30"
+        }
+      ]
+    },
+    {
+      "id": "spam-video",
+      "app": "messages",
+      "title": "短视频会员中心",
+      "participants": [
+        "owner",
+        "spam-video-sender"
+      ],
+      "messages": [
+        {
+          "id": "spam-video-msg-1",
+          "body": "本周会员活动已上线！热门内容和限时权益等你查看，详情请打开官方应用。",
+          "senderId": "spam-video-sender",
+          "time": "2026-09-02 17:55"
+        }
+      ]
+    },
+    {
+      "id": "test-chat-wechat",
       "title": "测试会话",
       "participants": [
         "owner",
@@ -936,371 +975,592 @@
         }
       ]
     },
-{
-  "id": "qq-lv-zhenxi",
-  "app": "qq",
-  "title": "吕政熙",
-  "participants": ["owner", "qq-lv-zhenxi"],
-  "messages": [
-    {"id":"qq-lv-msg-001","time":"2026-08-17 17:57","body":"打不打","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-002","time":"2026-08-17 17:57","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"owner"},
-    {"id":"qq-lv-msg-003","time":"2026-08-23 18:45","body":"上号","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-004","time":"2026-08-23 18:45","body":"等会","senderId":"owner"},
-    {"id":"qq-lv-msg-005","time":"2026-08-23 20:30","body":"来","senderId":"owner"},
-    {"id":"qq-lv-msg-006","time":"2026-08-23 20:30","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-007","time":"2026-09-04 13:23","body":"来不来","senderId":"owner"},
-    {"id":"qq-lv-msg-008","time":"2026-09-04 13:23","body":"等一下马上","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-009","time":"2026-09-04 13:34","body":"来","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-010","time":"2026-09-10 16:00","body":"玩不玩","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-011","time":"2026-09-10 16:00","body":"今天玩不了","senderId":"owner"},
-    {"id":"qq-lv-msg-012","time":"2026-09-16 17:10","body":"上号","senderId":"owner"},
-    {"id":"qq-lv-msg-013","time":"2026-09-16 17:10","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-014","time":"2026-09-30 19:28","body":"终于放假了","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-015","time":"2026-09-30 19:28","body":"爽玩","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-016","time":"2026-09-30 19:28","body":"来了","senderId":"owner"},
-    {"id":"qq-lv-msg-017","time":"2026-10-07 22:33","body":"粥","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-018","time":"2026-10-07 22:33","body":"明天出去玩不来了早睡","senderId":"owner"},
-    {"id":"qq-lv-msg-019","time":"2026-10-07 22:33","body":"和谁","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-020","time":"2026-10-07 22:33","body":"沈子航智恩涵，去青龙湖耍","senderId":"owner"},
-    {"id":"qq-lv-msg-021","time":"2026-10-07 22:33","body":"哦…","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-022","time":"2026-10-07 22:33","body":"咋了","senderId":"owner"},
-    {"id":"qq-lv-msg-023","time":"2026-10-07 22:33","body":"我前两天也去了那里玩","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-024","time":"2026-10-07 22:33","body":"好玩不","senderId":"owner"},
-    {"id":"qq-lv-msg-025","time":"2026-10-07 22:33","body":"还可以","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-026","time":"2026-10-07 22:33","body":"OK下次再一起去","senderId":"owner"},
-    {"id":"qq-lv-msg-027","time":"2026-10-07 22:33","body":"好","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-028","time":"2026-10-11 16:37","body":"我想玩下和平精英","senderId":"owner"},
-    {"id":"qq-lv-msg-029","time":"2026-10-11 16:37","body":"来哥带你","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-030","time":"2026-10-11 17:45","body":"你好菜","senderId":"owner"},
-    {"id":"qq-lv-msg-031","time":"2026-10-11 17:45","body":"失误","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-032","time":"2026-10-14 18:56","body":"https://peace-squad.invalid/invite/H8mQ3vZ6","senderId":"owner"},
-    {"id":"qq-lv-msg-033","time":"2026-10-15 17:38","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-034","time":"2026-10-18 14:39","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-035","time":"2026-10-23 16:27","body":"https://peace-squad.invalid/invite/H8mQ3vZ6","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-036","time":"2026-10-27 22:46","body":"你的心情是否还和四月一样","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-037","time":"2026-10-27 22:46","body":"啥意思现在不是十月吗","senderId":"owner"},
-    {"id":"qq-lv-msg-038","time":"2026-10-27 22:46","body":"不愧是四川人十四不分","senderId":"owner"},
-    {"id":"qq-lv-msg-039","time":"2026-10-27 22:46","body":"没事","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-040","time":"2026-10-27 22:46","body":"和平精英走起","senderId":"owner"},
-    {"id":"qq-lv-msg-041","time":"2026-11-05 17:22","body":"https://delta-squad.invalid/invite/7Kp9Xm2Q","senderId":"owner"},
-    {"id":"qq-lv-msg-042","time":"2026-11-08 18:45","body":"https://peace-squad.invalid/invite/H8mQ3vZ6","senderId":"qq-lv-zhenxi"},
-    {"id":"qq-lv-msg-043","time":"2026-11-15 12:55","body":"https://peace-squad.invalid/invite/H8mQ3vZ6","senderId":"owner"}
-  ]
-},
-{
-  "id": "qq-zhu-yingchen",
-  "app": "qq",
-  "title": "朱映宸",
-  "participants": ["owner", "qq-zhu-yingchen"],
-  "messages": [
     {
-      "id": "qq-zhu-yc-msg-001",
-      "time": "2026-09-02 16:42",
-      "body": "来蛋仔？",
-      "senderId": "qq-zhu-yingchen"
+      "id": "qq-lv-zhenxi",
+      "app": "qq",
+      "title": "吕政熙",
+      "participants": [
+        "owner",
+        "qq-lv-zhenxi"
+      ],
+      "messages": [
+        {
+          "id": "qq-lv-msg-001",
+          "time": "2026-08-17 17:57",
+          "body": "打不打",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-002",
+          "time": "2026-08-17 17:57",
+          "body": "https://delta-squad.invalid/invite/7Kp9Xm2Q",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-003",
+          "time": "2026-08-23 18:45",
+          "body": "上号",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-004",
+          "time": "2026-08-23 18:45",
+          "body": "等会",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-005",
+          "time": "2026-08-23 20:30",
+          "body": "来",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-006",
+          "time": "2026-08-23 20:30",
+          "body": "https://delta-squad.invalid/invite/7Kp9Xm2Q",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-007",
+          "time": "2026-09-04 13:23",
+          "body": "来不来",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-008",
+          "time": "2026-09-04 13:23",
+          "body": "等一下马上",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-009",
+          "time": "2026-09-04 13:34",
+          "body": "来",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-010",
+          "time": "2026-09-10 16:00",
+          "body": "玩不玩",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-011",
+          "time": "2026-09-10 16:00",
+          "body": "今天玩不了",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-012",
+          "time": "2026-09-16 17:10",
+          "body": "上号",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-013",
+          "time": "2026-09-16 17:10",
+          "body": "https://delta-squad.invalid/invite/7Kp9Xm2Q",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-014",
+          "time": "2026-09-30 19:28",
+          "body": "终于放假了",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-015",
+          "time": "2026-09-30 19:28",
+          "body": "爽玩",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-016",
+          "time": "2026-09-30 19:28",
+          "body": "来了",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-017",
+          "time": "2026-10-07 22:33",
+          "body": "粥",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-018",
+          "time": "2026-10-07 22:33",
+          "body": "明天出去玩不来了早睡",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-019",
+          "time": "2026-10-07 22:33",
+          "body": "和谁",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-020",
+          "time": "2026-10-07 22:33",
+          "body": "沈子航智恩涵，去青龙湖耍",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-021",
+          "time": "2026-10-07 22:33",
+          "body": "哦…",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-022",
+          "time": "2026-10-07 22:33",
+          "body": "咋了",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-023",
+          "time": "2026-10-07 22:33",
+          "body": "我前两天也去了那里玩",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-024",
+          "time": "2026-10-07 22:33",
+          "body": "好玩不",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-025",
+          "time": "2026-10-07 22:33",
+          "body": "还可以",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-026",
+          "time": "2026-10-07 22:33",
+          "body": "OK下次再一起去",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-027",
+          "time": "2026-10-07 22:33",
+          "body": "好",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-028",
+          "time": "2026-10-11 16:37",
+          "body": "我想玩下和平精英",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-029",
+          "time": "2026-10-11 16:37",
+          "body": "来哥带你",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-030",
+          "time": "2026-10-11 17:45",
+          "body": "你好菜",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-031",
+          "time": "2026-10-11 17:45",
+          "body": "失误",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-032",
+          "time": "2026-10-14 18:56",
+          "body": "https://peace-squad.invalid/invite/H8mQ3vZ6",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-033",
+          "time": "2026-10-15 17:38",
+          "body": "https://delta-squad.invalid/invite/7Kp9Xm2Q",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-034",
+          "time": "2026-10-18 14:39",
+          "body": "https://delta-squad.invalid/invite/7Kp9Xm2Q",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-035",
+          "time": "2026-10-23 16:27",
+          "body": "https://peace-squad.invalid/invite/H8mQ3vZ6",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-036",
+          "time": "2026-10-27 22:46",
+          "body": "你的心情是否还和四月一样",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-037",
+          "time": "2026-10-27 22:46",
+          "body": "啥意思现在不是十月吗",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-038",
+          "time": "2026-10-27 22:46",
+          "body": "不愧是四川人十四不分",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-039",
+          "time": "2026-10-27 22:46",
+          "body": "没事",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-040",
+          "time": "2026-10-27 22:46",
+          "body": "和平精英走起",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-041",
+          "time": "2026-11-05 17:22",
+          "body": "https://delta-squad.invalid/invite/7Kp9Xm2Q",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-lv-msg-042",
+          "time": "2026-11-08 18:45",
+          "body": "https://peace-squad.invalid/invite/H8mQ3vZ6",
+          "senderId": "qq-lv-zhenxi"
+        },
+        {
+          "id": "qq-lv-msg-043",
+          "time": "2026-11-15 12:55",
+          "body": "https://peace-squad.invalid/invite/H8mQ3vZ6",
+          "senderId": "owner"
+        }
+      ]
     },
     {
-      "id": "qq-zhu-yc-msg-002",
-      "time": "2026-09-02 16:43",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "qq-zhu-yingchen"
+      "id": "qq-zhu-yingchen",
+      "app": "qq",
+      "title": "朱映宸",
+      "participants": [
+        "owner",
+        "qq-zhu-yingchen"
+      ],
+      "messages": [
+        {
+          "id": "qq-zhu-yc-msg-001",
+          "time": "2026-09-02 16:42",
+          "body": "来蛋仔？",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-002",
+          "time": "2026-09-02 16:43",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-003",
+          "time": "2026-09-02 16:48",
+          "body": "来",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-004",
+          "time": "2026-09-06 19:15",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-005",
+          "time": "2026-09-06 19:16",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-006",
+          "time": "2026-09-06 19:19",
+          "body": "等我一下",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-007",
+          "time": "2026-09-10 17:32",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-008",
+          "time": "2026-09-10 17:34",
+          "body": "上号",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-009",
+          "time": "2026-09-10 17:38",
+          "body": "来了",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-010",
+          "time": "2026-09-14 20:06",
+          "body": "蛋仔走起",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-011",
+          "time": "2026-09-14 20:07",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-012",
+          "time": "2026-09-14 20:12",
+          "body": "马上",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-013",
+          "time": "2026-09-18 15:24",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-014",
+          "time": "2026-09-18 15:26",
+          "body": "来不来",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-015",
+          "time": "2026-09-18 15:31",
+          "body": "来啦",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-016",
+          "time": "2026-09-18 15:32",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-017",
+          "time": "2026-09-23 18:47",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-018",
+          "time": "2026-09-23 18:49",
+          "body": "开一把",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-019",
+          "time": "2026-09-23 18:50",
+          "body": "拉我",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-020",
+          "time": "2026-09-27 20:12",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-021",
+          "time": "2026-09-27 20:13",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-022",
+          "time": "2026-09-27 20:16",
+          "body": "来了",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-023",
+          "time": "2026-10-01 16:08",
+          "body": "蛋仔？",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-024",
+          "time": "2026-10-01 16:09",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-025",
+          "time": "2026-10-01 16:13",
+          "body": "来了来了",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-026",
+          "time": "2026-10-05 19:41",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-027",
+          "time": "2026-10-05 19:42",
+          "body": "快点",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-028",
+          "time": "2026-10-05 19:45",
+          "body": "好",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-029",
+          "time": "2026-10-09 17:18",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-030",
+          "time": "2026-10-09 17:20",
+          "body": "上线",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-031",
+          "time": "2026-10-09 17:23",
+          "body": "拉一下",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-032",
+          "time": "2026-10-13 20:21",
+          "body": "来玩蛋仔",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-033",
+          "time": "2026-10-13 20:22",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-034",
+          "time": "2026-10-13 20:26",
+          "body": "来",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-035",
+          "time": "2026-10-18 15:37",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-036",
+          "time": "2026-10-18 15:39",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-037",
+          "time": "2026-10-18 15:43",
+          "body": "马上",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-038",
+          "time": "2026-10-22 18:54",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-039",
+          "time": "2026-10-22 18:55",
+          "body": "开吗",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-040",
+          "time": "2026-10-22 18:59",
+          "body": "开",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-041",
+          "time": "2026-10-27 16:34",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-042",
+          "time": "2026-10-27 16:35",
+          "body": "来不来",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-043",
+          "time": "2026-10-27 16:39",
+          "body": "来",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-044",
+          "time": "2026-11-01 19:06",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-045",
+          "time": "2026-11-01 19:08",
+          "body": "上线",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-046",
+          "time": "2026-11-01 19:11",
+          "body": "来了",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-047",
+          "time": "2026-11-06 17:26",
+          "body": "来蛋仔",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-048",
+          "time": "2026-11-06 17:27",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-049",
+          "time": "2026-11-06 17:31",
+          "body": "来",
+          "senderId": "owner"
+        },
+        {
+          "id": "qq-zhu-yc-msg-050",
+          "time": "2026-11-11 20:03",
+          "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
+          "senderId": "qq-zhu-yingchen"
+        },
+        {
+          "id": "qq-zhu-yc-msg-051",
+          "time": "2026-11-11 20:05",
+          "body": "好，来了",
+          "senderId": "owner"
+        }
+      ]
     },
-    {
-      "id": "qq-zhu-yc-msg-003",
-      "time": "2026-09-02 16:48",
-      "body": "来",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-004",
-      "time": "2026-09-06 19:15",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-005",
-      "time": "2026-09-06 19:16",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-006",
-      "time": "2026-09-06 19:19",
-      "body": "等我一下",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-007",
-      "time": "2026-09-10 17:32",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-008",
-      "time": "2026-09-10 17:34",
-      "body": "上号",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-009",
-      "time": "2026-09-10 17:38",
-      "body": "来了",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-010",
-      "time": "2026-09-14 20:06",
-      "body": "蛋仔走起",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-011",
-      "time": "2026-09-14 20:07",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-012",
-      "time": "2026-09-14 20:12",
-      "body": "马上",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-013",
-      "time": "2026-09-18 15:24",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-014",
-      "time": "2026-09-18 15:26",
-      "body": "来不来",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-015",
-      "time": "2026-09-18 15:31",
-      "body": "来啦",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-016",
-      "time": "2026-09-18 15:32",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-017",
-      "time": "2026-09-23 18:47",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-018",
-      "time": "2026-09-23 18:49",
-      "body": "开一把",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-019",
-      "time": "2026-09-23 18:50",
-      "body": "拉我",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-020",
-      "time": "2026-09-27 20:12",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-021",
-      "time": "2026-09-27 20:13",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-022",
-      "time": "2026-09-27 20:16",
-      "body": "来了",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-023",
-      "time": "2026-10-01 16:08",
-      "body": "蛋仔？",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-024",
-      "time": "2026-10-01 16:09",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-025",
-      "time": "2026-10-01 16:13",
-      "body": "来了来了",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-026",
-      "time": "2026-10-05 19:41",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-027",
-      "time": "2026-10-05 19:42",
-      "body": "快点",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-028",
-      "time": "2026-10-05 19:45",
-      "body": "好",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-029",
-      "time": "2026-10-09 17:18",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-030",
-      "time": "2026-10-09 17:20",
-      "body": "上线",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-031",
-      "time": "2026-10-09 17:23",
-      "body": "拉一下",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-032",
-      "time": "2026-10-13 20:21",
-      "body": "来玩蛋仔",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-033",
-      "time": "2026-10-13 20:22",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-034",
-      "time": "2026-10-13 20:26",
-      "body": "来",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-035",
-      "time": "2026-10-18 15:37",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-036",
-      "time": "2026-10-18 15:39",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-037",
-      "time": "2026-10-18 15:43",
-      "body": "马上",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-038",
-      "time": "2026-10-22 18:54",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-039",
-      "time": "2026-10-22 18:55",
-      "body": "开吗",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-040",
-      "time": "2026-10-22 18:59",
-      "body": "开",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-041",
-      "time": "2026-10-27 16:34",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-042",
-      "time": "2026-10-27 16:35",
-      "body": "来不来",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-043",
-      "time": "2026-10-27 16:39",
-      "body": "来",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-044",
-      "time": "2026-11-01 19:06",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-045",
-      "time": "2026-11-01 19:08",
-      "body": "上线",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-046",
-      "time": "2026-11-01 19:11",
-      "body": "来了",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-047",
-      "time": "2026-11-06 17:26",
-      "body": "来蛋仔",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-048",
-      "time": "2026-11-06 17:27",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-049",
-      "time": "2026-11-06 17:31",
-      "body": "来",
-      "senderId": "owner"
-    },
-    {
-      "id": "qq-zhu-yc-msg-050",
-      "time": "2026-11-11 20:03",
-      "body": "https://egg-party.invalid/invite/Egg8Kp2Q",
-      "senderId": "qq-zhu-yingchen"
-    },
-    {
-      "id": "qq-zhu-yc-msg-051",
-      "time": "2026-11-11 20:05",
-      "body": "好，来了",
-      "senderId": "owner"
-    }
-  ]
-},
     {
       "id": "test-chat-whatsapp",
       "app": "whatsapp",
@@ -1399,20 +1659,111 @@
       }
     ],
     "contacts": [
-  {"id":"contact-item-chen-shen","title":"陈燊","body":"","sender":"陈燊","kind":"text","meta":{}},
-  {"id":"contact-item-father","title":"Father","body":"","sender":"Father","kind":"text","meta":{}},
-  {"id":"contact-item-fei-zong","title":"飞总","body":"","sender":"飞总","kind":"text","meta":{}},
-  {"id":"contact-item-laoshi","title":"老师","body":"","sender":"老师","kind":"text","meta":{}},
-  {"id":"contact-item-lv-zhengxi","title":"吕政熙","body":"","sender":"吕政熙","kind":"text","meta":{}},
-  {"id":"contact-item-mother","title":"Mother","body":"","sender":"Mother","kind":"text","meta":{}},
-  {"id":"contact-item-shen-zihang","title":"沈子航","body":"","sender":"沈子航","kind":"text","meta":{}},
-  {"id":"contact-item-xiaopang","title":"小胖同学","body":"","sender":"小胖同学","kind":"text","meta":{}},
-  {"id":"contact-item-xiaoyu","title":"小羽","body":"","sender":"小羽","kind":"text","meta":{}},
-  {"id":"contact-item-yang-linhao","title":"杨林好","body":"","sender":"杨林好","kind":"text","meta":{}},
-  {"id":"contact-item-yang-yunhao","title":"杨云皓","body":"","sender":"杨云皓","kind":"text","meta":{}},
-  {"id":"contact-item-zhezhe","title":"哲哲","body":"","sender":"哲哲","kind":"text","meta":{}},
-  {"id":"contact-item-zhi-enhan","title":"智恩涵","body":"","sender":"智恩涵","kind":"text","meta":{}}
-],
+      {
+        "id": "contact-item-chen-shen",
+        "title": "陈燊",
+        "body": "",
+        "sender": "陈燊",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "contact-item-father",
+        "title": "Father",
+        "body": "",
+        "sender": "Father",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "contact-item-fei-zong",
+        "title": "飞总",
+        "body": "",
+        "sender": "飞总",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "contact-item-laoshi",
+        "title": "老师",
+        "body": "",
+        "sender": "老师",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "contact-item-lv-zhengxi",
+        "title": "吕政熙",
+        "body": "",
+        "sender": "吕政熙",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "contact-item-mother",
+        "title": "Mother",
+        "body": "",
+        "sender": "Mother",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "contact-item-shen-zihang",
+        "title": "沈子航",
+        "body": "",
+        "sender": "沈子航",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "contact-item-xiaopang",
+        "title": "小胖同学",
+        "body": "",
+        "sender": "小胖同学",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "contact-item-xiaoyu",
+        "title": "小羽",
+        "body": "",
+        "sender": "小羽",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "contact-item-yang-linhao",
+        "title": "杨林好",
+        "body": "",
+        "sender": "杨林好",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "contact-item-yang-yunhao",
+        "title": "杨云皓",
+        "body": "",
+        "sender": "杨云皓",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "contact-item-zhezhe",
+        "title": "哲哲",
+        "body": "",
+        "sender": "哲哲",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "contact-item-zhi-enhan",
+        "title": "智恩涵",
+        "body": "",
+        "sender": "智恩涵",
+        "kind": "text",
+        "meta": {}
+      }
+    ],
     "photos": [
       {
         "id": "test-item-photos",
@@ -1504,107 +1855,109 @@
       }
     ],
     "music": [
-  {
-    "id": "music-street-lights",
-    "title": "Street Lights",
-    "body": "Street Lights",
-    "sender": "Kanye West",
-    "kind": "text",
-    "folder": "我的歌单",
-    "media": "/music-covers/street-lights.jpg",
-    "meta": { "album": "808s & Heartbreak" }
-  },
-  {
-    "id": "music-twenties",
-    "title": "Twenties",
-    "body": "Twenties",
-    "sender": "Bren Joy",
-    "kind": "text",
-    "folder": "我的歌单",
-    "media": "/music-covers/twenties.jpg",
-    "meta": {}
-  },
-  {
-    "id": "music-far-away",
-    "title": "Far away",
-    "body": "Far away",
-    "sender": "RINI",
-    "kind": "text",
-    "folder": "我的歌单",
-    "media": "/music-covers/far-away.jpg",
-    "meta": {}
-  },
-  {
-    "id": "music-bai-tuo-bai-tuo",
-    "title": "拜托拜托",
-    "body": "拜托拜托",
-    "sender": "TF家族",
-    "kind": "text",
-    "folder": "我的歌单",
-    "media": "/music-covers/baituobaotuo.jpg",
-    "meta": {}
-  },
-  {
-    "id": "music-always",
-    "title": "Always",
-    "body": "Always",
-    "sender": "keshi",
-    "kind": "text",
-    "folder": "我的歌单",
-    "media": "/music-covers/always.jpg",
-    "meta": {}
-  },
-  {
-    "id": "music-lan-ting-xu",
-    "title": "兰亭序",
-    "body": "兰亭序",
-    "sender": "周杰伦",
-    "kind": "text",
-    "folder": "我的歌单",
-    "media": "/music-covers/lantingxu.jpg",
-    "meta": {}
-  },
-  {
-    "id": "music-one-last-kiss",
-    "title": "One Last Kiss",
-    "body": "One Last Kiss",
-    "sender": "宇多田光",
-    "kind": "text",
-    "folder": "我的歌单",
-    "media": "/music-covers/one-last-kiss.jpg",
-    "meta": {}
-  },
-  {
-    "id": "music-drops",
-    "title": "Drops",
-    "body": "Drops",
-    "sender": "FKJ",
-    "kind": "text",
-    "folder": "我的歌单",
-    "media": "/music-covers/drops.jpg",
-    "meta": {}
-  },
-  {
-    "id": "music-tai-cong-ming",
-    "title": "太聪明",
-    "body": "太聪明",
-    "sender": "陈绮贞",
-    "kind": "text",
-    "folder": "我的歌单",
-    "media": "/music-covers/tai-cong-ming.jpg",
-    "meta": {}
-  },
-  {
-    "id": "music-hoshi-to-bokura-to",
-    "title": "星と僕らと",
-    "body": "星と僕らと",
-    "sender": "目黒佑介 / tofubeats（河合佑亮）",
-    "kind": "text",
-    "folder": "我的歌单",
-    "media": "/music-covers/hoshi-to-bokura.jpg",
-    "meta": {}
-  }
-],
+      {
+        "id": "music-street-lights",
+        "title": "Street Lights",
+        "body": "Street Lights",
+        "sender": "Kanye West",
+        "kind": "text",
+        "folder": "我的歌单",
+        "media": "/music-covers/street-lights.jpg",
+        "meta": {
+          "album": "808s & Heartbreak"
+        }
+      },
+      {
+        "id": "music-twenties",
+        "title": "Twenties",
+        "body": "Twenties",
+        "sender": "Bren Joy",
+        "kind": "text",
+        "folder": "我的歌单",
+        "media": "/music-covers/twenties.jpg",
+        "meta": {}
+      },
+      {
+        "id": "music-far-away",
+        "title": "Far away",
+        "body": "Far away",
+        "sender": "RINI",
+        "kind": "text",
+        "folder": "我的歌单",
+        "media": "/music-covers/far-away.jpg",
+        "meta": {}
+      },
+      {
+        "id": "music-bai-tuo-bai-tuo",
+        "title": "拜托拜托",
+        "body": "拜托拜托",
+        "sender": "TF家族",
+        "kind": "text",
+        "folder": "我的歌单",
+        "media": "/music-covers/baituobaotuo.jpg",
+        "meta": {}
+      },
+      {
+        "id": "music-always",
+        "title": "Always",
+        "body": "Always",
+        "sender": "keshi",
+        "kind": "text",
+        "folder": "我的歌单",
+        "media": "/music-covers/always.jpg",
+        "meta": {}
+      },
+      {
+        "id": "music-lan-ting-xu",
+        "title": "兰亭序",
+        "body": "兰亭序",
+        "sender": "周杰伦",
+        "kind": "text",
+        "folder": "我的歌单",
+        "media": "/music-covers/lantingxu.jpg",
+        "meta": {}
+      },
+      {
+        "id": "music-one-last-kiss",
+        "title": "One Last Kiss",
+        "body": "One Last Kiss",
+        "sender": "宇多田光",
+        "kind": "text",
+        "folder": "我的歌单",
+        "media": "/music-covers/one-last-kiss.jpg",
+        "meta": {}
+      },
+      {
+        "id": "music-drops",
+        "title": "Drops",
+        "body": "Drops",
+        "sender": "FKJ",
+        "kind": "text",
+        "folder": "我的歌单",
+        "media": "/music-covers/drops.jpg",
+        "meta": {}
+      },
+      {
+        "id": "music-tai-cong-ming",
+        "title": "太聪明",
+        "body": "太聪明",
+        "sender": "陈绮贞",
+        "kind": "text",
+        "folder": "我的歌单",
+        "media": "/music-covers/tai-cong-ming.jpg",
+        "meta": {}
+      },
+      {
+        "id": "music-hoshi-to-bokura-to",
+        "title": "星と僕らと",
+        "body": "星と僕らと",
+        "sender": "目黒佑介 / tofubeats（河合佑亮）",
+        "kind": "text",
+        "folder": "我的歌单",
+        "media": "/music-covers/hoshi-to-bokura.jpg",
+        "meta": {}
+      }
+    ],
     "maps": [
       {
         "id": "test-item-maps",
@@ -1616,87 +1969,87 @@
       }
     ],
     "weather": [
-  {
-    "id": "weather-chengdu",
-    "title": "成都",
-    "body": "天气数据待接入",
-    "sender": "Open-Meteo",
-    "kind": "text",
-    "meta": {}
-  },
-  {
-  "id": "weather-yibin",
-  "title": "宜宾",
-  "body": "天气数据待接入",
-  "sender": "Open-Meteo",
-  "kind": "text",
-  "meta": {}
- },
- {
-  "id": "weather-meishan",
-  "title": "眉山",
-  "body": "天气数据待接入",
-  "sender": "Open-Meteo",
-  "kind": "text",
-  "meta": {}
-  },
-  {
-    "id": "weather-chongqing",
-    "title": "重庆",
-    "body": "天气数据待接入",
-    "sender": "Open-Meteo",
-    "kind": "text",
-    "meta": {}
-  },
-  {
-    "id": "weather-langfang",
-    "title": "廊坊",
-    "body": "天气数据待接入",
-    "sender": "Open-Meteo",
-    "kind": "text",
-    "meta": {}
-  },
-  {
-    "id": "weather-dalian",
-    "title": "大连",
-    "body": "天气数据待接入",
-    "sender": "Open-Meteo",
-    "kind": "text",
-    "meta": {}
-  },
-  {
-    "id": "weather-jinan",
-    "title": "济南（山东）",
-    "body": "天气数据待接入",
-    "sender": "Open-Meteo",
-    "kind": "text",
-    "meta": {}
-  },
-  {
-    "id": "weather-hangzhou",
-    "title": "杭州（浙江）",
-    "body": "天气数据待接入",
-    "sender": "Open-Meteo",
-    "kind": "text",
-    "meta": {}
-  },
-  {
-    "id": "weather-tokyo",
-    "title": "东京",
-    "body": "天气数据待接入",
-    "sender": "Open-Meteo",
-    "kind": "text",
-    "meta": {}
-  },
-  {
-    "id": "weather-fuzhou",
-    "title": "福州（福建）",
-    "body": "天气数据待接入",
-    "sender": "Open-Meteo",
-    "kind": "text",
-    "meta": {}
-  }
-],
+      {
+        "id": "weather-chengdu",
+        "title": "成都",
+        "body": "天气数据待接入",
+        "sender": "Open-Meteo",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "weather-yibin",
+        "title": "宜宾",
+        "body": "天气数据待接入",
+        "sender": "Open-Meteo",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "weather-meishan",
+        "title": "眉山",
+        "body": "天气数据待接入",
+        "sender": "Open-Meteo",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "weather-chongqing",
+        "title": "重庆",
+        "body": "天气数据待接入",
+        "sender": "Open-Meteo",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "weather-langfang",
+        "title": "廊坊",
+        "body": "天气数据待接入",
+        "sender": "Open-Meteo",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "weather-dalian",
+        "title": "大连",
+        "body": "天气数据待接入",
+        "sender": "Open-Meteo",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "weather-jinan",
+        "title": "济南（山东）",
+        "body": "天气数据待接入",
+        "sender": "Open-Meteo",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "weather-hangzhou",
+        "title": "杭州（浙江）",
+        "body": "天气数据待接入",
+        "sender": "Open-Meteo",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "weather-tokyo",
+        "title": "东京",
+        "body": "天气数据待接入",
+        "sender": "Open-Meteo",
+        "kind": "text",
+        "meta": {}
+      },
+      {
+        "id": "weather-fuzhou",
+        "title": "福州（福建）",
+        "body": "天气数据待接入",
+        "sender": "Open-Meteo",
+        "kind": "text",
+        "meta": {}
+      }
+    ],
     "wallet": [
       {
         "id": "test-item-wallet",
@@ -1758,311 +2111,1543 @@
       }
     ],
     "redbook": [
-  {
-  "id": "some-blue",
-  "title": "some blue",
-  "body": "一些让人心情愉悦的蓝色系穿搭\n\n#fitcheck #Ootd #男士穿搭 #蓝色系穿搭",
-  "richText": "",
-  "time": "2026-10-26 12:30",
-  "sender": "厚嘴皮儿",
-  "avatar": "/小红书头像1.jpg",
-  "kind": "post",
-  "media": "/some blue1.jpg",
-  "images": [
-    "/some blue1.jpg",
-    "/some blue2.jpg",
-    "/some blue3.jpg",
-    "/some blue4.jpg",
-    "/some blue5.jpg",
-    "/some blue6.jpg",
-    "/some blue7.jpg",
-    "/some blue8.jpg",
-    "/some blue9.jpg",
-    "/some blue10.jpg"
-  ],
-  "favorite": true,
-  "likes": 1286,
-  "comments": [
-    "林秋水：发型也要学吗老师",
-    "小满今天穿什么：第三套真的好适合夏天啊，清爽又有少年感",
-    "阿哲不迟到：蓝色系果然是男生穿搭的神，干净又显白",
-    "云朵汽水：第二套的配色好舒服，有没有同款推荐呀",
-    "木木：求第一套外套链接！这个颜色也太好看了",
-    "今天也要开心：这种穿搭真的很加分，感觉整个人都温柔了",
-    "周周：第三套配浅色裤子绝了，直接抄作业💙",
-    "一颗薄荷糖：蓝色穿好了真的有种很清爽的感觉，不会太刻意",
-    "陈同学：就应该这么穿，简单但很有质感",
-    "晚风不晚：收藏了！下次买衣服照着搭配",
-    "小鱼游啊游：有没有适合学生党的平价版本，真的很喜欢这个风格",
-    "柠檬冰美式：第四套也好看！这种低饱和蓝色好戳我",
-    "林间有风：想知道鞋子是什么牌子的，搭得好好看",
-    "别叫我早睡：原来蓝色和白色这么搭，学到了学到了"
-  ],
-  "redbookComments": [
-    {
-      "id": "rb-comment-001",
-  "nickname": "林秋水",
-  "userId": "rb-user-001",
-  "avatar": "",
-  "content": "发型也要学吗老师",
-  "time": "2小时前",
-  "location": "四川",
-  "likes": 26,
-  "liked": false,
-  "isAuthor": false,
-  "replies": [
-    {
-      "id": "rb-reply-001",
-      "nickname": "可可嘻呖",
-      "userId": "rb-user-keke",
-      "avatar": "",
-      "content": "偶遇",
-      "time": "1小时前",
-      "location": "四川",
-      "likes": 0,
-      "liked": false,
-      "isAuthor": false
-        }
-      ]
-    },
-    {
-      "id": "rb-comment-002",
-      "nickname": "小满今天穿什么",
-      "userId": "rb-user-002",
-      "avatar": "",
-      "content": "第三套真的好适合夏天啊，清爽又有少年感",
-      "time": "3小时前",
-      "location": "浙江",
-      "likes": 58,
-      "liked": false,
-      "isAuthor": false,
-      "replies": [
-        {
-          "id": "rb-reply-003",
-          "nickname": "厚嘴皮儿",
-          "userId": "rb-author",
-          "avatar": "",
-          "content": "第三套我自己也很喜欢，夏天穿刚刚好。",
-          "time": "2小时前",
-          "location": "广东",
-          "likes": 12,
-          "liked": false,
-          "isAuthor": true
-        }
-      ]
-    },
-    {
-      "id": "rb-comment-003",
-      "nickname": "阿哲不迟到",
-      "userId": "rb-user-003",
-      "avatar": "",
-      "content": "蓝色系果然是男生穿搭的神，干净又显白",
-      "time": "4小时前",
-      "location": "江苏",
-      "likes": 42,
-      "liked": false,
-      "isAuthor": false,
-      "replies": []
-    },
-    {
-      "id": "rb-comment-004",
-      "nickname": "云朵汽水",
-      "userId": "rb-user-004",
-      "avatar": "",
-      "content": "第二套的配色好舒服，有没有同款推荐呀",
-      "time": "5小时前",
-      "location": "上海",
-      "likes": 31,
-      "liked": false,
-      "isAuthor": false,
-      "replies": [
-        {
-          "id": "rb-reply-004",
-          "nickname": "厚嘴皮儿",
-          "userId": "rb-author",
-          "avatar": "",
-          "content": "第二套可以试试浅蓝衬衫搭配米白色长裤。",
-          "time": "3小时前",
-          "location": "广东",
-          "likes": 6,
-          "liked": false,
-          "isAuthor": true
-        }
-      ]
-    },
-    {
-      "id": "rb-comment-005",
-      "nickname": "木木",
-      "userId": "rb-user-005",
-      "avatar": "",
-      "content": "求第一套外套链接！这个颜色也太好看了",
-      "time": "6小时前",
-      "location": "北京",
-      "likes": 19,
-      "liked": false,
-      "isAuthor": false,
-      "replies": []
-    },
-    {
-      "id": "rb-comment-006",
-      "nickname": "今天也要开心",
-      "userId": "rb-user-006",
-      "avatar": "",
-      "content": "这种穿搭真的很加分，感觉整个人都温柔了",
-      "time": "7小时前",
-      "location": "四川",
-      "likes": 15,
-      "liked": false,
-      "isAuthor": false,
-      "replies": [
-        {
-          "id": "rb-reply-005",
-          "nickname": "小满今天穿什么",
-          "userId": "rb-user-002",
-          "avatar": "",
-          "content": "真的！颜色选对了气质会很不一样。",
-          "time": "6小时前",
-          "location": "浙江",
-          "likes": 4,
-          "liked": false,
-          "isAuthor": false
-        }
-      ]
-    },
-    {
-      "id": "rb-comment-007",
-      "nickname": "周周",
-      "userId": "rb-user-007",
-      "avatar": "",
-      "content": "第三套配浅色裤子绝了，直接抄作业💙",
-      "time": "8小时前",
-      "location": "湖北",
-      "likes": 67,
-      "liked": false,
-      "isAuthor": false,
-      "replies": []
-    },
-    {
-      "id": "rb-comment-008",
-      "nickname": "一颗薄荷糖",
-      "userId": "rb-user-008",
-      "avatar": "",
-      "content": "蓝色穿好了真的有种很清爽的感觉，不会太刻意",
-      "time": "9小时前",
-      "location": "福建",
-      "likes": 23,
-      "liked": false,
-      "isAuthor": false,
-      "replies": []
-    },
-    {
-      "id": "rb-comment-009",
-      "nickname": "陈同学",
-      "userId": "rb-user-009",
-      "avatar": "",
-      "content": "就应该这么穿，简单但很有质感",
-      "time": "10小时前",
-      "location": "湖南",
-      "likes": 12,
-      "liked": false,
-      "isAuthor": false,
-      "replies": []
-    },
-    {
-      "id": "rb-comment-010",
-      "nickname": "晚风不晚",
-      "userId": "rb-user-010",
-      "avatar": "",
-      "content": "收藏了！下次买衣服照着搭配",
-      "time": "昨天",
-      "location": "山东",
-      "likes": 9,
-      "liked": false,
-      "isAuthor": false,
-      "replies": []
-    },
-    {
-      "id": "rb-comment-011",
-      "nickname": "小鱼游啊游",
-      "userId": "rb-user-011",
-      "avatar": "",
-      "content": "有没有适合学生党的平价版本，真的很喜欢这个风格",
-      "time": "昨天",
-      "location": "河南",
-      "likes": 36,
-      "liked": false,
-      "isAuthor": false,
-      "replies": [
-        {
-          "id": "rb-reply-006",
-          "nickname": "厚嘴皮儿",
-          "userId": "rb-author",
-          "avatar": "",
-          "content": "学生党可以先从基础款入手，浅蓝色上衣和白色裤子就很好搭。",
-          "time": "昨天",
-          "location": "广东",
-          "likes": 11,
-          "liked": false,
-          "isAuthor": true
-        }
-      ]
-    },
-    {
-      "id": "rb-comment-012",
-      "nickname": "柠檬冰美式",
-      "userId": "rb-user-012",
-      "avatar": "",
-      "content": "第四套也好看！这种低饱和蓝色好戳我",
-      "time": "昨天",
-      "location": "重庆",
-      "likes": 28,
-      "liked": false,
-      "isAuthor": false,
-      "replies": []
-    },
-    {
-      "id": "rb-comment-013",
-      "nickname": "林间有风",
-      "userId": "rb-user-013",
-      "avatar": "",
-      "content": "想知道鞋子是什么牌子的，搭得好好看",
-      "time": "昨天",
-      "location": "云南",
-      "likes": 17,
-      "liked": false,
-      "isAuthor": false,
-      "replies": [
-        {
-          "id": "rb-reply-007",
-          "nickname": "厚嘴皮儿",
-          "userId": "rb-author",
-          "avatar": "",
-          "content": "鞋子是比较基础的白色休闲鞋，类似款也可以搭配。",
-          "time": "昨天",
-          "location": "广东",
-          "likes": 5,
-          "liked": false,
-          "isAuthor": true
-        }
-      ]
-    },
-    {
-      "id": "rb-comment-014",
-      "nickname": "别叫我早睡",
-      "userId": "rb-user-014",
-      "avatar": "",
-      "content": "原来蓝色和白色这么搭，学到了学到了",
-      "time": "昨天",
-      "location": "安徽",
-      "likes": 21,
-      "liked": false,
-      "isAuthor": false,
-      "replies": []
-    }
-  ],
-  "meta": {}
-}
-],
+      {
+        "id": "some-blue",
+        "title": "some blue",
+        "body": "一些让人心情愉悦的蓝色系穿搭\n\n#fitcheck #Ootd #男士穿搭 #蓝色系穿搭",
+        "richText": "",
+        "time": "2026-10-26 12:30",
+        "sender": "厚嘴皮儿",
+        "avatar": "/小红书头像1.jpg",
+        "kind": "post",
+        "media": "/some blue1.jpg",
+        "images": [
+          "/some blue1.jpg",
+          "/some blue2.jpg",
+          "/some blue3.jpg",
+          "/some blue4.jpg",
+          "/some blue5.jpg",
+          "/some blue6.jpg",
+          "/some blue7.jpg",
+          "/some blue8.jpg",
+          "/some blue9.jpg",
+          "/some blue10.jpg"
+        ],
+        "favorite": true,
+        "likes": 1286,
+        "comments": [
+          "林秋水：发型也要学吗老师",
+          "小满今天穿什么：第三套真的好适合夏天啊，清爽又有少年感",
+          "阿哲不迟到：蓝色系果然是男生穿搭的神，干净又显白",
+          "云朵汽水：第二套的配色好舒服，有没有同款推荐呀",
+          "木木：求第一套外套链接！这个颜色也太好看了",
+          "今天也要开心：这种穿搭真的很加分，感觉整个人都温柔了",
+          "周周：第三套配浅色裤子绝了，直接抄作业💙",
+          "一颗薄荷糖：蓝色穿好了真的有种很清爽的感觉，不会太刻意",
+          "陈同学：就应该这么穿，简单但很有质感",
+          "晚风不晚：收藏了！下次买衣服照着搭配",
+          "小鱼游啊游：有没有适合学生党的平价版本，真的很喜欢这个风格",
+          "柠檬冰美式：第四套也好看！这种低饱和蓝色好戳我",
+          "林间有风：想知道鞋子是什么牌子的，搭得好好看",
+          "别叫我早睡：原来蓝色和白色这么搭，学到了学到了"
+        ],
+        "redbookComments": [
+          {
+            "id": "rb-comment-001",
+            "nickname": "林秋水",
+            "userId": "rb-user-001",
+            "avatar": "",
+            "content": "发型也要学吗老师",
+            "time": "2小时前",
+            "location": "四川",
+            "likes": 26,
+            "liked": false,
+            "isAuthor": false,
+            "replies": [
+              {
+                "id": "rb-reply-001",
+                "nickname": "可可嘻呖",
+                "userId": "rb-user-keke",
+                "avatar": "",
+                "content": "偶遇",
+                "time": "1小时前",
+                "location": "四川",
+                "likes": 0,
+                "liked": false,
+                "isAuthor": false
+              }
+            ]
+          },
+          {
+            "id": "rb-comment-002",
+            "nickname": "小满今天穿什么",
+            "userId": "rb-user-002",
+            "avatar": "",
+            "content": "第三套真的好适合夏天啊，清爽又有少年感",
+            "time": "3小时前",
+            "location": "浙江",
+            "likes": 58,
+            "liked": false,
+            "isAuthor": false,
+            "replies": [
+              {
+                "id": "rb-reply-003",
+                "nickname": "厚嘴皮儿",
+                "userId": "rb-author",
+                "avatar": "",
+                "content": "第三套我自己也很喜欢，夏天穿刚刚好。",
+                "time": "2小时前",
+                "location": "广东",
+                "likes": 12,
+                "liked": false,
+                "isAuthor": true
+              }
+            ]
+          },
+          {
+            "id": "rb-comment-003",
+            "nickname": "阿哲不迟到",
+            "userId": "rb-user-003",
+            "avatar": "",
+            "content": "蓝色系果然是男生穿搭的神，干净又显白",
+            "time": "4小时前",
+            "location": "江苏",
+            "likes": 42,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "rb-comment-004",
+            "nickname": "云朵汽水",
+            "userId": "rb-user-004",
+            "avatar": "",
+            "content": "第二套的配色好舒服，有没有同款推荐呀",
+            "time": "5小时前",
+            "location": "上海",
+            "likes": 31,
+            "liked": false,
+            "isAuthor": false,
+            "replies": [
+              {
+                "id": "rb-reply-004",
+                "nickname": "厚嘴皮儿",
+                "userId": "rb-author",
+                "avatar": "",
+                "content": "第二套可以试试浅蓝衬衫搭配米白色长裤。",
+                "time": "3小时前",
+                "location": "广东",
+                "likes": 6,
+                "liked": false,
+                "isAuthor": true
+              }
+            ]
+          },
+          {
+            "id": "rb-comment-005",
+            "nickname": "木木",
+            "userId": "rb-user-005",
+            "avatar": "",
+            "content": "求第一套外套链接！这个颜色也太好看了",
+            "time": "6小时前",
+            "location": "北京",
+            "likes": 19,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "rb-comment-006",
+            "nickname": "今天也要开心",
+            "userId": "rb-user-006",
+            "avatar": "",
+            "content": "这种穿搭真的很加分，感觉整个人都温柔了",
+            "time": "7小时前",
+            "location": "四川",
+            "likes": 15,
+            "liked": false,
+            "isAuthor": false,
+            "replies": [
+              {
+                "id": "rb-reply-005",
+                "nickname": "小满今天穿什么",
+                "userId": "rb-user-002",
+                "avatar": "",
+                "content": "真的！颜色选对了气质会很不一样。",
+                "time": "6小时前",
+                "location": "浙江",
+                "likes": 4,
+                "liked": false,
+                "isAuthor": false
+              }
+            ]
+          },
+          {
+            "id": "rb-comment-007",
+            "nickname": "周周",
+            "userId": "rb-user-007",
+            "avatar": "",
+            "content": "第三套配浅色裤子绝了，直接抄作业💙",
+            "time": "8小时前",
+            "location": "湖北",
+            "likes": 67,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "rb-comment-008",
+            "nickname": "一颗薄荷糖",
+            "userId": "rb-user-008",
+            "avatar": "",
+            "content": "蓝色穿好了真的有种很清爽的感觉，不会太刻意",
+            "time": "9小时前",
+            "location": "福建",
+            "likes": 23,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "rb-comment-009",
+            "nickname": "陈同学",
+            "userId": "rb-user-009",
+            "avatar": "",
+            "content": "就应该这么穿，简单但很有质感",
+            "time": "10小时前",
+            "location": "湖南",
+            "likes": 12,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "rb-comment-010",
+            "nickname": "晚风不晚",
+            "userId": "rb-user-010",
+            "avatar": "",
+            "content": "收藏了！下次买衣服照着搭配",
+            "time": "昨天",
+            "location": "山东",
+            "likes": 9,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "rb-comment-011",
+            "nickname": "小鱼游啊游",
+            "userId": "rb-user-011",
+            "avatar": "",
+            "content": "有没有适合学生党的平价版本，真的很喜欢这个风格",
+            "time": "昨天",
+            "location": "河南",
+            "likes": 36,
+            "liked": false,
+            "isAuthor": false,
+            "replies": [
+              {
+                "id": "rb-reply-006",
+                "nickname": "厚嘴皮儿",
+                "userId": "rb-author",
+                "avatar": "",
+                "content": "学生党可以先从基础款入手，浅蓝色上衣和白色裤子就很好搭。",
+                "time": "昨天",
+                "location": "广东",
+                "likes": 11,
+                "liked": false,
+                "isAuthor": true
+              }
+            ]
+          },
+          {
+            "id": "rb-comment-012",
+            "nickname": "柠檬冰美式",
+            "userId": "rb-user-012",
+            "avatar": "",
+            "content": "第四套也好看！这种低饱和蓝色好戳我",
+            "time": "昨天",
+            "location": "重庆",
+            "likes": 28,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "rb-comment-013",
+            "nickname": "林间有风",
+            "userId": "rb-user-013",
+            "avatar": "",
+            "content": "想知道鞋子是什么牌子的，搭得好好看",
+            "time": "昨天",
+            "location": "云南",
+            "likes": 17,
+            "liked": false,
+            "isAuthor": false,
+            "replies": [
+              {
+                "id": "rb-reply-007",
+                "nickname": "厚嘴皮儿",
+                "userId": "rb-author",
+                "avatar": "",
+                "content": "鞋子是比较基础的白色休闲鞋，类似款也可以搭配。",
+                "time": "昨天",
+                "location": "广东",
+                "likes": 5,
+                "liked": false,
+                "isAuthor": true
+              }
+            ]
+          },
+          {
+            "id": "rb-comment-014",
+            "nickname": "别叫我早睡",
+            "userId": "rb-user-014",
+            "avatar": "",
+            "content": "原来蓝色和白色这么搭，学到了学到了",
+            "time": "昨天",
+            "location": "安徽",
+            "likes": 21,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          }
+        ],
+        "meta": {}
+      },
+      {
+        "id": "he-shi-bbq",
+        "title": "好幸运💗啊啊啊被歪歪翻牌了☺️",
+        "body": "啊啊啊啊啊太开心辣～\n吃的超级香！\n我怎么这么幸运啊啊啊啊啊啊啊啊啊～\n救命啊啊啊啊啊！\n好开心😃\n-\n二编\n歪歪吃到的菜品有：\n烤霸气大五花、快乐儿童餐、鲜椒烤吊龙、卤烤耙鸡爪、卤烤豆干\n\n#高铭阳 #五代 #tf家族 #高铭阳歪歪 #歪歪\n#何师烧烤 #成都美食 #高铭阳五代 #高铭阳五代唯一全领域top",
+        "richText": "",
+        "time": "2026-10-26 12:30",
+        "sender": "何师烧烤",
+        "avatar": "",
+        "kind": "post",
+        "media": "/发现1.jpg",
+        "images": [
+          "/发现1.jpg"
+        ],
+        "favorite": false,
+        "likes": 0,
+        "comments": [
+          "小熊今天吃什么：啊啊啊啊啊这是什么天选之子！！羡慕已经说累了😭",
+          "一颗橘子糖：歪歪吃得开心就好，感觉隔着屏幕都能感受到你的快乐哈哈哈。",
+          "晚风有点甜：这不得把这一天记进人生高光时刻！",
+          "芝士年糕不加糖：何师烧烤：今天也是被幸福砸中的一天。",
+          "小鱼吐泡泡：快乐儿童餐哈哈哈哈，怎么感觉歪歪真的很适合这个名字。",
+          "困困小狗：姐妹你这篇每个字都在尖叫，我看完也跟着激动了。",
+          "月亮邮递员：求问偶遇歪歪是什么体验，我先羡慕为敬。",
+          "今天也要吃饱：这几道菜看起来都好香，歪歪的吃播效果应该很不错吧！",
+          "桃桃乌龙冰：二编还认真列了菜品，幸福得连菜单都要记录下来哈哈哈。"
+        ],
+        "redbookComments": [
+          {
+            "id": "he-shi-bbq-comment-001",
+            "nickname": "小熊今天吃什么",
+            "userId": "he-shi-bbq-user-001",
+            "avatar": "",
+            "content": "啊啊啊啊啊这是什么天选之子！！羡慕已经说累了😭",
+            "time": "1小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "he-shi-bbq-comment-002",
+            "nickname": "一颗橘子糖",
+            "userId": "he-shi-bbq-user-002",
+            "avatar": "",
+            "content": "歪歪吃得开心就好，感觉隔着屏幕都能感受到你的快乐哈哈哈。",
+            "time": "2小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "he-shi-bbq-comment-003",
+            "nickname": "晚风有点甜",
+            "userId": "he-shi-bbq-user-003",
+            "avatar": "",
+            "content": "这不得把这一天记进人生高光时刻！",
+            "time": "3小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "he-shi-bbq-comment-004",
+            "nickname": "芝士年糕不加糖",
+            "userId": "he-shi-bbq-user-004",
+            "avatar": "",
+            "content": "何师烧烤：今天也是被幸福砸中的一天。",
+            "time": "4小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "he-shi-bbq-comment-005",
+            "nickname": "小鱼吐泡泡",
+            "userId": "he-shi-bbq-user-005",
+            "avatar": "",
+            "content": "快乐儿童餐哈哈哈哈，怎么感觉歪歪真的很适合这个名字。",
+            "time": "5小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "he-shi-bbq-comment-006",
+            "nickname": "困困小狗",
+            "userId": "he-shi-bbq-user-006",
+            "avatar": "",
+            "content": "姐妹你这篇每个字都在尖叫，我看完也跟着激动了。",
+            "time": "6小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "he-shi-bbq-comment-007",
+            "nickname": "月亮邮递员",
+            "userId": "he-shi-bbq-user-007",
+            "avatar": "",
+            "content": "求问偶遇歪歪是什么体验，我先羡慕为敬。",
+            "time": "7小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "he-shi-bbq-comment-008",
+            "nickname": "今天也要吃饱",
+            "userId": "he-shi-bbq-user-008",
+            "avatar": "",
+            "content": "这几道菜看起来都好香，歪歪的吃播效果应该很不错吧！",
+            "time": "8小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "he-shi-bbq-comment-009",
+            "nickname": "桃桃乌龙冰",
+            "userId": "he-shi-bbq-user-009",
+            "avatar": "",
+            "content": "二编还认真列了菜品，幸福得连菜单都要记录下来哈哈哈。",
+            "time": "9小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          }
+        ],
+        "meta": {}
+      },
+      {
+        "id": "waiwai-autumn",
+        "title": "求助 如图",
+        "body": "只有这个时间段有空去玩 ꒦ິ^꒦ິ\n\n#南京 #徒步赏秋好去处 #梧桐大道 #秋天 #不懂就问系列 #秋意梧桐眼 #这对我很重要",
+        "richText": "",
+        "time": "2026-10-26 12:30",
+        "sender": "歪歪歪在干嘛",
+        "avatar": "",
+        "kind": "post",
+        "media": "/发现2.jpg",
+        "images": [
+          "/发现2.jpg"
+        ],
+        "favorite": false,
+        "likes": 0,
+        "comments": [
+          "秋日限定小鹿：只有这个时间段的话，建议还是去吧！秋天真的很短。",
+          "梧桐树下等风：梧桐大道这个季节去应该很漂亮，错过又要等一年了。",
+          "一只散步的猫：先去再说！计划赶不上变化，但秋天不会等你。",
+          "柚子汽水半糖：这个时间段去也不是不行，就是最好提前看一下天气。",
+          "南京小馒头：南京的秋天真的很有氛围感，拍照应该很出片。",
+          "今天不想早起：看得出来是真的很想去，祝你顺利赶上最漂亮的那段秋色！",
+          "小树慢慢长：如果只能选这个时间，我会选去，哪怕只是走一小段也值了。",
+          "落叶收藏家：秋天限定活动，主打一个能去就去！"
+        ],
+        "redbookComments": [
+          {
+            "id": "waiwai-autumn-comment-001",
+            "nickname": "秋日限定小鹿",
+            "userId": "waiwai-autumn-user-001",
+            "avatar": "",
+            "content": "只有这个时间段的话，建议还是去吧！秋天真的很短。",
+            "time": "1小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "waiwai-autumn-comment-002",
+            "nickname": "梧桐树下等风",
+            "userId": "waiwai-autumn-user-002",
+            "avatar": "",
+            "content": "梧桐大道这个季节去应该很漂亮，错过又要等一年了。",
+            "time": "2小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "waiwai-autumn-comment-003",
+            "nickname": "一只散步的猫",
+            "userId": "waiwai-autumn-user-003",
+            "avatar": "",
+            "content": "先去再说！计划赶不上变化，但秋天不会等你。",
+            "time": "3小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "waiwai-autumn-comment-004",
+            "nickname": "柚子汽水半糖",
+            "userId": "waiwai-autumn-user-004",
+            "avatar": "",
+            "content": "这个时间段去也不是不行，就是最好提前看一下天气。",
+            "time": "4小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "waiwai-autumn-comment-005",
+            "nickname": "南京小馒头",
+            "userId": "waiwai-autumn-user-005",
+            "avatar": "",
+            "content": "南京的秋天真的很有氛围感，拍照应该很出片。",
+            "time": "5小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "waiwai-autumn-comment-006",
+            "nickname": "今天不想早起",
+            "userId": "waiwai-autumn-user-006",
+            "avatar": "",
+            "content": "看得出来是真的很想去，祝你顺利赶上最漂亮的那段秋色！",
+            "time": "6小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "waiwai-autumn-comment-007",
+            "nickname": "小树慢慢长",
+            "userId": "waiwai-autumn-user-007",
+            "avatar": "",
+            "content": "如果只能选这个时间，我会选去，哪怕只是走一小段也值了。",
+            "time": "7小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "waiwai-autumn-comment-008",
+            "nickname": "落叶收藏家",
+            "userId": "waiwai-autumn-user-008",
+            "avatar": "",
+            "content": "秋天限定活动，主打一个能去就去！",
+            "time": "8小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          }
+        ],
+        "meta": {}
+      },
+      {
+        "id": "anime-guide-2026",
+        "title": "2026年第四季 新番导视",
+        "body": "🍁2026十月新番｜这季追什么？\n\n30部新番，3张图帮你挑！\n结合期待度、前作表现和制作阵容，分为「非常值得推荐／值得一看／按兴趣选择」三档。\n\n这是开追参考，实际表现留给追完再聊👀\n你这季最期待哪一部？\n\n#十月新番 #2026新番 #动漫推荐 #追番指南\n#新番导视 #动漫 #二次元动漫 #一年一番",
+        "richText": "",
+        "time": "2026-10-26 12:30",
+        "sender": "棵糕啾啾",
+        "avatar": "",
+        "kind": "post",
+        "media": "/发现3.jpg",
+        "images": [
+          "/发现3.jpg"
+        ],
+        "favorite": false,
+        "likes": 0,
+        "comments": [
+          "二次元充电中：三张图就能看完一季新番，楼主辛苦了！",
+          "今天追哪部：先收藏了，等播出之后回来对答案哈哈哈。",
+          "汽水味的夏天：这季感觉选择困难症又要犯了。",
+          "星星掉进番剧里：最期待的还是自己喜欢的题材，制作阵容就当加分项！",
+          "熬夜追番协会：每季都说少追一点，结果最后还是全都点开了。",
+          "小岛放映厅：这种分档真的很实用，比盲目跟风追番舒服多了。",
+          "白日梦放映员：先码住，十月追番就靠这份导视了。",
+          "三分钟热度：期待度和实际观感有时候差距很大，追完再回来复盘！",
+          "番剧不许完结：求楼主季末再做一期追番总结，想看预测命中率。"
+        ],
+        "redbookComments": [
+          {
+            "id": "anime-guide-2026-comment-001",
+            "nickname": "二次元充电中",
+            "userId": "anime-guide-2026-user-001",
+            "avatar": "",
+            "content": "三张图就能看完一季新番，楼主辛苦了！",
+            "time": "1小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "anime-guide-2026-comment-002",
+            "nickname": "今天追哪部",
+            "userId": "anime-guide-2026-user-002",
+            "avatar": "",
+            "content": "先收藏了，等播出之后回来对答案哈哈哈。",
+            "time": "2小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "anime-guide-2026-comment-003",
+            "nickname": "汽水味的夏天",
+            "userId": "anime-guide-2026-user-003",
+            "avatar": "",
+            "content": "这季感觉选择困难症又要犯了。",
+            "time": "3小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "anime-guide-2026-comment-004",
+            "nickname": "星星掉进番剧里",
+            "userId": "anime-guide-2026-user-004",
+            "avatar": "",
+            "content": "最期待的还是自己喜欢的题材，制作阵容就当加分项！",
+            "time": "4小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "anime-guide-2026-comment-005",
+            "nickname": "熬夜追番协会",
+            "userId": "anime-guide-2026-user-005",
+            "avatar": "",
+            "content": "每季都说少追一点，结果最后还是全都点开了。",
+            "time": "5小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "anime-guide-2026-comment-006",
+            "nickname": "小岛放映厅",
+            "userId": "anime-guide-2026-user-006",
+            "avatar": "",
+            "content": "这种分档真的很实用，比盲目跟风追番舒服多了。",
+            "time": "6小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "anime-guide-2026-comment-007",
+            "nickname": "白日梦放映员",
+            "userId": "anime-guide-2026-user-007",
+            "avatar": "",
+            "content": "先码住，十月追番就靠这份导视了。",
+            "time": "7小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "anime-guide-2026-comment-008",
+            "nickname": "三分钟热度",
+            "userId": "anime-guide-2026-user-008",
+            "avatar": "",
+            "content": "期待度和实际观感有时候差距很大，追完再回来复盘！",
+            "time": "8小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "anime-guide-2026-comment-009",
+            "nickname": "番剧不许完结",
+            "userId": "anime-guide-2026-user-009",
+            "avatar": "",
+            "content": "求楼主季末再做一期追番总结，想看预测命中率。",
+            "time": "9小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          }
+        ],
+        "meta": {}
+      },
+      {
+        "id": "serious-question",
+        "title": "没有闹着玩，很认真在问",
+        "body": "求解答\n\n#关注青少年心理健康＃关心孩子成长 #看见孩子行为背后的情绪#心理问\n题#青少年心理#从心理解孩子#対抗心理疾病＃\n尊重孩子的情绪＃孩子的自尊心#孩孩子心里健康",
+        "richText": "",
+        "time": "2026-10-26 12:30",
+        "sender": "好想随便找人施加伤害",
+        "avatar": "",
+        "kind": "post",
+        "media": "/发现4.jpg",
+        "images": [
+          "/发现4.jpg"
+        ],
+        "favorite": false,
+        "likes": 0,
+        "comments": [
+          "今天也很天真：难得在家长身上看到独有的天真。",
+          "脑筋急转弯选手：给脑梗患者出脑筋急转弯有助于他康复吗。",
+          "路过的植物人：给植物人浇水有助于他恢复吗。",
+          "挠挠小能手：看了评论区，你挠孩子，评论区会笑，反之，你挠评论区的人，你的孩子会笑。",
+          "隔几隔几：我真的我好绝望，我已经对着隔几隔几笑了一个小时了，我又崩溃又想笑又无助，微微一挠很隔几。",
+          "今天也想笑：孩子抑郁症能不能好不知道 我最近抑郁发作心情特别不好 点进来看笑了......",
+          "解冻小能手：渐冻症 的人送他去蒸桑拿可以解冻吗？",
+          "建议看看评论：你直接把这个帖子给你孩子看比较有用。",
+          "挠人专业户：得挠人处且挠人。"
+        ],
+        "redbookComments": [
+          {
+            "id": "serious-question-comment-001",
+            "nickname": "今天也很天真",
+            "userId": "serious-question-user-001",
+            "avatar": "",
+            "content": "难得在家长身上看到独有的天真。",
+            "time": "1小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "serious-question-comment-002",
+            "nickname": "脑筋急转弯选手",
+            "userId": "serious-question-user-002",
+            "avatar": "",
+            "content": "给脑梗患者出脑筋急转弯有助于他康复吗。",
+            "time": "2小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "serious-question-comment-003",
+            "nickname": "路过的植物人",
+            "userId": "serious-question-user-003",
+            "avatar": "",
+            "content": "给植物人浇水有助于他恢复吗。",
+            "time": "3小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "serious-question-comment-004",
+            "nickname": "挠挠小能手",
+            "userId": "serious-question-user-004",
+            "avatar": "",
+            "content": "看了评论区，你挠孩子，评论区会笑，反之，你挠评论区的人，你的孩子会笑。",
+            "time": "4小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "serious-question-comment-005",
+            "nickname": "隔几隔几",
+            "userId": "serious-question-user-005",
+            "avatar": "",
+            "content": "我真的我好绝望，我已经对着隔几隔几笑了一个小时了，我又崩溃又想笑又无助，微微一挠很隔几。",
+            "time": "5小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "serious-question-comment-006",
+            "nickname": "今天也想笑",
+            "userId": "serious-question-user-006",
+            "avatar": "",
+            "content": "孩子抑郁症能不能好不知道 我最近抑郁发作心情特别不好 点进来看笑了......",
+            "time": "6小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "serious-question-comment-007",
+            "nickname": "解冻小能手",
+            "userId": "serious-question-user-007",
+            "avatar": "",
+            "content": "渐冻症 的人送他去蒸桑拿可以解冻吗？",
+            "time": "7小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "serious-question-comment-008",
+            "nickname": "建议看看评论",
+            "userId": "serious-question-user-008",
+            "avatar": "",
+            "content": "你直接把这个帖子给你孩子看比较有用。",
+            "time": "8小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "serious-question-comment-009",
+            "nickname": "挠人专业户",
+            "userId": "serious-question-user-009",
+            "avatar": "",
+            "content": "得挠人处且挠人。",
+            "time": "9小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          }
+        ],
+        "meta": {}
+      },
+      {
+        "id": "naruto-ranking",
+        "title": "火影忍者手游忍者强度",
+        "body": "个人观点 不喜勿喷\n\n#火影视频 #火影忍者手游忍者排行榜#内容仅供参考 #漩涡鸣人",
+        "richText": "",
+        "time": "2026-10-26 12:30",
+        "sender": "红豆布丁好好吃",
+        "avatar": "",
+        "kind": "post",
+        "media": "/发现5.jpg",
+        "images": [
+          "/发现5.jpg"
+        ],
+        "favorite": false,
+        "likes": 0,
+        "comments": [
+          "林秋水：逆天",
+          "木叶村吃瓜群众：个人观点可以理解，但我还是想看看评论区怎么吵哈哈哈。",
+          "鸣人今天吃了吗：强度榜这东西真的每个人都有自己的答案。",
+          "忍界观察员：先不评价，等一个大佬来分析。",
+          "宇智波小饼干：有些忍者看着不强，碰到会玩的人是真的难受。",
+          "今天也在打决斗场：我只想知道我常用的忍者排第几。",
+          "木叶摸鱼人：每次看强度排行都感觉自己玩的不是同一个游戏。",
+          "螺旋丸收藏家：不喜勿喷，但我还是要先看看有没有我本命。",
+          "忍者考试没及格：建议评论区带上段位，不然讨论起来容易鸡同鸭讲。",
+          "一袋兵粮丸：版本一变，排行榜又得重新洗牌了。"
+        ],
+        "redbookComments": [
+          {
+            "id": "naruto-ranking-comment-001",
+            "nickname": "林秋水",
+            "userId": "naruto-ranking-user-001",
+            "avatar": "",
+            "content": "逆天",
+            "time": "1小时前",
+            "location": "四川",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "naruto-ranking-comment-002",
+            "nickname": "木叶村吃瓜群众",
+            "userId": "naruto-ranking-user-002",
+            "avatar": "",
+            "content": "个人观点可以理解，但我还是想看看评论区怎么吵哈哈哈。",
+            "time": "2小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "naruto-ranking-comment-003",
+            "nickname": "鸣人今天吃了吗",
+            "userId": "naruto-ranking-user-003",
+            "avatar": "",
+            "content": "强度榜这东西真的每个人都有自己的答案。",
+            "time": "3小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "naruto-ranking-comment-004",
+            "nickname": "忍界观察员",
+            "userId": "naruto-ranking-user-004",
+            "avatar": "",
+            "content": "先不评价，等一个大佬来分析。",
+            "time": "4小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "naruto-ranking-comment-005",
+            "nickname": "宇智波小饼干",
+            "userId": "naruto-ranking-user-005",
+            "avatar": "",
+            "content": "有些忍者看着不强，碰到会玩的人是真的难受。",
+            "time": "5小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "naruto-ranking-comment-006",
+            "nickname": "今天也在打决斗场",
+            "userId": "naruto-ranking-user-006",
+            "avatar": "",
+            "content": "我只想知道我常用的忍者排第几。",
+            "time": "6小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "naruto-ranking-comment-007",
+            "nickname": "木叶摸鱼人",
+            "userId": "naruto-ranking-user-007",
+            "avatar": "",
+            "content": "每次看强度排行都感觉自己玩的不是同一个游戏。",
+            "time": "7小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "naruto-ranking-comment-008",
+            "nickname": "螺旋丸收藏家",
+            "userId": "naruto-ranking-user-008",
+            "avatar": "",
+            "content": "不喜勿喷，但我还是要先看看有没有我本命。",
+            "time": "8小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "naruto-ranking-comment-009",
+            "nickname": "忍者考试没及格",
+            "userId": "naruto-ranking-user-009",
+            "avatar": "",
+            "content": "建议评论区带上段位，不然讨论起来容易鸡同鸭讲。",
+            "time": "9小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "naruto-ranking-comment-010",
+            "nickname": "一袋兵粮丸",
+            "userId": "naruto-ranking-user-010",
+            "avatar": "",
+            "content": "版本一变，排行榜又得重新洗牌了。",
+            "time": "10小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          }
+        ],
+        "meta": {}
+      },
+      {
+        "id": "thunder-replies",
+        "title": "被骂后的雷霆回复",
+        "body": "40条雷霆回复：\n1 嘎哒嘎哒嘎哒哒\n2 美人嗔怒\n3 开枪，我教过你的\n4 气的猪咪乱颤了吧\n5 红红 红红 妈错了红红\n6 好了好了，再叫要了你\n7 媳妇轻点骂\n8 我亲手养大的玫瑰终于有脾气了\n9 宝宝 mua\n10 那老公哄哄你？\n11 配十八个币，你别生气，你别生气\n12 乖乖，我们不骂了好不好\n13 你骂我，说明你的心里有我，谢谢你的关注，下次我还这么玩\n14 娘子教训的是，夫君受教了。\n15 人老了干啥都心酸\n16 能说英文吗，刚回国不太习惯\n17 你牙上有菜叶。\n18 啊啊啊男孩我保证你是天使\n19 还有傲娇模式啊，居然没跟我说\n20 嘎达嘎达\n21 嘟嘟嘟\n22 中国万岁\n23 宝宝是在撒娇吗\n24 懂你意思\n25 对不起队友 我是猪精 我已经很努力在挥动我的猪蹄了 奈何我只有两个蹄子 我尽力了\n26 今天没心情\n27 美人嗔怒 爽哉爽哉\n28 不调情ok？\n29 你这脾气 也就我能受得了 换别人早报警了\n30 再见啦过路人\n31 哥哥哄哄你好不好\n32 学姐毕业快乐\n33 再说要了你\n34 尼克狐尼克你被捕了\n35 已读乱回\n36 中国人不骂中国人\n37 你开心就好\n38 幸福者退让我先走啦\n39 叫哥哥\n40 我无心与你一决高下再见\n\n单字兵法体系：\n当对方陈述观点时，无论观点对错，说“典”；\n当对方支持自己不支持的人或事时，说“孝”；\n当对方辩论，或是开始细致解说时，说“急”；\n当自己难以理解对方表达的观点时，说“乐”；\n当对方要求你表达不存在的观点时，说“蚌”；\n当对方产生足以称为立场的观点时，说“批”；\n当自己说出自认为一针见血的话时，说“赢”；\n当无法对对方言论进行有效反驳时，说“麻”。\n需要注意的是，蚌急相克，赢麻相生，蚌克急，赢克蚌，典克赢，孝克典，急克孝，乐克一切。\n\n其他神回复：\n- 刚看到骂乐子的回复：我是乐子，那你愿意当我的悲子吗\n- 你全家都在蛋仔岛，失望的看着你，你爸爸变成了蛋小黄，你妈妈变成了蛋小红，你哥哥变成了蛋小蓝，你姐姐变成了蛋小紫，你妹妹变成了蛋小粉，你弟弟变成了蛋小绿\n- 终于把媳妇养出脾气了\n- 朋友你彻底战胜这个评论区所有人了\n- 是我珍惜你的方式错了吗？",
+        "richText": "",
+        "time": "2026-10-26 12:30",
+        "sender": "那又怎样",
+        "avatar": "",
+        "kind": "post",
+        "media": "/发现6.jpg",
+        "images": [
+          "/发现6.jpg"
+        ],
+        "favorite": false,
+        "likes": 0,
+        "comments": [
+          "林秋水：@可可嘻呖 码住",
+          "可乐加冰不加糖：第16条笑死我了，能说英文吗，刚回国不太习惯。",
+          "小猫不讲道理：这不是雷霆回复，这是把对方气笑的艺术。",
+          "今天也想躺平：第17条属于物理攻击，建议慎用。",
+          "一颗小葡萄：“你骂我，说明你的心里有我”这是什么顶级精神胜利法哈哈哈。",
+          "猪蹄文学研究员：第25条猪蹄文学已经刻进我的DNA了。",
+          "单字兵法爱好者：单字兵法体系建议列入九年义务教育。",
+          "蚌埠住了：乐克一切是什么设定，怎么突然变成武林秘籍了哈哈哈。",
+          "幸福小狗：看到“幸福者退让我先走啦”，我宣布这是我的新人生格言。",
+          "尼克狐的律师：第34条尼克狐尼克你被捕了，荣获本日最佳。",
+          "已读乱回大师：收藏了，下次有人骂我就拿出来随机抽取。",
+          "嘎达嘎达本人：这四十条回复里到底藏了多少种精神状态啊。",
+          "人类迷惑行为观察：你这不是被骂后的回复，你这是把对方的情绪当成了创作素材。",
+          "今天不想讲道理：“中国人不骂中国人”后面接一句“你开心就好”，效果翻倍。"
+        ],
+        "redbookComments": [
+          {
+            "id": "thunder-replies-comment-001",
+            "nickname": "林秋水",
+            "userId": "thunder-replies-user-001",
+            "avatar": "",
+            "content": "@可可嘻呖 码住",
+            "time": "1小时前",
+            "location": "四川",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "thunder-replies-comment-002",
+            "nickname": "可乐加冰不加糖",
+            "userId": "thunder-replies-user-002",
+            "avatar": "",
+            "content": "第16条笑死我了，能说英文吗，刚回国不太习惯。",
+            "time": "2小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "thunder-replies-comment-003",
+            "nickname": "小猫不讲道理",
+            "userId": "thunder-replies-user-003",
+            "avatar": "",
+            "content": "这不是雷霆回复，这是把对方气笑的艺术。",
+            "time": "3小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "thunder-replies-comment-004",
+            "nickname": "今天也想躺平",
+            "userId": "thunder-replies-user-004",
+            "avatar": "",
+            "content": "第17条属于物理攻击，建议慎用。",
+            "time": "4小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "thunder-replies-comment-005",
+            "nickname": "一颗小葡萄",
+            "userId": "thunder-replies-user-005",
+            "avatar": "",
+            "content": "“你骂我，说明你的心里有我”这是什么顶级精神胜利法哈哈哈。",
+            "time": "5小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "thunder-replies-comment-006",
+            "nickname": "猪蹄文学研究员",
+            "userId": "thunder-replies-user-006",
+            "avatar": "",
+            "content": "第25条猪蹄文学已经刻进我的DNA了。",
+            "time": "6小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "thunder-replies-comment-007",
+            "nickname": "单字兵法爱好者",
+            "userId": "thunder-replies-user-007",
+            "avatar": "",
+            "content": "单字兵法体系建议列入九年义务教育。",
+            "time": "7小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "thunder-replies-comment-008",
+            "nickname": "蚌埠住了",
+            "userId": "thunder-replies-user-008",
+            "avatar": "",
+            "content": "乐克一切是什么设定，怎么突然变成武林秘籍了哈哈哈。",
+            "time": "8小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "thunder-replies-comment-009",
+            "nickname": "幸福小狗",
+            "userId": "thunder-replies-user-009",
+            "avatar": "",
+            "content": "看到“幸福者退让我先走啦”，我宣布这是我的新人生格言。",
+            "time": "9小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "thunder-replies-comment-010",
+            "nickname": "尼克狐的律师",
+            "userId": "thunder-replies-user-010",
+            "avatar": "",
+            "content": "第34条尼克狐尼克你被捕了，荣获本日最佳。",
+            "time": "10小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "thunder-replies-comment-011",
+            "nickname": "已读乱回大师",
+            "userId": "thunder-replies-user-011",
+            "avatar": "",
+            "content": "收藏了，下次有人骂我就拿出来随机抽取。",
+            "time": "11小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "thunder-replies-comment-012",
+            "nickname": "嘎达嘎达本人",
+            "userId": "thunder-replies-user-012",
+            "avatar": "",
+            "content": "这四十条回复里到底藏了多少种精神状态啊。",
+            "time": "12小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "thunder-replies-comment-013",
+            "nickname": "人类迷惑行为观察",
+            "userId": "thunder-replies-user-013",
+            "avatar": "",
+            "content": "你这不是被骂后的回复，你这是把对方的情绪当成了创作素材。",
+            "time": "13小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "thunder-replies-comment-014",
+            "nickname": "今天不想讲道理",
+            "userId": "thunder-replies-user-014",
+            "avatar": "",
+            "content": "“中国人不骂中国人”后面接一句“你开心就好”，效果翻倍。",
+            "time": "14小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          }
+        ],
+        "meta": {}
+      },
+      {
+        "id": "cat-allergy",
+        "title": "猫毛过敏的人可以养猫吗",
+        "body": "背景：养了三年猫都没事，新冠以后突然猫毛过敏引起鼻炎，因为从来没过敏过，刚鼻炎时不知道，一个月后去查才知道是猫毛过敏已经引起结膜炎，而且一直感冒不好。舍不得扔猫也舍不得自己，搜了很多方法，以下方法可以实现不过敏不打喷嚏不流鼻涕。看到很多人一边痛苦一边养猫于是决定分享一下。\n\n解决办法：\n1.（最重要）隔离无猫毛空间，一定要把要睡的房间完全隔离出来，打扫干净，常通风，不要让猫进（这一步实现以后轻度过敏患者基本可以解决）。\n2.家中常备过敏药，我现在基本一个月会突然有一两天中招打两个喷嚏，吃一片盐酸左西替利嗪片（这个过敏人都知道）就好。\n3.客厅勤打扫，有条件可以安排一个扫地机，时间长没扫地拖地在客厅要戴口罩防止吸入猫毛。\n4.玩猫以后记得洗手液仔细洗手，可以选择性喷最近风很大的他敏锐，我喷过但是不知道是不是它起的作用，无广，这个不是必需品。（二编：感觉没啥用，摸猫勤洗手就好）\n（三编）5.最近发现只有后背受凉的时候流鼻涕打喷嚏咳嗽，在过敏症状出现的时候披个毛毯试试。\n过敏原理：‌猫毛过敏的原理主要涉及猫身上分泌的过敏原蛋白质，这些蛋白质在猫的唾液、皮屑和尿液中存在，接触后会引起人体的过敏反应。（来自百度）\n\n#过敏性鼻炎#猫 #猫毛过敏#猫毛过敏的人怎么吸猫 #养猫经验分享 #过敏性结膜炎",
+        "richText": "",
+        "time": "2026-10-26 12:30",
+        "sender": "青芒狗",
+        "avatar": "",
+        "kind": "post",
+        "media": "/发现7.jpg",
+        "images": [
+          "/发现7.jpg"
+        ],
+        "favorite": false,
+        "likes": 0,
+        "comments": [
+          "猫猫不许掉毛：看到“舍不得扔猫也舍不得自己”真的有点心酸，养猫人的纠结我懂。",
+          "小猫观察日记：感谢分享！不过过敏程度不同，还是要根据自己的情况调整。",
+          "毛茸茸爱好者：猫咪可以不进卧室这点确实值得参考，至少给自己留一个能安心休息的空间。",
+          "今天也在吸猫：我也是养猫之后才发现自己有过敏症状，真的很难受。",
+          "云朵猫猫屋：建议有结膜炎和持续鼻炎症状的朋友还是去医院看看，别只靠自己试方法。",
+          "小狗也要健康：养猫和照顾自己的身体都很重要，希望大家都能找到适合自己的办法。",
+          "猫毛研究所：原来猫的过敏原不只是猫毛，之前一直以为把毛清理干净就好了。",
+          "一只猫奴：这篇收藏了，虽然每个人情况不一样，但隔离卧室这个思路很实用。",
+          "想养十只猫：想问一下，家里有空气净化器的话，对减少过敏原会有帮助吗？",
+          "猫咪今天乖吗：希望楼主和猫猫都能一直好好的，健康吸猫最重要！"
+        ],
+        "redbookComments": [
+          {
+            "id": "cat-allergy-comment-001",
+            "nickname": "猫猫不许掉毛",
+            "userId": "cat-allergy-user-001",
+            "avatar": "",
+            "content": "看到“舍不得扔猫也舍不得自己”真的有点心酸，养猫人的纠结我懂。",
+            "time": "1小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "cat-allergy-comment-002",
+            "nickname": "小猫观察日记",
+            "userId": "cat-allergy-user-002",
+            "avatar": "",
+            "content": "感谢分享！不过过敏程度不同，还是要根据自己的情况调整。",
+            "time": "2小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "cat-allergy-comment-003",
+            "nickname": "毛茸茸爱好者",
+            "userId": "cat-allergy-user-003",
+            "avatar": "",
+            "content": "猫咪可以不进卧室这点确实值得参考，至少给自己留一个能安心休息的空间。",
+            "time": "3小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "cat-allergy-comment-004",
+            "nickname": "今天也在吸猫",
+            "userId": "cat-allergy-user-004",
+            "avatar": "",
+            "content": "我也是养猫之后才发现自己有过敏症状，真的很难受。",
+            "time": "4小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "cat-allergy-comment-005",
+            "nickname": "云朵猫猫屋",
+            "userId": "cat-allergy-user-005",
+            "avatar": "",
+            "content": "建议有结膜炎和持续鼻炎症状的朋友还是去医院看看，别只靠自己试方法。",
+            "time": "5小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "cat-allergy-comment-006",
+            "nickname": "小狗也要健康",
+            "userId": "cat-allergy-user-006",
+            "avatar": "",
+            "content": "养猫和照顾自己的身体都很重要，希望大家都能找到适合自己的办法。",
+            "time": "6小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "cat-allergy-comment-007",
+            "nickname": "猫毛研究所",
+            "userId": "cat-allergy-user-007",
+            "avatar": "",
+            "content": "原来猫的过敏原不只是猫毛，之前一直以为把毛清理干净就好了。",
+            "time": "7小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "cat-allergy-comment-008",
+            "nickname": "一只猫奴",
+            "userId": "cat-allergy-user-008",
+            "avatar": "",
+            "content": "这篇收藏了，虽然每个人情况不一样，但隔离卧室这个思路很实用。",
+            "time": "8小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "cat-allergy-comment-009",
+            "nickname": "想养十只猫",
+            "userId": "cat-allergy-user-009",
+            "avatar": "",
+            "content": "想问一下，家里有空气净化器的话，对减少过敏原会有帮助吗？",
+            "time": "9小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "cat-allergy-comment-010",
+            "nickname": "猫咪今天乖吗",
+            "userId": "cat-allergy-user-010",
+            "avatar": "",
+            "content": "希望楼主和猫猫都能一直好好的，健康吸猫最重要！",
+            "time": "10小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          }
+        ],
+        "meta": {}
+      },
+      {
+        "id": "salmon-dream",
+        "title": "你的梦想是——？",
+        "body": "是什么呢\n\n#赵俊羽 #同人",
+        "richText": "",
+        "time": "2026-10-26 12:30",
+        "sender": "三文鱼胶囊",
+        "avatar": "",
+        "kind": "post",
+        "media": "/发现8.jpg",
+        "images": [
+          "/发现8.jpg"
+        ],
+        "favorite": false,
+        "likes": 0,
+        "comments": [
+          "蝴蝶d：呃呀前排[流泪]好幸福的小羽。",
+          "SHIYU：太美好了..小羽就是一个温柔阳光的宝贝呀…",
+          "晴奈：我心暖暖的",
+          "rain_：好好看啊  好想他[流泪]",
+          "一盆饼糕：好温暖吧，小羽在学校里面也这样子的吧。想念一个羽饼",
+          "1ovememor3：老公画得太好了…好想一直听小羽唱歌啊🥲",
+          "你朔撒子呢：在爱里长大的小羽一直幸福下去吧！"
+        ],
+        "redbookComments": [
+          {
+            "id": "salmon-dream-comment-001",
+            "nickname": "蝴蝶d",
+            "userId": "salmon-dream-user-001",
+            "avatar": "",
+            "content": "呃呀前排[流泪]好幸福的小羽。",
+            "time": "1小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "salmon-dream-comment-002",
+            "nickname": "SHIYU",
+            "userId": "salmon-dream-user-002",
+            "avatar": "",
+            "content": "太美好了..小羽就是一个温柔阳光的宝贝呀…",
+            "time": "2小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "salmon-dream-comment-003",
+            "nickname": "晴奈",
+            "userId": "salmon-dream-user-003",
+            "avatar": "",
+            "content": "我心暖暖的",
+            "time": "3小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "salmon-dream-comment-004",
+            "nickname": "rain_",
+            "userId": "salmon-dream-user-004",
+            "avatar": "",
+            "content": "好好看啊  好想他[流泪]",
+            "time": "4小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "salmon-dream-comment-005",
+            "nickname": "一盆饼糕",
+            "userId": "salmon-dream-user-005",
+            "avatar": "",
+            "content": "好温暖吧，小羽在学校里面也这样子的吧。想念一个羽饼",
+            "time": "5小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "salmon-dream-comment-006",
+            "nickname": "1ovememor3",
+            "userId": "salmon-dream-user-006",
+            "avatar": "",
+            "content": "老公画得太好了…好想一直听小羽唱歌啊🥲",
+            "time": "6小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          },
+          {
+            "id": "salmon-dream-comment-007",
+            "nickname": "你朔撒子呢",
+            "userId": "salmon-dream-user-007",
+            "avatar": "",
+            "content": "在爱里长大的小羽一直幸福下去吧！",
+            "time": "7小时前",
+            "location": "",
+            "likes": 0,
+            "liked": false,
+            "isAuthor": false,
+            "replies": []
+          }
+        ],
+        "meta": {}
+      }
+    ],
     "douyin": [
       {
         "id": "test-item-douyin",
@@ -2073,270 +3658,270 @@
         "meta": {}
       }
     ],
-"bilibili": [
-  {
-    "id": "bili-chainsaw-man",
-    "title": "电锯人动漫解说：电次的故事到底有多疯狂？",
-    "body": "动漫解说 · 剧情分析",
-    "sender": "动漫观察室",
-    "kind": "text",
-    "media": "/bilibili电锯人.jpg",
-    "meta": {
-      "views": "128.6万",
-      "danmaku": "3281",
-      "duration": "08:42",
-      "category": "动画"
-    }
-  },
-  {
-    "id": "bili-dance-choreo",
-    "title": "零基础编舞练习｜跟着节奏学会这段舞",
-    "body": "舞蹈教学 · 编舞练习",
-    "sender": "编舞练习室",
-    "kind": "text",
-    "media": "/bilibili练舞.jpg",
-    "meta": {
-      "views": "32.8万",
-      "danmaku": "856",
-      "duration": "03:26",
-      "category": "音乐"
-    }
-  },
-  {
-    "id": "bili-shinchan",
-    "title": "蜡笔小新：小新今天又闯祸了！",
-    "body": "动漫 · 搞笑日常",
-    "sender": "童年放映厅",
-    "kind": "text",
-    "media": "/bilibili蜡笔小新.jpg",
-    "meta": {
-      "views": "86.2万",
-      "danmaku": "2160",
-      "duration": "05:18",
-      "category": "动画"
-    }
-  },
-  {
-    "id": "bili-genshin-ranking",
-    "title": "原神旅行者从夯到拉排名，你认同吗？",
-    "body": "原神 · 角色趣味排名",
-    "sender": "提瓦特研究所",
-    "kind": "text",
-    "media": "/bilibili原神.jpg",
-    "meta": {
-      "views": "54.7万",
-      "danmaku": "1432",
-      "duration": "06:51",
-      "category": "游戏"
-    }
-  },
-    {
-  "id": "bili-dynamic-010",
-  "title": "记录一下最近的追番生活",
-  "body": "从注册 B 站到现在，已经看了不少有趣的内容，也认识了喜欢的作品。以后继续追番、收藏视频，慢慢记录自己的日常！",
-  "sender": "林秋水",
-  "kind": "text",
-  "folder": "动态",
-  "time": "2026-11-11 11:11",
-  "outgoing": true,
-  "meta": {
-    "category": "动态",
-    "action": "日常记录"
-  }
-},
-{
-  "id": "bili-dynamic-009",
-  "title": "给喜欢的动漫视频点赞",
-  "body": "看到喜欢的动漫剪辑又忍不住点了赞，有时候短短几十秒就能把一部作品的感觉表达出来。",
-  "sender": "林秋水",
-  "kind": "text",
-  "folder": "动态",
-  "time": "2026-09-09 20:41",
-  "outgoing": true,
-  "meta": {
-    "category": "动态",
-    "action": "点赞视频"
-  }
-},
-{
-  "id": "bili-dynamic-008",
-  "title": "发现了一个宝藏 UP 主",
-  "body": "偶然刷到一个特别喜欢的 UP 主，视频风格很对胃口，已经准备把之前的作品也补一遍了。",
-  "sender": "林秋水",
-  "kind": "text",
-  "folder": "动态",
-  "time": "2026-06-14 17:50",
-  "outgoing": true,
-  "meta": {
-    "category": "动态",
-    "action": "发现 UP 主"
-  }
-},
-{
-  "id": "bili-dynamic-007",
-  "title": "收藏夹又多了几个视频",
-  "body": "最近收藏了好多动漫剪辑和有趣的视频，收藏夹越来越丰富了，感觉以后有得补了。",
-  "sender": "林秋水",
-  "kind": "text",
-  "folder": "动态",
-  "time": "2026-03-02 22:08",
-  "outgoing": true,
-  "meta": {
-    "category": "动态",
-    "action": "收藏视频"
-  }
-},
-{
-  "id": "bili-dynamic-006",
-  "title": "开始看《蜡笔小新》",
-  "body": "第二部看的番剧是《蜡笔小新》！小新真的太搞笑了，明明看过很多片段，认真追起来还是很有意思。",
-  "sender": "林秋水",
-  "kind": "text",
-  "folder": "动态",
-  "time": "2026-01-17 14:25",
-  "outgoing": true,
-  "meta": {
-    "category": "动态",
-    "action": "看过番剧",
-    "anime": "蜡笔小新"
-  }
-},
-{
-  "id": "bili-dynamic-005",
-  "title": "给喜欢的 UP 主点了赞",
-  "body": "今天刷到一个很用心的作品，必须点个赞支持一下！认真做视频的人值得被看见。",
-  "sender": "林秋水",
-  "kind": "text",
-  "folder": "动态",
-  "time": "2025-12-21 18:36",
-  "outgoing": true,
-  "meta": {
-    "category": "动态",
-    "action": "点赞视频"
-  }
-},
-{
-  "id": "bili-dynamic-004",
-  "title": "收藏了一期喜欢的视频",
-  "body": "刷到一个特别有意思的视频，先收藏起来，等有空的时候再慢慢看！",
-  "sender": "林秋水",
-  "kind": "text",
-  "folder": "动态",
-  "time": "2025-11-06 19:42",
-  "outgoing": true,
-  "meta": {
-    "category": "动态",
-    "action": "收藏视频"
-  }
-},
-{
-  "id": "bili-dynamic-003",
-  "title": "看完了《鬼灭之刃》",
-  "body": "最近终于看了《鬼灭之刃》！炭治郎真的很温柔，战斗场面也太燃了，第一次追番就遇到这么喜欢的作品。",
-  "sender": "林秋水",
-  "kind": "text",
-  "folder": "动态",
-  "time": "2025-10-12 21:20",
-  "outgoing": true,
-  "meta": {
-    "category": "动态",
-    "action": "看过番剧",
-    "anime": "鬼灭之刃"
-  }
-},
-{
-  "id": "bili-dynamic-002",
-  "title": "开通大会员啦！",
-  "body": "终于开通大会员了，以后追番更方便了，希望能发现更多喜欢的作品！",
-  "sender": "林秋水",
-  "kind": "text",
-  "folder": "动态",
-  "time": "2025-03-08 20:15",
-  "outgoing": true,
-  "meta": {
-    "category": "动态",
-    "action": "开通大会员"
-  }
-},
-{
-  "id": "bili-dynamic-001",
-  "title": "正式加入哔哩哔哩",
-  "body": "2024 年，终于注册了 B 站！以后可以在这里看番、刷视频、收藏喜欢的内容啦。",
-  "sender": "林秋水",
-  "kind": "text",
-  "folder": "动态",
-  "time": "2024-06-18 16:30",
-  "outgoing": true,
-  "meta": {
-    "category": "动态",
-    "action": "注册账号"
-  }
-},
-  {
-  "id": "bili-history-demon-slayer",
-  "title": "鬼灭之刃 · 全季",
-  "body": "已看完全部季度",
-  "sender": "林秋水",
-  "kind": "image",
-  "media": "/历史鬼灭之刃.jpg",
-  "folder": "历史",
-  "time": "2025-10-12 21:20",
-  "meta": {
-    "category": "动画",
-    "action": "追番记录",
-    "progress": "全季",
-    "watchStatus": "已看完"
-  }
-},
-{
-  "id": "bili-history-shinchan",
-  "title": "蜡笔小新 · 第 1–3 季",
-  "body": "已看完前三季",
-  "sender": "林秋水",
-  "kind": "image",
-  "media": "/历史蜡笔小新.jpg",
-  "folder": "历史",
-  "time": "2026-01-17 14:25",
-  "meta": {
-    "category": "动画",
-    "action": "追番记录",
-    "progress": "前三季",
-    "watchStatus": "已看完"
-  }
-},
-{
-  "id": "bili-history-chainsaw-man",
-  "title": "电锯人 · 全季",
-  "body": "已看完全部季度",
-  "sender": "林秋水",
-  "kind": "image",
-  "media": "/历史电锯人.jpg",
-  "folder": "历史",
-  "time": "2026-03-02 22:08",
-  "meta": {
-    "category": "动画",
-    "action": "追番记录",
-    "progress": "全季",
-    "watchStatus": "已看完"
-  }
-},
-{
-  "id": "bili-history-chiikawa",
-  "title": "Chiikawa · 第 1–2 季",
-  "body": "已看完前两季",
-  "sender": "林秋水",
-  "kind": "image",
-  "media": "/历史chiikawa.jpg",
-  "folder": "历史",
-  "time": "2026-06-14 17:50",
-  "meta": {
-    "category": "动画",
-    "action": "追番记录",
-    "progress": "前两季",
-    "watchStatus": "已看完"
-    }
-  }
-],
+    "bilibili": [
+      {
+        "id": "bili-chainsaw-man",
+        "title": "电锯人动漫解说：电次的故事到底有多疯狂？",
+        "body": "动漫解说 · 剧情分析",
+        "sender": "动漫观察室",
+        "kind": "text",
+        "media": "/bilibili电锯人.jpg",
+        "meta": {
+          "views": "128.6万",
+          "danmaku": "3281",
+          "duration": "08:42",
+          "category": "动画"
+        }
+      },
+      {
+        "id": "bili-dance-choreo",
+        "title": "零基础编舞练习｜跟着节奏学会这段舞",
+        "body": "舞蹈教学 · 编舞练习",
+        "sender": "编舞练习室",
+        "kind": "text",
+        "media": "/bilibili练舞.jpg",
+        "meta": {
+          "views": "32.8万",
+          "danmaku": "856",
+          "duration": "03:26",
+          "category": "音乐"
+        }
+      },
+      {
+        "id": "bili-shinchan",
+        "title": "蜡笔小新：小新今天又闯祸了！",
+        "body": "动漫 · 搞笑日常",
+        "sender": "童年放映厅",
+        "kind": "text",
+        "media": "/bilibili蜡笔小新.jpg",
+        "meta": {
+          "views": "86.2万",
+          "danmaku": "2160",
+          "duration": "05:18",
+          "category": "动画"
+        }
+      },
+      {
+        "id": "bili-genshin-ranking",
+        "title": "原神旅行者从夯到拉排名，你认同吗？",
+        "body": "原神 · 角色趣味排名",
+        "sender": "提瓦特研究所",
+        "kind": "text",
+        "media": "/bilibili原神.jpg",
+        "meta": {
+          "views": "54.7万",
+          "danmaku": "1432",
+          "duration": "06:51",
+          "category": "游戏"
+        }
+      },
+      {
+        "id": "bili-dynamic-010",
+        "title": "记录一下最近的追番生活",
+        "body": "从注册 B 站到现在，已经看了不少有趣的内容，也认识了喜欢的作品。以后继续追番、收藏视频，慢慢记录自己的日常！",
+        "sender": "林秋水",
+        "kind": "text",
+        "folder": "动态",
+        "time": "2026-11-11 11:11",
+        "outgoing": true,
+        "meta": {
+          "category": "动态",
+          "action": "日常记录"
+        }
+      },
+      {
+        "id": "bili-dynamic-009",
+        "title": "给喜欢的动漫视频点赞",
+        "body": "看到喜欢的动漫剪辑又忍不住点了赞，有时候短短几十秒就能把一部作品的感觉表达出来。",
+        "sender": "林秋水",
+        "kind": "text",
+        "folder": "动态",
+        "time": "2026-09-09 20:41",
+        "outgoing": true,
+        "meta": {
+          "category": "动态",
+          "action": "点赞视频"
+        }
+      },
+      {
+        "id": "bili-dynamic-008",
+        "title": "发现了一个宝藏 UP 主",
+        "body": "偶然刷到一个特别喜欢的 UP 主，视频风格很对胃口，已经准备把之前的作品也补一遍了。",
+        "sender": "林秋水",
+        "kind": "text",
+        "folder": "动态",
+        "time": "2026-06-14 17:50",
+        "outgoing": true,
+        "meta": {
+          "category": "动态",
+          "action": "发现 UP 主"
+        }
+      },
+      {
+        "id": "bili-dynamic-007",
+        "title": "收藏夹又多了几个视频",
+        "body": "最近收藏了好多动漫剪辑和有趣的视频，收藏夹越来越丰富了，感觉以后有得补了。",
+        "sender": "林秋水",
+        "kind": "text",
+        "folder": "动态",
+        "time": "2026-03-02 22:08",
+        "outgoing": true,
+        "meta": {
+          "category": "动态",
+          "action": "收藏视频"
+        }
+      },
+      {
+        "id": "bili-dynamic-006",
+        "title": "开始看《蜡笔小新》",
+        "body": "第二部看的番剧是《蜡笔小新》！小新真的太搞笑了，明明看过很多片段，认真追起来还是很有意思。",
+        "sender": "林秋水",
+        "kind": "text",
+        "folder": "动态",
+        "time": "2026-01-17 14:25",
+        "outgoing": true,
+        "meta": {
+          "category": "动态",
+          "action": "看过番剧",
+          "anime": "蜡笔小新"
+        }
+      },
+      {
+        "id": "bili-dynamic-005",
+        "title": "给喜欢的 UP 主点了赞",
+        "body": "今天刷到一个很用心的作品，必须点个赞支持一下！认真做视频的人值得被看见。",
+        "sender": "林秋水",
+        "kind": "text",
+        "folder": "动态",
+        "time": "2025-12-21 18:36",
+        "outgoing": true,
+        "meta": {
+          "category": "动态",
+          "action": "点赞视频"
+        }
+      },
+      {
+        "id": "bili-dynamic-004",
+        "title": "收藏了一期喜欢的视频",
+        "body": "刷到一个特别有意思的视频，先收藏起来，等有空的时候再慢慢看！",
+        "sender": "林秋水",
+        "kind": "text",
+        "folder": "动态",
+        "time": "2025-11-06 19:42",
+        "outgoing": true,
+        "meta": {
+          "category": "动态",
+          "action": "收藏视频"
+        }
+      },
+      {
+        "id": "bili-dynamic-003",
+        "title": "看完了《鬼灭之刃》",
+        "body": "最近终于看了《鬼灭之刃》！炭治郎真的很温柔，战斗场面也太燃了，第一次追番就遇到这么喜欢的作品。",
+        "sender": "林秋水",
+        "kind": "text",
+        "folder": "动态",
+        "time": "2025-10-12 21:20",
+        "outgoing": true,
+        "meta": {
+          "category": "动态",
+          "action": "看过番剧",
+          "anime": "鬼灭之刃"
+        }
+      },
+      {
+        "id": "bili-dynamic-002",
+        "title": "开通大会员啦！",
+        "body": "终于开通大会员了，以后追番更方便了，希望能发现更多喜欢的作品！",
+        "sender": "林秋水",
+        "kind": "text",
+        "folder": "动态",
+        "time": "2025-03-08 20:15",
+        "outgoing": true,
+        "meta": {
+          "category": "动态",
+          "action": "开通大会员"
+        }
+      },
+      {
+        "id": "bili-dynamic-001",
+        "title": "正式加入哔哩哔哩",
+        "body": "2024 年，终于注册了 B 站！以后可以在这里看番、刷视频、收藏喜欢的内容啦。",
+        "sender": "林秋水",
+        "kind": "text",
+        "folder": "动态",
+        "time": "2024-06-18 16:30",
+        "outgoing": true,
+        "meta": {
+          "category": "动态",
+          "action": "注册账号"
+        }
+      },
+      {
+        "id": "bili-history-demon-slayer",
+        "title": "鬼灭之刃 · 全季",
+        "body": "已看完全部季度",
+        "sender": "林秋水",
+        "kind": "image",
+        "media": "/历史鬼灭之刃.jpg",
+        "folder": "历史",
+        "time": "2025-10-12 21:20",
+        "meta": {
+          "category": "动画",
+          "action": "追番记录",
+          "progress": "全季",
+          "watchStatus": "已看完"
+        }
+      },
+      {
+        "id": "bili-history-shinchan",
+        "title": "蜡笔小新 · 第 1–3 季",
+        "body": "已看完前三季",
+        "sender": "林秋水",
+        "kind": "image",
+        "media": "/历史蜡笔小新.jpg",
+        "folder": "历史",
+        "time": "2026-01-17 14:25",
+        "meta": {
+          "category": "动画",
+          "action": "追番记录",
+          "progress": "前三季",
+          "watchStatus": "已看完"
+        }
+      },
+      {
+        "id": "bili-history-chainsaw-man",
+        "title": "电锯人 · 全季",
+        "body": "已看完全部季度",
+        "sender": "林秋水",
+        "kind": "image",
+        "media": "/历史电锯人.jpg",
+        "folder": "历史",
+        "time": "2026-03-02 22:08",
+        "meta": {
+          "category": "动画",
+          "action": "追番记录",
+          "progress": "全季",
+          "watchStatus": "已看完"
+        }
+      },
+      {
+        "id": "bili-history-chiikawa",
+        "title": "Chiikawa · 第 1–2 季",
+        "body": "已看完前两季",
+        "sender": "林秋水",
+        "kind": "image",
+        "media": "/历史chiikawa.jpg",
+        "folder": "历史",
+        "time": "2026-06-14 17:50",
+        "meta": {
+          "category": "动画",
+          "action": "追番记录",
+          "progress": "前两季",
+          "watchStatus": "已看完"
+        }
+      }
+    ],
     "alipay": [
       {
         "id": "test-item-alipay",
@@ -2348,254 +3933,254 @@
       }
     ],
     "taobao": [
-  {
-    "id": "taobao-chiikawa-blindbox",
-    "title": "Chiikawa盲盒",
-    "body": "这是一条测试内容。",
-    "sender": "小琪杂货铺",
-    "kind": "image",
-    "media": "/淘宝盲盒.jpg",
-    "meta": {
-      "price": "69"
-    }
-  },
-  {
-    "id": "taobao-blue-pants",
-    "title": "蓝色裤子",
-    "body": "这是一条测试内容。",
-    "sender": "蓝调衣橱",
-    "kind": "image",
-    "media": "/淘宝裤子.jpg",
-    "meta": {
-      "price": "209"
-    }
-  },
-  {
-    "id": "taobao-muichiro-doll",
-    "title": "时透无一郎棉花娃娃",
-    "body": "这是一条测试内容。",
-    "sender": "云杉玩偶屋",
-    "kind": "image",
-    "media": "/淘宝娃娃.jpg",
-    "meta": {
-      "price": "59"
-    }
-  },
-  {
-    "id": "taobao-mountain-bike",
-    "title": "山地自行车",
-    "body": "这是一条测试内容。",
-    "sender": "骑行装备社",
-    "kind": "image",
-    "media": "/淘宝自行车.jpg",
-    "meta": {
-      "price": "3888"
-    }
-  },
-  {
-    "id": "taobao-frog-foot-pillow",
-    "title": "奶蛙的脚抱枕",
-    "body": "这是一条测试内容。",
-    "sender": "奶蛙小铺",
-    "kind": "image",
-    "media": "/淘宝抱枕.jpg",
-    "meta": {
-      "price": "19.8"
-    }
-  },
-  {
-    "id": "taobao-pure-milk",
-    "title": "纯牛奶",
-    "body": "这是一条测试内容。",
-    "sender": "每日牧场",
-    "kind": "image",
-    "media": "/淘宝牛奶.jpg",
-    "meta": {
-      "price": "56"
-    }
-  },
-  {
-    "id": "taobao-order-hand-warmer",
-    "title": "暖手宝",
-    "body": "冬天暖手，方便携带",
-    "sender": "暖冬生活馆",
-    "kind": "image",
-    "folder": "订单",
-    "time": "2026-10-28",
-    "media": "/暖手宝.jpg",
-    "meta": {
-      "price": "39.90",
-      "status": "待收货",
-      "number": "TB202610280001"
-    }
-  },
-    {
-    "id": "taobao-order-bike-grip",
-    "title": "自行车防滑棉",
-    "body": "骑行防滑配件",
-    "sender": "骑行装备社",
-    "kind": "image",
-    "folder": "订单",
-    "time": "2026-10-27",
-    "media": "/自行车防滑棉.jpg",
-    "meta": {
-      "price": "18.80",
-      "status": "待收货",
-      "number": "TB202610270002"
-    }
-  },
       {
-  "id": "taobao-order-earbuds",
-  "title": "蓝牙耳机",
-  "body": "无线蓝牙耳机",
-  "sender": "数码优选店",
-  "kind": "image",
-  "folder": "订单",
-  "time": "2026-10-20",
-  "media": "/蓝牙耳机.jpg",
-  "meta": {
-    "price": "1099",
-    "status": "已完成",
-    "number": "TB202610200003"
-  }
-},
-{
-  "id": "taobao-order-notebook",
-  "title": "精美笔记本",
-  "body": "日常学习与记录",
-  "sender": "文具小铺",
-  "kind": "image",
-  "folder": "订单",
-  "time": "2026-10-19",
-  "media": "/精美笔记本.jpg",
-  "meta": {
-    "price": "16.90",
-    "status": "已完成",
-    "number": "TB202610190004"
-  }
-},
-{
-  "id": "taobao-order-xiaoxin-case",
-  "title": "蜡笔小新手机壳",
-  "body": "卡通手机保护壳",
-  "sender": "手机配件仓",
-  "kind": "image",
-  "folder": "订单",
-  "time": "2026-10-18",
-  "media": "/蜡笔小新手机壳.jpg",
-  "meta": {
-    "price": "79",
-    "status": "已完成",
-    "number": "TB202610180005"
-  }
-},
-{
-  "id": "taobao-order-naruto-recharge",
-  "title": "火影忍者代充",
-  "body": "游戏充值订单",
-  "sender": "日常衣橱",
-  "kind": "image",
-  "folder": "订单",
-  "time": "2026-10-17",
-  "media": "/火影忍者代充.jpg",
-  "meta": {
-    "price": "181.6",
-    "status": "已完成",
-    "number": "TB202610170006"
-  }
-},
-{
-  "id": "taobao-order-fila-backpack",
-  "title": "FILA 双肩包",
-  "body": "日常出行双肩包",
-  "sender": "简约穿搭馆",
-  "kind": "image",
-  "folder": "订单",
-  "time": "2026-10-16",
-  "media": "/双肩包.jpg",
-  "meta": {
-    "price": "388",
-    "status": "已完成",
-    "number": "TB202610160007"
-  }
-},
-{
-  "id": "taobao-order-self-mock-bear",
-  "title": "自嘲熊挂件",
-  "body": "可爱熊熊挂件",
-  "sender": "云杉玩偶屋",
-  "kind": "image",
-  "folder": "订单",
-  "time": "2026-10-15",
-  "media": "/自嘲熊挂件.jpg",
-  "meta": {
-    "price": "35.00",
-    "status": "已完成",
-    "number": "TB202610150008"
-  }
-},
-{
-  "id": "taobao-order-chiikawa-cup",
-  "title": "Chiikawa 小八水杯",
-  "body": "小八主题水杯",
-  "sender": "每日好物",
-  "kind": "image",
-  "folder": "订单",
-  "time": "2026-10-14",
-  "media": "/小八水杯.jpg",
-  "meta": {
-    "price": "159",
-    "status": "已完成",
-    "number": "TB202610140009"
-  }
-},
-{
-  "id": "taobao-order-desk-lamp",
-  "title": "桌面护眼台灯",
-  "body": "桌面阅读照明",
-  "sender": "居家生活馆",
-  "kind": "image",
-  "folder": "订单",
-  "time": "2026-10-13",
-  "media": "/桌面护眼台灯.jpg",
-  "meta": {
-    "price": "69.00",
-    "status": "已完成",
-    "number": "TB202610130010"
-  }
-},
-{
-  "id": "taobao-order-mlb-cap",
-  "title": "MLB 帽子",
-  "body": "日常休闲帽子",
-  "sender": "骑行装备社",
-  "kind": "image",
-  "folder": "订单",
-  "time": "2026-10-12",
-  "media": "/帽子.jpg",
-  "meta": {
-    "price": "199",
-    "status": "已完成",
-    "number": "TB202610120011"
-  }
-},
-{
-  "id": "taobao-order-storage-box",
-  "title": "桌面收纳盒",
-  "body": "桌面物品收纳",
-  "sender": "居家好物铺",
-  "kind": "image",
-  "folder": "订单",
-  "time": "2026-10-11",
-  "media": "/桌面收纳盒.jpg",
-  "meta": {
-    "price": "28.90",
-    "status": "已完成",
-    "number": "TB202610110012"
-     }
-   }
-],
-"netease": [
+        "id": "taobao-chiikawa-blindbox",
+        "title": "Chiikawa盲盒",
+        "body": "这是一条测试内容。",
+        "sender": "小琪杂货铺",
+        "kind": "image",
+        "media": "/淘宝盲盒.jpg",
+        "meta": {
+          "price": "69"
+        }
+      },
+      {
+        "id": "taobao-blue-pants",
+        "title": "蓝色裤子",
+        "body": "这是一条测试内容。",
+        "sender": "蓝调衣橱",
+        "kind": "image",
+        "media": "/淘宝裤子.jpg",
+        "meta": {
+          "price": "209"
+        }
+      },
+      {
+        "id": "taobao-muichiro-doll",
+        "title": "时透无一郎棉花娃娃",
+        "body": "这是一条测试内容。",
+        "sender": "云杉玩偶屋",
+        "kind": "image",
+        "media": "/淘宝娃娃.jpg",
+        "meta": {
+          "price": "59"
+        }
+      },
+      {
+        "id": "taobao-mountain-bike",
+        "title": "山地自行车",
+        "body": "这是一条测试内容。",
+        "sender": "骑行装备社",
+        "kind": "image",
+        "media": "/淘宝自行车.jpg",
+        "meta": {
+          "price": "3888"
+        }
+      },
+      {
+        "id": "taobao-frog-foot-pillow",
+        "title": "奶蛙的脚抱枕",
+        "body": "这是一条测试内容。",
+        "sender": "奶蛙小铺",
+        "kind": "image",
+        "media": "/淘宝抱枕.jpg",
+        "meta": {
+          "price": "19.8"
+        }
+      },
+      {
+        "id": "taobao-pure-milk",
+        "title": "纯牛奶",
+        "body": "这是一条测试内容。",
+        "sender": "每日牧场",
+        "kind": "image",
+        "media": "/淘宝牛奶.jpg",
+        "meta": {
+          "price": "56"
+        }
+      },
+      {
+        "id": "taobao-order-hand-warmer",
+        "title": "暖手宝",
+        "body": "冬天暖手，方便携带",
+        "sender": "暖冬生活馆",
+        "kind": "image",
+        "folder": "订单",
+        "time": "2026-10-28",
+        "media": "/暖手宝.jpg",
+        "meta": {
+          "price": "39.90",
+          "status": "待收货",
+          "number": "TB202610280001"
+        }
+      },
+      {
+        "id": "taobao-order-bike-grip",
+        "title": "自行车防滑棉",
+        "body": "骑行防滑配件",
+        "sender": "骑行装备社",
+        "kind": "image",
+        "folder": "订单",
+        "time": "2026-10-27",
+        "media": "/自行车防滑棉.jpg",
+        "meta": {
+          "price": "18.80",
+          "status": "待收货",
+          "number": "TB202610270002"
+        }
+      },
+      {
+        "id": "taobao-order-earbuds",
+        "title": "蓝牙耳机",
+        "body": "无线蓝牙耳机",
+        "sender": "数码优选店",
+        "kind": "image",
+        "folder": "订单",
+        "time": "2026-10-20",
+        "media": "/蓝牙耳机.jpg",
+        "meta": {
+          "price": "1099",
+          "status": "已完成",
+          "number": "TB202610200003"
+        }
+      },
+      {
+        "id": "taobao-order-notebook",
+        "title": "精美笔记本",
+        "body": "日常学习与记录",
+        "sender": "文具小铺",
+        "kind": "image",
+        "folder": "订单",
+        "time": "2026-10-19",
+        "media": "/精美笔记本.jpg",
+        "meta": {
+          "price": "16.90",
+          "status": "已完成",
+          "number": "TB202610190004"
+        }
+      },
+      {
+        "id": "taobao-order-xiaoxin-case",
+        "title": "蜡笔小新手机壳",
+        "body": "卡通手机保护壳",
+        "sender": "手机配件仓",
+        "kind": "image",
+        "folder": "订单",
+        "time": "2026-10-18",
+        "media": "/蜡笔小新手机壳.jpg",
+        "meta": {
+          "price": "79",
+          "status": "已完成",
+          "number": "TB202610180005"
+        }
+      },
+      {
+        "id": "taobao-order-naruto-recharge",
+        "title": "火影忍者代充",
+        "body": "游戏充值订单",
+        "sender": "日常衣橱",
+        "kind": "image",
+        "folder": "订单",
+        "time": "2026-10-17",
+        "media": "/火影忍者代充.jpg",
+        "meta": {
+          "price": "181.6",
+          "status": "已完成",
+          "number": "TB202610170006"
+        }
+      },
+      {
+        "id": "taobao-order-fila-backpack",
+        "title": "FILA 双肩包",
+        "body": "日常出行双肩包",
+        "sender": "简约穿搭馆",
+        "kind": "image",
+        "folder": "订单",
+        "time": "2026-10-16",
+        "media": "/双肩包.jpg",
+        "meta": {
+          "price": "388",
+          "status": "已完成",
+          "number": "TB202610160007"
+        }
+      },
+      {
+        "id": "taobao-order-self-mock-bear",
+        "title": "自嘲熊挂件",
+        "body": "可爱熊熊挂件",
+        "sender": "云杉玩偶屋",
+        "kind": "image",
+        "folder": "订单",
+        "time": "2026-10-15",
+        "media": "/自嘲熊挂件.jpg",
+        "meta": {
+          "price": "35.00",
+          "status": "已完成",
+          "number": "TB202610150008"
+        }
+      },
+      {
+        "id": "taobao-order-chiikawa-cup",
+        "title": "Chiikawa 小八水杯",
+        "body": "小八主题水杯",
+        "sender": "每日好物",
+        "kind": "image",
+        "folder": "订单",
+        "time": "2026-10-14",
+        "media": "/小八水杯.jpg",
+        "meta": {
+          "price": "159",
+          "status": "已完成",
+          "number": "TB202610140009"
+        }
+      },
+      {
+        "id": "taobao-order-desk-lamp",
+        "title": "桌面护眼台灯",
+        "body": "桌面阅读照明",
+        "sender": "居家生活馆",
+        "kind": "image",
+        "folder": "订单",
+        "time": "2026-10-13",
+        "media": "/桌面护眼台灯.jpg",
+        "meta": {
+          "price": "69.00",
+          "status": "已完成",
+          "number": "TB202610130010"
+        }
+      },
+      {
+        "id": "taobao-order-mlb-cap",
+        "title": "MLB 帽子",
+        "body": "日常休闲帽子",
+        "sender": "骑行装备社",
+        "kind": "image",
+        "folder": "订单",
+        "time": "2026-10-12",
+        "media": "/帽子.jpg",
+        "meta": {
+          "price": "199",
+          "status": "已完成",
+          "number": "TB202610120011"
+        }
+      },
+      {
+        "id": "taobao-order-storage-box",
+        "title": "桌面收纳盒",
+        "body": "桌面物品收纳",
+        "sender": "居家好物铺",
+        "kind": "image",
+        "folder": "订单",
+        "time": "2026-10-11",
+        "media": "/桌面收纳盒.jpg",
+        "meta": {
+          "price": "28.90",
+          "status": "已完成",
+          "number": "TB202610110012"
+        }
+      }
+    ],
+    "netease": [
       {
         "id": "test-item-netease",
         "title": "测试内容",
@@ -2666,386 +4251,386 @@
       }
     ],
     "snapchat": [
-  {
-    "id": "snap-photo-1",
-    "title": "我的照片 1",
-    "body": "🐣",
-    "sender": "林秋水",
-    "kind": "image",
-    "meta": {}
-  },
-  {
-    "id": "snap-photo-2",
-    "title": "我的照片 2",
-    "body": "🐣",
-    "sender": "林秋水",
-    "kind": "image",
-    "meta": {}
-  },
-  {
-    "id": "snap-photo-3",
-    "title": "我的照片 3",
-    "body": "🐣",
-    "sender": "林秋水",
-    "kind": "image",
-    "meta": {}
-  },
-  {
-    "id": "snap-photo-4",
-    "title": "我的照片 4",
-    "body": "🐣",
-    "sender": "林秋水",
-    "kind": "image",
-    "meta": {}
-  },
-  {
-    "id": "memory-photo-1",
-    "title": "回忆 1",
-    "body": "",
-    "sender": "林秋水",
-    "kind": "image",
-    "folder": "回忆",
-    "meta": {}
-  },
-  {
-    "id": "memory-photo-2",
-    "title": "回忆 2",
-    "body": "",
-    "sender": "林秋水",
-    "kind": "image",
-    "folder": "回忆",
-    "meta": {}
-  },
-  {
-    "id": "memory-photo-3",
-    "title": "回忆 3",
-    "body": "",
-    "sender": "林秋水",
-    "kind": "image",
-    "folder": "回忆",
-    "meta": {}
-  },
-  {
-    "id": "memory-photo-4",
-    "title": "回忆 4",
-    "body": "",
-    "sender": "林秋水",
-    "kind": "image",
-    "folder": "回忆",
-    "meta": {}
-  },
-  {
-    "id": "memory-photo-5",
-    "title": "回忆 5",
-    "body": "",
-    "sender": "林秋水",
-    "kind": "image",
-    "folder": "回忆",
-    "meta": {}
-  },
-  {
-    "id": "memory-photo-6",
-    "title": "回忆 6",
-    "body": "",
-    "sender": "林秋水",
-    "kind": "image",
-    "folder": "回忆",
-    "meta": {}
-  },
-  {
-    "id": "memory-photo-7",
-    "title": "回忆 7",
-    "body": "",
-    "sender": "林秋水",
-    "kind": "image",
-    "folder": "回忆",
-    "meta": {}
-  },
-  {
-    "id": "memory-photo-8",
-    "title": "回忆 8",
-    "body": "",
-    "sender": "林秋水",
-    "kind": "image",
-    "folder": "回忆",
-    "meta": {}
-  },
-  {
-  "id": "snap-zjy-01",
-  "title": "赵俊羽",
-  "body": "出片了出片了",
-  "sender": "赵俊羽",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": false,
-  "meta": {}
-},
-{
-  "id": "snap-zjy-02",
-  "title": "赵俊羽",
-  "body": "这个软件好好用啊",
-  "sender": "赵俊羽",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": false,
-  "meta": {}
-},
-{
-  "id": "snap-zjy-03",
-  "title": "赵俊羽",
-  "body": "完全欧美diva",
-  "sender": "林秋水",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": true,
-  "meta": {}
-},
-{
-  "id": "snap-zjy-04",
-  "title": "赵俊羽",
-  "body": "礼貌申请格莱美",
-  "sender": "林秋水",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": true,
-  "meta": {}
-},
-{
-  "id": "snap-zjy-05",
-  "title": "赵俊羽",
-  "body": "🥰🥰😘",
-  "sender": "赵俊羽",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": false,
-  "meta": {}
-},
-{
-  "id": "snap-cs-01",
-  "title": "陈燊",
-  "body": "为什么要给我拍成一个邪恶老婆婆",
-  "sender": "陈燊",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": false,
-  "meta": {}
-},
-{
-  "id": "snap-cs-02",
-  "title": "陈燊",
-  "body": "很ins啊，你不懂别乱说",
-  "sender": "林秋水",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": true,
-  "meta": {}
-},
-{
-  "id": "snap-cs-03",
-  "title": "陈燊",
-  "body": "你不是看不上吗怎么又下载下来了",
-  "sender": "林秋水",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": true,
-  "meta": {}
-},
-{
-  "id": "snap-cs-04",
-  "title": "陈燊",
-  "body": "绝不是来看你都有在玩些什么软件的",
-  "sender": "陈燊",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": false,
-  "meta": {}
-},
-{
-  "id": "snap-cs-05",
-  "title": "陈燊",
-  "body": "别自作多情",
-  "sender": "陈燊",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": false,
-  "meta": {}
-},
-{
-  "id": "snap-cs-06",
-  "title": "陈燊",
-  "body": "哦哦",
-  "sender": "林秋水",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": true,
-  "meta": {}
-},
-{
-  "id": "snap-cs-07",
-  "title": "陈燊",
-  "body": "你回忆里那张给吕政熙拍的照片为什么那么好看，都没有用这些搞怪特效，给我的就这么丑",
-  "sender": "陈燊",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": false,
-  "meta": {}
-},
-{
-  "id": "snap-cs-08",
-  "title": "陈燊",
-  "body": "你睁大眼睛好好看看啊",
-  "sender": "林秋水",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": true,
-  "meta": {}
-},
-{
-  "id": "snap-cs-09",
-  "title": "陈燊",
-  "body": "明明就用了恩宰豆那个眼距特效",
-  "sender": "林秋水",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": true,
-  "meta": {}
-},
-{
-  "id": "snap-cs-10",
-  "title": "陈燊",
-  "body": "难道说他已经和恩宰豆融为一体了？",
-  "sender": "林秋水",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": true,
-  "meta": {}
-},
-{
-  "id": "snap-cs-11",
-  "title": "陈燊",
-  "body": "你中有我我中有你",
-  "sender": "林秋水",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": true,
-  "meta": {}
-},
-{
-  "id": "snap-cs-12",
-  "title": "陈燊",
-  "body": "哈哈哈哈哈哈哈哈哈哈哈哈他自己都没发现",
-  "sender": "陈燊",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": false,
-  "meta": {}
-},
-{
-  "id": "snap-cs-13",
-  "title": "陈燊",
-  "body": "刚刚就是他给我炫耀说你给他拍的很帅的",
-  "sender": "陈燊",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": false,
-  "meta": {}
-},
-{
-  "id": "snap-cs-14",
-  "title": "陈燊",
-  "body": "🤭🤭🤭",
-  "sender": "林秋水",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": true,
-  "meta": {}
-},
- {
-  "id": "snap-cs-15",
-  "title": "陈燊",
-  "body": "生日快乐！",
-  "sender": "陈燊",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "2026-11-17 00:00",
-  "outgoing": false,
-  "meta": {}
-},
-{
-  "id": "snap-yyh-01",
-  "title": "杨云皓",
-  "body": "不是说好的你在看风景看风景的人在看你吗？",
-  "sender": "杨云皓",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": false,
-  "meta": {}
-},
-{
-  "id": "snap-yyh-02",
-  "title": "杨云皓",
-  "body": "这张照片是不是有点太傻了",
-  "sender": "杨云皓",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": false,
-  "meta": {}
-},
-{
-  "id": "snap-yyh-03",
-  "title": "杨云皓",
-  "body": "有吗，我觉得很好看啊，你看看笑得多开心",
-  "sender": "林秋水",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": true,
-  "meta": {}
-},
-{
-  "id": "snap-yyh-04",
-  "title": "杨云皓",
-  "body": "就是胡子还不够浓密",
-  "sender": "林秋水",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": true,
-  "meta": {}
-},
-{
-  "id": "snap-yyh-05",
-  "title": "杨云皓",
-  "body": "你开心就好",
-  "sender": "杨云皓",
-  "folder": "聊天",
-  "kind": "text",
-  "time": "",
-  "outgoing": false,
-  "meta": {}
-}
-],
+      {
+        "id": "snap-photo-1",
+        "title": "我的照片 1",
+        "body": "🐣",
+        "sender": "林秋水",
+        "kind": "image",
+        "meta": {}
+      },
+      {
+        "id": "snap-photo-2",
+        "title": "我的照片 2",
+        "body": "🐣",
+        "sender": "林秋水",
+        "kind": "image",
+        "meta": {}
+      },
+      {
+        "id": "snap-photo-3",
+        "title": "我的照片 3",
+        "body": "🐣",
+        "sender": "林秋水",
+        "kind": "image",
+        "meta": {}
+      },
+      {
+        "id": "snap-photo-4",
+        "title": "我的照片 4",
+        "body": "🐣",
+        "sender": "林秋水",
+        "kind": "image",
+        "meta": {}
+      },
+      {
+        "id": "memory-photo-1",
+        "title": "回忆 1",
+        "body": "",
+        "sender": "林秋水",
+        "kind": "image",
+        "folder": "回忆",
+        "meta": {}
+      },
+      {
+        "id": "memory-photo-2",
+        "title": "回忆 2",
+        "body": "",
+        "sender": "林秋水",
+        "kind": "image",
+        "folder": "回忆",
+        "meta": {}
+      },
+      {
+        "id": "memory-photo-3",
+        "title": "回忆 3",
+        "body": "",
+        "sender": "林秋水",
+        "kind": "image",
+        "folder": "回忆",
+        "meta": {}
+      },
+      {
+        "id": "memory-photo-4",
+        "title": "回忆 4",
+        "body": "",
+        "sender": "林秋水",
+        "kind": "image",
+        "folder": "回忆",
+        "meta": {}
+      },
+      {
+        "id": "memory-photo-5",
+        "title": "回忆 5",
+        "body": "",
+        "sender": "林秋水",
+        "kind": "image",
+        "folder": "回忆",
+        "meta": {}
+      },
+      {
+        "id": "memory-photo-6",
+        "title": "回忆 6",
+        "body": "",
+        "sender": "林秋水",
+        "kind": "image",
+        "folder": "回忆",
+        "meta": {}
+      },
+      {
+        "id": "memory-photo-7",
+        "title": "回忆 7",
+        "body": "",
+        "sender": "林秋水",
+        "kind": "image",
+        "folder": "回忆",
+        "meta": {}
+      },
+      {
+        "id": "memory-photo-8",
+        "title": "回忆 8",
+        "body": "",
+        "sender": "林秋水",
+        "kind": "image",
+        "folder": "回忆",
+        "meta": {}
+      },
+      {
+        "id": "snap-zjy-01",
+        "title": "赵俊羽",
+        "body": "出片了出片了",
+        "sender": "赵俊羽",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": false,
+        "meta": {}
+      },
+      {
+        "id": "snap-zjy-02",
+        "title": "赵俊羽",
+        "body": "这个软件好好用啊",
+        "sender": "赵俊羽",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": false,
+        "meta": {}
+      },
+      {
+        "id": "snap-zjy-03",
+        "title": "赵俊羽",
+        "body": "完全欧美diva",
+        "sender": "林秋水",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": true,
+        "meta": {}
+      },
+      {
+        "id": "snap-zjy-04",
+        "title": "赵俊羽",
+        "body": "礼貌申请格莱美",
+        "sender": "林秋水",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": true,
+        "meta": {}
+      },
+      {
+        "id": "snap-zjy-05",
+        "title": "赵俊羽",
+        "body": "🥰🥰😘",
+        "sender": "赵俊羽",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": false,
+        "meta": {}
+      },
+      {
+        "id": "snap-cs-01",
+        "title": "陈燊",
+        "body": "为什么要给我拍成一个邪恶老婆婆",
+        "sender": "陈燊",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": false,
+        "meta": {}
+      },
+      {
+        "id": "snap-cs-02",
+        "title": "陈燊",
+        "body": "很ins啊，你不懂别乱说",
+        "sender": "林秋水",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": true,
+        "meta": {}
+      },
+      {
+        "id": "snap-cs-03",
+        "title": "陈燊",
+        "body": "你不是看不上吗怎么又下载下来了",
+        "sender": "林秋水",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": true,
+        "meta": {}
+      },
+      {
+        "id": "snap-cs-04",
+        "title": "陈燊",
+        "body": "绝不是来看你都有在玩些什么软件的",
+        "sender": "陈燊",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": false,
+        "meta": {}
+      },
+      {
+        "id": "snap-cs-05",
+        "title": "陈燊",
+        "body": "别自作多情",
+        "sender": "陈燊",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": false,
+        "meta": {}
+      },
+      {
+        "id": "snap-cs-06",
+        "title": "陈燊",
+        "body": "哦哦",
+        "sender": "林秋水",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": true,
+        "meta": {}
+      },
+      {
+        "id": "snap-cs-07",
+        "title": "陈燊",
+        "body": "你回忆里那张给吕政熙拍的照片为什么那么好看，都没有用这些搞怪特效，给我的就这么丑",
+        "sender": "陈燊",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": false,
+        "meta": {}
+      },
+      {
+        "id": "snap-cs-08",
+        "title": "陈燊",
+        "body": "你睁大眼睛好好看看啊",
+        "sender": "林秋水",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": true,
+        "meta": {}
+      },
+      {
+        "id": "snap-cs-09",
+        "title": "陈燊",
+        "body": "明明就用了恩宰豆那个眼距特效",
+        "sender": "林秋水",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": true,
+        "meta": {}
+      },
+      {
+        "id": "snap-cs-10",
+        "title": "陈燊",
+        "body": "难道说他已经和恩宰豆融为一体了？",
+        "sender": "林秋水",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": true,
+        "meta": {}
+      },
+      {
+        "id": "snap-cs-11",
+        "title": "陈燊",
+        "body": "你中有我我中有你",
+        "sender": "林秋水",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": true,
+        "meta": {}
+      },
+      {
+        "id": "snap-cs-12",
+        "title": "陈燊",
+        "body": "哈哈哈哈哈哈哈哈哈哈哈哈他自己都没发现",
+        "sender": "陈燊",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": false,
+        "meta": {}
+      },
+      {
+        "id": "snap-cs-13",
+        "title": "陈燊",
+        "body": "刚刚就是他给我炫耀说你给他拍的很帅的",
+        "sender": "陈燊",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": false,
+        "meta": {}
+      },
+      {
+        "id": "snap-cs-14",
+        "title": "陈燊",
+        "body": "🤭🤭🤭",
+        "sender": "林秋水",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": true,
+        "meta": {}
+      },
+      {
+        "id": "snap-cs-15",
+        "title": "陈燊",
+        "body": "生日快乐！",
+        "sender": "陈燊",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "2026-11-17 00:00",
+        "outgoing": false,
+        "meta": {}
+      },
+      {
+        "id": "snap-yyh-01",
+        "title": "杨云皓",
+        "body": "不是说好的你在看风景看风景的人在看你吗？",
+        "sender": "杨云皓",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": false,
+        "meta": {}
+      },
+      {
+        "id": "snap-yyh-02",
+        "title": "杨云皓",
+        "body": "这张照片是不是有点太傻了",
+        "sender": "杨云皓",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": false,
+        "meta": {}
+      },
+      {
+        "id": "snap-yyh-03",
+        "title": "杨云皓",
+        "body": "有吗，我觉得很好看啊，你看看笑得多开心",
+        "sender": "林秋水",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": true,
+        "meta": {}
+      },
+      {
+        "id": "snap-yyh-04",
+        "title": "杨云皓",
+        "body": "就是胡子还不够浓密",
+        "sender": "林秋水",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": true,
+        "meta": {}
+      },
+      {
+        "id": "snap-yyh-05",
+        "title": "杨云皓",
+        "body": "你开心就好",
+        "sender": "杨云皓",
+        "folder": "聊天",
+        "kind": "text",
+        "time": "",
+        "outgoing": false,
+        "meta": {}
+      }
+    ],
     "facebook": [
       {
         "id": "test-item-facebook",
@@ -3165,4 +4750,4 @@
   "variables": {},
   "events": [],
   "tests": []
-  }
+}
