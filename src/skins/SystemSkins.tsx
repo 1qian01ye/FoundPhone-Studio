@@ -533,6 +533,7 @@ export function ContactsSkin(p: Props) {
 
 
 
+
 export function PhotosSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "图库");
 
@@ -540,6 +541,10 @@ export function PhotosSkin(p: Props) {
     tab === "收藏"
       ? items.filter((i) => i.favorite)
       : items;
+
+  const dates = [
+    ...new Set(list.map((i) => i.time.slice(0, 10))),
+  ].sort((a, b) => b.localeCompare(a));
 
   return (
     <div className="catalog-skin native-photos">
@@ -550,18 +555,42 @@ export function PhotosSkin(p: Props) {
 
         <SearchBox value={q} set={setQ} />
 
-        <div className="photo-mosaic">
-          {list.map((i) => (
-            <button
-              aria-label={`查看${i.title}`}
-              key={i.id}
-              onClick={() => p.onItem(i)}
-            >
-              <Media item={i} />
-              {i.favorite && <Heart size={12} fill="white" />}
-            </button>
-          ))}
-        </div>
+        {dates.map((date) => {
+          const [year, month, day] = date.split("-");
+
+          const photos = list.filter(
+            (i) => i.time.slice(0, 10) === date,
+          );
+
+          return (
+            <section className="photo-date-group" key={date}>
+              <h2
+                style={{
+                  fontSize: "28px",
+                  fontWeight: 700,
+                  margin: "20px 0 12px",
+                }}
+              >
+                {Number(month)}月{Number(day)}日
+              </h2>
+
+              <div className="photo-mosaic">
+                {photos.map((i) => (
+                  <button
+                    aria-label={`查看${i.title}`}
+                    key={i.id}
+                    onClick={() => p.onItem(i)}
+                  >
+                    <Media item={i} />
+                    {i.favorite && (
+                      <Heart size={12} fill="white" />
+                    )}
+                  </button>
+                ))}
+              </div>
+            </section>
+          );
+        })}
 
         <p className="media-count">{list.length} 个项目</p>
         <Empty items={list} />
