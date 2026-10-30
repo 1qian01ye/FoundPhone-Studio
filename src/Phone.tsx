@@ -1349,7 +1349,7 @@ if (app.id === "camera") {
           key={comment.id}
         >
           <div className="redbook-comment-main">
-            {comment.avatar ? (
+            {comment.avatar && !["林秋水", "厚嘴皮儿"].includes(comment.nickname) ? (
               <img
                 className="redbook-comment-avatar"
                 src={comment.avatar}
@@ -1386,7 +1386,7 @@ if (app.id === "camera") {
   className="redbook-comment-reply"
   key={reply.id}
 >
-  {reply.avatar ? (
+  {reply.avatar && reply.nickname !== "可可嘻呖" && reply.nickname !== "厚嘴皮儿" ? (
     <img
       className="redbook-comment-avatar"
       src={reply.avatar}
