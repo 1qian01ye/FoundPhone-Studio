@@ -1367,10 +1367,10 @@ if (app.id === "camera") {
     )}
 
     {detail.comments.map((comment, index) => (
-      <p key={index} className="comment">
-        {comment}
-      </p>
-    ))}
+  <p key={index} className="comment">
+    {typeof comment === "string" ? comment : comment.content}
+  </p>
+))}
   </>
 )}
         </>
