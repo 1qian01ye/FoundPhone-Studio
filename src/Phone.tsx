@@ -1537,7 +1537,7 @@ socialDetailApps.has(app.id) &&
               </div>
               {detailView}
             </>
-          ))}
+          )}
       </>
     );
   return (
