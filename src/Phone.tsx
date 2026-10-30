@@ -1297,7 +1297,10 @@ if (app.id === "camera") {
           ? [detail.media]
           : []
       ).map((image, index) => (
-        <div className="redbook-detail-image" key={`${image}-${index}`}>
+        <div
+          className="redbook-detail-image"
+          key={`${image}-${index}`}
+        >
           <Media
             item={{
               ...detail,
@@ -1318,13 +1321,82 @@ if (app.id === "camera") {
     />
 
     <section className="redbook-comments">
-      <h3>全部评论（{detail.comments.length}）</h3>
+      <h3>全部评论（{detail.redbookComments.length}）</h3>
 
-      {detail.comments.map((comment, index) => (
-        <p key={`${detail.id}-comment-${index}`} className="comment">
-          {comment}
-        </p>
+      {detail.redbookComments.map((comment) => (
+        <article
+          className="redbook-comment"
+          key={comment.id}
+        >
+          <div className="redbook-comment-main">
+            {comment.avatar ? (
+              <img
+                className="redbook-comment-avatar"
+                src={comment.avatar}
+                alt=""
+              />
+            ) : (
+              <div className="redbook-comment-avatar redbook-avatar-placeholder">
+                {comment.nickname.slice(0, 1)}
+              </div>
+            )}
+
+            <div className="redbook-comment-content">
+              <div className="redbook-comment-name">
+                <span>{comment.nickname}</span>
+                {comment.isAuthor && (
+                  <small>作者</small>
+                )}
+              </div>
+
+              <p>{comment.content}</p>
+
+              <div className="redbook-comment-meta">
+                <span>{comment.time}</span>
+                {comment.location && (
+                  <span>IP属地：{comment.location}</span>
+                )}
+                <span>回复</span>
+              </div>
+
+              {comment.replies.length > 0 && (
+                <div className="redbook-comment-replies">
+                  {comment.replies.map((reply) => (
+                    <div
+                      className="redbook-comment-reply"
+                      key={reply.id}
+                    >
+                      <strong>{reply.nickname}</strong>
+
+                      {reply.isAuthor && (
+                        <small>作者</small>
+                      )}
+
+                      <span>：{reply.content}</span>
+
+                      <div className="redbook-comment-meta">
+                        <span>{reply.time}</span>
+                        {reply.location && (
+                          <span>IP属地：{reply.location}</span>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="redbook-comment-likes">
+              <span>{comment.liked ? "♥" : "♡"}</span>
+              <small>{comment.likes}</small>
+            </div>
+          </div>
+        </article>
       ))}
+
+      {!detail.redbookComments.length && (
+        <p className="post-comments-empty">暂无评论</p>
+      )}
     </section>
   </div>
 ) : (
