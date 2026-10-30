@@ -50,6 +50,7 @@ redbookComments: z.array(
     location: z.string().default(""),
     likes: z.number().default(0),
     liked: z.boolean().default(false),
+    isAuthor: z.boolean().default(false),
     replies: z.array(
       z.object({
         id: z.string(),
@@ -61,6 +62,7 @@ redbookComments: z.array(
         location: z.string().default(""),
         likes: z.number().default(0),
         liked: z.boolean().default(false),
+        isAuthor: z.boolean().default(false),
       }),
     ).default([]),
   }),
