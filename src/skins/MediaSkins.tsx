@@ -814,29 +814,130 @@ export function DouyinSkin(p: Props) {
           </div>
         ) : (
           <div className="catalog-scroll">
-            <h1>好友消息</h1>
+            <div
+  style={{
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    padding: "18px 16px",
+    background: "#fff",
+  }}
+>
+  <strong style={{ fontSize: 23, color: "#161823" }}>消息</strong>
+  <span style={{ color: "#666", fontSize: 14 }}>搜索　＋</span>
+</div>
 
-            {friends.map((friend) => (
-              <button
-                key={friend}
-                onClick={() => setActiveFriend(friend)}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 12,
-                  width: "100%",
-                  padding: 14,
-                  border: 0,
-                  borderBottom: "1px solid #eee",
-                  background: "#fff",
-                  textAlign: "left",
-                }}
-              >
-                <Avatar name={friend} />
-                <strong>{friend}</strong>
-                <span style={{ marginLeft: "auto", color: "#999" }}>›</span>
-              </button>
-            ))}
+            {friends.map((friend, index) => {
+  const latestMessage = messages[friend]?.slice(-1)[0];
+
+  return (
+    <button
+      key={friend}
+      onClick={() => setActiveFriend(friend)}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        width: "100%",
+        minHeight: 82,
+        padding: "12px 16px",
+        gap: 12,
+        border: 0,
+        borderBottom: "1px solid #f3f3f3",
+        background: "#fff",
+        textAlign: "left",
+        cursor: "pointer",
+        color: "#161823",
+      }}
+    >
+      <div style={{ position: "relative", flexShrink: 0 }}>
+        <div
+          style={{
+            width: 52,
+            height: 52,
+            borderRadius: "50%",
+            overflow: "hidden",
+            background: [
+              "#f5c7d2",
+              "#b9d9f5",
+              "#d6c5f5",
+              "#f5d9ad",
+              "#c5e5d2",
+              "#e7c7b6",
+              "#cbd4e8",
+            ][index],
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#fff",
+            fontSize: 21,
+            fontWeight: 600,
+          }}
+        >
+          {friend.slice(0, 1)}
+        </div>
+        <span
+          style={{
+            position: "absolute",
+            right: 0,
+            bottom: 1,
+            width: 11,
+            height: 11,
+            borderRadius: "50%",
+            background: "#31c48d",
+            border: "2px solid white",
+          }}
+        />
+      </div>
+
+      <div
+        style={{
+          flex: 1,
+          minWidth: 0,
+          display: "flex",
+          flexDirection: "column",
+          gap: 7,
+        }}
+      >
+        <strong
+          style={{
+            display: "block",
+            color: "#161823",
+            fontSize: 15,
+            fontWeight: 600,
+            lineHeight: "20px",
+          }}
+        >
+          {friend}
+        </strong>
+
+        <span
+          style={{
+            display: "block",
+            color: "#999",
+            fontSize: 12,
+            overflow: "hidden",
+            whiteSpace: "nowrap",
+            textOverflow: "ellipsis",
+          }}
+        >
+          {latestMessage
+            ? `${latestMessage.outgoing ? "我：" : ""}${latestMessage.text}`
+            : "点击发消息，和好友聊一聊"}
+        </span>
+      </div>
+
+      <div
+        style={{
+          color: "#aaa",
+          fontSize: 11,
+          flexShrink: 0,
+        }}
+      >
+        {latestMessage?.time ?? ""}
+      </div>
+    </button>
+  );
+})}
           </div>
         )
       ) : (
