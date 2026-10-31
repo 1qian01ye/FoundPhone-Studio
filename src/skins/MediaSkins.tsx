@@ -791,16 +791,6 @@ const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({
       gap: 18,
     }}
   >
-    <div
-      style={{
-        alignSelf: "center",
-        color: "#aaa",
-        fontSize: 11,
-        marginBottom: 8,
-      }}
-    >
-      今天
-    </div>
 
     {(messages[activeFriend] ?? []).map((message) => (
   <div key={message.id}>
