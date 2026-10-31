@@ -619,32 +619,260 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
 }
 export function DouyinSkin(p: Props) {
   const { tab, setTab, items } = useContent(p, "推荐");
-  const list = tab === "推荐" ? items : items.filter((i) => i.folder === tab);
+
+  const [activeFriend, setActiveFriend] = useState("");
+  const [draft, setDraft] = useState("");
+  const [messages, setMessages] = useState<
+    Record<string, { id: number; text: string; outgoing: boolean; time: string }[]>
+  >({});
+
+  const friends = [
+    "可可嘻沥",
+    "会飞的羽毛",
+    "PINK 7 K.I.N.G",
+    "这里有哲理",
+    "利维斯",
+    "大力大力",
+    "同意成为魔方糕手",
+  ];
+
+  const sendMessage = (text: string) => {
+    const content = text.trim();
+    if (!content || !activeFriend) return;
+
+    setMessages((old) => ({
+      ...old,
+      [activeFriend]: [
+        ...(old[activeFriend] ?? []),
+        {
+          id: Date.now(),
+          text: content,
+          outgoing: true,
+          time: new Date().toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+          }),
+        },
+      ],
+    }));
+
+    setDraft("");
+  };
+
+  const shareVideo = (item: Item) => {
+    setMessages((old) => ({
+      ...old,
+      [activeFriend]: [
+        ...(old[activeFriend] ?? []),
+        {
+          id: Date.now(),
+          text: `分享了视频：${item.title}`,
+          outgoing: true,
+          time: new Date().toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+          }),
+        },
+      ],
+    }));
+  };
+
   return (
     <div className="catalog-skin douyin-ui">
       <Header p={p} />
-      <div className="douyin-top">
-        {["关注", "推荐"].map((t) => (
-          <button
-            className={tab === t ? "selected" : ""}
-            key={t}
-            onClick={() => setTab(t)}
+
+      {tab === "好友" ? (
+        activeFriend ? (
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              height: "calc(100% - 60px)",
+              background: "#f7f7f7",
+            }}
           >
-            {t}
-          </button>
-        ))}
-      </div>
-      <div className="vertical-feed">
-        {list.map((i) => (
-          <VerticalVideo key={i.id} p={p} item={i} />
-        ))}
-        <Empty items={list} />
-      </div>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                padding: 14,
+                background: "#fff",
+                borderBottom: "1px solid #eee",
+              }}
+            >
+              <button onClick={() => setActiveFriend("")}>‹ 返回</button>
+              <strong>{activeFriend}</strong>
+            </div>
+
+            <div
+              style={{
+                flex: 1,
+                overflowY: "auto",
+                padding: 14,
+                display: "flex",
+                flexDirection: "column",
+                gap: 12,
+              }}
+            >
+              {(messages[activeFriend] ?? []).map((message) => (
+                <div
+                  key={message.id}
+                  style={{
+                    alignSelf: message.outgoing ? "flex-end" : "flex-start",
+                    maxWidth: "78%",
+                    padding: "10px 13px",
+                    borderRadius: 14,
+                    background: message.outgoing ? "#95ec69" : "#fff",
+                    overflowWrap: "anywhere",
+                  }}
+                >
+                  {message.text}
+                  <small
+                    style={{
+                      display: "block",
+                      marginTop: 4,
+                      fontSize: 10,
+                      color: "#777",
+                      textAlign: "right",
+                    }}
+                  >
+                    {message.time}
+                  </small>
+                </div>
+              ))}
+            </div>
+
+            <div
+              style={{
+                display: "flex",
+                gap: 8,
+                padding: 10,
+                background: "#fff",
+                borderTop: "1px solid #eee",
+              }}
+            >
+              <input
+                value={draft}
+                onChange={(event) => setDraft(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter") sendMessage(draft);
+                }}
+                placeholder="发送消息..."
+                style={{
+                  flex: 1,
+                  minWidth: 0,
+                  padding: "10px 12px",
+                  border: "1px solid #ddd",
+                  borderRadius: 20,
+                  outline: "none",
+                }}
+              />
+              <button onClick={() => sendMessage(draft)}>发送</button>
+            </div>
+
+            <div
+              style={{
+                padding: "8px 12px",
+                background: "#fff",
+                borderTop: "1px solid #eee",
+              }}
+            >
+              <strong style={{ fontSize: 13 }}>分享视频</strong>
+              <div
+                style={{
+                  display: "flex",
+                  gap: 8,
+                  overflowX: "auto",
+                  marginTop: 8,
+                }}
+              >
+                {items
+                  .filter((item) => item.kind === "video")
+                  .map((item) => (
+                    <button
+                      key={item.id}
+                      onClick={() => shareVideo(item)}
+                      style={{
+                        flex: "0 0 150px",
+                        padding: 8,
+                        border: "1px solid #eee",
+                        borderRadius: 8,
+                        background: "#fafafa",
+                        textAlign: "left",
+                      }}
+                    >
+                      <Media item={item} />
+                      <small>{item.title}</small>
+                      <div style={{ color: "#fe2c55", fontSize: 12 }}>
+                        分享给好友
+                      </div>
+                    </button>
+                  ))}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="catalog-scroll">
+            <h1>好友消息</h1>
+
+            {friends.map((friend) => (
+              <button
+                key={friend}
+                onClick={() => setActiveFriend(friend)}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 12,
+                  width: "100%",
+                  padding: 14,
+                  border: 0,
+                  borderBottom: "1px solid #eee",
+                  background: "#fff",
+                  textAlign: "left",
+                }}
+              >
+                <Avatar name={friend} />
+                <strong>{friend}</strong>
+                <span style={{ marginLeft: "auto", color: "#999" }}>›</span>
+              </button>
+            ))}
+          </div>
+        )
+      ) : (
+        <>
+          <div className="douyin-top">
+            {["关注", "推荐"].map((t) => (
+              <button
+                className={tab === t ? "selected" : ""}
+                key={t}
+                onClick={() => setTab(t)}
+              >
+                {t}
+              </button>
+            ))}
+          </div>
+
+          <div className="vertical-feed">
+            {items
+              .filter((item) =>
+                tab === "推荐" ? true : item.folder === tab,
+              )
+              .map((item) => (
+                <VerticalVideo key={item.id} p={p} item={item} />
+              ))}
+          </div>
+        </>
+      )}
+
       <Tabs
         tabs={["推荐", "好友"]}
         value={tab}
-        set={setTab}
-        icons={[<Home />, <Users />, <User />]}
+        set={(value) => {
+          setTab(value);
+          setActiveFriend("");
+        }}
+        icons={[<Home />, <Users />]}
       />
     </div>
   );
