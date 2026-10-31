@@ -742,7 +742,11 @@ export function DouyinSkin(p: Props) {
   };
 
   return (
-    <div className="catalog-skin douyin-ui">
+    <div
+  className={`catalog-skin douyin-ui ${
+    tab === "好友" ? "douyin-friends-mode" : ""
+  }`}
+>
       <Header p={p} />
 
       {tab === "好友" ? (
