@@ -537,10 +537,10 @@ export function ContactsSkin(p: Props) {
 export function PhotosSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "图库");
 
-  const list =
+    const list =
     tab === "收藏"
       ? items.filter((i) => i.favorite)
-      : items;
+      : items.filter((i) => !i.favorite);
 
   const dates = [
     ...new Set(list.map((i) => i.time.slice(0, 10))),
