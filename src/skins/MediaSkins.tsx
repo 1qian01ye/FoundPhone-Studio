@@ -679,9 +679,11 @@ export function DouyinSkin(p: Props) {
 
   return (
     <div className="catalog-skin douyin-ui">
-      <Header p={p} />
+            <Header p={p} />
 
-      <div
+      {tab === "好友" ? (
+        activeFriend ? (
+          <div
   style={{
     display: "flex",
     flexDirection: "column",
@@ -935,7 +937,8 @@ export function DouyinSkin(p: Props) {
       发送
     </button>
   </div>
-</div>
+          </div>
+        ) : (
           <div className="catalog-scroll">
             <div
   style={{
