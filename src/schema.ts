@@ -261,5 +261,10 @@ export function safeMedia(value: string) {
   const localImage =
     /^\/(?:music-covers\/)?[^/]+\.(jpg|jpeg|png|webp|gif)$/i;
 
-  return embeddedMedia.test(value) || localImage.test(value) ? value : "";
+  const localVideo =
+    /^\/[^/]+\.(mp4|webm)$/i;
+
+  return embeddedMedia.test(value) || localImage.test(value) || localVideo.test(value)
+    ? value
+    : "";
 }
