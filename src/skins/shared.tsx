@@ -93,17 +93,26 @@ export function Avatar({
   round?: boolean;
   src?: string;
 }) {
+  const imageSrc = safeMedia(src);
+
   return (
     <span className={`catalog-avatar ${round ? "round" : ""}`}>
-      {safeMedia(src)?.startsWith("data:image/") ? (
-        <img src={safeMedia(src)} alt="" />
+      {imageSrc ? (
+        <img
+          src={imageSrc}
+          alt=""
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
       ) : (
         name.slice(0, 1) || "人"
       )}
     </span>
   );
 }
-
 export function Media({
   item,
   className = "",
