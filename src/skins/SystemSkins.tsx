@@ -52,7 +52,7 @@ useEffect(() => {
   if (call !== "阳阳来电") return;
 
   const audio = new Audio(
-    `${import.meta.env.BASE_URL}阳阳来电.MP3`
+    `${import.meta.env.BASE_URL}阳阳来电.mp3`
   );
 
   void audio.play().catch((error) => {
