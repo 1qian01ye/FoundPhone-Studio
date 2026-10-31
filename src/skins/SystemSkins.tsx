@@ -48,7 +48,22 @@ export function PhoneSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "最近通话");
 const [digits, setDigits] = useState(""),
   [call, setCall] = useState("");
+useEffect(() => {
+  if (call !== "阳阳来电") return;
 
+  const audio = new Audio(
+    `${import.meta.env.BASE_URL}阳阳来电.MP3`
+  );
+
+  void audio.play().catch((error) => {
+    console.error("语音播放失败：", error);
+  });
+
+  return () => {
+    audio.pause();
+    audio.currentTime = 0;
+  };
+}, [call]);
 
   const favoriteNames = [
     "Mother",
