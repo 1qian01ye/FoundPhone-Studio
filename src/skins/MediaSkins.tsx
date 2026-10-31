@@ -525,14 +525,15 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
   );
   const [showComments, setShowComments] = useState(false);
 
-  const mockComments = [
-  { id: "奶龙今天吃什么", text: "哈哈哈哈这个切换战斗模式也太突然了！" },
-  { id: "小熊软糖", text: "检测到前方有奶蛙，立即启动！" },
-  { id: "云朵收藏家", text: "我已经看了十遍了，还是忍不住笑 😂" },
-  { id: "汽水不加冰", text: "这个音乐和画面居然这么搭。" },
-  { id: "今天也要开心", text: "奶龙：你礼貌吗？" },
-  { id: "吃颗糖再走", text: "最后那个动作真的笑死我。" },
-];
+    const displayComments = (item.comments ?? []).map((comment, index) => {
+    const match = comment.match(/^@?([^：:]+)[：:]\s*(.*)$/);
+
+    return {
+      id: `${item.id}-comment-${index}`,
+      nickname: match?.[1] ?? "用户",
+      text: match?.[2] ?? comment,
+    };
+  });
 
   return (
     <article className="vertical-video" ref={articleRef}>
@@ -591,16 +592,16 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
             <div className="douyin-comment-handle" />
 
             <header className="douyin-comment-header">
-              <strong>{mockComments.length} 条评论</strong>
+              <strong>{item.commentCount} 条评论</strong>
               <button onClick={() => setShowComments(false)}>✕</button>
             </header>
 
             <div className="douyin-comment-list">
-              {mockComments.map((comment) => (
+              {displayComments.map((comment) => (
   <div className="douyin-comment-item" key={comment.id}>
-    <Avatar name={comment.id} />
+    <Avatar name={comment.nickname} />
     <div>
-      <strong>@{comment.id}</strong>
+      <strong>@{comment.nickname}</strong>
       <p>{comment.text}</p>
     </div>
   </div>
