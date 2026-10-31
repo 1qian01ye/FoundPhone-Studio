@@ -637,7 +637,58 @@ export function DouyinSkin(p: Props) {
   };
 };
 
-const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({});
+const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({
+  "可可嘻沥": [
+    {
+      id: 1722200000000,
+      type: "video",
+      outgoing: true,
+      time: "7月29日",
+      video: {
+        title: "小心震荡",
+        author: "长街",
+        cover: "/吕政熙抖音1.jpg",
+        url: "#",
+        duration: "",
+      },
+    },
+    {
+      id: 1722200000001,
+      type: "text",
+      text: "是敌是友？",
+      outgoing: false,
+      time: "",
+    },
+    {
+      id: 1722200000002,
+      type: "text",
+      text: "啊啊啊，姐妹们到底谁懂那句小心震荡啊，刚出来的时候，我就被惊艳了，少年感简直溢出来了！！",
+      outgoing: true,
+      time: "",
+    },
+    {
+      id: 1722200000003,
+      type: "text",
+      text: "好好听呀！姐妹我直接被惊艳了好吧，少年感满满！",
+      outgoing: false,
+      time: "",
+    },
+    {
+      id: 1722200000004,
+      type: "text",
+      text: "谁懂那句联手出击😭😭",
+      outgoing: true,
+      time: "",
+    },
+    {
+      id: 1722200000005,
+      type: "text",
+      text: "好了停",
+      outgoing: false,
+      time: "",
+    },
+  ],
+});
 
   const friends = [
     "可可嘻沥",
