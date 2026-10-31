@@ -571,7 +571,7 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
             <div className="douyin-comment-handle" />
 
             <header className="douyin-comment-header">
-              <strong>{mockComments.length} 条评论</strong>
+              <strong>{item.commentCount} 条评论</strong>
               <button onClick={() => setShowComments(false)}>✕</button>
             </header>
 
