@@ -803,19 +803,121 @@ const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({
     </div>
 
     {(messages[activeFriend] ?? []).map((message) => (
+  <div key={message.id}>
+    {/* 日期分隔：独立居中，不属于消息卡片 */}
+    {message.type === "video" && message.time && (
       <div
-        key={message.id}
         style={{
-          display: "flex",
-          alignItems: "flex-start",
-          justifyContent: message.outgoing ? "flex-end" : "flex-start",
-          gap: 8,
+          textAlign: "center",
+          color: "#aaa",
+          fontSize: 11,
+          margin: "18px 0 12px",
         }}
       >
-        {!message.outgoing && (
-          <Avatar name={activeFriend} />
-        )}
+        {message.time}
+      </div>
+    )}
 
+    <div
+      style={{
+        display: "flex",
+        alignItems: "flex-start",
+        justifyContent: message.outgoing ? "flex-end" : "flex-start",
+        gap: 8,
+        marginBottom: 14,
+      }}
+    >
+      {!message.outgoing && <Avatar name={activeFriend} />}
+
+      {message.type === "video" && message.video ? (
+        /* 独立视频卡片：不使用气泡，也不可点击 */
+        <div
+          style={{
+            width: 210,
+            flexShrink: 0,
+            overflow: "hidden",
+            borderRadius: 12,
+            background: "#fff",
+            color: "#161823",
+            boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
+          }}
+        >
+          <div
+            style={{
+              width: "100%",
+              aspectRatio: "3 / 4",
+              position: "relative",
+              overflow: "hidden",
+            }}
+          >
+            <img
+              src={message.video.cover}
+              alt={message.video.title}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+
+            {message.video.duration && (
+              <span
+                style={{
+                  position: "absolute",
+                  right: 9,
+                  bottom: 8,
+                  color: "#fff",
+                  fontSize: 12,
+                  textShadow: "0 1px 3px #333",
+                }}
+              >
+                {message.video.duration}
+              </span>
+            )}
+
+            <span
+              style={{
+                position: "absolute",
+                inset: 0,
+                display: "grid",
+                placeItems: "center",
+                color: "#fff",
+                fontSize: 36,
+                textShadow: "0 1px 5px #333",
+              }}
+            >
+              ▶
+            </span>
+          </div>
+
+          <div style={{ padding: 10 }}>
+            <strong style={{ fontSize: 14 }}>
+              {message.video.title}
+            </strong>
+
+            <div
+              style={{
+                color: "#888",
+                fontSize: 11,
+                marginTop: 6,
+              }}
+            >
+              作者：{message.video.author}
+            </div>
+
+            <div
+              style={{
+                color: "#888",
+                fontSize: 11,
+                marginTop: 6,
+              }}
+            >
+              ♪ 抖音
+            </div>
+          </div>
+        </div>
+      ) : (
+        /* 普通文字消息：保留原来的气泡 */
         <div
           style={{
             maxWidth: "75%",
@@ -829,98 +931,14 @@ const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({
             boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
           }}
         >
-          {message.type === "video" && message.video ? (
-  <a
-    href={message.video.url}
-    target="_blank"
-    rel="noreferrer"
-    style={{
-      display: "block",
-      width: 210,
-      overflow: "hidden",
-      borderRadius: 12,
-      background: "#fff",
-      color: "#161823",
-      textDecoration: "none",
-    }}
-  >
-    <div
-      style={{
-        width: "100%",
-        aspectRatio: "3 / 4",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
-      <img
-        src={message.video.cover}
-        alt={message.video.title}
-        style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-        }}
-      />
-      <span
-        style={{
-          position: "absolute",
-          right: 9,
-          bottom: 8,
-          color: "#fff",
-          fontSize: 12,
-          textShadow: "0 1px 3px #333",
-        }}
-      >
-        {message.video.duration}
-      </span>
-      <span
-        style={{
-          position: "absolute",
-          inset: 0,
-          display: "grid",
-          placeItems: "center",
-          color: "#fff",
-          fontSize: 36,
-          textShadow: "0 1px 5px #333",
-        }}
-      >
-        ▶
-      </span>
-    </div>
-
-    <div style={{ padding: 10 }}>
-      <strong style={{ fontSize: 14 }}>{message.video.title}</strong>
-      <div style={{ color: "#888", fontSize: 11, marginTop: 6 }}>
-        作者：{message.video.author}
-      </div>
-      <div style={{ color: "#888", fontSize: 11, marginTop: 6 }}>
-        ♪ 抖音
-      </div>
-    </div>
-  </a>
-) : (
-  message.text
-)}
-
-          <div
-            style={{
-              fontSize: 10,
-              marginTop: 5,
-              textAlign: "right",
-              color: message.outgoing
-                ? "rgba(255,255,255,0.75)"
-                : "#aaa",
-            }}
-          >
-            {message.time}
-          </div>
+          {message.text}
         </div>
+      )}
 
-        {message.outgoing && (
-          <Avatar name="我" />
-        )}
-      </div>
-    ))}
+      {message.outgoing && <Avatar name="我" />}
+    </div>
+  </div>
+))}
   </div>
 
   {/* 底部输入栏 */}
