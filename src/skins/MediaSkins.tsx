@@ -16,7 +16,7 @@ import {
   Users,
   Video,
 } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { safeMedia, type Item } from "../schema";
 import {
   Avatar,
@@ -492,6 +492,27 @@ console.log("[B站历史检查]", {
   );
 }
 function VerticalVideo({ p, item }: { p: Props; item: Item }) {
+    const articleRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const article = articleRef.current;
+    const video = article?.querySelector("video");
+
+    if (!article || !video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting || entry.intersectionRatio < 0.5) {
+          video.pause();
+        }
+      },
+      { threshold: [0, 0.5, 1] },
+    );
+
+    observer.observe(article);
+
+    return () => observer.disconnect();
+  }, []);
   const [liked, setLiked] = useSkinState<boolean>(
     p,
     `liked-${item.id}`,
@@ -514,7 +535,7 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
 ];
 
   return (
-    <article className="vertical-video">
+    <article className="vertical-video" ref={articleRef}>
       <Media item={item} autoPlay />
 
       <div className="vertical-actions">
