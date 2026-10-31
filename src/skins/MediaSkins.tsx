@@ -540,7 +540,7 @@ export function DouyinSkin(p: Props) {
     <div className="catalog-skin douyin-ui">
       <Header p={p} />
       <div className="douyin-top">
-        {["同城", "关注", "推荐"].map((t) => (
+        {["关注", "推荐"].map((t) => (
           <button
             className={tab === t ? "selected" : ""}
             key={t}
@@ -557,7 +557,7 @@ export function DouyinSkin(p: Props) {
         <Empty items={list} />
       </div>
       <Tabs
-        tabs={["推荐", "关注", "我"]}
+        tabs={["推荐", "好友"]}
         value={tab}
         set={setTab}
         icons={[<Home />, <Users />, <User />]}
