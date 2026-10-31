@@ -647,7 +647,7 @@ const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({
       video: {
         title: "小心震荡",
         author: "长街",
-        cover: "/吕政熙抖音分享一.jpg",
+        cover: "/FoundPhone-Studio/吕政熙抖音分享一.jpg",
         url: "#",
         duration: "",
       },
