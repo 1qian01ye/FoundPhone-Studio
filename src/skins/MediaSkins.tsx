@@ -496,7 +496,7 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
     [saved, setSaved] = useSkinState<boolean>(p, `saved-${item.id}`, false);
   return (
     <article className="vertical-video">
-      <Media item={item} />
+      <Media item={item} autoPlay />
       <div className="vertical-actions">
         <button
           aria-label={`作者${item.sender}`}
