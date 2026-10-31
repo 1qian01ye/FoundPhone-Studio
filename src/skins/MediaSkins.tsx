@@ -690,14 +690,15 @@ const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({
   ],
 });
 
-  const friends = [
-    "可可嘻沥",
-    "会飞的羽毛",
-    "PINK 7 K.I.N.G",
-    "这里有哲理",
-    "利维斯",
-    "大力大力",
-    "同意成为魔方糕手",
+  const friendAvatars: Record<string, string> = {
+  "我": "/FoundPhone-Studio/linqiushui.jpg",
+  "可可嘻沥": "/FoundPhone-Studio/lvzhengxiQQ.jpg",
+  "会飞的羽毛": "/FoundPhone-Studio/赵俊羽.jpg",
+  "PINK 7 K.I.N.G": "/FoundPhone-Studio/chenshenQQ.jpg",
+  "这里有哲理": "/FoundPhone-Studio/任玄哲.jpg",
+  "利维斯": "/FoundPhone-Studio/yangyunhaoQQ.jpg",
+  "大力大力": "/FoundPhone-Studio/沈子航.jpg",
+  "同意成为魔方糕手": "/FoundPhone-Studio/佟弋.jpg",
   ];
 
   const sendMessage = (text: string) => {
