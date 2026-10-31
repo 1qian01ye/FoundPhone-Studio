@@ -786,7 +786,7 @@ export function DouyinSkin(p: Props) {
                 ‹
               </button>
 
-              <Avatar name={activeFriend} />
+              <Avatar name={activeFriend} src={friendAvatars[activeFriend]} />
 
               <div style={{ flex: 1, minWidth: 0 }}>
                 <strong style={{ fontSize: 15 }}>{activeFriend}</strong>
@@ -838,7 +838,12 @@ export function DouyinSkin(p: Props) {
                       marginBottom: 14,
                     }}
                   >
-                    {!message.outgoing && <Avatar name={activeFriend} />}
+                    {!message.outgoing && (
+  <Avatar
+    name={activeFriend}
+    src={friendAvatars[activeFriend]}
+  />
+)}
 
                     {message.type === "video" && message.video ? (
                       <div
@@ -944,7 +949,9 @@ export function DouyinSkin(p: Props) {
                       </div>
                     )}
 
-                    {message.outgoing && <Avatar name="我" />}
+                    {message.outgoing && (
+  <Avatar name="我" src={friendAvatars["我"]} />
+)}
                   </div>
                 </div>
               ))}
