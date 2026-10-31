@@ -270,10 +270,15 @@ const list =
               disabled={!digits}
               aria-label="模拟拨号"
               onClick={() => {
-                setCall(digits);
-                const i = items.find((i) => meta(i, "number") === digits);
-                if (i) p.onRead(i.id);
-              }}
+  if (digits === "20261117") {
+    setCall("阳阳来电");
+    return;
+  }
+
+  setCall(digits);
+  const i = items.find((i) => meta(i, "number") === digits);
+  if (i) p.onRead(i.id);
+}}
             >
               <Phone size={24} />
             </button>
