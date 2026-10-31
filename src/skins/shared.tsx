@@ -128,8 +128,15 @@ export function Media({
   className={className}
   controls
   playsInline
+  preload="auto"
   autoPlay={autoPlay}
   src={mediaSrc}
+  onError={(e) => {
+    console.error("抖音视频加载失败：", {
+      src: mediaSrc,
+      error: e.currentTarget.error,
+    });
+  }}
   onClick={(e) => e.stopPropagation()}
 />
     ) : (
