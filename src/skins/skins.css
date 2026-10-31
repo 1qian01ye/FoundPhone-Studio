@@ -4715,3 +4715,23 @@
   color: #999;
   font-size: 13px;
 }
+/* 抖音：好友模式专属白色背景 */
+.douyin-ui.douyin-friends-mode {
+  background: #fff;
+}
+
+/* 好友模式顶部导航栏 */
+.douyin-ui.douyin-friends-mode .app-nav,
+.douyin-ui.douyin-friends-mode .catalog-nav {
+  background: #fff !important;
+}
+
+/* 好友模式好友列表区域 */
+.douyin-ui.douyin-friends-mode .catalog-scroll {
+  background: #fff !important;
+}
+
+/* 好友列表标题和每一行 */
+.douyin-ui.douyin-friends-mode .catalog-row {
+  background: #fff !important;
+}
