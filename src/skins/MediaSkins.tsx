@@ -30,6 +30,7 @@ import {
   useContent,
   type Props,
 } from "./shared";
+
 function TrackPlayer({
   item,
   p,
@@ -59,6 +60,7 @@ function TrackPlayer({
     </div>
   );
 }
+
 export function SpotifySkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "首页");
   const [playlist, setPlaylist] = useState(""),
@@ -148,23 +150,24 @@ export function SpotifySkin(p: Props) {
     </div>
   );
 }
+
 export function NeteaseSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "发现");
-  
-console.log(
-  "[网易云排查]",
-  "items:",
-  p.items.length,
-  "songs:",
-  items.length,
-  "titles:",
-  items.map((i) => i.title),
-);
+
+  console.log(
+    "[网易云排查]",
+    "items:",
+    p.items.length,
+    "songs:",
+    items.length,
+    "titles:",
+    items.map((i) => i.title),
+  );
   const [folder, setFolder] = useState(""),
     [track, setTrack] = useTrack(p, items);
   const list = items.filter(
-  (i) => !folder || (i.folder || "我的歌单") === folder
-);
+    (i) => !folder || (i.folder || "我的歌单") === folder,
+  );
   return (
     <div className="catalog-skin netease-ui">
       <Header p={p} />
@@ -250,6 +253,7 @@ console.log(
     </div>
   );
 }
+
 export function YouTubeSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "首页");
   const [category, setCategory] = useState("全部");
@@ -310,176 +314,175 @@ export function YouTubeSkin(p: Props) {
     </div>
   );
 }
+
 export function BilibiliSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "首页");
-  
-console.log(
-  "[B站首页内容详情]",
-  JSON.stringify(
-    items.map((i) => ({
-      id: i.id,
-      title: i.title,
-      body: i.body,
-      sender: i.sender,
-      folder: i.folder,
-      kind: i.kind,
-      media: i.media,
-      meta: i.meta,
-    })),
-    null,
-    2,
-  ),
-);
-  const list =
-  tab === "历史"
-    ? items.filter((i) => i.folder?.trim() === "历史")
-    : tab === "动态"
-      ? items.filter((i) => i.folder?.trim() === "动态")
-      : items.filter(
-          (i) =>
-            i.folder?.trim() !== "历史" &&
-            i.folder?.trim() !== "动态"
-        );
 
-console.log("[B站历史检查]", {
-  currentTab: tab,
-  totalItems: items.length,
-  historyItems: items
-    .filter((i) => i.folder?.trim() === "历史")
-    .map((i) => ({
-      id: i.id,
-      title: i.title,
-      folder: i.folder,
-    })),
-  displayedItems: list.length,
-});
+  console.log(
+    "[B站首页内容详情]",
+    JSON.stringify(
+      items.map((i) => ({
+        id: i.id,
+        title: i.title,
+        body: i.body,
+        sender: i.sender,
+        folder: i.folder,
+        kind: i.kind,
+        media: i.media,
+        meta: i.meta,
+      })),
+      null,
+      2,
+    ),
+  );
+  const list =
+    tab === "历史"
+      ? items.filter((i) => i.folder?.trim() === "历史")
+      : tab === "动态"
+        ? items.filter((i) => i.folder?.trim() === "动态")
+        : items.filter(
+            (i) =>
+              i.folder?.trim() !== "历史" && i.folder?.trim() !== "动态",
+          );
+
+  console.log("[B站历史检查]", {
+    currentTab: tab,
+    totalItems: items.length,
+    historyItems: items
+      .filter((i) => i.folder?.trim() === "历史")
+      .map((i) => ({
+        id: i.id,
+        title: i.title,
+        folder: i.folder,
+      })),
+    displayedItems: list.length,
+  });
   return (
     <div className="catalog-skin bilibili-ui">
       <Header p={p} />
-      
-<div className="bili-search">
-  <img
-    className="bili-avatar"
-    src={`${import.meta.env.BASE_URL}linqiushui.jpg`}
-    alt="林秋水"
-  />
-  <SearchBox value={q} set={setQ} />
-</div>
 
-<div className="bili-hero">
-  <img
-    className="bili-hero-image"
-    src={`${import.meta.env.BASE_URL}bilibili火影.jpg`}
-    alt="火影忍者推荐"
-    onError={(e) => {
-      e.currentTarget.style.display = "none";
-    }}
-  />
+      <div className="bili-search">
+        <img
+          className="bili-avatar"
+          src={`${import.meta.env.BASE_URL}linqiushui.jpg`}
+          alt="林秋水"
+        />
+        <SearchBox value={q} set={setQ} />
+      </div>
 
-  <div className="bili-hero-overlay">
-    <span className="bili-hero-label">热门推荐 · 动漫</span>
-    <h2>火影忍者</h2>
-    <p>热血、羁绊与永不放弃的忍道</p>
-    <button
-      className="bili-hero-button"
-      onClick={() => {
-        const target = items.find((i) =>
-          /火影忍者|鸣人|佐助/.test(i.title)
-        );
-        if (target) p.onItem(target);
-      }}
-    >
-      <Play size={14} fill="currentColor" />
-      立即观看
-    </button>
-  </div>
+      <div className="bili-hero">
+        <img
+          className="bili-hero-image"
+          src={`${import.meta.env.BASE_URL}bilibili火影.jpg`}
+          alt="火影忍者推荐"
+          onError={(e) => {
+            e.currentTarget.style.display = "none";
+          }}
+        />
 
-  <div className="bili-hero-dots">
-    <span className="active" />
-    <span />
-    <span />
-  </div>
-</div>
-      <div className="catalog-scroll messages-no-scrollbar">
-        
-{tab === "历史" ? (
-  <div className="bili-history-list">
-    {[...list]
-      .sort(
-        (a, b) =>
-          new Date(b.time ?? 0).getTime() -
-          new Date(a.time ?? 0).getTime()
-      )
-      .map((i) => (
-        <button
-          className="bili-history-item"
-          key={i.id}
-          onClick={() => p.onItem(i)}
-        >
-          <div className="bili-history-cover">
-            <Media item={i} />
-          </div>
-
-          <div className="bili-history-info">
-  <strong>{i.title}</strong>
-  <span>已看完</span>
-</div>
-        </button>
-      ))}
-  </div>
-) : tab === "动态" ? (
-  <div className="bili-dynamic-list">
-    {[...list]
-      .sort(
-        (a, b) =>
-          new Date(b.time ?? 0).getTime() -
-          new Date(a.time ?? 0).getTime()
-      )
-      .map((i) => (
-        <article className="bili-dynamic-card" key={i.id}>
-          <div className="bili-dynamic-avatar">
-            <img
-              src={`${import.meta.env.BASE_URL}linqiushui.jpg`}
-              alt="林秋水"
-            />
-          </div>
-
-          <div className="bili-dynamic-content">
-            <div className="bili-dynamic-header">
-              <strong>林秋水</strong>
-              <time>{i.time}</time>
-            </div>
-
-            <h3>{i.title}</h3>
-            <p>{i.body}</p>
-
-            <div className="bili-dynamic-actions">
-              <span>♡ 点赞</span>
-              <span>☆ 收藏</span>
-              <span>评论</span>
-            </div>
-          </div>
-        </article>
-      ))}
-  </div>
-) : (
-  <div className="bili-grid">
-    {list.map((i) => (
-      <button key={i.id} onClick={() => p.onItem(i)}>
-        <div>
-          <Media item={i} />
-          <small>
-            <Play size={10} />
-            {meta(i, "views", "—")}
-            <time>{meta(i, "duration")}</time>
-          </small>
+        <div className="bili-hero-overlay">
+          <span className="bili-hero-label">热门推荐 · 动漫</span>
+          <h2>火影忍者</h2>
+          <p>热血、羁绊与永不放弃的忍道</p>
+          <button
+            className="bili-hero-button"
+            onClick={() => {
+              const target = items.find((i) =>
+                /火影忍者|鸣人|佐助/.test(i.title),
+              );
+              if (target) p.onItem(target);
+            }}
+          >
+            <Play size={14} fill="currentColor" />
+            立即观看
+          </button>
         </div>
-        <strong>{i.title}</strong>
-        <span>UP · {i.sender}</span>
-      </button>
-    ))}
-  </div>
-)}
+
+        <div className="bili-hero-dots">
+          <span className="active" />
+          <span />
+          <span />
+        </div>
+      </div>
+      <div className="catalog-scroll messages-no-scrollbar">
+        {tab === "历史" ? (
+          <div className="bili-history-list">
+            {[...list]
+              .sort(
+                (a, b) =>
+                  new Date(b.time ?? 0).getTime() -
+                  new Date(a.time ?? 0).getTime(),
+              )
+              .map((i) => (
+                <button
+                  className="bili-history-item"
+                  key={i.id}
+                  onClick={() => p.onItem(i)}
+                >
+                  <div className="bili-history-cover">
+                    <Media item={i} />
+                  </div>
+
+                  <div className="bili-history-info">
+                    <strong>{i.title}</strong>
+                    <span>已看完</span>
+                  </div>
+                </button>
+              ))}
+          </div>
+        ) : tab === "动态" ? (
+          <div className="bili-dynamic-list">
+            {[...list]
+              .sort(
+                (a, b) =>
+                  new Date(b.time ?? 0).getTime() -
+                  new Date(a.time ?? 0).getTime(),
+              )
+              .map((i) => (
+                <article className="bili-dynamic-card" key={i.id}>
+                  <div className="bili-dynamic-avatar">
+                    <img
+                      src={`${import.meta.env.BASE_URL}linqiushui.jpg`}
+                      alt="林秋水"
+                    />
+                  </div>
+
+                  <div className="bili-dynamic-content">
+                    <div className="bili-dynamic-header">
+                      <strong>林秋水</strong>
+                      <time>{i.time}</time>
+                    </div>
+
+                    <h3>{i.title}</h3>
+                    <p>{i.body}</p>
+
+                    <div className="bili-dynamic-actions">
+                      <span>♡ 点赞</span>
+                      <span>☆ 收藏</span>
+                      <span>评论</span>
+                    </div>
+                  </div>
+                </article>
+              ))}
+          </div>
+        ) : (
+          <div className="bili-grid">
+            {list.map((i) => (
+              <button key={i.id} onClick={() => p.onItem(i)}>
+                <div>
+                  <Media item={i} />
+                  <small>
+                    <Play size={10} />
+                    {meta(i, "views", "—")}
+                    <time>{meta(i, "duration")}</time>
+                  </small>
+                </div>
+                <strong>{i.title}</strong>
+                <span>UP · {i.sender}</span>
+              </button>
+            ))}
+          </div>
+        )}
         <Empty items={list} />
       </div>
       <Tabs
@@ -491,8 +494,9 @@ console.log("[B站历史检查]", {
     </div>
   );
 }
+
 function VerticalVideo({ p, item }: { p: Props; item: Item }) {
-    const articleRef = useRef<HTMLElement>(null);
+  const articleRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const article = articleRef.current;
@@ -525,7 +529,7 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
   );
   const [showComments, setShowComments] = useState(false);
 
-    const displayComments = (item.comments ?? []).map((comment, index) => {
+  const displayComments = (item.comments ?? []).map((comment, index) => {
     const match = comment.match(/^@?([^：:]+)[：:]\s*(.*)$/);
 
     return {
@@ -598,14 +602,14 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
 
             <div className="douyin-comment-list">
               {displayComments.map((comment) => (
-  <div className="douyin-comment-item" key={comment.id}>
-    <Avatar name={comment.nickname} />
-    <div>
-      <strong>@{comment.nickname}</strong>
-      <p>{comment.text}</p>
-    </div>
-  </div>
-))}
+                <div className="douyin-comment-item" key={comment.id}>
+                  <Avatar name={comment.nickname} />
+                  <div>
+                    <strong>@{comment.nickname}</strong>
+                    <p>{comment.text}</p>
+                  </div>
+                </div>
+              ))}
             </div>
 
             <div className="douyin-comment-input">
@@ -617,97 +621,101 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
     </article>
   );
 }
+
 export function DouyinSkin(p: Props) {
   const { tab, setTab, items } = useContent(p, "推荐");
 
   const [activeFriend, setActiveFriend] = useState("");
   const [draft, setDraft] = useState("");
+
   type ChatMessage = {
-  id: number;
-  text?: string;
-  outgoing: boolean;
-  time: string;
-  type: "text" | "video";
-  video?: {
-    title: string;
-    author: string;
-    cover: string;
-    url: string;
-    duration: string;
+    id: number;
+    text?: string;
+    outgoing: boolean;
+    time: string;
+    type: "text" | "video";
+    video?: {
+      title: string;
+      author: string;
+      cover: string;
+      url: string;
+      duration: string;
+    };
   };
-};
 
-const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({
-  "可可嘻沥": [
-    {
-      id: 1722200000000,
-      type: "video",
-      outgoing: true,
-      time: "7月29日",
-      video: {
-        title: "小心震荡",
-        author: "长街",
-        cover: "/FoundPhone-Studio/吕政熙抖音分享一.jpg",
-        url: "#",
-        duration: "",
+  const friends = [
+    "可可嘻沥",
+    "会飞的羽毛",
+    "PINK 7 K.I.N.G",
+    "这里有哲理",
+    "利维斯",
+    "大力大力",
+    "同意成为魔方糕手",
+  ];
+
+  const friendAvatars: Record<string, string> = {
+    我: "/FoundPhone-Studio/linqiushui.jpg",
+    可可嘻沥: "/FoundPhone-Studio/lvzhengxiQQ.jpg",
+    会飞的羽毛: "/FoundPhone-Studio/赵俊羽.jpg",
+    "PINK 7 K.I.N.G": "/FoundPhone-Studio/chenshenQQ.jpg",
+    这里有哲理: "/FoundPhone-Studio/任玄哲.jpg",
+    利维斯: "/FoundPhone-Studio/yangyunhaoQQ.jpg",
+    大力大力: "/FoundPhone-Studio/沈子航.jpg",
+    同意成为魔方糕手: "/FoundPhone-Studio/佟弋.jpg",
+  };
+
+  const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({
+    可可嘻沥: [
+      {
+        id: 1722200000000,
+        type: "video",
+        outgoing: true,
+        time: "7月29日",
+        video: {
+          title: "小心震荡",
+          author: "长街",
+          cover: "/FoundPhone-Studio/吕政熙抖音分享一.jpg",
+          url: "#",
+          duration: "",
+        },
       },
-    },
-    {
-      id: 1722200000001,
-      type: "text",
-      text: "是敌是友？",
-      outgoing: false,
-      time: "",
-    },
-    {
-      id: 1722200000002,
-      type: "text",
-      text: "啊啊啊，姐妹们到底谁懂那句小心震荡啊，刚出来的时候，我就被惊艳了，少年感简直溢出来了！！",
-      outgoing: true,
-      time: "",
-    },
-    {
-      id: 1722200000003,
-      type: "text",
-      text: "好好听呀！姐妹我直接被惊艳了好吧，少年感满满！",
-      outgoing: false,
-      time: "",
-    },
-    {
-      id: 1722200000004,
-      type: "text",
-      text: "谁懂那句联手出击😭😭",
-      outgoing: true,
-      time: "",
-    },
-    {
-      id: 1722200000005,
-      type: "text",
-      text: "好了停",
-      outgoing: false,
-      time: "",
-    },
-  ],
-});
-
-  type ChatMessage = {
-  // 保留原来的类型定义，不动
-};
-
-const friendAvatars: Record<string, string> = {
-  "我": "/FoundPhone-Studio/linqiushui.jpg",
-  "可可嘻沥": "/FoundPhone-Studio/lvzhengxiQQ.jpg",
-  "会飞的羽毛": "/FoundPhone-Studio/赵俊羽.jpg",
-  "PINK 7 K.I.N.G": "/FoundPhone-Studio/chenshenQQ.jpg",
-  "这里有哲理": "/FoundPhone-Studio/任玄哲.jpg",
-  "利维斯": "/FoundPhone-Studio/yangyunhaoQQ.jpg",
-  "大力大力": "/FoundPhone-Studio/沈子航.jpg",
-  "同意成为魔方糕手": "/FoundPhone-Studio/佟弋.jpg",
-};
-
-const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({
-  // 保留原来的消息记录，不动
-});
+      {
+        id: 1722200000001,
+        type: "text",
+        text: "是敌是友？",
+        outgoing: false,
+        time: "",
+      },
+      {
+        id: 1722200000002,
+        type: "text",
+        text: "啊啊啊，姐妹们到底谁懂那句小心震荡啊，刚出来的时候，我就被惊艳了，少年感简直溢出来了！！",
+        outgoing: true,
+        time: "",
+      },
+      {
+        id: 1722200000003,
+        type: "text",
+        text: "好好听呀！姐妹我直接被惊艳了好吧，少年感满满！",
+        outgoing: false,
+        time: "",
+      },
+      {
+        id: 1722200000004,
+        type: "text",
+        text: "谁懂那句联手出击😭😭",
+        outgoing: true,
+        time: "",
+      },
+      {
+        id: 1722200000005,
+        type: "text",
+        text: "好了停",
+        outgoing: false,
+        time: "",
+      },
+    ],
+  });
 
   const sendMessage = (text: string) => {
     const content = text.trim();
@@ -735,407 +743,391 @@ const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({
 
   return (
     <div className="catalog-skin douyin-ui">
-            <Header p={p} />
+      <Header p={p} />
 
       {tab === "好友" ? (
         activeFriend ? (
           <div
-  style={{
-    display: "flex",
-    flexDirection: "column",
-    height: "calc(100% - 60px)",
-    background: "#f5f6f8",
-    color: "#161823",
-  }}
->
-  {/* 顶部聊天栏 */}
-  <div
-    style={{
-      height: 58,
-      flexShrink: 0,
-      display: "flex",
-      alignItems: "center",
-      padding: "0 14px",
-      gap: 12,
-      background: "#fff",
-      borderBottom: "1px solid #eee",
-    }}
-  >
-    <button
-      onClick={() => setActiveFriend("")}
-      style={{
-        border: 0,
-        background: "transparent",
-        fontSize: 27,
-        color: "#161823",
-        padding: 0,
-      }}
-    >
-      ‹
-    </button>
-
-    <Avatar name={activeFriend} />
-
-    <div style={{ flex: 1, minWidth: 0 }}>
-      <strong style={{ fontSize: 15 }}>{activeFriend}</strong>
-      <div style={{ fontSize: 11, color: "#999", marginTop: 3 }}>
-        在线
-      </div>
-    </div>
-
-    <span style={{ fontSize: 20 }}>☎</span>
-    <span style={{ fontSize: 20 }}>▣</span>
-    <span style={{ fontSize: 22 }}>···</span>
-  </div>
-
-  {/* 聊天消息区域 */}
-  <div
-    style={{
-      flex: 1,
-      minHeight: 0,
-      overflowY: "auto",
-      padding: "18px 12px",
-      display: "flex",
-      flexDirection: "column",
-      gap: 18,
-    }}
-  >
-
-    {(messages[activeFriend] ?? []).map((message) => (
-  <div key={message.id}>
-    {/* 日期分隔：独立居中，不属于消息卡片 */}
-    {message.type === "video" && message.time && (
-      <div
-        style={{
-          textAlign: "center",
-          color: "#aaa",
-          fontSize: 11,
-          margin: "18px 0 12px",
-        }}
-      >
-        {message.time}
-      </div>
-    )}
-
-    <div
-      style={{
-        display: "flex",
-        alignItems: "flex-start",
-        justifyContent: message.outgoing ? "flex-end" : "flex-start",
-        gap: 8,
-        marginBottom: 14,
-      }}
-    >
-      {!message.outgoing && <Avatar name={activeFriend} />}
-
-      {message.type === "video" && message.video ? (
-        /* 独立视频卡片：不使用气泡，也不可点击 */
-        <div
-          style={{
-            width: 210,
-            flexShrink: 0,
-            overflow: "hidden",
-            borderRadius: 12,
-            background: "#fff",
-            color: "#161823",
-            boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
-          }}
-        >
-          <div
             style={{
-              width: "100%",
-              aspectRatio: "3 / 4",
-              position: "relative",
-              overflow: "hidden",
+              display: "flex",
+              flexDirection: "column",
+              height: "calc(100% - 60px)",
+              background: "#f5f6f8",
+              color: "#161823",
             }}
           >
-            <img
-              src={message.video.cover}
-              alt={message.video.title}
+            {/* 顶部聊天栏 */}
+            <div
               style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
+                height: 58,
+                flexShrink: 0,
+                display: "flex",
+                alignItems: "center",
+                padding: "0 14px",
+                gap: 12,
+                background: "#fff",
+                borderBottom: "1px solid #eee",
               }}
-            />
-
-            {message.video.duration && (
-              <span
+            >
+              <button
+                onClick={() => setActiveFriend("")}
                 style={{
-                  position: "absolute",
-                  right: 9,
-                  bottom: 8,
-                  color: "#fff",
-                  fontSize: 12,
-                  textShadow: "0 1px 3px #333",
+                  border: 0,
+                  background: "transparent",
+                  fontSize: 27,
+                  color: "#161823",
+                  padding: 0,
                 }}
               >
-                {message.video.duration}
-              </span>
-            )}
+                ‹
+              </button>
 
-            <span
-              style={{
-                position: "absolute",
-                inset: 0,
-                display: "grid",
-                placeItems: "center",
-                color: "#fff",
-                fontSize: 36,
-                textShadow: "0 1px 5px #333",
-              }}
-            >
-              ▶
-            </span>
-          </div>
+              <Avatar name={activeFriend} />
 
-          <div style={{ padding: 10 }}>
-            <strong style={{ fontSize: 14 }}>
-              {message.video.title}
-            </strong>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <strong style={{ fontSize: 15 }}>{activeFriend}</strong>
+                <div style={{ fontSize: 11, color: "#999", marginTop: 3 }}>
+                  在线
+                </div>
+              </div>
 
-            <div
-              style={{
-                color: "#888",
-                fontSize: 11,
-                marginTop: 6,
-              }}
-            >
-              作者：{message.video.author}
+              <span style={{ fontSize: 20 }}>☎</span>
+              <span style={{ fontSize: 20 }}>▣</span>
+              <span style={{ fontSize: 22 }}>···</span>
             </div>
 
+            {/* 聊天消息区域 */}
             <div
               style={{
-                color: "#888",
-                fontSize: 11,
-                marginTop: 6,
+                flex: 1,
+                minHeight: 0,
+                overflowY: "auto",
+                padding: "18px 12px",
+                display: "flex",
+                flexDirection: "column",
+                gap: 18,
               }}
             >
-              ♪ 抖音
+              {(messages[activeFriend] ?? []).map((message) => (
+                <div key={message.id}>
+                  {message.type === "video" && message.time && (
+                    <div
+                      style={{
+                        textAlign: "center",
+                        color: "#aaa",
+                        fontSize: 11,
+                        margin: "18px 0 12px",
+                      }}
+                    >
+                      {message.time}
+                    </div>
+                  )}
+
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      justifyContent: message.outgoing
+                        ? "flex-end"
+                        : "flex-start",
+                      gap: 8,
+                      marginBottom: 14,
+                    }}
+                  >
+                    {!message.outgoing && <Avatar name={activeFriend} />}
+
+                    {message.type === "video" && message.video ? (
+                      <div
+                        style={{
+                          width: 210,
+                          flexShrink: 0,
+                          overflow: "hidden",
+                          borderRadius: 12,
+                          background: "#fff",
+                          color: "#161823",
+                          boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
+                        }}
+                      >
+                        <div
+                          style={{
+                            width: "100%",
+                            aspectRatio: "3 / 4",
+                            position: "relative",
+                            overflow: "hidden",
+                          }}
+                        >
+                          <img
+                            src={message.video.cover}
+                            alt={message.video.title}
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                            }}
+                          />
+
+                          {message.video.duration && (
+                            <span
+                              style={{
+                                position: "absolute",
+                                right: 9,
+                                bottom: 8,
+                                color: "#fff",
+                                fontSize: 12,
+                                textShadow: "0 1px 3px #333",
+                              }}
+                            >
+                              {message.video.duration}
+                            </span>
+                          )}
+
+                          <span
+                            style={{
+                              position: "absolute",
+                              inset: 0,
+                              display: "grid",
+                              placeItems: "center",
+                              color: "#fff",
+                              fontSize: 36,
+                              textShadow: "0 1px 5px #333",
+                            }}
+                          >
+                            ▶
+                          </span>
+                        </div>
+
+                        <div style={{ padding: 10 }}>
+                          <strong style={{ fontSize: 14 }}>
+                            {message.video.title}
+                          </strong>
+
+                          <div
+                            style={{
+                              color: "#888",
+                              fontSize: 11,
+                              marginTop: 6,
+                            }}
+                          >
+                            作者：{message.video.author}
+                          </div>
+
+                          <div
+                            style={{
+                              color: "#888",
+                              fontSize: 11,
+                              marginTop: 6,
+                            }}
+                          >
+                            ♪ 抖音
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div
+                        style={{
+                          maxWidth: "75%",
+                          padding: "11px 14px",
+                          borderRadius: 15,
+                          background: message.outgoing ? "#1684FF" : "#fff",
+                          color: message.outgoing ? "#fff" : "#161823",
+                          fontSize: 14,
+                          lineHeight: 1.55,
+                          overflowWrap: "anywhere",
+                          boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
+                        }}
+                      >
+                        {message.text}
+                      </div>
+                    )}
+
+                    {message.outgoing && <Avatar name="我" />}
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
-        </div>
-      ) : (
-        /* 普通文字消息：保留原来的气泡 */
-        <div
-          style={{
-            maxWidth: "75%",
-            padding: "11px 14px",
-            borderRadius: 15,
-            background: message.outgoing ? "#1684FF" : "#fff",
-            color: message.outgoing ? "#fff" : "#161823",
-            fontSize: 14,
-            lineHeight: 1.55,
-            overflowWrap: "anywhere",
-            boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
-          }}
-        >
-          {message.text}
-        </div>
-      )}
 
-      {message.outgoing && <Avatar name="我" />}
-    </div>
-  </div>
-))}
-  </div>
+            {/* 底部输入栏 */}
+            <div
+              style={{
+                flexShrink: 0,
+                display: "flex",
+                alignItems: "center",
+                gap: 9,
+                padding: "10px 12px",
+                paddingBottom: 14,
+                background: "#fff",
+                borderTop: "1px solid #eee",
+              }}
+            >
+              <button
+                style={{
+                  border: 0,
+                  background: "transparent",
+                  fontSize: 22,
+                }}
+              >
+                ◉
+              </button>
 
-  {/* 底部输入栏 */}
-  <div
-    style={{
-      flexShrink: 0,
-      display: "flex",
-      alignItems: "center",
-      gap: 9,
-      padding: "10px 12px",
-      paddingBottom: 14,
-      background: "#fff",
-      borderTop: "1px solid #eee",
-    }}
-  >
-    <button
-      style={{
-        border: 0,
-        background: "transparent",
-        fontSize: 22,
-      }}
-    >
-      ◉
-    </button>
+              <input
+                value={draft}
+                onChange={(event) => setDraft(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter") sendMessage(draft);
+                }}
+                placeholder="发送消息..."
+                style={{
+                  flex: 1,
+                  minWidth: 0,
+                  border: 0,
+                  outline: "none",
+                  borderRadius: 22,
+                  background: "#f2f3f5",
+                  padding: "11px 15px",
+                  fontSize: 14,
+                }}
+              />
 
-    <input
-      value={draft}
-      onChange={(event) => setDraft(event.target.value)}
-      onKeyDown={(event) => {
-        if (event.key === "Enter") sendMessage(draft);
-      }}
-      placeholder="发送消息..."
-      style={{
-        flex: 1,
-        minWidth: 0,
-        border: 0,
-        outline: "none",
-        borderRadius: 22,
-        background: "#f2f3f5",
-        padding: "11px 15px",
-        fontSize: 14,
-      }}
-    />
+              <button
+                style={{
+                  border: 0,
+                  background: "transparent",
+                  fontSize: 22,
+                }}
+              >
+                ☺
+              </button>
 
-    <button
-      style={{
-        border: 0,
-        background: "transparent",
-        fontSize: 22,
-      }}
-    >
-      ☺
-    </button>
-
-    <button
-      onClick={() => sendMessage(draft)}
-      style={{
-        border: 0,
-        borderRadius: 20,
-        padding: "8px 13px",
-        background: "#1684FF",
-        color: "#fff",
-        fontSize: 13,
-        fontWeight: 600,
-      }}
-    >
-      发送
-    </button>
-  </div>
+              <button
+                onClick={() => sendMessage(draft)}
+                style={{
+                  border: 0,
+                  borderRadius: 20,
+                  padding: "8px 13px",
+                  background: "#1684FF",
+                  color: "#fff",
+                  fontSize: 13,
+                  fontWeight: 600,
+                }}
+              >
+                发送
+              </button>
+            </div>
           </div>
         ) : (
           <div className="catalog-scroll">
             <div
-  style={{
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    padding: "18px 16px",
-    background: "#fff",
-  }}
->
-  <strong style={{ fontSize: 23, color: "#161823" }}>消息</strong>
-  <span style={{ color: "#666", fontSize: 14 }}>搜索 +</span>
-</div>
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                padding: "18px 16px",
+                background: "#fff",
+              }}
+            >
+              <strong style={{ fontSize: 23, color: "#161823" }}>消息</strong>
+              <span style={{ color: "#666", fontSize: 14 }}>搜索 +</span>
+            </div>
 
-            {friends.map((friend, index) => {
-  const latestMessage = messages[friend]?.slice(-1)[0];
+            {friends.map((friend) => {
+              const latestMessage = messages[friend]?.slice(-1)[0];
 
-  return (
-    <button
-      key={friend}
-      onClick={() => setActiveFriend(friend)}
-      style={{
-        display: "flex",
-        alignItems: "center",
-        width: "100%",
-        minHeight: 82,
-        padding: "12px 16px",
-        gap: 12,
-        border: 0,
-        borderBottom: "1px solid #f3f3f3",
-        background: "#fff",
-        textAlign: "left",
-        cursor: "pointer",
-        color: "#161823",
-      }}
-    >
-      <div style={{ position: "relative", flexShrink: 0 }}>
-        <div
-          style={{
-            width: 52,
-            height: 52,
-            borderRadius: "50%",
-            overflow: "hidden",
-            background: [
-              "#f5c7d2",
-              "#b9d9f5",
-              "#d6c5f5",
-              "#f5d9ad",
-              "#c5e5d2",
-              "#e7c7b6",
-              "#cbd4e8",
-            ][index],
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "#fff",
-            fontSize: 21,
-            fontWeight: 600,
-          }}
-        >
-          {friend.slice(0, 1)}
-        </div>
-        <span
-          style={{
-            position: "absolute",
-            right: 0,
-            bottom: 1,
-            width: 11,
-            height: 11,
-            borderRadius: "50%",
-            background: "#31c48d",
-            border: "2px solid white",
-          }}
-        />
-      </div>
+              return (
+                <button
+                  key={friend}
+                  onClick={() => setActiveFriend(friend)}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    width: "100%",
+                    minHeight: 82,
+                    padding: "12px 16px",
+                    gap: 12,
+                    border: 0,
+                    borderBottom: "1px solid #f3f3f3",
+                    background: "#fff",
+                    textAlign: "left",
+                    cursor: "pointer",
+                    color: "#161823",
+                  }}
+                >
+                  <div style={{ position: "relative", flexShrink: 0 }}>
+                    <img
+                      src={friendAvatars[friend]}
+                      alt={friend}
+                      style={{
+                        display: "block",
+                        width: 52,
+                        height: 52,
+                        borderRadius: "50%",
+                        objectFit: "cover",
+                      }}
+                    />
+                    <span
+                      style={{
+                        position: "absolute",
+                        right: 0,
+                        bottom: 1,
+                        width: 11,
+                        height: 11,
+                        borderRadius: "50%",
+                        background: "#31c48d",
+                        border: "2px solid white",
+                      }}
+                    />
+                  </div>
 
-      <div
-        style={{
-          flex: 1,
-          minWidth: 0,
-          display: "flex",
-          flexDirection: "column",
-          gap: 7,
-        }}
-      >
-        <strong
-          style={{
-            display: "block",
-            color: "#161823",
-            fontSize: 15,
-            fontWeight: 600,
-            lineHeight: "20px",
-          }}
-        >
-          {friend}
-        </strong>
+                  <div
+                    style={{
+                      flex: 1,
+                      minWidth: 0,
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: 7,
+                    }}
+                  >
+                    <strong
+                      style={{
+                        display: "block",
+                        color: "#161823",
+                        fontSize: 15,
+                        fontWeight: 600,
+                        lineHeight: "20px",
+                      }}
+                    >
+                      {friend}
+                    </strong>
 
-        <span
-          style={{
-            display: "block",
-            color: "#999",
-            fontSize: 12,
-            overflow: "hidden",
-            whiteSpace: "nowrap",
-            textOverflow: "ellipsis",
-          }}
-        >
-          {latestMessage
-  ? latestMessage.type === "video"
-    ? "分享了一个视频"
-    : `${latestMessage.outgoing ? "我：" : ""}${latestMessage.text ?? ""}`
-  : "点击发消息，和好友聊一聊"}
-        </span>
-      </div>
+                    <span
+                      style={{
+                        display: "block",
+                        color: "#999",
+                        fontSize: 12,
+                        overflow: "hidden",
+                        whiteSpace: "nowrap",
+                        textOverflow: "ellipsis",
+                      }}
+                    >
+                      {latestMessage
+                        ? latestMessage.type === "video"
+                          ? "分享了一个视频"
+                          : `${latestMessage.outgoing ? "我：" : ""}${latestMessage.text ?? ""}`
+                        : "点击发消息，和好友聊一聊"}
+                    </span>
+                  </div>
 
-      <div
-        style={{
-          color: "#aaa",
-          fontSize: 11,
-          flexShrink: 0,
-        }}
-      >
-        {latestMessage?.time ?? ""}
-      </div>
-    </button>
-  );
-})}
+                  <div
+                    style={{
+                      color: "#aaa",
+                      fontSize: 11,
+                      flexShrink: 0,
+                    }}
+                  >
+                    {latestMessage?.time ?? ""}
+                  </div>
+                </button>
+              );
+            })}
           </div>
         )
       ) : (
@@ -1176,6 +1168,7 @@ const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({
     </div>
   );
 }
+
 export function TikTokSkin(p: Props) {
   const { tab, setTab, items } = useContent(p, "For You");
   const list =
@@ -1216,6 +1209,7 @@ export function TikTokSkin(p: Props) {
     </div>
   );
 }
+
 export function NetflixSkin(p: Props) {
   const { tab, setTab, q, setQ, items } = useContent(p, "首页");
   const [saved, setSaved] = useSkinState<string[]>(p, "saved", []);
@@ -1287,4 +1281,3 @@ export function NetflixSkin(p: Props) {
     </div>
   );
 }
-
