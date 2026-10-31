@@ -672,24 +672,6 @@ const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({});
     setDraft("");
   };
 
-  const shareVideo = (item: Item) => {
-    setMessages((old) => ({
-      ...old,
-      [activeFriend]: [
-        ...(old[activeFriend] ?? []),
-        {
-          id: Date.now(),
-          text: `分享了视频：${item.title}`,
-          outgoing: true,
-          time: new Date().toLocaleTimeString([], {
-            hour: "2-digit",
-            minute: "2-digit",
-          }),
-        },
-      ],
-    }));
-  };
-
   return (
     <div className="catalog-skin douyin-ui">
             <Header p={p} />
@@ -1066,8 +1048,10 @@ const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({});
           }}
         >
           {latestMessage
-            ? `${latestMessage.outgoing ? "我：" : ""}${latestMessage.text}`
-            : "点击发消息，和好友聊一聊"}
+  ? latestMessage.type === "video"
+    ? "分享了一个视频"
+    : `${latestMessage.outgoing ? "我：" : ""}${latestMessage.text ?? ""}`
+  : "点击发消息，和好友聊一聊"}
         </span>
       </div>
 
