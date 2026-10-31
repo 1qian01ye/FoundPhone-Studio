@@ -824,7 +824,7 @@ export function DouyinSkin(p: Props) {
   }}
 >
   <strong style={{ fontSize: 23, color: "#161823" }}>消息</strong>
-  <span style={{ color: "#666", fontSize: 14 }}>搜索　＋</span>
+  <span style={{ color: "#666", fontSize: 14 }}>搜索 +</span>
 </div>
 
             {friends.map((friend, index) => {
