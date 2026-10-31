@@ -681,138 +681,261 @@ export function DouyinSkin(p: Props) {
     <div className="catalog-skin douyin-ui">
       <Header p={p} />
 
-      {tab === "好友" ? (
-        activeFriend ? (
+      <div
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    height: "calc(100% - 60px)",
+    background: "#f5f6f8",
+    color: "#161823",
+  }}
+>
+  {/* 顶部聊天栏 */}
+  <div
+    style={{
+      height: 58,
+      flexShrink: 0,
+      display: "flex",
+      alignItems: "center",
+      padding: "0 14px",
+      gap: 12,
+      background: "#fff",
+      borderBottom: "1px solid #eee",
+    }}
+  >
+    <button
+      onClick={() => setActiveFriend("")}
+      style={{
+        border: 0,
+        background: "transparent",
+        fontSize: 27,
+        color: "#161823",
+        padding: 0,
+      }}
+    >
+      ‹
+    </button>
+
+    <Avatar name={activeFriend} />
+
+    <div style={{ flex: 1, minWidth: 0 }}>
+      <strong style={{ fontSize: 15 }}>{activeFriend}</strong>
+      <div style={{ fontSize: 11, color: "#999", marginTop: 3 }}>
+        在线
+      </div>
+    </div>
+
+    <span style={{ fontSize: 20 }}>☎</span>
+    <span style={{ fontSize: 20 }}>▣</span>
+    <span style={{ fontSize: 22 }}>···</span>
+  </div>
+
+  {/* 聊天消息区域 */}
+  <div
+    style={{
+      flex: 1,
+      minHeight: 0,
+      overflowY: "auto",
+      padding: "18px 12px",
+      display: "flex",
+      flexDirection: "column",
+      gap: 18,
+    }}
+  >
+    <div
+      style={{
+        alignSelf: "center",
+        color: "#aaa",
+        fontSize: 11,
+        marginBottom: 8,
+      }}
+    >
+      今天
+    </div>
+
+    {(messages[activeFriend] ?? []).map((message) => (
+      <div
+        key={message.id}
+        style={{
+          display: "flex",
+          alignItems: "flex-start",
+          justifyContent: message.outgoing ? "flex-end" : "flex-start",
+          gap: 8,
+        }}
+      >
+        {!message.outgoing && (
+          <Avatar name={activeFriend} />
+        )}
+
+        <div
+          style={{
+            maxWidth: "75%",
+            padding: "11px 14px",
+            borderRadius: 15,
+            background: message.outgoing ? "#1684FF" : "#fff",
+            color: message.outgoing ? "#fff" : "#161823",
+            fontSize: 14,
+            lineHeight: 1.55,
+            overflowWrap: "anywhere",
+            boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
+          }}
+        >
+          {message.text}
+
           <div
             style={{
-              display: "flex",
-              flexDirection: "column",
-              height: "calc(100% - 60px)",
-              background: "#f7f7f7",
+              fontSize: 10,
+              marginTop: 5,
+              textAlign: "right",
+              color: message.outgoing
+                ? "rgba(255,255,255,0.75)"
+                : "#aaa",
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 12,
-                padding: 14,
-                background: "#fff",
-                borderBottom: "1px solid #eee",
-              }}
-            >
-              <button onClick={() => setActiveFriend("")}>‹ 返回</button>
-              <strong>{activeFriend}</strong>
-            </div>
-
-            <div
-              style={{
-                flex: 1,
-                overflowY: "auto",
-                padding: 14,
-                display: "flex",
-                flexDirection: "column",
-                gap: 12,
-              }}
-            >
-              {(messages[activeFriend] ?? []).map((message) => (
-                <div
-                  key={message.id}
-                  style={{
-                    alignSelf: message.outgoing ? "flex-end" : "flex-start",
-                    maxWidth: "78%",
-                    padding: "10px 13px",
-                    borderRadius: 14,
-                    background: message.outgoing ? "#95ec69" : "#fff",
-                    overflowWrap: "anywhere",
-                  }}
-                >
-                  {message.text}
-                  <small
-                    style={{
-                      display: "block",
-                      marginTop: 4,
-                      fontSize: 10,
-                      color: "#777",
-                      textAlign: "right",
-                    }}
-                  >
-                    {message.time}
-                  </small>
-                </div>
-              ))}
-            </div>
-
-            <div
-              style={{
-                display: "flex",
-                gap: 8,
-                padding: 10,
-                background: "#fff",
-                borderTop: "1px solid #eee",
-              }}
-            >
-              <input
-                value={draft}
-                onChange={(event) => setDraft(event.target.value)}
-                onKeyDown={(event) => {
-                  if (event.key === "Enter") sendMessage(draft);
-                }}
-                placeholder="发送消息..."
-                style={{
-                  flex: 1,
-                  minWidth: 0,
-                  padding: "10px 12px",
-                  border: "1px solid #ddd",
-                  borderRadius: 20,
-                  outline: "none",
-                }}
-              />
-              <button onClick={() => sendMessage(draft)}>发送</button>
-            </div>
-
-            <div
-              style={{
-                padding: "8px 12px",
-                background: "#fff",
-                borderTop: "1px solid #eee",
-              }}
-            >
-              <strong style={{ fontSize: 13 }}>分享视频</strong>
-              <div
-                style={{
-                  display: "flex",
-                  gap: 8,
-                  overflowX: "auto",
-                  marginTop: 8,
-                }}
-              >
-                {items
-                  .filter((item) => item.kind === "video")
-                  .map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => shareVideo(item)}
-                      style={{
-                        flex: "0 0 150px",
-                        padding: 8,
-                        border: "1px solid #eee",
-                        borderRadius: 8,
-                        background: "#fafafa",
-                        textAlign: "left",
-                      }}
-                    >
-                      <Media item={item} />
-                      <small>{item.title}</small>
-                      <div style={{ color: "#fe2c55", fontSize: 12 }}>
-                        分享给好友
-                      </div>
-                    </button>
-                  ))}
-              </div>
-            </div>
+            {message.time}
           </div>
-        ) : (
+        </div>
+
+        {message.outgoing && (
+          <Avatar name="我" />
+        )}
+      </div>
+    ))}
+  </div>
+
+  {/* 视频分享入口 */}
+  <div
+    style={{
+      flexShrink: 0,
+      padding: "9px 12px",
+      background: "#fff",
+      borderTop: "1px solid #eee",
+    }}
+  >
+    <div
+      style={{
+        fontSize: 12,
+        color: "#777",
+        marginBottom: 8,
+      }}
+    >
+      分享抖音视频
+    </div>
+
+    <div
+      style={{
+        display: "flex",
+        gap: 8,
+        overflowX: "auto",
+      }}
+    >
+      {items
+        .filter((item) => item.kind === "video")
+        .map((item) => (
+          <button
+            key={item.id}
+            onClick={() => shareVideo(item)}
+            style={{
+              flex: "0 0 125px",
+              minWidth: 0,
+              padding: 7,
+              border: "1px solid #eee",
+              borderRadius: 10,
+              background: "#f8f8f8",
+              textAlign: "left",
+              color: "#161823",
+            }}
+          >
+            <div style={{ height: 75, overflow: "hidden", borderRadius: 6 }}>
+              <Media item={item} />
+            </div>
+            <div
+              style={{
+                fontSize: 11,
+                marginTop: 5,
+                overflow: "hidden",
+                whiteSpace: "nowrap",
+                textOverflow: "ellipsis",
+              }}
+            >
+              {item.title}
+            </div>
+            <div style={{ color: "#1684FF", fontSize: 11, marginTop: 4 }}>
+              分享给好友
+            </div>
+          </button>
+        ))}
+    </div>
+  </div>
+
+  {/* 底部输入栏 */}
+  <div
+    style={{
+      flexShrink: 0,
+      display: "flex",
+      alignItems: "center",
+      gap: 9,
+      padding: "10px 12px",
+      paddingBottom: 14,
+      background: "#fff",
+      borderTop: "1px solid #eee",
+    }}
+  >
+    <button
+      style={{
+        border: 0,
+        background: "transparent",
+        fontSize: 22,
+      }}
+    >
+      ◉
+    </button>
+
+    <input
+      value={draft}
+      onChange={(event) => setDraft(event.target.value)}
+      onKeyDown={(event) => {
+        if (event.key === "Enter") sendMessage(draft);
+      }}
+      placeholder="发送消息..."
+      style={{
+        flex: 1,
+        minWidth: 0,
+        border: 0,
+        outline: "none",
+        borderRadius: 22,
+        background: "#f2f3f5",
+        padding: "11px 15px",
+        fontSize: 14,
+      }}
+    />
+
+    <button
+      style={{
+        border: 0,
+        background: "transparent",
+        fontSize: 22,
+      }}
+    >
+      ☺
+    </button>
+
+    <button
+      onClick={() => sendMessage(draft)}
+      style={{
+        border: 0,
+        borderRadius: 20,
+        padding: "8px 13px",
+        background: "#1684FF",
+        color: "#fff",
+        fontSize: 13,
+        fontWeight: 600,
+      }}
+    >
+      发送
+    </button>
+  </div>
+</div>
           <div className="catalog-scroll">
             <div
   style={{
