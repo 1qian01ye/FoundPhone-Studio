@@ -259,7 +259,7 @@ export function safeMedia(value: string) {
     /^data:(image\/(png|jpeg|webp|gif)|audio\/(mpeg|mp3|wav|ogg|webm|mp4)|video\/(mp4|webm));base64,[a-zA-Z0-9+/=\s]+$/;
 
   const localImage =
-    /^\/(?:music-covers\/)?[^/]+\.(jpg|jpeg|png|webp|gif)$/i;
+  /^\/(?:[a-zA-Z0-9_-]+\/)*[^/]+\.(jpg|jpeg|png|webp|gif)$/i;
 
   const localVideo =
     /^\/[^/]+\.(mp4|webm)$/i;
