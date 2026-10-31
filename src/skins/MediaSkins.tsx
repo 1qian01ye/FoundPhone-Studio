@@ -622,9 +622,22 @@ export function DouyinSkin(p: Props) {
 
   const [activeFriend, setActiveFriend] = useState("");
   const [draft, setDraft] = useState("");
-  const [messages, setMessages] = useState<
-    Record<string, { id: number; text: string; outgoing: boolean; time: string }[]>
-  >({});
+  type ChatMessage = {
+  id: number;
+  text?: string;
+  outgoing: boolean;
+  time: string;
+  type: "text" | "video";
+  video?: {
+    title: string;
+    author: string;
+    cover: string;
+    url: string;
+    duration: string;
+  };
+};
+
+const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({});
 
   const friends = [
     "可可嘻沥",
@@ -782,7 +795,78 @@ export function DouyinSkin(p: Props) {
             boxShadow: "0 1px 3px rgba(0,0,0,0.04)",
           }}
         >
-          {message.text}
+          {message.type === "video" && message.video ? (
+  <a
+    href={message.video.url}
+    target="_blank"
+    rel="noreferrer"
+    style={{
+      display: "block",
+      width: 210,
+      overflow: "hidden",
+      borderRadius: 12,
+      background: "#fff",
+      color: "#161823",
+      textDecoration: "none",
+    }}
+  >
+    <div
+      style={{
+        width: "100%",
+        aspectRatio: "3 / 4",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
+      <img
+        src={message.video.cover}
+        alt={message.video.title}
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+        }}
+      />
+      <span
+        style={{
+          position: "absolute",
+          right: 9,
+          bottom: 8,
+          color: "#fff",
+          fontSize: 12,
+          textShadow: "0 1px 3px #333",
+        }}
+      >
+        {message.video.duration}
+      </span>
+      <span
+        style={{
+          position: "absolute",
+          inset: 0,
+          display: "grid",
+          placeItems: "center",
+          color: "#fff",
+          fontSize: 36,
+          textShadow: "0 1px 5px #333",
+        }}
+      >
+        ▶
+      </span>
+    </div>
+
+    <div style={{ padding: 10 }}>
+      <strong style={{ fontSize: 14 }}>{message.video.title}</strong>
+      <div style={{ color: "#888", fontSize: 11, marginTop: 6 }}>
+        作者：{message.video.author}
+      </div>
+      <div style={{ color: "#888", fontSize: 11, marginTop: 6 }}>
+        ♪ 抖音
+      </div>
+    </div>
+  </a>
+) : (
+  message.text
+)}
 
           <div
             style={{
