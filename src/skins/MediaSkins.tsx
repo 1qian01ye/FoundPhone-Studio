@@ -690,7 +690,11 @@ const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({
   ],
 });
 
-  const friendAvatars: Record<string, string> = {
+  type ChatMessage = {
+  // 保留原来的类型定义，不动
+};
+
+const friendAvatars: Record<string, string> = {
   "我": "/FoundPhone-Studio/linqiushui.jpg",
   "可可嘻沥": "/FoundPhone-Studio/lvzhengxiQQ.jpg",
   "会飞的羽毛": "/FoundPhone-Studio/赵俊羽.jpg",
@@ -699,7 +703,11 @@ const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({
   "利维斯": "/FoundPhone-Studio/yangyunhaoQQ.jpg",
   "大力大力": "/FoundPhone-Studio/沈子航.jpg",
   "同意成为魔方糕手": "/FoundPhone-Studio/佟弋.jpg",
-  ];
+};
+
+const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({
+  // 保留原来的消息记录，不动
+});
 
   const sendMessage = (text: string) => {
     const content = text.trim();
