@@ -556,7 +556,7 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
           onClick={() => setShowComments(true)}
         >
           <MessageCircle size={29} />
-          <small>{item.comments.length}</small>
+          <small>{item.commentCount}</small>
         </button>
 
         <button
