@@ -4599,3 +4599,8 @@
   object-fit: contain;
   background: #000;
 }
+/* 抖音视频上的互动按钮和文案置顶 */
+.douyin-ui .vertical-actions,
+.douyin-ui .vertical-caption {
+  z-index: 2;
+}
