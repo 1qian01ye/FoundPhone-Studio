@@ -107,9 +107,11 @@ export function Avatar({
 export function Media({
   item,
   className = "",
+  autoPlay = false,
 }: {
   item: Item;
   className?: string;
+  autoPlay?: boolean;
 }) {
   const src = safeMedia(item.media);
 
@@ -123,12 +125,13 @@ export function Media({
       <audio className={className} controls src={mediaSrc} />
     ) : item.kind === "video" ? (
       <video
-        className={className}
-        controls
-        playsInline
-        src={mediaSrc}
-        onClick={(e) => e.stopPropagation()}
-      />
+  className={className}
+  controls
+  playsInline
+  autoPlay={autoPlay}
+  src={mediaSrc}
+  onClick={(e) => e.stopPropagation()}
+/>
     ) : (
       <img
         className={className}
