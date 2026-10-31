@@ -659,6 +659,7 @@ const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({});
         ...(old[activeFriend] ?? []),
         {
           id: Date.now(),
+          type: "text",
           text: content,
           outgoing: true,
           time: new Date().toLocaleTimeString([], {
