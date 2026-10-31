@@ -575,11 +575,11 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
             </header>
 
             <div className="douyin-comment-list">
-              {displayComments.map((comment) => (
+              {mockComments.map((comment) => (
   <div className="douyin-comment-item" key={comment.id}>
-    <Avatar name={comment.nickname} />
+    <Avatar name={comment.id} />
     <div>
-      <strong>@{comment.nickname}</strong>
+      <strong>@{comment.id}</strong>
       <p>{comment.text}</p>
     </div>
   </div>
