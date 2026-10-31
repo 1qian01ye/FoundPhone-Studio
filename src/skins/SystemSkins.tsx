@@ -392,10 +392,10 @@ const list =
       />
       {call && (
         <div className="virtual-call">
-          <small>虚拟通话</small>
+          <small>恭喜你触发彩蛋</small>
           <Avatar name={call} />
           <h2>{call}</h2>
-          <p>这是作品内的通话模拟</p>
+          <p>这里是一则来自阳阳的通话</p>
           <button aria-label="挂断" onClick={() => setCall("")}>
             <Phone />
           </button>
