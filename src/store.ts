@@ -40,7 +40,7 @@ export const useStudio = create<Store>((set, get) => ({
     try {
       const template = compileStory(storyTemplate).work;
       const musicSongs = template.data.music ?? [];
-
+      const wechatMessages = template.data.wechat ?? [];
       console.info("[Music诊断] 模板歌曲数量:", musicSongs.length);
       console.info(
         "[Music诊断] 模板歌曲:",
@@ -70,42 +70,50 @@ export const useStudio = create<Store>((set, get) => ({
         console.info("[Music诊断] 已保存新模板:", {
           musicCount: template.data.music?.length ?? 0,
         });
-      } else if (musicSongs.length) {
+            } else if (musicSongs.length || wechatMessages.length) {
         const updatedWorks: Work[] = [];
 
         for (const work of works) {
+          // 同步网易云音乐
           const existingMusic = work.data.music ?? [];
           const musicIds = new Set(existingMusic.map((item) => item.id));
           const missingMusic = musicSongs.filter(
             (item) => !musicIds.has(item.id),
           );
 
-          if (missingMusic.length) {
+          // 同步微信聊天记录
+          const existingWechat = work.data.wechat ?? [];
+          const wechatIds = new Set(existingWechat.map((item) => item.id));
+          const missingWechat = wechatMessages.filter(
+            (item) => !wechatIds.has(item.id),
+          );
+
+          // 只要有新增内容，就写入旧作品
+          if (missingMusic.length || missingWechat.length) {
             const updated: Work = {
               ...work,
               data: {
                 ...work.data,
                 music: [...existingMusic, ...missingMusic],
+                wechat: [...existingWechat, ...missingWechat],
               },
-              updatedAt: Date.now(),
             };
 
             await db.works.put(updated);
             updatedWorks.push(updated);
 
-            console.info("[Music诊断] 已补入歌曲:", {
+            console.info("[自动同步] 已更新作品:", {
               workId: work.id,
-              补入数量: missingMusic.length,
-              补入歌曲: missingMusic.map((song) => song.title),
-              同步后总数: updated.data.music?.length ?? 0,
+              新增歌曲: missingMusic.length,
+              新增微信消息: missingWechat.length,
+              微信新增内容: missingWechat.map((item) => ({
+                title: item.title,
+                sender: item.sender,
+                body: item.body,
+              })),
             });
           } else {
             updatedWorks.push(work);
-
-            console.info("[Music诊断] 此存档无需补歌:", {
-              workId: work.id,
-              当前歌曲数量: existingMusic.length,
-            });
           }
         }
 
