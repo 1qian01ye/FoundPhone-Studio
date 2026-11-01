@@ -44,6 +44,7 @@ export type SkinProps = {
   onRead: (id: string) => void;
   onItem: (i: Item) => void;
   onAdd: () => void;
+  onSendMessage?: (body: string) => void;
   onBack: () => void;
   thread: string;
   onThread: (s: string) => void;
