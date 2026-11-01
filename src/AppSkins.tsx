@@ -403,12 +403,20 @@ export function WeChatSkin(p: SkinProps) {
         p.onRead(item.title);
       }
     }}
+    style={{
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      flexDirection: "row",
+      width: "100%",
+      boxSizing: "border-box",
+    }}
   >
+    <span>{c}</span>
     <Avatar
       name={c}
       src={`/FoundPhone-Studio/${c}.jpg`}
     />
-    {c}
   </button>
 ))}
             </>
