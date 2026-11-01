@@ -950,7 +950,7 @@ export function DouyinSkin(p: Props) {
       type: "text",
       text: "😓",
       outgoing: false,
-      time: "",
+      time: "10月4日",
     },
   ],
 
@@ -1094,7 +1094,7 @@ export function DouyinSkin(p: Props) {
     id: 16,
     text: "😌",
     outgoing: true,
-    time: "",
+    time: "11月11日",
     type: "text",
   },
 ],
