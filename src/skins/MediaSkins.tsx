@@ -665,57 +665,159 @@ export function DouyinSkin(p: Props) {
   };
 
   const [messages, setMessages] = useState<Record<string, ChatMessage[]>>({
-    可可嘻沥: [
-      {
-        id: 1722200000000,
-        type: "video",
-        outgoing: true,
-        time: "7月29日",
-        video: {
-          title: "小心震荡",
-          author: "长街",
-          cover: "/FoundPhone-Studio/吕政熙抖音分享一.jpg",
-          url: "#",
-          duration: "",
-        },
+  可可嘻沥: [
+    {
+      id: 1722200000000,
+      type: "video",
+      outgoing: true,
+      time: "7月29日",
+      video: {
+        title: "小心震荡",
+        author: "长街",
+        cover: "/FoundPhone-Studio/吕政熙抖音分享一.jpg",
+        url: "#",
+        duration: "",
       },
-      {
-        id: 1722200000001,
-        type: "text",
-        text: "是敌是友？",
-        outgoing: false,
-        time: "",
+    },
+    {
+      id: 1722200000001,
+      type: "text",
+      text: "是敌是友？",
+      outgoing: false,
+      time: "",
+    },
+    {
+      id: 1722200000002,
+      type: "text",
+      text: "啊啊啊，姐妹们到底谁懂那句小心震荡啊，刚出来的时候，我就被惊艳了，少年感简直溢出来了！！",
+      outgoing: true,
+      time: "",
+    },
+    {
+      id: 1722200000003,
+      type: "text",
+      text: "好好听呀！姐妹我直接被惊艳了好吧，少年感满满！",
+      outgoing: false,
+      time: "",
+    },
+    {
+      id: 1722200000004,
+      type: "text",
+      text: "谁懂那句联手出击😭😭",
+      outgoing: true,
+      time: "",
+    },
+    {
+      id: 1722200000005,
+      type: "text",
+      text: "好了停",
+      outgoing: false,
+      time: "",
+    },
+  ],
+
+  "同意成为魔方糕手": [
+    {
+      id: 1787875200001,
+      type: "video",
+      outgoing: true,
+      time: "8月28日",
+      video: {
+        title: "#日常唠嗑 #东北媳妇",
+        author: "佳琦同学",
+        cover: "/FoundPhone-Studio/佟弋抖音1.jpg",
+        url: "#",
+        duration: "",
       },
-      {
-        id: 1722200000002,
-        type: "text",
-        text: "啊啊啊，姐妹们到底谁懂那句小心震荡啊，刚出来的时候，我就被惊艳了，少年感简直溢出来了！！",
-        outgoing: true,
-        time: "",
+    },
+    {
+      id: 1788475200002,
+      type: "video",
+      outgoing: true,
+      time: "9月4日",
+      video: {
+        title: "#东北人 #东北 #大实话",
+        author: "小酒窝",
+        cover: "/FoundPhone-Studio/佟弋抖音2.jpg",
+        url: "#",
+        duration: "",
       },
-      {
-        id: 1722200000003,
-        type: "text",
-        text: "好好听呀！姐妹我直接被惊艳了好吧，少年感满满！",
-        outgoing: false,
-        time: "",
+    },
+    {
+      id: 1788561600003,
+      type: "text",
+      text: "你不要再发这些东西给我了",
+      outgoing: false,
+      time: "9月5日",
+    },
+    {
+      id: 1789344000004,
+      type: "video",
+      outgoing: true,
+      time: "9月14日",
+      video: {
+        title: "想听东北人说Satisfaction #东北话 #语言艺术",
+        author: "小酒窝",
+        cover: "/FoundPhone-Studio/佟弋抖音3.jpg",
+        url: "#",
+        duration: "",
       },
-      {
-        id: 1722200000004,
-        type: "text",
-        text: "谁懂那句联手出击😭😭",
-        outgoing: true,
-        time: "",
+    },
+    {
+      id: 1789516800005,
+      type: "video",
+      outgoing: false,
+      time: "9月16日",
+      video: {
+        title: "#坏人的画像 #福建人",
+        author: "蝉老板",
+        cover: "/FoundPhone-Studio/佟弋抖音4.jpg",
+        url: "#",
+        duration: "",
       },
-      {
-        id: 1722200000005,
-        type: "text",
-        text: "好了停",
-        outgoing: false,
-        time: "",
+    },
+    {
+      id: 1790899200006,
+      type: "video",
+      outgoing: true,
+      time: "10月2日",
+      video: {
+        title: "东北都这么宠孩子嘛？",
+        author: "鲍半仙儿",
+        cover: "/FoundPhone-Studio/佟弋抖音5.jpg",
+        url: "#",
+        duration: "",
       },
-    ],
-  });
+    },
+    {
+      id: 1791072000007,
+      type: "video",
+      outgoing: false,
+      time: "10月4日",
+      video: {
+        title: "这是真的吗",
+        author: "老逾",
+        cover: "/FoundPhone-Studio/佟弋抖音6.jpg",
+        url: "#",
+        duration: "",
+      },
+    },
+    {
+      id: 1791072000008,
+      type: "text",
+      text: "休战吧",
+      outgoing: true,
+      time: "",
+    },
+    {
+      id: 1791072000009,
+      type: "text",
+      text: "😓",
+      outgoing: false,
+      time: "",
+    },
+  ],
+});
 
   const sendMessage = (text: string) => {
     const content = text.trim();
