@@ -1788,7 +1788,7 @@ export function DouyinSkin(p: Props) {
             >
               {(messages[activeFriend] ?? []).map((message) => (
                 <div key={message.id}>
-                  {message.type === "video" && message.time && (
+                  {message.time && (
                     <div
                       style={{
                         textAlign: "center",
