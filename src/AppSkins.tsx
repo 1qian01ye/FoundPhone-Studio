@@ -146,18 +146,52 @@ function MessageList({
 function Compose({
   creator,
   onAdd,
+  onSend,
   wa = false,
 }: {
   creator: boolean;
   onAdd: () => void;
+  onSend?: (body: string) => void;
   wa?: boolean;
 }) {
+  const [value, setValue] = useState("");
+
+  const send = () => {
+    const body = value.trim();
+    if (!body) return;
+
+    onSend?.(body);
+    setValue("");
+  };
+
   return (
     <div className={`skin-compose ${wa ? "wa-compose" : ""}`}>
       {wa ? <Plus size={20} /> : <Mic size={20} />}
-      <NativeComposer creator={creator} onAdd={onAdd} />
 
-      <Smile size={21} />
+      {creator ? (
+        <NativeComposer creator={creator} onAdd={onAdd} />
+      ) : (
+        <>
+          <input
+            className="native-compose-field"
+            aria-label="输入消息"
+            placeholder="输入消息"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") send();
+            }}
+          />
+          {value.trim() ? (
+            <button type="button" onClick={send}>
+              发送
+            </button>
+          ) : (
+            <Smile size={21} />
+          )}
+        </>
+      )}
+
       {wa ? <Mic size={20} /> : <Plus size={22} />}
     </div>
   );
