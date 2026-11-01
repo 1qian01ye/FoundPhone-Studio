@@ -190,7 +190,6 @@ const contacts = [
   { name: "刘禹辰", initial: "L" },
   { name: "刘瀚辰", initial: "L" },
   { name: "Mother", initial: "M" },
-  { name: "Mather", initial: "M" },
   { name: "皮子渝", initial: "P" },
   { name: "任玄哲", initial: "R" },
   { name: "时代峰峻", initial: "S" },
