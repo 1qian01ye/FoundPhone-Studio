@@ -180,30 +180,40 @@ export function WeChatSkin(p: SkinProps) {
         .map((i) => i.title),
     ),
   ];
-  const contacts = [
-  "吕政熙",
-  "杨云皓",
-  "侯王子",
-  "刘禹辰",
-  "余政霖",
-  "杨子豪",
-  "宋金泽",
-  "任玄哲",
-  "皮子渝",
-  "智恩涵",
-  "沈子航",
-  "杨林好",
-  "朱映宸",
-  "张誉严",
-  "陈璟翊",
-  "胡阿米",
-  "魏新航",
-  "佟弋",
-  "赵俊羽",
-  "刘瀚辰",
-  "陈燊",
-  "越艺晨",
+  
+const contacts = [
+  { name: "陈璟翊", initial: "C" },
+  { name: "陈燊", initial: "C" },
+  { name: "胡阿米", initial: "H" },
+  { name: "侯王子", initial: "H" },
+  { name: "吕政熙", initial: "L" },
+  { name: "刘禹辰", initial: "L" },
+  { name: "刘瀚辰", initial: "L" },
+  { name: "Mother", initial: "M" },
+  { name: "Mather", initial: "M" },
+  { name: "皮子渝", initial: "P" },
+  { name: "任玄哲", initial: "R" },
+  { name: "时代峰峻", initial: "S" },
+  { name: "宋金泽", initial: "S" },
+  { name: "沈子航", initial: "S" },
+  { name: "佟弋", initial: "T" },
+  { name: "魏新航", initial: "W" },
+  { name: "小胖", initial: "X" },
+  { name: "杨云皓", initial: "Y" },
+  { name: "余政霖", initial: "Y" },
+  { name: "杨子豪", initial: "Y" },
+  { name: "杨林好", initial: "Y" },
+  { name: "越艺晨", initial: "Y" },
+  { name: "智恩涵", initial: "Z" },
+  { name: "朱映宸", initial: "Z" },
+  { name: "张誉严", initial: "Z" },
+  { name: "时代峰峻", initial: "S" },
+  { name: "Mother", initial: "M" },
+  { name: "Father", initial: "F" },
+  { name: "小胖", initial: "X" },
+  { name: "赵俊羽", initial: "Z" },
 ];
+
   const posts = p.items.filter(
     (i) => i.folder === "朋友圈" || i.kind === "post",
   );
@@ -402,34 +412,52 @@ export function WeChatSkin(p: SkinProps) {
           ) : tab === "通讯录" ? (
             <>
               <div className="wx-section-label">联系人</div>
-              {contacts.map((c) => (
-  <button
-    key={c}
-    className="wx-contact"
-    onClick={() => {
-      const item = p.items.find((i) => i.sender === c);
-      if (item) {
-        p.onThread(item.title);
-        p.onRead(item.title);
-      }
-    }}
-    style={{
-      display: "flex",
-      flexDirection: "row",
-      alignItems: "center",
-      justifyContent: "flex-start",
-      width: "100%",
-      boxSizing: "border-box",
-      gap: "12px",
-    }}
-  >
-    <Avatar
-      name={c}
-      src={`/FoundPhone-Studio/${c}.jpg`}
-    />
-    <span>{c}</span>
-  </button>
+              
+{contacts.map((c, index) => (
+  <div key={c.name}>
+    {(index === 0 ||
+      contacts[index - 1].initial !== c.initial) && (
+      <div
+        className="wx-section-label"
+        style={{
+          padding: "12px 16px 6px",
+          fontSize: "13px",
+          color: "#888",
+          fontWeight: 600,
+        }}
+      >
+        {c.initial}
+      </div>
+    )}
+
+    <button
+      className="wx-contact"
+      onClick={() => {
+        const item = p.items.find((i) => i.sender === c.name);
+        if (item) {
+          p.onThread(item.title);
+          p.onRead(item.title);
+        }
+      }}
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        width: "100%",
+        boxSizing: "border-box",
+        gap: "12px",
+      }}
+    >
+      <Avatar
+        name={c.name}
+        src={`/FoundPhone-Studio/${c.name}.jpg`}
+      />
+      <span>{c.name}</span>
+    </button>
+  </div>
 ))}
+
             </>
           ) : tab === "发现" ? (
             <div className="wx-discover-groups">
