@@ -1219,7 +1219,7 @@ export function DouyinSkin(p: Props) {
       },
       {
         id: 15,
-        text: "🩷🧡",
+        text: "最后一个：❤",
         outgoing: true,
         time: "11月15日",
         type: "text",
