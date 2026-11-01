@@ -319,24 +319,69 @@ const contacts = [
       {utility ? (
         <div className="skin-scroll wx-utility">
           {utility === "聊天信息" && (
-            <div className="wx-members">
-              {[
-                ...new Set(
-                  p.items
-                    .filter((i) => i.title === p.thread)
-                    .map((i) => i.sender),
-                ),
-              ].map((name) => (
-                <div key={name}>
-                  <Avatar
-                    name={name}
-                    src={p.items.find((i) => i.sender === name)?.avatar}
-                  />
-                  <small>{name}</small>
-                </div>
-              ))}
-            </div>
-          )}
+  <div
+    className="wx-members"
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(5, minmax(0, 1fr))",
+      gap: "20px 8px",
+      padding: "20px 12px",
+    }}
+  >
+    {[
+      "吕政熙",
+      "杨云皓",
+      "侯王子",
+      "刘禹辰",
+      "余政霖",
+      "杨子豪",
+      "宋金泽",
+      "任玄哲",
+      "皮子渝",
+      "智恩涵",
+      "沈子航",
+      "杨林好",
+      "朱映宸",
+      "张誉严",
+      "陈璟翊",
+      "胡阿米",
+      "魏新航",
+      "佟弋",
+      "赵俊羽",
+      "刘瀚辰",
+      "陈燊",
+      "越艺晨",
+      "时代峰峻",
+      "阳阳（我）",
+    ].map((name) => (
+      <div
+        key={name}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "6px",
+          minWidth: 0,
+        }}
+      >
+        <Avatar
+          name={name}
+          src={p.items.find((i) => i.sender === name)?.avatar}
+        />
+        <small
+          style={{
+            textAlign: "center",
+            width: "100%",
+            fontSize: "12px",
+            overflowWrap: "anywhere",
+          }}
+        >
+          {name}
+        </small>
+      </div>
+    ))}
+  </div>
+)}
           {p.items
             .filter((i) => i.folder === utility)
             .map((i) => (
