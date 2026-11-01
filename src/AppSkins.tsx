@@ -446,8 +446,9 @@ const contacts = [
       </div>
       <time>{last?.time.slice(-5) ?? ""}</time>
     </button>
-  );
-})
+    );
+  })}
+}
               {!conversations.length && <p className="skin-empty">暂无聊天</p>}
             </>
           ) : tab === "通讯录" ? (
