@@ -466,6 +466,23 @@
     }
   ]
 },
+{
+  "id": "wechat-chen-shen",
+  "app": "wechat",
+  "title": "陈燊",
+  "participants": [
+    "owner",
+    "contact-chen-shen"
+  ],
+  "messages": [
+    {
+      "id": "wechat-chen-shen-birthday-20261117",
+      "time": "2026-11-17 00:00",
+      "body": "生日快乐！",
+      "senderId": "contact-chen-shen"
+    }
+  ]
+},
     {
       "id": "qq-chen-shen",
       "app": "qq",
