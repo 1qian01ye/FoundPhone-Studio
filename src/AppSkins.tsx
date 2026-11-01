@@ -294,6 +294,7 @@ const contacts = [
     setMenu(!menu);
   }
 }}
+          >
           {p.thread ? <MoreHorizontal size={22} /> : <CirclePlus size={22} />}
         </button>
       </div>
