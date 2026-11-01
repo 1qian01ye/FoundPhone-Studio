@@ -405,18 +405,19 @@ export function WeChatSkin(p: SkinProps) {
     }}
     style={{
       display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
       flexDirection: "row",
+      alignItems: "center",
+      justifyContent: "flex-start",
       width: "100%",
       boxSizing: "border-box",
+      gap: "12px",
     }}
   >
-    <span>{c}</span>
     <Avatar
       name={c}
       src={`/FoundPhone-Studio/${c}.jpg`}
     />
+    <span>{c}</span>
   </button>
 ))}
             </>
