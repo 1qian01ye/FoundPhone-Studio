@@ -486,16 +486,19 @@ const contacts = [
             </div>
           ) : (
             <>
-              <div className="wx-profile">
-                <Avatar name={p.owner || "机主"} />
-                <div>
-                  <h2>{p.owner || "机主"}</h2>
-                  <small>微信号：未设置</small>
-                  <button
-                    className="wx-profile-status"
-                    onClick={() => setUtility("状态")}
-                  >
-                    ＋ 状态
+  <div className="wx-profile">
+    <Avatar
+      name="阳阳"
+      src="/FoundPhone-Studio/阳阳.jpg"
+    />
+    <div>
+      <h2>阳阳</h2>
+      <small>微信号：yang20121117</small>
+      <button
+        className="wx-profile-status"
+        onClick={() => setUtility("状态")}
+      >
+        ＋ 状态
                   </button>
                 </div>
               </div>
