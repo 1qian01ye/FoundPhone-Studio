@@ -160,27 +160,19 @@
       "phone": "",
       "bio": ""
     },
-    {
+        {
       "id": "contact-zhi-enhan",
       "name": "智恩涵",
       "phone": "",
       "bio": ""
     },
     {
-  "id": "test-chat-wechat",
-      "title": "测试会话",
-      "participants": [
-        "owner",
-        "test-contact"
-      ],
-      "messages": [
-        {
-          "id": "test-message-wechat",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
-    },
+      "id": "contact-era-jun",
+      "name": "时代峰峻",
+      "phone": "",
+      "bio": ""
+    }
+  ],
   "chats": [
     {
       "id": "spam-hokage",
