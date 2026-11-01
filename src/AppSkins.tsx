@@ -418,35 +418,36 @@ const contacts = [
                     ),
                 )
                 .map((t) => {
-                  const list = p.items.filter((i) => i.title === t),
-                    last = list.at(-1)!;
-                  return (
-                    <button
-                      className="wx-chat-row"
-                      key={t}
-                      onClick={() => {
-                        setReadThreads((v) => (v.includes(t) ? v : [...v, t]));
-                        p.onThread(t);
-                        p.onRead(t);
-                      }}
-                    >
-                      <span className="wx-chat-avatar">
-                        <Avatar name={t} src={last.avatar} />
-                        {!readThreads.includes(t) &&
-                          list.some((i) => !i.read) && (
-                            <b className="wx-unread">
-                              {list.filter((i) => !i.read).length}
-                            </b>
-                          )}
-                      </span>
-                      <div>
-                        <strong>{t}</strong>
-                        <p>{last.body}</p>
-                      </div>
-                      <time>{last.time.slice(-5)}</time>
-                    </button>
-                  );
-                })}
+  const list = p.items.filter((i) => i.title === t);
+  const last = list.at(-1);
+
+  return (
+    <button
+      className="wx-chat-row"
+      key={t}
+      onClick={() => {
+        setReadThreads((v) => (v.includes(t) ? v : [...v, t]));
+        p.onThread(t);
+        if (last) p.onRead(t);
+      }}
+    >
+      <span className="wx-chat-avatar">
+        <Avatar name={t} src={last?.avatar ?? ""} />
+        {!readThreads.includes(t) &&
+          list.some((i) => !i.read) && (
+            <b className="wx-unread">
+              {list.filter((i) => !i.read).length}
+            </b>
+          )}
+      </span>
+      <div>
+        <strong>{t}</strong>
+        <p>{last?.body ?? "暂无消息"}</p>
+      </div>
+      <time>{last?.time.slice(-5) ?? ""}</time>
+    </button>
+  );
+})
               {!conversations.length && <p className="skin-empty">暂无聊天</p>}
             </>
           ) : tab === "通讯录" ? (
