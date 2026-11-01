@@ -209,12 +209,13 @@ export function WeChatSkin(p: SkinProps) {
     [],
   );
   const conversations = [
-    ...new Set(
-      p.items
-        .filter((i) => !["朋友圈", "我"].includes(i.folder))
-        .map((i) => i.title),
-    ),
-  ];
+  ...new Set([
+    ...p.items
+      .filter((i) => !["朋友圈", "我"].includes(i.folder))
+      .map((i) => i.title),
+    "五五不呜呜",
+  ]),
+];
   
 const contacts = [
 { name: "陈璟翊", initial: "C" },
@@ -284,12 +285,15 @@ const contacts = [
           aria-label={
             p.creator ? "新增内容" : p.thread ? "聊天详情" : "微信菜单"
           }
-          onClick={
-            p.creator
-              ? p.onAdd
-              : () => (p.thread ? setUtility("聊天信息") : setMenu(!menu))
-          }
-        >
+          onClick={() => {
+  if (p.thread) {
+    setUtility("聊天信息");
+  } else if (p.creator) {
+    p.onAdd();
+  } else {
+    setMenu(!menu);
+  }
+}}
           {p.thread ? <MoreHorizontal size={22} /> : <CirclePlus size={22} />}
         </button>
       </div>
@@ -355,7 +359,11 @@ const contacts = [
             onItem={p.onItem}
             onRead={p.onRead}
           />
-          <Compose creator={p.creator} onAdd={p.onAdd} />
+          <Compose
+  creator={p.creator}
+  onAdd={p.onAdd}
+  onSend={p.onSendMessage}
+/>
         </>
       ) : moments ? (
         <div className="wx-moments">
