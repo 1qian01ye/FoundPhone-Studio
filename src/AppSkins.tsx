@@ -48,6 +48,7 @@ export type SkinProps = {
   thread: string;
   onThread: (s: string) => void;
 };
+
 function Avatar({
   name,
   round = false,
@@ -57,16 +58,25 @@ function Avatar({
   round?: boolean;
   src?: string;
 }) {
+  const imageSrc = safeMedia(src);
+
   return (
     <span className={`skin-avatar ${round ? "round" : ""}`}>
-      {safeMedia(src)?.startsWith("data:image/") ? (
-        <img src={safeMedia(src)} alt="" />
+      {imageSrc ? (
+        <img
+          src={imageSrc}
+          alt=""
+          onError={(e) => {
+            e.currentTarget.style.display = "none";
+          }}
+        />
       ) : (
         name.slice(0, 1)
       )}
     </span>
   );
 }
+
 function ItemMedia({ item }: { item: Item }) {
   const src = safeMedia(item.media);
   return src ? (
