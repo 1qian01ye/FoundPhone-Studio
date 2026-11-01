@@ -59,7 +59,36 @@ function Avatar({
   round?: boolean;
   src?: string;
 }) {
-  const imageSrc = safeMedia(src);
+  const avatarFiles: Record<string, string> = {
+    "陈璟翊": "/FoundPhone-Studio/陈璟翊.jpg",
+    "陈燊": "/FoundPhone-Studio/陈燊.jpg",
+    "Father": "/FoundPhone-Studio/Father.jpg",
+    "侯王子": "/FoundPhone-Studio/侯王子.jpg",
+    "胡阿米": "/FoundPhone-Studio/胡阿米.jpg",
+    "刘瀚辰": "/FoundPhone-Studio/刘瀚辰.jpg",
+    "刘禹辰": "/FoundPhone-Studio/刘禹辰.jpg",
+    "吕政熙": "/FoundPhone-Studio/吕政熙.jpg",
+    "Mother": "/FoundPhone-Studio/Mother.jpg",
+    "皮子渝": "/FoundPhone-Studio/皮子渝.jpg",
+    "任玄哲": "/FoundPhone-Studio/任玄哲.jpg",
+    "沈子航": "/FoundPhone-Studio/沈子航.jpg",
+    "时代峰峻": "/FoundPhone-Studio/时代峰峻.jpg",
+    "宋金泽": "/FoundPhone-Studio/宋金泽.jpg",
+    "佟弋": "/FoundPhone-Studio/佟弋.jpg",
+    "魏新航": "/FoundPhone-Studio/魏新航.jpg",
+    "小胖": "/FoundPhone-Studio/小胖.jpg",
+    "杨林好": "/FoundPhone-Studio/杨林好.jpg",
+    "杨云皓": "/FoundPhone-Studio/杨云皓.jpg",
+    "杨子豪": "/FoundPhone-Studio/杨子豪.jpg",
+    "余政霖": "/FoundPhone-Studio/余政霖.jpg",
+    "越艺晨": "/FoundPhone-Studio/越艺晨.jpg",
+    "张誉严": "/FoundPhone-Studio/张誉严.jpg",
+    "赵俊羽": "/FoundPhone-Studio/赵俊羽.jpg",
+    "智恩涵": "/FoundPhone-Studio/智恩涵.jpg",
+    "朱映宸": "/FoundPhone-Studio/朱映宸.jpg",
+  };
+
+  const imageSrc = src || avatarFiles[name];
 
   return (
     <span className={`skin-avatar ${round ? "round" : ""}`}>
@@ -77,7 +106,6 @@ function Avatar({
     </span>
   );
 }
-
 function ItemMedia({ item }: { item: Item }) {
   const src = safeMedia(item.media);
   return src ? (
