@@ -139,7 +139,7 @@ function MessageList({
     <div className={`skin-messages ${whatsapp ? "wa-wallpaper" : ""}`}>
       <div className="skin-date">
   {items[0]?.time
-    ? items[0].time.slice(5, 10)
+    ? `${Number(items[0].time.slice(5, 7))}月${Number(items[0].time.slice(8, 10))}日 ${items[0].time.slice(11, 16)}`
     : ""}
 </div>
       {items.map((i) => (
