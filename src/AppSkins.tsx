@@ -366,7 +366,7 @@ const contacts = [
       >
         <Avatar
           name={name}
-          src={p.items.find((i) => i.sender === name)?.avatar}
+          src={`/FoundPhone-Studio/${name === "阳阳（我）" ? "阳阳" : name}.jpg`}
         />
         <small
           style={{
