@@ -1409,10 +1409,11 @@ export function DouyinSkin(p: Props) {
       },
     ],
     "PINK 7 K.I.N.G": [
+  // 11月12日
   {
     id: 1,
     outgoing: false,
-    time: "11月13日",
+    time: "11月12日",
     type: "video",
     video: {
       title: "我的两个表 雌雄双股剑",
@@ -1426,13 +1427,15 @@ export function DouyinSkin(p: Props) {
     id: 2,
     text: "这首燊了",
     outgoing: true,
-    time: "11月13日",
+    time: "",
     type: "text",
   },
+
+  // 11月13日
   {
     id: 3,
     outgoing: false,
-    time: "11月14日",
+    time: "11月13日",
     type: "video",
     video: {
       title: "“Baby请你不要担心我 我会成为最闪亮的那一颗”很久没唱的don’t worry",
@@ -1445,7 +1448,7 @@ export function DouyinSkin(p: Props) {
   {
     id: 4,
     outgoing: true,
-    time: "11月14日",
+    time: "",
     type: "video",
     video: {
       title: "人，该续火花啦",
@@ -1455,10 +1458,12 @@ export function DouyinSkin(p: Props) {
       duration: "00:00",
     },
   },
+
+  // 11月14日
   {
     id: 5,
     outgoing: true,
-    time: "11月15日",
+    time: "11月14日",
     type: "video",
     video: {
       title: "召集全网黄色生物",
@@ -1472,97 +1477,99 @@ export function DouyinSkin(p: Props) {
     id: 6,
     text: "暗示？",
     outgoing: false,
-    time: "11月15日",
+    time: "",
     type: "text",
   },
   {
     id: 7,
     text: "群发",
     outgoing: true,
-    time: "11月15日",
+    time: "",
     type: "text",
   },
+
+  // 11月15日
   {
     id: 8,
     text: "我去问他们了他们都说你没有发这个给他们",
     outgoing: false,
-    time: "11月16日",
+    time: "11月15日",
     type: "text",
   },
   {
     id: 9,
     text: "我发现您这人特较真儿",
     outgoing: true,
-    time: "11月16日",
+    time: "",
     type: "text",
   },
   {
     id: 10,
     text: "已下单",
     outgoing: false,
-    time: "11月16日",
+    time: "",
     type: "text",
   },
   {
     id: 11,
     text: "你敢买我都不敢戴出去",
     outgoing: true,
-    time: "11月16日",
+    time: "",
     type: "text",
   },
   {
     id: 12,
     text: "我不管你必须戴",
     outgoing: false,
-    time: "11月16日",
+    time: "",
     type: "text",
   },
   {
     id: 13,
     text: "还要告诉所有人这是我给你买的",
     outgoing: false,
-    time: "11月16日",
+    time: "",
     type: "text",
   },
   {
     id: 14,
     text: "我说是被你强迫的",
     outgoing: true,
-    time: "11月16日",
+    time: "",
     type: "text",
   },
   {
     id: 15,
     text: "其实你也很渴望吧",
     outgoing: false,
-    time: "11月16日",
+    time: "",
     type: "text",
   },
   {
     id: 16,
     text: "满足自己的愿望，败坏我的名声",
     outgoing: false,
-    time: "11月16日",
+    time: "",
     type: "text",
   },
   {
     id: 17,
     text: "你不愿意？",
     outgoing: true,
-    time: "11月16日",
+    time: "",
     type: "text",
   },
   {
     id: 18,
     text: "求之不得",
     outgoing: false,
-    time: "11月16日",
+    time: "",
     type: "text",
   },
   {
     id: 19,
     outgoing: false,
-    time: "11月15日",
+    time: "",
     type: "video",
     video: {
       title: "How can l survive",
@@ -1575,7 +1582,7 @@ export function DouyinSkin(p: Props) {
   {
     id: 20,
     outgoing: true,
-    time: "11月15日",
+    time: "",
     type: "video",
     video: {
       title: "人，该续火花啦",
@@ -1585,6 +1592,8 @@ export function DouyinSkin(p: Props) {
       duration: "00:00",
     },
   },
+
+  // 11月16日
   {
     id: 21,
     outgoing: false,
@@ -1602,11 +1611,34 @@ export function DouyinSkin(p: Props) {
     id: 22,
     text: "有品兄弟",
     outgoing: true,
-    time: "11月16日",
+    time: "",
     type: "text",
   },
   {
     id: 23,
+    text: "还叫兄弟",
+    outgoing: false,
+    time: "",
+    type: "text",
+  },
+  {
+    id: 24,
+    text: "有品儿子",
+    outgoing: true,
+    time: "",
+    type: "text",
+  },
+  {
+    id: 25,
+    text: "🤡🤡",
+    outgoing: false,
+    time: "",
+    type: "text",
+  },
+
+  // 11月17日
+  {
+    id: 26,
     text: "生日快乐！",
     outgoing: false,
     time: "11月17日",
