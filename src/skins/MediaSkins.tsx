@@ -1079,8 +1079,9 @@ export function DouyinSkin(p: Props) {
       cover: "/FoundPhone-Studio/杨云皓抖音8.jpg",
       url: "",
       duration: "00:00",
+      },
     },
-],
+  ],
 });
 
   const sendMessage = (text: string) => {
