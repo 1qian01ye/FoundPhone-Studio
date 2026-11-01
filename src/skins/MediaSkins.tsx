@@ -1079,8 +1079,9 @@ export function DouyinSkin(p: Props) {
       cover: "/FoundPhone-Studio/杨云皓抖音8.jpg",
       url: "",
       duration: "00:00",
-      },
+       },
     },
+  ],
           "这里有哲理": [
       {
         id: 1,
@@ -1270,9 +1271,8 @@ export function DouyinSkin(p: Props) {
         time: "11月15日",
         type: "text",
       },
-    },
-  ],
-});
+    ],
+  });
 
   const sendMessage = (text: string) => {
     const content = text.trim();
