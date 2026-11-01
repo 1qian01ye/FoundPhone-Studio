@@ -167,12 +167,20 @@
       "bio": ""
     },
     {
-      "id": "test-contact",
-      "name": "测试联系人",
-      "phone": "",
-      "bio": "这是一条测试内容。"
-    }
-  ],
+  "id": "test-chat-wechat",
+      "title": "测试会话",
+      "participants": [
+        "owner",
+        "test-contact"
+      ],
+      "messages": [
+        {
+          "id": "test-message-wechat",
+          "body": "这是一条测试消息。",
+          "senderId": "test-contact"
+        }
+      ]
+    },
   "chats": [
     {
       "id": "spam-hokage",
@@ -444,20 +452,22 @@
       ]
     },
     {
-      "id": "test-chat-wechat",
-      "title": "测试会话",
-      "participants": [
-        "owner",
-        "test-contact"
-      ],
-      "messages": [
-        {
-          "id": "test-message-wechat",
-          "body": "这是一条测试消息。",
-          "senderId": "test-contact"
-        }
-      ]
-    },
+  "id": "wechat-group-wuwu",
+  "app": "wechat",
+  "title": "五五不呜呜",
+  "participants": [
+    "owner",
+    "contact-era-jun"
+  ],
+  "messages": [
+    {
+      "id": "wx-birthday-20261117",
+      "time": "2026-11-17 00:00",
+      "body": "祝我们的阳阳14岁生日快乐🎂带着自己的热爱与坚持一直大步向前走吧！🎉",
+      "senderId": "contact-era-jun"
+    }
+  ]
+},
     {
       "id": "qq-chen-shen",
       "app": "qq",
