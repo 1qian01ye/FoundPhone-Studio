@@ -166,9 +166,15 @@
       "phone": "",
       "bio": ""
     },
-    {
+        {
       "id": "contact-era-jun",
       "name": "时代峰峻",
+      "phone": "",
+      "bio": ""
+    },
+    {
+      "id": "test-contact",
+      "name": "测试联系人",
       "phone": "",
       "bio": ""
     }
