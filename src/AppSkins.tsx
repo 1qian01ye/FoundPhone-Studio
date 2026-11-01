@@ -171,8 +171,29 @@ export function WeChatSkin(p: SkinProps) {
     ),
   ];
   const contacts = [
-    ...new Set(p.items.map((i) => i.sender).filter((s) => s !== "我")),
-  ];
+  "吕政熙",
+  "杨云皓",
+  "侯王子",
+  "刘禹辰",
+  "余政霖",
+  "杨子豪",
+  "宋金泽",
+  "任玄哲",
+  "皮子渝",
+  "智恩涵",
+  "沈子航",
+  "杨林好",
+  "朱映宸",
+  "张誉严",
+  "陈璟翊",
+  "胡阿米",
+  "魏新航",
+  "佟弋",
+  "赵俊羽",
+  "刘瀚辰",
+  "陈燊",
+  "越艺晨",
+];
   const posts = p.items.filter(
     (i) => i.folder === "朋友圈" || i.kind === "post",
   );
@@ -372,24 +393,24 @@ export function WeChatSkin(p: SkinProps) {
             <>
               <div className="wx-section-label">联系人</div>
               {contacts.map((c) => (
-                <button
-                  key={c}
-                  className="wx-contact"
-                  onClick={() => {
-                    const item = p.items.find((i) => i.sender === c);
-                    if (item) {
-                      p.onThread(item.title);
-                      p.onRead(item.title);
-                    }
-                  }}
-                >
-                  <Avatar
-                    name={c}
-                    src={p.items.find((i) => i.sender === c)?.avatar}
-                  />
-                  {c}
-                </button>
-              ))}
+  <button
+    key={c}
+    className="wx-contact"
+    onClick={() => {
+      const item = p.items.find((i) => i.sender === c);
+      if (item) {
+        p.onThread(item.title);
+        p.onRead(item.title);
+      }
+    }}
+  >
+    <Avatar
+      name={c}
+      src={`/FoundPhone-Studio/${c}.jpg`}
+    />
+    {c}
+  </button>
+))}
             </>
           ) : tab === "发现" ? (
             <div className="wx-discover-groups">
