@@ -1156,14 +1156,16 @@ export function DouyinSkin(p: Props) {
           </div>
 
           <div className="vertical-feed">
-            {items
-              .filter((item) =>
-                tab === "推荐" ? true : item.folder === tab,
-              )
-              .map((item) => (
-                <VerticalVideo key={item.id} p={p} item={item} />
-              ))}
-          </div>
+  {items
+    .filter((item) =>
+      tab === "关注"
+        ? item.folder?.trim() === "关注"
+        : item.folder?.trim() !== "关注",
+    )
+    .map((item) => (
+      <VerticalVideo key={item.id} p={p} item={item} />
+    ))}
+</div>
         </>
       )}
 
