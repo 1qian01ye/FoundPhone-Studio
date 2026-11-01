@@ -168,8 +168,9 @@ export function createWork(title = "雨停之前"): Work {
       folder: "我的歌单",
     }),
   ];
+  
   w.data.wechat = [
-   makeItem({
+    makeItem({
       id: "wx1",
       title: "小林",
       sender: "小林",
@@ -191,7 +192,15 @@ export function createWork(title = "雨停之前"): Work {
       body: "还有一张照片。它比你想象的更重要。",
       time: "2026-09-01 08:34",
     }),
+    makeItem({
+      id: "wx-birthday-20261117",
+      title: "五五不呜呜",
+      sender: "时代峰峻",
+      body: "祝我们的阳阳14岁生日快乐🎂带着自己的热爱与坚持一直大步向前走吧！🎉",
+      time: "2026-11-17 00:00",
+    }),
   ];
+
   w.data.notes = [
     makeItem({
       id: "note-clue",
