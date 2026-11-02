@@ -302,11 +302,7 @@ export function WeChatSkin(p: SkinProps) {
     [menu, setMenu] = useState(false),
     [searchOpen, setSearchOpen] = useState(false),
     [utility, setUtility] = useState("");
-  const [readThreads, setReadThreads] = useSkinState<string[]>(
-    p,
-    "readThreads",
-    [],
-  );
+  const [readThreads, setReadThreads] = useSkinState<string[]>(p, "readThreads-v2", []);
   const conversations = [
   ...new Set([
     ...p.items
@@ -684,12 +680,9 @@ style={{
     >
       <span className="wx-chat-avatar">
         <Avatar name={t} src={last?.avatar ?? ""} />
-        {!readThreads.includes(t) &&
-          list.some((i) => !i.read) && (
-            <b className="wx-unread">
-              {list.filter((i) => !i.read).length}
-            </b>
-          )}
+        {t === "吕政熙" && !readThreads.includes(t) && (
+  <b className="wx-unread">1</b>
+)}
       </span>
       <div>
         <strong>{t}</strong>
