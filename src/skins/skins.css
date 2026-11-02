@@ -4735,3 +4735,140 @@
 .douyin-ui.douyin-friends-mode .catalog-row {
   background: #fff !important;
 }
+
+/* ===== 微信聊天界面优化：吕政熙私聊 ===== */
+
+/* 聊天消息整体布局 */
+.skin-messages {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 时间分隔文字 */
+.skin-date {
+  align-self: center;
+  margin: 12px auto;
+  padding: 4px 10px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.08);
+  color: #888;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* 每条消息 */
+.skin-message {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  margin: 3px 0;
+}
+
+/* 自己发送的消息靠右 */
+.skin-message.outgoing {
+  justify-content: flex-end;
+}
+
+/* 普通聊天气泡 */
+.skin-bubble {
+  max-width: 72%;
+  min-width: 0;
+  padding: 10px 12px;
+  border: none;
+  border-radius: 9px;
+  background: #fff;
+  color: #222;
+  font-size: 14px;
+  line-height: 1.55;
+  text-align: left;
+  overflow-wrap: anywhere;
+  box-shadow: none;
+}
+
+/* 自己的绿色气泡 */
+.skin-message.outgoing .skin-bubble {
+  background: #95ec69;
+  color: #222;
+}
+
+/* 消息时间 */
+.wx-message-time {
+  display: block;
+  margin-top: 5px;
+  color: #999;
+  font-size: 10px;
+  text-align: right;
+}
+
+/* 聊天头像 */
+.skin-avatar {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #ddd;
+}
+
+.skin-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 情书图片 */
+.skin-photo,
+.skin-message-image {
+  display: block;
+  max-width: 220px;
+  width: auto;
+  height: auto;
+  max-height: 320px;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+/* 转账卡片 */
+.skin-transfer {
+  box-sizing: border-box;
+  width: 230px;
+  max-width: 75vw;
+  min-height: 88px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #f39b36;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  text-align: left;
+  box-shadow: none;
+}
+
+.skin-transfer small {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 11px;
+}
+
+/* 独立图片和转账消息的容器 */
+.skin-message-media,
+.skin-message-transfer {
+  display: flex;
+  align-items: flex-start;
+  max-width: 78%;
+  padding: 0;
+  margin: 2px 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.skin-message.outgoing .skin-message-media,
+.skin-message.outgoing .skin-message-transfer {
+  margin-left: auto;
+  justify-content: flex-end;
+}
