@@ -546,6 +546,29 @@
       ]
     },
     {
+  "id": "wechat-zhao-junyu",
+  "app": "wechat",
+  "title": "赵俊羽",
+  "participants": ["owner", "contact-zhao-junyu"],
+  "messages": [
+    {"id":"zhaojunyu-001","time":"2026-11-17 00:02","body":"生日快乐呀高铭阳，希望你在新的一岁也可以天天开心，健健康康，唱歌和跳舞越来越好🥳🥳","senderId":"contact-zhao-junyu"},
+    {"id":"zhaojunyu-002","time":"2026-11-17 00:02","body":"谢谢你！","senderId":"owner"},
+    {"id":"zhaojunyu-003","time":"2026-11-17 00:02","body":"刚刚不是在两个群里都祝过了嘛","senderId":"owner"},
+    {"id":"zhaojunyu-004","time":"2026-11-17 00:02","body":"还是想单独再祝福一下呀","senderId":"contact-zhao-junyu"},
+    {"id":"zhaojunyu-005","time":"2026-11-17 00:02","body":"三倍祝福 很nice啊","senderId":"contact-zhao-junyu"},
+    {"id":"zhaojunyu-006","time":"2026-11-17 00:02","body":"好好好谢谢谢谢谢谢 三倍感谢","senderId":"owner"},
+    {"id":"zhaojunyu-007","time":"2026-11-17 18:02","body":"⋆ 　　　* 　҉　.\n҉　　　  +  ·  ✧  *\n*   .      ҉　　　　  ✦     ҉\n·  　 　　　　　     ҉　　　　　　 ⋆\n⠀ /)⑅/)⠀      *              ☆\n⠀ (⠀⠀•)             .          ҉\n_  ( o ⠀ )______________","senderId":"contact-zhao-junyu"},
+    {"id":"zhaojunyu-008","time":"2026-11-17 18:02","body":"┆　┆　┆　┆　┆\n ┆　┆   ˖☆ ⭑┆ ˖ .☆ .  ˖ \n ☆⊹  ┆ ˖ 　⊹  ★ ⋆.˚  ⊹ \n     ˖⋆˚★ ₊ ⊹　  ˖  ₊   ˖　\n . 　⊹  ˖　　　  ˖\n 　　.  　　　  ","senderId":"contact-zhao-junyu"},
+    {"id":"zhaojunyu-009","time":"2026-11-17 18:02","body":"哇塞","senderId":"owner"},
+    {"id":"zhaojunyu-010","time":"2026-11-17 18:02","body":"这是什么啊","senderId":"owner"},
+    {"id":"zhaojunyu-011","time":"2026-11-17 18:02","body":"传统生日礼炮呀","senderId":"contact-zhao-junyu"},
+    {"id":"zhaojunyu-012","time":"2026-11-17 18:02","body":"虽然我们现在没办法在公司一起过生日","senderId":"contact-zhao-junyu"},
+    {"id":"zhaojunyu-013","time":"2026-11-17 18:02","body":"但属于你的礼炮关是要放给你","senderId":"contact-zhao-junyu"},
+    {"id":"zhaojunyu-014","time":"2026-11-17 18:02","body":"很简陋嘿嘿，以后一定给你补上","senderId":"contact-zhao-junyu"},
+    {"id":"zhaojunyu-015","time":"2026-11-17 18:02","body":"😭😭😭😭😭","senderId":"owner"}
+  ]
+},
+    {
   "id": "wechat-xiaopang",
   "app": "wechat",
   "title": "小胖",
