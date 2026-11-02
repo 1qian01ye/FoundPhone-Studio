@@ -548,7 +548,7 @@
     {
   "id": "wechat-xiaopang",
   "app": "wechat",
-  "title": "小胖同学",
+  "title": "小胖",
   "participants": ["owner", "contact-xiaopang"],
   "messages": [
     {"id":"xiaopang-001","time":"2026-10-20 21:34","body":"物资已齐全，请求回复","senderId":"owner"},
