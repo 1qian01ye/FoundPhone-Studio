@@ -137,6 +137,7 @@ const [homeRequest, setHomeRequest] = useState(0);
 
 // 微信语音来电
 const [wechatIncomingVisible, setWechatIncomingVisible] = useState(false);
+const [wechatCallActive, setWechatCallActive] = useState(false);
 const wechatCallAudio = useRef<HTMLAudioElement | null>(null);
   const [locked, setLocked] = useState(!creator);
   const [pinOpen, setPinOpen] = useState(false);
@@ -273,8 +274,14 @@ const wechatCallAudio = useRef<HTMLAudioElement | null>(null);
   if (!work.apps.some((a) => a.id === id && a.installed)) return;
 
   // 停止上一段微信来电音频
-  wechatCallAudio.current?.pause();
-  wechatCallAudio.current = null;
+  if (wechatCallAudio.current) {
+    wechatCallAudio.current.pause();
+    wechatCallAudio.current.currentTime = 0;
+    wechatCallAudio.current = null;
+  }
+
+  // 关闭上一段通话界面
+  setWechatCallActive(false);
 
   // 只有打开微信时显示吕政熙的来电
   setWechatIncomingVisible(id === "wechat");
@@ -287,34 +294,67 @@ const wechatCallAudio = useRef<HTMLAudioElement | null>(null);
   onOpen?.(id);
   event("openApp", id);
 };
-  const rejectWechatCall = () => {
-  wechatCallAudio.current?.pause();
-  wechatCallAudio.current = null;
+  // 拒绝微信来电
+const rejectWechatCall = () => {
+  if (wechatCallAudio.current) {
+    wechatCallAudio.current.pause();
+    wechatCallAudio.current.currentTime = 0;
+    wechatCallAudio.current = null;
+  }
+
   setWechatIncomingVisible(false);
+  setWechatCallActive(false);
 };
 
+// 接受微信来电
 const acceptWechatCall = () => {
+  // 防止重复创建音频
+  if (wechatCallAudio.current) {
+    wechatCallAudio.current.pause();
+    wechatCallAudio.current.currentTime = 0;
+    wechatCallAudio.current = null;
+  }
+
   const audio = new Audio(
     `${import.meta.env.BASE_URL}吕政熙来电.mp3`
   );
 
   wechatCallAudio.current = audio;
 
+  // 音频播放结束，自动退出通话界面
   audio.onended = () => {
-    setWechatIncomingVisible(false);
+    setWechatCallActive(false);
     wechatCallAudio.current = null;
   };
 
+  // 音频加载失败
   audio.onerror = () => {
-    setBanner("吕政熙来电音频加载失败，请检查文件路径");
-    setWechatIncomingVisible(false);
+    setWechatCallActive(false);
     wechatCallAudio.current = null;
+    setBanner("吕政熙来电音频加载失败，请检查文件路径");
   };
 
+  // 隐藏顶部来电卡片，显示全屏通话界面
+  setWechatIncomingVisible(false);
+  setWechatCallActive(true);
+
+  // 开始播放音频
   audio.play().catch(() => {
+    setWechatCallActive(false);
+    wechatCallAudio.current = null;
     setBanner("音频播放失败，请检查浏览器播放权限");
   });
+};
 
+// 挂断微信通话
+const hangupWechatCall = () => {
+  if (wechatCallAudio.current) {
+    wechatCallAudio.current.pause();
+    wechatCallAudio.current.currentTime = 0;
+    wechatCallAudio.current = null;
+  }
+
+  setWechatCallActive(false);
   setWechatIncomingVisible(false);
 };
   const installedApps = work.apps.filter((a) => a.installed);
@@ -666,6 +706,102 @@ const acceptWechatCall = () => {
     </div>
   </div>
 )}
+                    {/* 吕政熙微信全屏通话界面 */}
+          {wechatCallActive && app === "wechat" && (
+            <div
+              style={{
+                position: "absolute",
+                inset: 0,
+                zIndex: 10000,
+                background: "#17191f",
+                color: "#fff",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "space-between",
+                padding: "100px 24px 65px",
+                boxSizing: "border-box",
+              }}
+            >
+              <div
+                style={{
+                  textAlign: "center",
+                  color: "#aaa",
+                  fontSize: "16px",
+                }}
+              >
+                微信语音通话
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: "22px",
+                }}
+              >
+                <img
+                  src={`${import.meta.env.BASE_URL}吕政熙.jpg`}
+                  alt="吕政熙"
+                  style={{
+                    width: "112px",
+                    height: "112px",
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                  }}
+                />
+
+                <div style={{ fontSize: "27px", fontWeight: 600 }}>
+                  吕政熙
+                </div>
+
+                <div style={{ color: "#aaa", fontSize: "16px" }}>
+                  正在语音通话…
+                </div>
+              </div>
+
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: "14px",
+                }}
+              >
+                <button
+                  onClick={hangupWechatCall}
+                  aria-label="挂断通话"
+                  style={{
+                    width: "76px",
+                    height: "76px",
+                    borderRadius: "50%",
+                    border: "none",
+                    background: "#fa3b43",
+                    color: "#fff",
+                    fontSize: "32px",
+                    cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <span
+                    style={{
+                      display: "inline-block",
+                      transform: "rotate(135deg)",
+                    }}
+                  >
+                    ✆
+                  </span>
+                </button>
+
+                <div style={{ color: "#aaa", fontSize: "14px" }}>
+                  挂断
+                </div>
+              </div>
+            </div>
+          )}
           {folder && (
             <div className="folder-overlay" onClick={() => setFolder("")}>
               <h2>{folder}</h2>
