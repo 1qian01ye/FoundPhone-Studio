@@ -538,14 +538,45 @@ style={{
   {/* 原来的朋友圈封面内容保留在这里 */}
 </div>
           {posts.map((i) => (
-            <button
-              key={i.id}
-              className="wx-moment-post"
-              onClick={() => p.onItem(i)}
-            >
-              <Avatar name={i.sender} />
-              <div>
-                <strong>{i.sender}</strong>
+  <button
+    key={i.id}
+    className="wx-moment-post"
+    onClick={() => p.onItem(i)}
+    style={{
+      display: "grid",
+      gridTemplateColumns: "46px minmax(0, 1fr)",
+      alignItems: "start",
+      justifyItems: "start",
+      columnGap: "12px",
+      width: "100%",
+      textAlign: "left",
+    }}
+  >
+    <div
+      style={{
+        gridColumn: "1",
+        gridRow: "1",
+        alignSelf: "start",
+        justifySelf: "start",
+        margin: 0,
+        padding: 0,
+      }}
+    >
+      <Avatar name={i.sender} />
+    </div>
+
+    <div
+      style={{
+        gridColumn: "2",
+        gridRow: "1",
+        width: "100%",
+        minWidth: 0,
+        alignSelf: "start",
+        justifySelf: "stretch",
+        textAlign: "left",
+      }}
+    >
+      <strong>{i.sender}</strong>
                 <p>{i.body}</p>
 
 {i.images?.length ? (
