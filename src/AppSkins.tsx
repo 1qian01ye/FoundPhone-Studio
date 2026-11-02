@@ -445,10 +445,17 @@ const contacts = [
         </>
       ) : moments ? (
         <div className="wx-moments">
-          <div className="wx-moment-cover">
-            <Camera size={32} />
-            <span>朋友圈</span>
-          </div>
+          <div
+  className="wx-moment-cover"
+  style={{
+    backgroundImage: 'url("/朋友圈背景.jpg")',
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
+  {/* 原来的朋友圈封面内容保留在这里 */}
+</div>
           {posts.map((i) => (
             <button
               key={i.id}
