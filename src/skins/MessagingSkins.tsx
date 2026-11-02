@@ -184,7 +184,7 @@ function ChatRows({
               p.onRead(name);
             }}
           >
-            <Avatar name={name} round={round} />
+            <Avatar name={name} src={last.avatar} round={round} />
             <span>
               <strong>{name}</strong>
               <p>{last.body}</p>
