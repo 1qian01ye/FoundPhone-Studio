@@ -4945,3 +4945,25 @@
   font-size: 11px;
   text-align: center;
 }
+/* 修复朋友圈头像垂直居中问题 */
+.wechat-ui .wx-moment-post {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start !important;
+  justify-content: flex-start;
+  gap: 12px;
+  text-align: left;
+}
+
+.wechat-ui .wx-moment-post > .skin-avatar {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  align-self: flex-start;
+  margin-top: 0;
+}
+
+.wechat-ui .wx-moment-post > div {
+  flex: 1;
+  min-width: 0;
+}
