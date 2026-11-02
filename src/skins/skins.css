@@ -4872,3 +4872,76 @@
   margin-left: auto;
   justify-content: flex-end;
 }
+/* ===== 微信图片和转账独立显示 ===== */
+
+.skin-message-media,
+.skin-message-transfer {
+  display: block;
+  flex: 0 1 auto;
+  width: auto;
+  max-width: 78%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.skin-message-media img {
+  display: block;
+  max-width: 220px;
+  max-height: 320px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.skin-message-transfer .skin-transfer {
+  width: 230px;
+  min-height: 90px;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 8px;
+  background: #f39b36;
+  color: white;
+}
+
+.skin-transfer-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  font-size: 25px;
+}
+
+.skin-transfer-heading span {
+  font-size: 18px;
+}
+
+.skin-transfer-heading strong {
+  font-weight: 600;
+}
+
+.skin-message-transfer .skin-transfer small {
+  display: block;
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 11px;
+}
+
+/* 时间分隔 */
+.skin-messages .skin-date {
+  display: block;
+  width: fit-content;
+  margin: 14px auto;
+  padding: 4px 9px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.08);
+  color: #888;
+  font-size: 11px;
+  text-align: center;
+}
