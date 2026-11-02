@@ -1369,7 +1369,7 @@
   "id": "wechat-hou-wangzi",
   "app": "wechat",
   "title": "侯王子",
-  "participants": ["owner", "qq-hou-wangzi"],
+  "participants": ["owner", "contact-hou-wangzi"],
   "messages": [
     {"id": "houwangzi-001", "time": "2026-11-17 00:00", "body": "生日快乐呀高铭阳！", "senderId": "contact-hou-wangzi"},
     {"id": "houwangzi-002", "time": "2026-11-17 00:01", "body": "谢谢侯王子！", "senderId": "owner"},
