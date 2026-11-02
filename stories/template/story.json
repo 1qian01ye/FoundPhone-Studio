@@ -466,6 +466,374 @@
     }
   ]
 },
+    {
+  "id": "wechat-lv-zhengxi",
+  "app": "wechat",
+  "title": "吕政熙",
+  "participants": [
+    "owner",
+    "contact-lv-zhengxi"
+  ],
+  "messages": [
+    {
+      "id": "lvzx-001",
+      "time": "2026-11-16 18:34",
+      "body": "你在干什么",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-002",
+      "time": "2026-11-16 18:34",
+      "body": "刚放学还在回家的路上",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-003",
+      "time": "2026-11-16 18:34",
+      "body": "你猜我在干什么",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-004",
+      "time": "2026-11-16 18:34",
+      "body": "打游戏",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-005",
+      "time": "2026-11-16 18:34",
+      "body": "在你眼里我就是这么不务正业的人吗！",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-006",
+      "time": "2026-11-16 18:34",
+      "body": "那你在干什么",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-007",
+      "time": "2026-11-16 18:34",
+      "body": "练舞吗",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-008",
+      "time": "2026-11-16 18:34",
+      "body": "又背着我偷偷卷",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-009",
+      "time": "2026-11-16 18:34",
+      "body": "不讲不讲",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-010",
+      "time": "2026-11-16 18:34",
+      "body": "我刚刚去给你挑了生日礼物",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-011",
+      "time": "2026-11-16 18:34",
+      "body": "激不激动期不期待",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-012",
+      "time": "2026-11-16 18:34",
+      "body": "好期待呀",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-013",
+      "time": "2026-11-16 18:34",
+      "body": "我等会去找你",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-014",
+      "time": "2026-11-16 18:34",
+      "body": "今天？",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-015",
+      "time": "2026-11-16 18:34",
+      "body": "对啊",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-016",
+      "time": "2026-11-16 18:34",
+      "body": "还在下雨呢",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-017",
+      "time": "2026-11-16 18:34",
+      "body": "没事，我已经出发了，等你到家我差不多也到了",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-018",
+      "time": "2026-11-16 18:34",
+      "body": "现在来找我干嘛呀",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-019",
+      "time": "2026-11-16 18:34",
+      "body": "当然是为了亲手把礼物送到你手里",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-020",
+      "time": "2026-11-16 18:34",
+      "body": "到时候到了我给你发信息你就下来",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-021",
+      "time": "2026-11-16 18:34",
+      "body": "然后乖乖把手伸出来等待礼物就好了",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-022",
+      "time": "2026-11-16 18:34",
+      "body": "我才不伸",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-023",
+      "time": "2026-11-16 18:34",
+      "body": "为什么？！你不想要我的礼物吗",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-024",
+      "time": "2026-11-16 18:34",
+      "body": "这样不会显得是我在索要吗",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-025",
+      "time": "2026-11-16 18:34",
+      "body": "而且你根本就是想拉我的手吧",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-026",
+      "time": "2026-11-16 18:34",
+      "body": "又被看穿了",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-027",
+      "time": "2026-11-16 18:34",
+      "body": "先不说了我要晕车了",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-028",
+      "time": "2026-11-16 18:34",
+      "body": "等会见",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-029",
+      "time": "2026-11-16 20:56",
+      "body": "报备",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-030",
+      "time": "2026-11-16 20:56",
+      "body": "我到家了",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-031",
+      "time": "2026-11-16 20:56",
+      "body": "收到",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-032",
+      "time": "2026-11-16 20:56",
+      "body": "礼物你拆了吗",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-033",
+      "time": "2026-11-16 20:56",
+      "body": "拆了",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-034",
+      "time": "2026-11-16 20:56",
+      "body": "怎么样怎么样",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-035",
+      "time": "2026-11-16 20:56",
+      "body": "超级无敌喜欢",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-036",
+      "time": "2026-11-16 20:56",
+      "body": "那就好",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-037",
+      "time": "2026-11-16 20:56",
+      "body": "还有呢",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-038",
+      "time": "2026-11-16 20:56",
+      "body": "还有什么",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-039",
+      "time": "2026-11-16 20:56",
+      "body": "就是那个啊！",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-040",
+      "time": "2026-11-16 20:56",
+      "body": "哪个",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-041",
+      "time": "2026-11-16 20:56",
+      "body": "就是那个，放在盒子最底下的",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-042",
+      "time": "2026-11-16 20:56",
+      "body": "最底下的哪个啊",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-043",
+      "time": "2026-11-16 20:56",
+      "body": "高铭阳你就是没仔细看我送的东西吧！",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-044",
+      "time": "2026-11-16 20:56",
+      "body": "哦～你说的是那个粉色的，缠着黄色蕾丝包装的，一拆开香香的，写了一整页的信？",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-045",
+      "time": "2026-11-16 20:56",
+      "body": "好啊你又逗我",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-046",
+      "time": "2026-11-16 20:56",
+      "body": "你看到了怎么什么都不说",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-047",
+      "time": "2026-11-16 20:56",
+      "body": "我不是说了吗",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-048",
+      "time": "2026-11-16 20:56",
+      "body": "你说啥了",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-049",
+      "time": "2026-11-16 20:56",
+      "body": "情书.jpg",
+      "senderId": "owner",
+      "kind": "image",
+      "media": "/FoundPhone-Studio/情书.jpg"
+    },
+    {
+      "id": "lvzx-050",
+      "time": "2026-11-16 20:56",
+      "body": "超级无敌喜欢",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-051",
+      "time": "2026-11-16 20:56",
+      "body": "最后一句的回答",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-052",
+      "time": "2026-11-16 20:56",
+      "body": "😳",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-053",
+      "time": "2026-11-16 20:56",
+      "body": "那我也不只一点点喜欢你",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-054",
+      "time": "2026-11-16 20:56",
+      "body": "超级无敌爆炸喜欢",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-055",
+      "time": "2026-11-16 20:56",
+      "body": "比你多一个爆炸",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-056",
+      "time": "2026-11-16 20:56",
+      "body": "知道了",
+      "senderId": "owner"
+    },
+    {
+      "id": "lvzx-057",
+      "time": "2026-11-16 20:56",
+      "body": "¤̴̶̷̀ᴗ¤̴̶̷́ᐝ",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-058",
+      "time": "2026-11-17 00:00",
+      "body": "高铭阳生日快乐！这是陪你度过的第二个生日，很开心我们能够相遇，出现在彼此的生命里，相逢的意义在于照亮对方，我们珍惜彼此，共同成长，希望未来的每个生日我都可以陪着你过！",
+      "senderId": "contact-lv-zhengxi"
+    },
+    {
+      "id": "lvzx-059",
+      "time": "2026-11-17 00:00",
+      "body": "520.00",
+      "senderId": "contact-lv-zhengxi",
+      "kind": "transfer"
+    }
+  ]
+},
 {
   "id": "wechat-chen-shen",
   "app": "wechat",
