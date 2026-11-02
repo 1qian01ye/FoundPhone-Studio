@@ -196,15 +196,25 @@ function ChatRows({
               p.onRead(name);
             }}
           >
-            <Avatar
-              name={name}
-              src={
-                qqAvatar
-                  ? `${import.meta.env.BASE_URL}${qqAvatar}`
-                  : last.avatar
-              }
-              round={round}
-            />
+            {qqAvatar ? (
+  <span className={`catalog-avatar ${round ? "round" : ""}`}>
+    <img
+      src={`${import.meta.env.BASE_URL}${qqAvatar}`}
+      alt={name}
+      style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        display: "block",
+      }}
+      onError={(e) => {
+        console.error("QQ头像加载失败：", e.currentTarget.src);
+      }}
+    />
+  </span>
+) : (
+  <Avatar name={name} src={last.avatar} round={round} />
+)}
             <span>
               <strong>{name}</strong>
               <p>{last.body}</p>
