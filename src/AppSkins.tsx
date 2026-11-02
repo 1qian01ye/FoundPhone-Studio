@@ -98,19 +98,23 @@ function Avatar({
     <span
       className={`skin-avatar ${round ? "round" : ""}`}
       style={{
-        display: "inline-flex",
-        width: "48px",
-        height: "48px",
-        minWidth: "48px",
-        minHeight: "48px",
-        maxWidth: "48px",
-        maxHeight: "48px",
-        flex: "0 0 48px",
-        aspectRatio: "1 / 1",
-        alignSelf: "center",
-        overflow: "hidden",
-        boxSizing: "border-box",
-      }}
+  display: "inline-flex",
+  alignItems: "center",
+  justifyContent: "center",
+  textAlign: "center",
+  lineHeight: 1,
+  width: "48px",
+  height: "48px",
+  minWidth: "48px",
+  minHeight: "48px",
+  maxWidth: "48px",
+  maxHeight: "48px",
+  flex: "0 0 48px",
+  aspectRatio: "1 / 1",
+  alignSelf: "center",
+  overflow: "hidden",
+  boxSizing: "border-box",
+}}
     >
       {imageSrc ? (
         <img
