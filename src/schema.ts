@@ -36,9 +36,9 @@ export const itemSchema = z.object({
   outgoing: z.boolean().default(false),
   read: z.boolean().default(false),
   likes: z.number().default(0),
+likedBy: z.array(z.string()).default([]),
 commentCount: z.number().default(0),
 comments: z.array(z.string()).default([]),
-
 redbookComments: z.array(
   z.object({
     id: z.string(),
