@@ -503,6 +503,30 @@ style={{
     "$1年$2月$3日 $4"
   )}
 </small>
+                { i.id === "wechat-moments-ren-xuanzhe-20261117" && (
+  <div
+    style={{
+      marginTop: "8px",
+      padding: "8px 10px",
+      background: "#f5f5f5",
+      borderRadius: "4px",
+      fontSize: "13px",
+      lineHeight: 1.8,
+      textAlign: "left",
+    }}
+  >
+    <div style={{ color: "#576b95" }}>
+      ♥{" "}
+      {contacts
+        .filter(
+          (c) =>
+            !["Mother", "Father", "小胖"].includes(c.name)
+        )
+        .map((c) => c.name)
+        .join("、")}
+    </div>
+  </div>
+)}
                 {i.comments && i.comments.length > 0 && (
   <div
     style={{
