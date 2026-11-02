@@ -297,6 +297,8 @@ export function WeChatSkin(p: SkinProps) {
       .filter((i) => !["朋友圈", "我"].includes(i.folder))
       .map((i) => i.title),
     "五五不呜呜",
+    "烟花组",
+    "哲阳好俊",
   ]),
 ];
   
