@@ -709,11 +709,17 @@
       "senderId": "contact-chen-shen"
     },
     {
-      "id": "wx-birthday-20261117-23",
-      "time": "2026-11-17 00:00",
-      "body": "高铭阳生日快乐啊，恭喜你拥有了和我同岁的三个月体验卡🤪",
-      "senderId": "contact-lv-zhengxi"
-    }
+  "id": "wx-birthday-20261117-23",
+  "time": "2026-11-17 00:00",
+  "body": "高铭阳生日快乐啊，恭喜你拥有了和我同岁的三个月体验卡🤪",
+  "senderId": "contact-lv-zhengxi"
+},
+{
+  "id": "wx-birthday-20261117-24",
+  "time": "2026-11-17 00:00",
+  "body": "谢谢大家！",
+  "senderId": "owner"
+}
   ]
 },
     {
