@@ -140,41 +140,90 @@ function MessageList({
 }) {
   return (
     <div className={`skin-messages ${whatsapp ? "wa-wallpaper" : ""}`}>
-      <div className="skin-date">
-  {items[0]?.time
-    ? `${Number(items[0].time.slice(5, 7))}月${Number(items[0].time.slice(8, 10))}日 ${items[0].time.slice(11, 16)}`
-    : ""}
-</div>
-      {items.map((i) => (
-        <div
-          key={i.id}
-          className={`skin-message ${i.outgoing ? "outgoing" : ""}`}
-        >
-          {!whatsapp && !i.outgoing && (
-            <Avatar name={i.sender} src={i.avatar} />
-          )}
-          <button
-            className="skin-bubble"
-            onClick={() => (creator ? onItem(i) : onRead(i.id))}
-          >
-            {["image", "audio", "video"].includes(i.kind) ? (
-              <ItemMedia item={i} />
-            ) : i.kind === "transfer" ? (
-              <div className="skin-transfer">
-                ¥ {i.body}
-                <small>转账记录 · 虚构</small>
-              </div>
-            ) : (
-              i.body
+      {items.map((i, index) => {
+        const previous = items[index - 1];
+        const showTime = !previous || previous.time !== i.time;
+
+        const date = i.time.slice(5, 10);
+        const clock = i.time.slice(11, 16);
+        const timeLabel = `${Number(date.slice(0, 2))}月${Number(
+          date.slice(3, 5)
+        )}日 ${clock}`;
+
+        const isImage = i.kind === "image";
+        const isTransfer = i.kind === "transfer";
+        const isSpecial = isImage || isTransfer;
+
+        const handleClick = () => {
+          if (creator) {
+            onItem(i);
+          } else {
+            onRead(i.id);
+          }
+        };
+
+        return (
+          <div key={i.id}>
+            {showTime && !whatsapp && (
+              <div className="skin-date">{timeLabel}</div>
             )}
-            <small className={whatsapp ? undefined : "wx-message-time"}>
-              {i.time.slice(-5)}{" "}
-              {whatsapp && i.outgoing && <CheckCheck size={11} />}
-            </small>
-          </button>
-          {!whatsapp && i.outgoing && <Avatar name={i.sender} src={i.avatar} />}
-        </div>
-      ))}
+
+            <div
+              className={`skin-message ${i.outgoing ? "outgoing" : ""}`}
+            >
+              {!whatsapp && !i.outgoing && (
+                <Avatar name={i.sender} src={i.avatar} />
+              )}
+
+              {isImage ? (
+                <button
+                  type="button"
+                  className="skin-message-media"
+                  onClick={handleClick}
+                >
+                  <ItemMedia item={i} />
+                </button>
+              ) : isTransfer ? (
+                <button
+                  type="button"
+                  className="skin-message-transfer"
+                  onClick={handleClick}
+                >
+                  <div className="skin-transfer">
+                    <div className="skin-transfer-heading">
+                      <span>¥</span>
+                      <strong>{Number(i.body).toFixed(2)}</strong>
+                    </div>
+                    <small>微信转账</small>
+                  </div>
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className="skin-bubble"
+                  onClick={handleClick}
+                >
+                  {["audio", "video"].includes(i.kind) ? (
+                    <ItemMedia item={i} />
+                  ) : (
+                    i.body
+                  )}
+                  <small className={whatsapp ? undefined : "wx-message-time"}>
+                    {i.time.slice(-5)}{" "}
+                    {whatsapp && i.outgoing && (
+                      <CheckCheck size={11} />
+                    )}
+                  </small>
+                </button>
+              )}
+
+              {!whatsapp && i.outgoing && (
+                <Avatar name={i.sender} src={i.avatar} />
+              )}
+            </div>
+          </div>
+        );
+      })}
     </div>
   );
 }
