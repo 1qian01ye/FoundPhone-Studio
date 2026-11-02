@@ -88,97 +88,193 @@
     "kakao"
   ],
   "contacts": [
-    {
-      "id": "contact-chen-shen",
-      "name": "陈燊",
-      "phone": "",
-      "bio": ""
-    },
-    {
-      "id": "contact-father",
-      "name": "Father",
-      "phone": "",
-      "bio": ""
-    },
-    {
-      "id": "contact-fei-zong",
-      "name": "飞总",
-      "phone": "",
-      "bio": ""
-    },
-    {
-      "id": "contact-laoshi",
-      "name": "老师",
-      "phone": "",
-      "bio": ""
-    },
-    {
-      "id": "contact-lv-zhengxi",
-      "name": "吕政熙",
-      "phone": "",
-      "bio": ""
-    },
-    {
-      "id": "contact-mother",
-      "name": "Mother",
-      "phone": "",
-      "bio": ""
-    },
-    {
-      "id": "contact-shen-zihang",
-      "name": "沈子航",
-      "phone": "",
-      "bio": ""
-    },
-    {
-      "id": "contact-xiaopang",
-      "name": "小胖同学",
-      "phone": "",
-      "bio": ""
-    },
-    {
-      "id": "contact-xiaoyu",
-      "name": "小羽",
-      "phone": "",
-      "bio": ""
-    },
-    {
-      "id": "contact-yang-linhao",
-      "name": "杨林好",
-      "phone": "",
-      "bio": ""
-    },
-    {
-      "id": "contact-yang-yunhao",
-      "name": "杨云皓",
-      "phone": "",
-      "bio": ""
-    },
-    {
-      "id": "contact-zhezhe",
-      "name": "哲哲",
-      "phone": "",
-      "bio": ""
-    },
-        {
-      "id": "contact-zhi-enhan",
-      "name": "智恩涵",
-      "phone": "",
-      "bio": ""
-    },
-        {
-      "id": "contact-era-jun",
-      "name": "时代峰峻",
-      "phone": "",
-      "bio": ""
-    },
-    {
-      "id": "test-contact",
-      "name": "测试联系人",
-      "phone": "",
-      "bio": ""
-    }
-  ],
+  {
+    "id": "contact-chen-shen",
+    "name": "陈燊",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-father",
+    "name": "Father",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-fei-zong",
+    "name": "飞总",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-laoshi",
+    "name": "老师",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-lv-zhengxi",
+    "name": "吕政熙",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-mother",
+    "name": "Mother",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-shen-zihang",
+    "name": "沈子航",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-xiaopang",
+    "name": "小胖同学",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-xiaoyu",
+    "name": "小羽",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-yang-linhao",
+    "name": "杨林好",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-yang-yunhao",
+    "name": "杨云皓",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-zhezhe",
+    "name": "哲哲",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-zhi-enhan",
+    "name": "智恩涵",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-era-jun",
+    "name": "时代峰峻",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-liu-hanchen",
+    "name": "刘瀚辰",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-liu-yuchen",
+    "name": "刘禹辰",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-song-jinze",
+    "name": "宋金泽",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-pi-ziyu",
+    "name": "皮子渝",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-zhang-yuyan",
+    "name": "张誉严",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-chen-jingyi",
+    "name": "陈璟翊",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-hu-ami",
+    "name": "胡阿米",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-wei-xinhang",
+    "name": "魏新航",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-tong-yi",
+    "name": "佟弋",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-yang-zihao",
+    "name": "杨子豪",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-yu-zhenglin",
+    "name": "余政霖",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-yue-yichen",
+    "name": "越艺晨",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-hou-wangzi",
+    "name": "侯王子",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-zhu-yingchen",
+    "name": "朱映宸",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-zhao-junyu",
+    "name": "赵俊羽",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "contact-ren-xuanzhe",
+    "name": "任玄哲",
+    "phone": "",
+    "bio": ""
+  },
+  {
+    "id": "test-contact",
+    "name": "测试联系人",
+    "phone": "",
+    "bio": ""
+  }
+],
   "chats": [
     {
       "id": "spam-hokage",
