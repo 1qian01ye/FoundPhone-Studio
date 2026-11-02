@@ -447,12 +447,14 @@ const contacts = [
         <div className="wx-moments">
           <div
   className="wx-moment-cover"
-  style={{
-    backgroundImage: 'url("/FoundPhone-Studio/朋友圈背景.jpg")',
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-  }}
+style={{
+  backgroundImage: 'url("/FoundPhone-Studio/朋友圈背景.jpg")',
+  backgroundSize: "contain",
+  backgroundPosition: "center",
+  backgroundRepeat: "no-repeat",
+  aspectRatio: "1 / 1",
+  width: "100%",
+}}
 >
   {/* 原来的朋友圈封面内容保留在这里 */}
 </div>
