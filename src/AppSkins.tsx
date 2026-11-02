@@ -585,15 +585,9 @@ style={{
     }}
   >
     <div style={{ color: "#576b95" }}>
-      ♥{" "}
-      {contacts
-        .filter(
-          (c) =>
-            !["Mother", "Father", "小胖"].includes(c.name)
-        )
-        .map((c) => c.name)
-        .join("、")}
-    </div>
+  ♥{" "}
+  {(i.likedBy ?? []).join("、")}
+</div>
   </div>
 )}
                 {i.comments && i.comments.length > 0 && (
