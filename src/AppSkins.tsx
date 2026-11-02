@@ -94,13 +94,22 @@ function Avatar({
 
   const imageSrc = src || avatarFiles[name];
 
-  return (
+    return (
     <span
       className={`skin-avatar ${round ? "round" : ""}`}
       style={{
+        display: "inline-flex",
+        width: "48px",
+        height: "48px",
+        minWidth: "48px",
+        minHeight: "48px",
+        maxWidth: "48px",
+        maxHeight: "48px",
+        flex: "0 0 48px",
         aspectRatio: "1 / 1",
-        flexShrink: 0,
+        alignSelf: "center",
         overflow: "hidden",
+        boxSizing: "border-box",
       }}
     >
       {imageSrc ? (
@@ -108,11 +117,16 @@ function Avatar({
           src={imageSrc}
           alt=""
           style={{
-            width: "100%",
-            height: "100%",
-            aspectRatio: "1 / 1",
-            objectFit: "cover",
             display: "block",
+            width: "48px",
+            height: "48px",
+            minWidth: "48px",
+            minHeight: "48px",
+            maxWidth: "48px",
+            maxHeight: "48px",
+            objectFit: "cover",
+            flex: "0 0 48px",
+            boxSizing: "border-box",
           }}
           onError={(e) => {
             e.currentTarget.style.display = "none";
