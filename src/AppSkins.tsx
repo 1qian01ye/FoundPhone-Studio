@@ -448,7 +448,7 @@ const contacts = [
           <div
   className="wx-moment-cover"
   style={{
-    backgroundImage: 'url("/朋友圈背景.jpg")',
+    backgroundImage: 'url("/FoundPhone-Studio/朋友圈背景.jpg")',
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
