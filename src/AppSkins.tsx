@@ -193,7 +193,7 @@ function MessageList({
                       <span>¥</span>
                       <strong>{Number(i.body).toFixed(2)}</strong>
                     </div>
-                    <small>微信转账</small>
+                    <small>生日快乐！</small>
                   </div>
                 </button>
               ) : (
