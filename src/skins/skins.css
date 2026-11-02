@@ -4967,3 +4967,21 @@
   flex: 1;
   min-width: 0;
 }
+/* QQ、微信群聊首字头像居中 */
+.wx-chat-avatar,
+.wx-chat-row .skin-avatar,
+.catalog-chat .skin-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+/* 确保头像里的首字也居中 */
+.wx-chat-avatar,
+.wx-chat-avatar > span,
+.catalog-chat .skin-avatar {
+  text-align: center;
+}
