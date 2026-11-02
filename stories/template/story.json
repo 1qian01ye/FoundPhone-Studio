@@ -1673,7 +1673,23 @@
     }
   ],
   "content": {
-    "phone": [
+  "wechat": [
+    {
+      "id": "wechat-moments-ren-xuanzhe-20261117",
+      "title": "任玄哲",
+      "body": "地球online🌍：\n亲爱的玩家鸭鸭，恭喜你成功开启第14章剧情，请继续向前探养住线，解锁更多剧情，触发特殊彩蛋。\n祝您游戏愉快，生活顺利！",
+      "sender": "任玄哲",
+      "kind": "post",
+      "folder": "朋友圈",
+      "time": "2026-11-17 00:00",
+      "media": "/FoundPhone-Studio/任玄哲朋友圈1.jpg",
+      "images": [
+        "/FoundPhone-Studio/任玄哲朋友圈1.jpg",
+        "/FoundPhone-Studio/任玄哲朋友圈2.jpg"
+      ]
+    }
+  ],
+  "phone": [
       {
         "id": "test-item-phone",
         "title": "测试内容",
