@@ -450,12 +450,35 @@
       ]
     },
     {
+  {
   "id": "wechat-group-wuwu",
   "app": "wechat",
   "title": "五五不呜呜",
   "participants": [
     "owner",
-    "contact-era-jun"
+    "contact-era-jun",
+    "contact-liu-hanchen",
+    "contact-liu-yuchen",
+    "contact-song-jinze",
+    "contact-pi-ziyu",
+    "contact-zhang-yuyan",
+    "contact-chen-jingyi",
+    "contact-hu-ami",
+    "contact-wei-xinhang",
+    "contact-tong-yi",
+    "contact-yang-zihao",
+    "contact-yu-zhenglin",
+    "contact-yue-yichen",
+    "contact-hou-wangzi",
+    "contact-yang-linhao",
+    "contact-zhu-yingchen",
+    "contact-shen-zihang",
+    "contact-zhi-enhan",
+    "contact-yang-yunhao",
+    "contact-zhao-junyu",
+    "contact-ren-xuanzhe",
+    "contact-chen-shen",
+    "contact-lv-zhengxi"
   ],
   "messages": [
     {
@@ -463,6 +486,138 @@
       "time": "2026-11-17 00:00",
       "body": "祝我们的阳阳14岁生日快乐🎂带着自己的热爱与坚持一直大步向前走吧！🎉",
       "senderId": "contact-era-jun"
+    },
+    {
+      "id": "wx-birthday-20261117-02",
+      "time": "2026-11-17 00:00",
+      "body": "歪歪生日快乐！🎉🎉🎉🥳🥳🥳",
+      "senderId": "contact-liu-hanchen"
+    },
+    {
+      "id": "wx-birthday-20261117-03",
+      "time": "2026-11-17 00:00",
+      "body": "高铭阳同学生日快乐！",
+      "senderId": "contact-liu-yuchen"
+    },
+    {
+      "id": "wx-birthday-20261117-04",
+      "time": "2026-11-17 00:00",
+      "body": "祝高铭阳生日快乐！🎊",
+      "senderId": "contact-song-jinze"
+    },
+    {
+      "id": "wx-birthday-20261117-05",
+      "time": "2026-11-17 00:00",
+      "body": "生日快乐高总！",
+      "senderId": "contact-pi-ziyu"
+    },
+    {
+      "id": "wx-birthday-20261117-06",
+      "time": "2026-11-17 00:00",
+      "body": "高铭阳生日快乐呀！",
+      "senderId": "contact-zhang-yuyan"
+    },
+    {
+      "id": "wx-birthday-20261117-07",
+      "time": "2026-11-17 00:00",
+      "body": "祝我的老乡高铭阳生日快乐🎁",
+      "senderId": "contact-chen-jingyi"
+    },
+    {
+      "id": "wx-birthday-20261117-08",
+      "time": "2026-11-17 00:00",
+      "body": "生日快乐啊高铭阳！",
+      "senderId": "contact-hu-ami"
+    },
+    {
+      "id": "wx-birthday-20261117-09",
+      "time": "2026-11-17 00:00",
+      "body": "生日快乐🎈",
+      "senderId": "contact-wei-xinhang"
+    },
+    {
+      "id": "wx-birthday-20261117-10",
+      "time": "2026-11-17 00:00",
+      "body": "祝你生日快乐高铭阳！",
+      "senderId": "contact-tong-yi"
+    },
+    {
+      "id": "wx-birthday-20261117-11",
+      "time": "2026-11-17 00:00",
+      "body": "祝高铭阳生日快乐",
+      "senderId": "contact-yang-zihao"
+    },
+    {
+      "id": "wx-birthday-20261117-12",
+      "time": "2026-11-17 00:00",
+      "body": "生日快乐啊！礼物已寄送😎",
+      "senderId": "contact-yu-zhenglin"
+    },
+    {
+      "id": "wx-birthday-20261117-13",
+      "time": "2026-11-17 00:00",
+      "body": "高铭阳生日快乐！",
+      "senderId": "contact-yue-yichen"
+    },
+    {
+      "id": "wx-birthday-20261117-14",
+      "time": "2026-11-17 00:00",
+      "body": "生日快乐高铭阳！新的一岁也要天天开心",
+      "senderId": "contact-hou-wangzi"
+    },
+    {
+      "id": "wx-birthday-20261117-15",
+      "time": "2026-11-17 00:00",
+      "body": "阳阳生日快乐🎉",
+      "senderId": "contact-yang-linhao"
+    },
+    {
+      "id": "wx-birthday-20261117-16",
+      "time": "2026-11-17 00:00",
+      "body": "祝我们的高高生日快乐，长命百岁！",
+      "senderId": "contact-zhu-yingchen"
+    },
+    {
+      "id": "wx-birthday-20261117-17",
+      "time": "2026-11-17 00:00",
+      "body": "生日快乐高铭阳！今年要继续一起吃很多饭😋",
+      "senderId": "contact-shen-zihang"
+    },
+    {
+      "id": "wx-birthday-20261117-18",
+      "time": "2026-11-17 00:00",
+      "body": "高铭阳生日快乐，未来一年打球的水我包了",
+      "senderId": "contact-zhi-enhan"
+    },
+    {
+      "id": "wx-birthday-20261117-19",
+      "time": "2026-11-17 00:00",
+      "body": "生日快乐啊这个高铭阳，14岁的高铭阳代替13岁的高铭阳变成了我最亲近的人✌️",
+      "senderId": "contact-yang-yunhao"
+    },
+    {
+      "id": "wx-birthday-20261117-20",
+      "time": "2026-11-17 00:00",
+      "body": "小阳阳生日快乐！新的一岁我的耳机可以分你一半哟😉",
+      "senderId": "contact-zhao-junyu"
+    },
+    {
+      "id": "wx-birthday-20261117-21",
+      "time": "2026-11-17 00:00",
+      "body": "生日快乐我家鸭鸭，永远爱你😘",
+      "senderId": "contact-ren-xuanzhe"
+    },
+    {
+      "id": "wx-birthday-20261117-22",
+      "time": "2026-11-17 00:00",
+      "body": "生日快乐！前面的都说完了我还能说什么！反正就是要天天开心健健康康！祝你的过敏快点好，吃大蛋糕！",
+      "senderId": "contact-chen-shen"
+    },
+    {
+      "id": "wx-birthday-20261117-23",
+      "time": "2026-11-17 00:00",
+      "body": "高铭阳生日快乐啊，恭喜你拥有了和我同岁的三个月体验卡🤪",
+      "senderId": "contact-lv-zhengxi"
     }
   ]
 },
