@@ -60,6 +60,9 @@ function Avatar({
   src?: string;
 }) {
   const avatarFiles: Record<string, string> = {
+    "机主": "/FoundPhone-Studio/阳阳.jpg",
+    "我": "/FoundPhone-Studio/阳阳.jpg",
+    "高铭阳": "/FoundPhone-Studio/阳阳.jpg",
     "陈璟翊": "/FoundPhone-Studio/陈璟翊.jpg",
     "陈燊": "/FoundPhone-Studio/陈燊.jpg",
     "Father": "/FoundPhone-Studio/Father.jpg",
