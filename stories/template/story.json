@@ -1108,6 +1108,29 @@
   ]
 },
     {
+  "id": "wechat-group-yanhuazu",
+  "app": "wechat",
+  "title": "烟花组",
+  "participants": [
+    "owner",
+    "contact-zhi-enhan",
+    "contact-shen-zihang"
+  ],
+  "messages": []
+},
+{
+  "id": "wechat-group-zheyanghaojun",
+  "app": "wechat",
+  "title": "哲阳好俊",
+  "participants": [
+    "owner",
+    "contact-ren-xuanzhe",
+    "contact-zhao-junyu",
+    "contact-yang-linhao"
+  ],
+  "messages": []
+}
+    {
       "id": "qq-chen-shen",
       "app": "qq",
       "title": "陈燊",
