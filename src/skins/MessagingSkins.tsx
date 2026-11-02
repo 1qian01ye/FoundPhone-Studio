@@ -161,20 +161,32 @@ function ChatRows({
   p,
   items,
   round = true,
+  qqAvatars = false,
 }: {
   p: Props;
   items: Item[];
   round?: boolean;
+  qqAvatars?: boolean;
 }) {
   const names = [...new Set(items.map((i) => i.title))].sort((a, b) => {
-  if (a.includes("陈燊")) return -1;
-  if (b.includes("陈燊")) return 1;
-  return 0;
-});
+    if (a.includes("陈燊")) return -1;
+    if (b.includes("陈燊")) return 1;
+    return 0;
+  });
+
+  const qqAvatarFiles: Record<string, string> = {
+    "陈燊": "chenshenQQ.jpg",
+    "吕政熙": "lvzhengxiQQ.jpg",
+    "朱映宸": "zhuyingchenQQ.jpg",
+  };
+
   return (
     <>
       {names.map((name) => {
         const last = items.filter((i) => i.title === name).at(-1)!;
+
+        const qqAvatar = qqAvatars ? qqAvatarFiles[name] : undefined;
+
         return (
           <button
             className="catalog-chat"
@@ -184,7 +196,15 @@ function ChatRows({
               p.onRead(name);
             }}
           >
-            <Avatar name={name} src={last.avatar} round={round} />
+            <Avatar
+              name={name}
+              src={
+                qqAvatar
+                  ? `${import.meta.env.BASE_URL}${qqAvatar}`
+                  : last.avatar
+              }
+              round={round}
+            />
             <span>
               <strong>{name}</strong>
               <p>{last.body}</p>
@@ -304,7 +324,7 @@ export function QQSkin(p: Props) {
             <SearchBox value={q} set={setQ} />
 
             {tab === "消息" ? (
-              <ChatRows p={p} items={list} />
+  <ChatRows p={p} items={list} qqAvatars />
             ) : tab === "联系人" ? (
               <div className="qq-contacts-list">
                 {contactGroups.map((group) => {
