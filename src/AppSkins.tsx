@@ -152,7 +152,6 @@ function MessageList({
 
         const isImage = i.kind === "image";
         const isTransfer = i.kind === "transfer";
-        const isSpecial = isImage || isTransfer;
 
         const handleClick = () => {
           if (creator) {
