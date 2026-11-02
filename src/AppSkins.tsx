@@ -503,6 +503,30 @@ style={{
     "$1年$2月$3日 $4"
   )}
 </small>
+                {i.comments && i.comments.length > 0 && (
+  <div
+    style={{
+      marginTop: "10px",
+      padding: "8px 10px",
+      background: "#f5f5f5",
+      borderRadius: "4px",
+      fontSize: "13px",
+      lineHeight: 1.8,
+      color: "#576b95",
+      textAlign: "left",
+    }}
+  >
+    {i.comments.map((comment, index) => (
+      <div key={`${i.id}-comment-${index}`}>
+        {comment.includes("回复") ? (
+          <span>{comment}</span>
+        ) : (
+          <span>{comment}</span>
+        )}
+      </div>
+    ))}
+  </div>
+)}
               </div>
             </button>
           ))}
