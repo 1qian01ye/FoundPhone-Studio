@@ -761,7 +761,7 @@
 },
 {
   "id": "wx-birthday-20261117-24",
-  "time": "2026-11-17 00:00",
+  "time": "2026-11-17 00:13",
   "body": "谢谢大家！",
   "senderId": "owner"
 }
@@ -1128,7 +1128,7 @@
     },
     {
       "id": "lvzx-059",
-      "time": "2026-11-17 00:00",
+      "time": "2026-11-17 00:10",
       "body": "520.00",
       "senderId": "contact-lv-zhengxi",
       "kind": "transfer"
@@ -1182,7 +1182,7 @@
   {"id":"chen-095","time":"2026-11-17 00:05","body":"感动哭了","senderId":"owner"},
   {"id":"chen-096","time":"2026-11-17 00:05","body":"看看眼泪","senderId":"contact-chen-shen"},
   {"id":"chen-097","time":"2026-11-17 00:05","body":"别赛脸","senderId":"owner"},
-  {"id":"chen-098","time":"2026-11-17 00:05","body":"嘿嘿😈","senderId":"contact-chen-shen"}
+  {"id":"chen-098","time":"2026-11-17 00:08","body":"嘿嘿😈","senderId":"contact-chen-shen"}
   ]
 },
 {
@@ -1255,7 +1255,7 @@
     {"id":"yunhao-062","time":"2026-11-17 00:00","body":"小事小事","senderId":"contact-yang-yunhao"},
     {"id":"yunhao-063","time":"2026-11-17 00:00","body":"这次真的去睡觉了","senderId":"contact-yang-yunhao"},
     {"id":"yunhao-064","time":"2026-11-17 00:00","body":"晚安","senderId":"contact-yang-yunhao"},
-    {"id":"yunhao-065","time":"2026-11-17 00:00","body":"晚安","senderId":"owner"}
+    {"id":"yunhao-065","time":"2026-11-17 00:07","body":"晚安","senderId":"owner"}
     ]
 },
     {
@@ -1319,7 +1319,7 @@
     {"id":"yanhua-044","time":"2026-11-17 00:00","body":"我去问哲哲","senderId":"contact-shen-zihang"},
     {"id":"yanhua-045","time":"2026-11-17 00:00","body":"一起一起","senderId":"contact-shen-zihang"},
     {"id":"yanhua-046","time":"2026-11-17 00:00","body":"我们不是来拆散的我们是来加入的","senderId":"contact-zhi-enhan"},
-    {"id":"yanhua-047","time":"2026-11-17 00:00","body":"那你们去问吧，他们OK我就OK","senderId":"owner"}
+    {"id":"yanhua-047","time":"2026-11-17 00:06","body":"那你们去问吧，他们OK我就OK","senderId":"owner"}
   ]
 },
 {
@@ -1362,7 +1362,23 @@
     {"id":"zheyang-026","time":"2026-11-17 00:00","body":"走起啊，必须狠狠给你出片","senderId":"contact-ren-xuanzhe"},
     {"id":"zheyang-027","time":"2026-11-17 00:00","body":"对对对，我也想去","senderId":"contact-zhao-junyu"},
     {"id":"zheyang-028","time":"2026-11-17 00:00","body":"可以呀，杨林好也一起","senderId":"owner"},
-    {"id":"zheyang-029","time":"2026-11-17 00:00","body":"走走走","senderId":"contact-yang-linhao"}
+    {"id":"zheyang-029","time":"2026-11-17 00:05","body":"走走走","senderId":"contact-yang-linhao"}
+  ]
+},
+    {
+  "id": "wechat-hou-wangzi",
+  "app": "wechat",
+  "title": "侯王子",
+  "participants": ["owner", "qq-hou-wangzi"],
+  "messages": [
+    {"id": "houwangzi-001", "time": "2026-11-17 00:00", "body": "生日快乐呀高铭阳！", "senderId": "contact-hou-wangzi"},
+    {"id": "houwangzi-002", "time": "2026-11-17 00:01", "body": "谢谢侯王子！", "senderId": "owner"},
+    {"id": "houwangzi-003", "time": "2026-11-17 00:02", "body": "最近都没怎么发消息，你最近在新学校怎么样啊，还适应吗", "senderId": "owner"},
+    {"id": "houwangzi-004", "time": "2026-11-17 00:03", "body": "一切都好，一直有在想你🙂", "senderId": "contact-hou-wangzi"},
+    {"id": "houwangzi-005", "time": "2026-11-17 00:04", "body": "那太好了，我还以为有了新朋友就忘了呢🤭", "senderId": "owner"},
+    {"id": "houwangzi-006", "time": "2026-11-17 00:05", "body": "怎么可能！你别瞎说！", "senderId": "contact-hou-wangzi"},
+    {"id": "houwangzi-007", "time": "2026-11-17 00:06", "body": "哈哈哈哈哈开玩笑的，看到你和别的朋友关系变好我为你感到开心", "senderId": "owner"},
+    {"id": "houwangzi-008", "time": "2026-11-17 00:04", "body": "👊👊", "senderId": "contact-hou-wangzi"}
   ]
 },
     {
@@ -1377,7 +1393,7 @@
     {"id":"liuhanchen-004","time":"2026-11-17 00:00","body":"我也是😩😩","senderId":"owner"},
     {"id":"liuhanchen-005","time":"2026-11-17 00:00","body":"不过我相信很快就会再见面的！","senderId":"contact-liu-hanchen"},
     {"id":"liuhanchen-006","time":"2026-11-17 00:00","body":"你一定要好好练习，下次考核重庆组必胜！","senderId":"contact-liu-hanchen"},
-    {"id":"liuhanchen-007","time":"2026-11-17 00:00","body":"我会好好练习的，你也要好好练习，成都组不会输🤭","senderId":"owner"}
+    {"id":"liuhanchen-007","time":"2026-11-17 00:03","body":"我会好好练习的，你也要好好练习，成都组不会输🤭","senderId":"owner"}
   ]
 },
     {
