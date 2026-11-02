@@ -512,19 +512,40 @@ style={{
       borderRadius: "4px",
       fontSize: "13px",
       lineHeight: 1.8,
-      color: "#576b95",
       textAlign: "left",
     }}
   >
-    {i.comments.map((comment, index) => (
-      <div key={`${i.id}-comment-${index}`}>
-        {comment.includes("回复") ? (
-          <span>{comment}</span>
-        ) : (
-          <span>{comment}</span>
-        )}
-      </div>
-    ))}
+    {i.comments.map((comment, index) => {
+      const replyIndex = comment.indexOf("回复");
+
+      if (replyIndex !== -1) {
+        const name = comment.slice(0, replyIndex);
+        const rest = comment.slice(replyIndex + 2);
+        const colonIndex = rest.indexOf("：");
+        const target = colonIndex === -1 ? rest : rest.slice(0, colonIndex);
+        const content = colonIndex === -1 ? "" : rest.slice(colonIndex + 1);
+
+        return (
+          <div key={`${i.id}-comment-${index}`}>
+            <span style={{ color: "#576b95" }}>{name}</span>
+            <span style={{ color: "#000" }}>回复</span>
+            <span style={{ color: "#576b95" }}>{target}</span>
+            <span style={{ color: "#000" }}>：{content}</span>
+          </div>
+        );
+      }
+
+      const colonIndex = comment.indexOf("：");
+      const name = comment.slice(0, colonIndex);
+      const content = comment.slice(colonIndex + 1);
+
+      return (
+        <div key={`${i.id}-comment-${index}`}>
+          <span style={{ color: "#576b95" }}>{name}</span>
+          <span style={{ color: "#000" }}>：{content}</span>
+        </div>
+      );
+    })}
   </div>
 )}
               </div>
