@@ -577,6 +577,32 @@
   ],
   "messages": [
     {
+  "id": "wechat-xiaopang",
+  "app": "wechat",
+  "title": "小胖同学",
+  "participants": ["owner", "contact-xiaopang"],
+  "messages": [
+    {"id":"xiaopang-001","time":"2026-10-20 21:34","body":"物资已齐全，请求回复","senderId":"owner"},
+    {"id":"xiaopang-002","time":"2026-10-20 21:34","body":"同样齐全，over","senderId":"contact-xiaopang"},
+    {"id":"xiaopang-003","time":"2026-10-20 21:34","body":"稳了稳了","senderId":"owner"},
+    {"id":"xiaopang-004","time":"2026-10-21 18:54","body":"放学的时候我们分开有个女生来找我要你的联系方式","senderId":"contact-xiaopang"},
+    {"id":"xiaopang-005","time":"2026-10-21 18:54","body":"她看起来比你还高五厘米","senderId":"contact-xiaopang"},
+    {"id":"xiaopang-006","time":"2026-10-21 18:54","body":"你说她怎么想的","senderId":"contact-xiaopang"},
+    {"id":"xiaopang-007","time":"2026-10-21 18:54","body":"哎，不带人身攻击的啊","senderId":"owner"},
+    {"id":"xiaopang-008","time":"2026-10-21 18:54","body":"你怎么说","senderId":"owner"},
+    {"id":"xiaopang-009","time":"2026-10-21 18:54","body":"我说人家是明星，我只是个保镖而已","senderId":"contact-xiaopang"},
+    {"id":"xiaopang-010","time":"2026-10-21 18:54","body":"做得好","senderId":"owner"},
+    {"id":"xiaopang-011","time":"2026-10-21 18:54","body":"明天给你加餐","senderId":"owner"},
+    {"id":"xiaopang-012","time":"2026-10-21 18:54","body":"感恩高老大","senderId":"contact-xiaopang"},
+    {"id":"xiaopang-013","time":"2026-11-17 00:14","body":"生日快乐啊高铭阳！","senderId":"contact-xiaopang"},
+    {"id":"xiaopang-014","time":"2026-11-17 00:14","body":"刚刚游戏关没结束，没卡上点","senderId":"contact-xiaopang"},
+    {"id":"xiaopang-015","time":"2026-11-17 00:14","body":"作为同样的忍者，你能理解我的吧","senderId":"contact-xiaopang"},
+    {"id":"xiaopang-016","time":"2026-11-17 00:14","body":"原谅原谅","senderId":"owner"},
+    {"id":"xiaopang-017","time":"2026-11-17 00:14","body":"好兄弟🤝","senderId":"contact-xiaopang"},
+    {"id":"xiaopang-018","time":"2026-11-17 00:14","body":"明天给你带早餐赔罪","senderId":"contact-xiaopang"},
+    {"id":"xiaopang-019","time":"2026-11-17 00:14","body":"可以那我刚好喊我妈不做了","senderId":"owner"}
+},
+    {
       "id": "wx-birthday-20261117",
       "time": "2026-11-17 00:00",
       "body": "祝我们的阳阳14岁生日快乐🎂带着自己的热爱与坚持一直大步向前走吧！🎉",
