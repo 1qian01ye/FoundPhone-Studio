@@ -133,7 +133,11 @@ function PhoneRuntime({
   onRuntime?: (s: Runtime) => void;
 }) {
   const [app, setApp] = useState("");
-  const [homeRequest, setHomeRequest] = useState(0);
+const [homeRequest, setHomeRequest] = useState(0);
+
+// 微信语音来电
+const [wechatIncomingVisible, setWechatIncomingVisible] = useState(false);
+const wechatCallAudio = useRef<HTMLAudioElement | null>(null);
   const [locked, setLocked] = useState(!creator);
   const [pinOpen, setPinOpen] = useState(false);
   const [quickCamera, setQuickCamera] = useState(false);
@@ -266,15 +270,53 @@ function PhoneRuntime({
       if (!recent.includes(id) && id !== app) appSnapshots.current.delete(id);
   };
   const open = (id: string) => {
-    if (!work.apps.some((a) => a.id === id && a.installed)) return;
-    setApp(id);
-    setKeyboard(false);
-    setRecent((v) => [id, ...v.filter((a) => a !== id)].slice(0, 8));
-    setFolder("");
-    setPanel("");
-    onOpen?.(id);
-    event("openApp", id);
+  if (!work.apps.some((a) => a.id === id && a.installed)) return;
+
+  // 停止上一段微信来电音频
+  wechatCallAudio.current?.pause();
+  wechatCallAudio.current = null;
+
+  // 只有打开微信时显示吕政熙的来电
+  setWechatIncomingVisible(id === "wechat");
+
+  setApp(id);
+  setKeyboard(false);
+  setRecent((v) => [id, ...v.filter((a) => a !== id)].slice(0, 8));
+  setFolder("");
+  setPanel("");
+  onOpen?.(id);
+  event("openApp", id);
+};
+  const rejectWechatCall = () => {
+  wechatCallAudio.current?.pause();
+  wechatCallAudio.current = null;
+  setWechatIncomingVisible(false);
+};
+
+const acceptWechatCall = () => {
+  const audio = new Audio(
+    `${import.meta.env.BASE_URL}FoundPhone-Studio/吕政熙来电.mp3`
+  );
+
+  wechatCallAudio.current = audio;
+
+  audio.onended = () => {
+    setWechatIncomingVisible(false);
+    wechatCallAudio.current = null;
   };
+
+  audio.onerror = () => {
+    setBanner("吕政熙来电音频加载失败，请检查文件路径");
+    setWechatIncomingVisible(false);
+    wechatCallAudio.current = null;
+  };
+
+  audio.play().catch(() => {
+    setBanner("音频播放失败，请检查浏览器播放权限");
+  });
+
+  setWechatIncomingVisible(false);
+};
   const installedApps = work.apps.filter((a) => a.installed);
   const apps = installedApps.filter((a) => a.visible);
   const unlock = (pin = "") => {
@@ -537,6 +579,93 @@ function PhoneRuntime({
               />
             )}
           </AnimatePresence>
+          {wechatIncomingVisible && app === "wechat" && (
+  <div
+    style={{
+      position: "absolute",
+      top: "68px",
+      left: "10px",
+      right: "10px",
+      zIndex: 9999,
+      padding: "20px 18px 18px",
+      borderRadius: "34px",
+      background: "#050505",
+      color: "#fff",
+      boxSizing: "border-box",
+      boxShadow: "0 8px 28px rgba(0,0,0,0.35)",
+    }}
+  >
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "12px",
+        marginBottom: "22px",
+      }}
+    >
+      <img
+        src={`${import.meta.env.BASE_URL}FoundPhone-Studio/吕政熙.jpg`}
+        alt="吕政熙"
+        style={{
+          width: "54px",
+          height: "54px",
+          borderRadius: "50%",
+          objectFit: "cover",
+          flexShrink: 0,
+        }}
+      />
+
+      <div style={{ minWidth: 0 }}>
+        <div style={{ fontSize: "17px", fontWeight: 700 }}>
+          吕政熙邀请你语音通话
+        </div>
+        <div
+          style={{
+            color: "#aaa",
+            fontSize: "16px",
+            marginTop: "4px",
+          }}
+        >
+          微信音频
+        </div>
+      </div>
+    </div>
+
+    <div style={{ display: "flex", gap: "10px" }}>
+      <button
+        onClick={rejectWechatCall}
+        style={{
+          flex: 1,
+          height: "54px",
+          border: "none",
+          borderRadius: "40px",
+          background: "#fa3b43",
+          color: "#fff",
+          fontSize: "17px",
+          fontWeight: 600,
+        }}
+      >
+        ✕ 拒绝
+      </button>
+
+      <button
+        onClick={acceptWechatCall}
+        style={{
+          flex: 1,
+          height: "54px",
+          border: "none",
+          borderRadius: "40px",
+          background: "#078cf0",
+          color: "#fff",
+          fontSize: "17px",
+          fontWeight: 600,
+        }}
+      >
+        ✓ 接受
+      </button>
+    </div>
+  </div>
+)}
           {folder && (
             <div className="folder-overlay" onClick={() => setFolder("")}>
               <h2>{folder}</h2>
