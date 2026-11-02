@@ -1366,6 +1366,21 @@
   ]
 },
     {
+  "id": "wechat-liu-hanchen",
+  "app": "wechat",
+  "title": "刘瀚辰",
+  "participants": ["owner", "contact-liu-hanchen"],
+  "messages": [
+    {"id":"liuhanchen-001","time":"2026-11-17 00:00","body":"hello歪歪生日快乐！！","senderId":"contact-liu-hanchen"},
+    {"id":"liuhanchen-002","time":"2026-11-17 00:00","body":"谢谢你橙橙！！","senderId":"owner"},
+    {"id":"liuhanchen-003","time":"2026-11-17 00:00","body":"好久不见甚是想念啊","senderId":"contact-liu-hanchen"},
+    {"id":"liuhanchen-004","time":"2026-11-17 00:00","body":"我也是😩😩","senderId":"owner"},
+    {"id":"liuhanchen-005","time":"2026-11-17 00:00","body":"不过我相信很快就会再见面的！","senderId":"contact-liu-hanchen"},
+    {"id":"liuhanchen-006","time":"2026-11-17 00:00","body":"你一定要好好练习，下次考核重庆组必胜！","senderId":"contact-liu-hanchen"},
+    {"id":"liuhanchen-007","time":"2026-11-17 00:00","body":"我会好好练习的，你也要好好练习，成都组不会输🤭","senderId":"owner"}
+  ]
+},
+    {
       "id": "qq-chen-shen",
       "app": "qq",
       "title": "陈燊",
