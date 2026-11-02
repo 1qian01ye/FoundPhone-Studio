@@ -295,7 +295,7 @@ const wechatCallAudio = useRef<HTMLAudioElement | null>(null);
 
 const acceptWechatCall = () => {
   const audio = new Audio(
-    `${import.meta.env.BASE_URL}FoundPhone-Studio/吕政熙来电.mp3`
+    `${import.meta.env.BASE_URL}吕政熙来电.mp3`
   );
 
   wechatCallAudio.current = audio;
@@ -604,7 +604,7 @@ const acceptWechatCall = () => {
       }}
     >
       <img
-        src={`${import.meta.env.BASE_URL}FoundPhone-Studio/吕政熙.jpg`}
+        src={`${import.meta.env.BASE_URL}吕政熙.jpg`}
         alt="吕政熙"
         style={{
           width: "54px",
