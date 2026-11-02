@@ -1116,7 +1116,60 @@
     "contact-zhi-enhan",
     "contact-shen-zihang"
   ],
-  "messages": []
+  "messages": [
+    {"id":"yanhua-001","time":"2026-10-06 19:54","body":"明天青龙湖有没有约起的","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-002","time":"2026-10-06 19:54","body":"报名","senderId":"contact-shen-zihang"},
+    {"id":"yanhua-003","time":"2026-10-06 19:54","body":"等一下","senderId":"contact-shen-zihang"},
+    {"id":"yanhua-004","time":"2026-10-06 19:54","body":"高铭阳你去不去","senderId":"contact-shen-zihang"},
+    {"id":"yanhua-005","time":"2026-10-06 19:54","body":"吕政熙上周也去了那里","senderId":"owner"},
+    {"id":"yanhua-006","time":"2026-10-06 19:54","body":"他说那里很大他在那儿学了骑自行车","senderId":"owner"},
+    {"id":"yanhua-007","time":"2026-10-06 19:54","body":"但是我不会骑自行车怎么办啊","senderId":"owner"},
+    {"id":"yanhua-008","time":"2026-10-06 19:54","body":"没事我可以带你","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-009","time":"2026-10-06 19:54","body":"你在搞笑吗","senderId":"contact-shen-zihang"},
+    {"id":"yanhua-010","time":"2026-10-06 19:54","body":"共享单车哪有后座","senderId":"contact-shen-zihang"},
+    {"id":"yanhua-011","time":"2026-10-06 19:54","body":"哦我忘记了","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-012","time":"2026-10-06 19:54","body":"没事你明天去试试，我把我的代步车拿着","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-013","time":"2026-10-06 19:54","body":"要是不行的话你就骑我的代步车","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-014","time":"2026-10-06 19:54","body":"okok","senderId":"owner"},
+
+    {"id":"yanhua-015","time":"2026-10-15 19:48","body":"篮球有无","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-016","time":"2026-10-15 19:48","body":"太晚了我不去了","senderId":"contact-shen-zihang"},
+
+    {"id":"yanhua-017","time":"2026-10-30 21:04","body":"你们两背叛组织","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-018","time":"2026-10-30 21:04","body":"怎么两个人偷偷出去约会了","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-019","time":"2026-10-30 21:04","body":"解释","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-020","time":"2026-10-30 21:04","body":"没有解释的义务","senderId":"contact-shen-zihang"},
+    {"id":"yanhua-021","time":"2026-10-30 21:04","body":"你不是在上课吗","senderId":"owner"},
+    {"id":"yanhua-022","time":"2026-10-30 21:04","body":"而且上次你们俩一起去打球也没有通知","senderId":"contact-shen-zihang"},
+    {"id":"yanhua-023","time":"2026-10-30 21:04","body":"明明是你说太晚了不出来了你自己翻聊天记录","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-024","time":"2026-10-30 21:04","body":"那高铭阳也没有回啊我以为他也不去","senderId":"contact-shen-zihang"},
+    {"id":"yanhua-025","time":"2026-10-30 21:04","body":"而且你还请他喝水","senderId":"contact-shen-zihang"},
+    {"id":"yanhua-026","time":"2026-10-30 21:04","body":"你之前从来没有请过我","senderId":"contact-shen-zihang"},
+    {"id":"yanhua-027","time":"2026-10-30 21:04","body":"🏳️","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-028","time":"2026-10-30 21:04","body":"下次一定","senderId":"contact-zhi-enhan"},
+
+    {"id":"yanhua-029","time":"2026-11-11 11:11","body":"打卡","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-030","time":"2026-11-11 11:11","body":"你们两绝不能背叛我","senderId":"contact-zhi-enhan"},
+
+    {"id":"yanhua-031","time":"2026-11-11 12:25","body":"你居然上课偷偷玩手机","senderId":"owner"},
+    {"id":"yanhua-032","time":"2026-11-11 12:25","body":"强烈谴责","senderId":"contact-shen-zihang"},
+    {"id":"yanhua-033","time":"2026-11-11 12:25","body":"上课时间在看电影而已！","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-034","time":"2026-11-11 12:25","body":"转移话题","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-035","time":"2026-11-11 12:25","body":"有鬼","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-036","time":"2026-11-11 12:25","body":"你想多了","senderId":"owner"},
+    {"id":"yanhua-037","time":"2026-11-11 12:25","body":"好像敏感了","senderId":"contact-shen-zihang"},
+
+    {"id":"yanhua-038","time":"2026-11-17 00:00","body":"高铭阳生日快乐！！烟花组forever！","senderId":"contact-shen-zihang"},
+    {"id":"yanhua-039","time":"2026-11-17 00:00","body":"生日快乐高铭阳，晚上要不要出去打球","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-040","time":"2026-11-17 00:00","body":"谁家生日打球","senderId":"contact-shen-zihang"},
+    {"id":"yanhua-041","time":"2026-11-17 00:00","body":"吃饭也行","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-042","time":"2026-11-17 00:00","body":"谢谢☺️","senderId":"owner"},
+    {"id":"yanhua-043","time":"2026-11-17 00:00","body":"但是吃饭应该不行已经约了任玄哲赵俊羽和杨林好","senderId":"owner"},
+    {"id":"yanhua-044","time":"2026-11-17 00:00","body":"我去问哲哲","senderId":"contact-shen-zihang"},
+    {"id":"yanhua-045","time":"2026-11-17 00:00","body":"一起一起","senderId":"contact-shen-zihang"},
+    {"id":"yanhua-046","time":"2026-11-17 00:00","body":"我们不是来拆散的我们是来加入的","senderId":"contact-zhi-enhan"},
+    {"id":"yanhua-047","time":"2026-11-17 00:00","body":"那你们去问吧，他们OK我就OK","senderId":"owner"}
+  ]
 },
 {
   "id": "wechat-group-zheyanghaojun",
@@ -1128,8 +1181,39 @@
     "contact-zhao-junyu",
     "contact-yang-linhao"
   ],
-  "messages": []
- },
+  "messages": [
+    {"id":"zheyang-001","time":"2026-10-30 18:54","body":"dddd","senderId":"owner"},
+    {"id":"zheyang-002","time":"2026-10-30 18:54","body":"让我来猜猜","senderId":"contact-zhao-junyu"},
+    {"id":"zheyang-003","time":"2026-10-30 18:54","body":"是不是需要茉莉奶白拼套餐","senderId":"contact-zhao-junyu"},
+    {"id":"zheyang-004","time":"2026-10-30 18:54","body":"什么套餐","senderId":"contact-yang-linhao"},
+    {"id":"zheyang-005","time":"2026-10-30 18:54","body":"茉莉奶白和chiikawa的新联名！","senderId":"contact-ren-xuanzhe"},
+    {"id":"zheyang-006","time":"2026-10-30 18:54","body":"👍🏻👍🏻👍🏻","senderId":"owner"},
+    {"id":"zheyang-007","time":"2026-10-30 18:54","body":"料事如神","senderId":"owner"},
+    {"id":"zheyang-008","time":"2026-10-30 18:54","body":"我要喝那个茉莉与吕政熙","senderId":"owner"},
+    {"id":"zheyang-009","time":"2026-10-30 18:54","body":"你怎么不让本人和你一起","senderId":"contact-zhao-junyu"},
+    {"id":"zheyang-010","time":"2026-10-30 18:54","body":"无法克服远距离","senderId":"owner"},
+    {"id":"zheyang-011","time":"2026-10-30 18:54","body":"可以，买完之后陪我去星巴克","senderId":"contact-ren-xuanzhe"},
+    {"id":"zheyang-012","time":"2026-10-30 18:54","body":"我新收的卡到了，我要去拍那个猫耳营业照😋","senderId":"contact-ren-xuanzhe"},
+    {"id":"zheyang-013","time":"2026-10-30 18:54","body":"带着茉莉奶白去星巴克是不是不太好","senderId":"contact-yang-linhao"},
+    {"id":"zheyang-014","time":"2026-10-30 18:54","body":"没事！又不是不消费！","senderId":"contact-ren-xuanzhe"},
+    {"id":"zheyang-015","time":"2026-10-30 18:54","body":"而且我应该很快的","senderId":"contact-ren-xuanzhe"},
+    {"id":"zheyang-016","time":"2026-10-30 18:54","body":"好","senderId":"owner"},
+    {"id":"zheyang-017","time":"2026-10-30 18:54","body":"OK","senderId":"contact-zhao-junyu"},
+
+    {"id":"zheyang-018","time":"2026-11-17 00:00","body":"阳阳生日快乐！","senderId":"contact-zhao-junyu"},
+    {"id":"zheyang-019","time":"2026-11-17 00:00","body":"生日快乐阳阳！","senderId":"contact-yang-linhao"},
+    {"id":"zheyang-020","time":"2026-11-17 00:00","body":"阳阳生日快乐阳阳！","senderId":"contact-ren-xuanzhe"},
+    {"id":"zheyang-021","time":"2026-11-17 00:00","body":"谢谢😆","senderId":"owner"},
+    {"id":"zheyang-022","time":"2026-11-17 00:00","body":"小阳阳有约无","senderId":"contact-ren-xuanzhe"},
+    {"id":"zheyang-023","time":"2026-11-17 00:00","body":"还没呢","senderId":"owner"},
+    {"id":"zheyang-024","time":"2026-11-17 00:00","body":"礼貌申请","senderId":"contact-ren-xuanzhe"},
+    {"id":"zheyang-025","time":"2026-11-17 00:00","body":"上次你说很好看的那个莫奈花园","senderId":"contact-ren-xuanzhe"},
+    {"id":"zheyang-026","time":"2026-11-17 00:00","body":"走起啊，必须狠狠给你出片","senderId":"contact-ren-xuanzhe"},
+    {"id":"zheyang-027","time":"2026-11-17 00:00","body":"对对对，我也想去","senderId":"contact-zhao-junyu"},
+    {"id":"zheyang-028","time":"2026-11-17 00:00","body":"可以呀，杨林好也一起","senderId":"owner"},
+    {"id":"zheyang-029","time":"2026-11-17 00:00","body":"走走走","senderId":"contact-yang-linhao"}
+  ]
+},
     {
       "id": "qq-chen-shen",
       "app": "qq",
