@@ -468,8 +468,41 @@ style={{
               <div>
                 <strong>{i.sender}</strong>
                 <p>{i.body}</p>
-                {i.media && <ItemMedia item={i} />}
-                <small>{i.time}</small>
+
+{i.images?.length ? (
+  <div
+    style={{
+      display: "grid",
+      gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+      gap: "4px",
+      marginTop: "8px",
+      maxWidth: "280px",
+    }}
+  >
+    {i.images.map((src, index) => (
+      <img
+        key={`${i.id}-${index}`}
+        src={src}
+        alt={`${i.sender}的朋友圈图片${index + 1}`}
+        style={{
+          width: "100%",
+          aspectRatio: "1 / 1",
+          objectFit: "cover",
+          display: "block",
+        }}
+      />
+    ))}
+  </div>
+) : i.media ? (
+  <ItemMedia item={i} />
+) : null}
+
+<small>
+  {i.time?.replace(
+    /^(\d{4})-(\d{2})-(\d{2}) (\d{2}:\d{2})$/,
+    "$1年$2月$3日 $4"
+  )}
+</small>
               </div>
             </button>
           ))}
