@@ -778,12 +778,28 @@ style={{
     <button
       className="wx-contact"
       onClick={() => {
-        const item = p.items.find((i) => i.sender === c.name);
-        if (item) {
-          p.onThread(item.title);
-          p.onRead(item.title);
-        }
-      }}
+  // Mother 和 Father 点击后不跳转
+  if (["Mother", "Father"].includes(c.name)) return;
+
+  // 查找这个联系人对应的单人聊天
+  const item =
+    p.items.find((i) => i.title === c.name) ??
+    p.items.find(
+      (i) =>
+        i.sender === c.name &&
+        !["五五不呜呜", "烟花组", "哲阳好俊"].includes(i.title),
+    );
+
+  if (item) {
+    // 有私聊记录，进入对应的私聊
+    p.onThread(item.title);
+    p.onRead(item.title);
+  } else {
+    // 没有私聊记录，进入五五不呜呜群聊
+    p.onThread("五五不呜呜");
+    p.onRead("五五不呜呜");
+  }
+}}
       style={{
         display: "flex",
         flexDirection: "row",
