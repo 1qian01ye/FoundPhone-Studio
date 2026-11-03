@@ -2160,7 +2160,7 @@ export function DouyinSkin(p: Props) {
   setActiveFriend(friend);
 
   if (friend === "利维斯") {
-    onDouyinLevisChat?.();
+    p.onDouyinLevisChat?.();
   }
 }}
                   style={{
