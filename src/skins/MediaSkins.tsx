@@ -504,10 +504,17 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
 
     if (!article || !video) return;
 
+    // 推荐视频默认静音，禁止自动播放声音
+    video.pause();
+    video.muted = true;
+    video.autoplay = false;
+    video.removeAttribute("autoplay");
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting || entry.intersectionRatio < 0.5) {
           video.pause();
+          video.muted = true;
         }
       },
       { threshold: [0, 0.5, 1] },
@@ -515,8 +522,12 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
 
     observer.observe(article);
 
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      observer.disconnect();
+      video.pause();
+      video.muted = true;
+    };
+  }, [item.id]);
   const [liked, setLiked] = useSkinState<boolean>(
     p,
     `liked-${item.id}`,
@@ -541,7 +552,7 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
 
   return (
     <article className="vertical-video" ref={articleRef}>
-      <Media item={item} autoPlay />
+      <Media item={item} />
 
       <div className="vertical-actions">
         <button
