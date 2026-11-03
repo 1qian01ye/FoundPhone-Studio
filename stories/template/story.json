@@ -2814,6 +2814,68 @@
         "meta": {}
       }
     ],
+    "wechat": [
+  {
+    "id": "wechat-listen-001",
+    "title": "兰亭序",
+    "body": "兰亭序",
+    "sender": "高铭阳",
+    "kind": "audio",
+    "folder": "听一听",
+    "media": "/FoundPhone-Studio/兰亭序.mp3",
+    "meta": {}
+  },
+  {
+    "id": "wechat-listen-002",
+    "title": "lazy",
+    "body": "lazy",
+    "sender": "阳阳",
+    "kind": "audio",
+    "folder": "听一听",
+    "media": "/FoundPhone-Studio/lazy.mp3",
+    "meta": {}
+  },
+  {
+    "id": "wechat-listen-003",
+    "title": "直来直往",
+    "body": "直来直往",
+    "sender": "高铭鸭",
+    "kind": "audio",
+    "folder": "听一听",
+    "media": "/FoundPhone-Studio/直来直往.mp3",
+    "meta": {}
+  },
+  {
+    "id": "wechat-listen-004",
+    "title": "from",
+    "body": "from",
+    "sender": "鸭鸭",
+    "kind": "audio",
+    "folder": "听一听",
+    "media": "/FoundPhone-Studio/from.mp3",
+    "meta": {}
+  },
+  {
+    "id": "wechat-listen-005",
+    "title": "太聪明",
+    "body": "太聪明",
+    "sender": "高绵羊",
+    "kind": "audio",
+    "folder": "听一听",
+    "media": "/FoundPhone-Studio/太聪明.mp3",
+    "meta": {}
+  },
+  {
+    "id": "wechat-listen-006",
+    "title": "还是会寂寞",
+    "body": "还是会寂寞",
+    "sender": "高茗雅",
+    "kind": "audio",
+    "folder": "听一听",
+    "media": "/FoundPhone-Studio/还是会寂寞.mp3",
+    "meta": {}
+  }
+],
     "photos": [
   {
     "id": "photo-20260805-1",
