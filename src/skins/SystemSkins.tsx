@@ -591,7 +591,7 @@ export function PhotosSkin(p: Props) {
                   margin: "20px 0 12px",
                 }}
               >
-                {Number(month)}月{Number(day)}日
+               {date ? `${Number(month)}月${Number(day)}日` : "鸭月鸭日"}
               </h2>
 
               <div className="photo-mosaic">
