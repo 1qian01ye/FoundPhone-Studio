@@ -908,20 +908,17 @@ const chooseYangCallOption = (step: number) => {
         marginBottom: "22px",
       }}
     >
-      <div
-        style={{
-          width: "54px",
-          height: "54px",
-          borderRadius: "50%",
-          background: "#333",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          fontSize: "24px",
-        }}
-      >
-        杨
-      </div>
+      <img
+  src={`${import.meta.env.BASE_URL}yangyunhaoQQ.jpg`}
+  alt="杨云皓"
+  style={{
+    width: "54px",
+    height: "54px",
+    borderRadius: "50%",
+    objectFit: "cover",
+    flexShrink: 0,
+  }}
+/>
 
       <div>
         <div style={{ fontSize: "17px", fontWeight: 700 }}>
@@ -998,20 +995,16 @@ const chooseYangCallOption = (step: number) => {
         gap: "22px",
       }}
     >
-      <div
-        style={{
-          width: "112px",
-          height: "112px",
-          borderRadius: "50%",
-          background: "#333",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          fontSize: "48px",
-        }}
-      >
-        杨
-      </div>
+      <img
+  src={`${import.meta.env.BASE_URL}yangyunhaoQQ.jpg`}
+  alt="杨云皓"
+  style={{
+    width: "112px",
+    height: "112px",
+    borderRadius: "50%",
+    objectFit: "cover",
+  }}
+/>
 
       <div style={{ fontSize: "27px", fontWeight: 600 }}>杨云皓</div>
 
