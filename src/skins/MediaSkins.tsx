@@ -2156,7 +2156,13 @@ export function DouyinSkin(p: Props) {
               return (
                 <button
                   key={friend}
-                  onClick={() => setActiveFriend(friend)}
+                  onClick={() => {
+  setActiveFriend(friend);
+
+  if (friend === "利维斯") {
+    onDouyinLevisChat?.();
+  }
+}}
                   style={{
                     display: "flex",
                     alignItems: "center",
