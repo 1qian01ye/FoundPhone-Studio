@@ -419,12 +419,26 @@ const groupMembers: Record<string, string[]> = {
   "烟花组": ["智恩涵", "沈子航", "我"],
   "哲阳好俊": ["任玄哲", "杨林好", "赵俊羽", "我"],
 };
-  console.log("微信收到的全部数据：", p.items);
+  console.log("微信数据字段：", Object.keys(p.items[0] ?? {}));
+
+console.log("微信收到的前10条数据：", p.items.slice(0, 10));
+
 console.log(
-  "微信收到的朋友圈数据：",
-  p.items.filter(
-    (i) => i.folder === "朋友圈" || i.kind === "post",
-  ),
+  "朋友圈人物相关数据：",
+  p.items.filter((i) =>
+    ["陈燊", "任玄哲", "Father", "Mother"].some((name) =>
+      JSON.stringify(i).includes(name)
+    )
+  )
+);
+
+console.log(
+  "包含朋友圈字段的数据：",
+  p.items.filter((i) =>
+    Object.values(i).some(
+      (value) => value === "朋友圈" || value === "post"
+    )
+  )
 );
   const posts = p.items.filter((i) => {
   // 排除听一听的歌曲
