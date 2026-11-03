@@ -318,7 +318,7 @@ export function WeChatSkin(p: SkinProps) {
     [query, setQuery] = useState(""),
     [moments, setMoments] = useState(false),
     [menu, setMenu] = useState(false),
-    [searchOpen, setSearchOpen] = useState(false),
+    [searchOpen, setSearchOpen] = useState(true),
     [utility, setUtility] = useState("");
   const [readThreads, setReadThreads] = useSkinState<string[]>(p, "readThreads-v2", []);
   const conversations = [
