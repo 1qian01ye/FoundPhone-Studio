@@ -419,6 +419,13 @@ const groupMembers: Record<string, string[]> = {
   "烟花组": ["智恩涵", "沈子航", "我"],
   "哲阳好俊": ["任玄哲", "杨林好", "赵俊羽", "我"],
 };
+  console.log("微信收到的全部数据：", p.items);
+console.log(
+  "微信收到的朋友圈数据：",
+  p.items.filter(
+    (i) => i.folder === "朋友圈" || i.kind === "post",
+  ),
+);
   const posts = p.items.filter((i) => {
   // 排除听一听的歌曲
   if (i.folder === "听一听" || i.kind === "audio") return false;
