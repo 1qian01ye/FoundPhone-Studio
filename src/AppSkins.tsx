@@ -549,8 +549,9 @@ const groupMembers: Record<string, string[]> = {
       </button>
     ))
 )}
-          {!p.items.some((i) => i.folder === utility) &&
-            utility !== "聊天信息" && <p className="skin-empty">暂无内容</p>}
+          {utility !== "听一听" &&
+  !p.items.some((i) => i.folder === utility) &&
+  utility !== "聊天信息" && <p className="skin-empty">暂无内容</p>}
         </div>
       ) : p.thread ? (
         <>
