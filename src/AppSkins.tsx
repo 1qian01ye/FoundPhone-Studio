@@ -655,15 +655,6 @@ console.log(
               ▶
             </span>
           </div>
-          <div
-            style={{
-              padding: "8px",
-              fontSize: "13px",
-              color: "#222",
-            }}
-          >
-            视频号{number}
-          </div>
         </button>
       );
     })}
