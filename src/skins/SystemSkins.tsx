@@ -1318,8 +1318,9 @@ export function MusicSkin(p: Props) {
               className="music-track"
               key={i.id}
               onClick={() => {
-                setSong(i);
-              }}
+  setSong(i);
+  p.onItem(i);
+}}
             >
               <small>{n + 1}</small>
               <span>
