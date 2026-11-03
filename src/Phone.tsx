@@ -279,16 +279,17 @@ const yangCallAudio = useRef<HTMLAudioElement | null>(null);
   if (!work.apps.some((a) => a.id === id && a.installed)) return;
 
   // 停止上一段微信来电音频
-  if (wechatCallAudio.current) {
-    // 停止上一段杨云皓来电音频
+if (wechatCallAudio.current) {
+  wechatCallAudio.current.pause();
+  wechatCallAudio.current.currentTime = 0;
+  wechatCallAudio.current = null;
+}
+
+// 停止上一段杨云皓来电音频
 stopYangCallAudio();
 setYangIncomingVisible(false);
 setYangCallActive(false);
 setYangCallChoiceStage(0);
-    wechatCallAudio.current.pause();
-    wechatCallAudio.current.currentTime = 0;
-    wechatCallAudio.current = null;
-  }
 
   // 关闭上一段通话界面
   setWechatCallActive(false);
