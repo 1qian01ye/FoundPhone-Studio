@@ -360,7 +360,36 @@ const contacts = [
 { name: "智恩涵", initial: "Z" },
 { name: "朱映宸", initial: "Z" },
 ];
-
+const groupMembers: Record<string, string[]> = {
+  "五五不呜呜": [
+    "吕政熙",
+    "杨云皓",
+    "侯王子",
+    "刘禹辰",
+    "余政霖",
+    "杨子豪",
+    "宋金泽",
+    "任玄哲",
+    "皮子渝",
+    "智恩涵",
+    "沈子航",
+    "杨林好",
+    "朱映宸",
+    "张誉严",
+    "陈璟翊",
+    "胡阿米",
+    "魏新航",
+    "佟弋",
+    "赵俊羽",
+    "刘瀚辰",
+    "陈燊",
+    "越艺晨",
+    "时代峰峻",
+    "阳阳（我）",
+  ],
+  "烟花组": ["智恩涵", "沈子航", "我"],
+  "哲阳好俊": ["任玄哲", "杨林好", "赵俊羽", "我"],
+};
   const posts = p.items.filter(
     (i) => i.folder === "朋友圈" || i.kind === "post",
   );
@@ -402,7 +431,9 @@ const contacts = [
           }
           onClick={() => {
   if (p.thread) {
-    setUtility("聊天信息");
+    if (groupMembers[p.thread]) {
+      setUtility("聊天信息");
+    }
   } else if (p.creator) {
     p.onAdd();
   } else {
@@ -433,7 +464,7 @@ const contacts = [
       )}
       {utility ? (
         <div className="skin-scroll wx-utility">
-          {utility === "聊天信息" && (
+          {utility === "聊天信息" && groupMembers[p.thread] && (
   <div
     className="wx-members"
     style={{
@@ -443,58 +474,38 @@ const contacts = [
       padding: "20px 12px",
     }}
   >
-    {[
-      "吕政熙",
-      "杨云皓",
-      "侯王子",
-      "刘禹辰",
-      "余政霖",
-      "杨子豪",
-      "宋金泽",
-      "任玄哲",
-      "皮子渝",
-      "智恩涵",
-      "沈子航",
-      "杨林好",
-      "朱映宸",
-      "张誉严",
-      "陈璟翊",
-      "胡阿米",
-      "魏新航",
-      "佟弋",
-      "赵俊羽",
-      "刘瀚辰",
-      "陈燊",
-      "越艺晨",
-      "时代峰峻",
-      "阳阳（我）",
-    ].map((name) => (
-      <div
-        key={name}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          gap: "6px",
-          minWidth: 0,
-        }}
-      >
-        <Avatar
-          name={name}
-          src={`/FoundPhone-Studio/${name === "阳阳（我）" ? "阳阳" : name}.jpg`}
-        />
-        <small
+    {groupMembers[p.thread].map((name) => {
+      const avatarName =
+        name === "阳阳（我）" || name === "我" ? "阳阳" : name;
+
+      return (
+        <div
+          key={name}
           style={{
-            textAlign: "center",
-            width: "100%",
-            fontSize: "12px",
-            overflowWrap: "anywhere",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: "6px",
+            minWidth: 0,
           }}
         >
-          {name}
-        </small>
-      </div>
-    ))}
+          <Avatar
+            name={name}
+            src={`/FoundPhone-Studio/${avatarName}.jpg`}
+          />
+          <small
+            style={{
+              textAlign: "center",
+              width: "100%",
+              fontSize: "12px",
+              overflowWrap: "anywhere",
+            }}
+          >
+            {name}
+          </small>
+        </div>
+      );
+    })}
   </div>
 )}
           {p.items
