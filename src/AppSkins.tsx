@@ -630,18 +630,21 @@ console.log(
             }}
           >
             <video
-              src={`${import.meta.env.BASE_URL}${fileName}`}
-              muted
-              playsInline
-              preload="metadata"
-              tabIndex={-1}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                pointerEvents: "none",
-              }}
-            />
+  src={`${import.meta.env.BASE_URL}${fileName}`}
+  muted
+  playsInline
+  preload="metadata"
+  tabIndex={-1}
+  style={{
+    display: "block",
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    pointerEvents: "none",
+    border: "none",
+    outline: "none",
+  }}
+/>
             <span
               style={{
                 position: "absolute",
