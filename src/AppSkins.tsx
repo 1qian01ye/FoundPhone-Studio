@@ -509,18 +509,46 @@ const groupMembers: Record<string, string[]> = {
     })}
   </div>
 )}
-          {p.items
-            .filter((i) => i.folder === utility)
-            .map((i) => (
-              <button
-                key={i.id}
-                className="wx-discovery"
-                onClick={() => p.onItem(i)}
-              >
-                {i.title}
-                <span>›</span>
-              </button>
-            ))}
+          {utility === "听一听" ? (
+  <div style={{ padding: "12px 16px" }}>
+    {p.items
+      .filter((i) => i.folder === "听一听" && i.kind === "audio")
+      .slice(0, 6)
+      .map((i) => (
+        <div
+          key={i.id}
+          style={{
+            padding: "14px 12px",
+            marginBottom: "12px",
+            background: "#fff",
+            borderRadius: "12px",
+            boxShadow: "0 1px 5px rgba(0,0,0,0.06)",
+          }}
+        >
+          <strong style={{ display: "block", marginBottom: "10px" }}>
+            {i.title}
+          </strong>
+          <ItemMedia item={i} />
+        </div>
+      ))}
+    {!p.items.some(
+      (i) => i.folder === "听一听" && i.kind === "audio"
+    ) && <p className="skin-empty">暂无音频</p>}
+  </div>
+) : (
+  p.items
+    .filter((i) => i.folder === utility)
+    .map((i) => (
+      <button
+        key={i.id}
+        className="wx-discovery"
+        onClick={() => p.onItem(i)}
+      >
+        {i.title}
+        <span>›</span>
+      </button>
+    ))
+)}
           {!p.items.some((i) => i.folder === utility) &&
             utility !== "聊天信息" && <p className="skin-empty">暂无内容</p>}
         </div>
