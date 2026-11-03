@@ -111,7 +111,7 @@ function Avatar({
   maxHeight: "48px",
   flex: "0 0 48px",
   aspectRatio: "1 / 1",
-  alignSelf: "center",
+  alignSelf: "flex-start",
   overflow: "hidden",
   boxSizing: "border-box",
 }}
