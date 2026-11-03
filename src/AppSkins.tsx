@@ -353,7 +353,7 @@ export function WeChatSkin(p: SkinProps) {
   const conversations = [
   ...new Set([
     ...p.items
-      .filter((i) => !["朋友圈", "我"].includes(i.folder))
+      .filter((i) => !["朋友圈", "我", "听一听"].includes(i.folder))
       .map((i) => i.title),
     "五五不呜呜",
     "烟花组",
@@ -588,6 +588,7 @@ const groupMembers: Record<string, string[]> = {
     (i) =>
       i.title === p.thread &&
       i.folder !== "朋友圈" &&
+      i.folder !== "听一听" &&
       i.kind !== "post",
   )}
   creator={p.creator}
@@ -788,8 +789,10 @@ style={{
                     ),
                 )
                 .map((t) => {
-  const list = p.items.filter((i) => i.title === t);
-  const last = list.at(-1);
+  const list = p.items.filter(
+  (i) => i.title === t && i.folder !== "听一听"
+);
+const last = list.at(-1);
 
   return (
     <button
