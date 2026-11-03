@@ -143,11 +143,39 @@ function Avatar({
   );
 }
 
+// 记录当前正在播放的音频
+let activeAudio: HTMLAudioElement | null = null;
+
 function ItemMedia({ item }: { item: Item }) {
   const src = safeMedia(item.media);
+
   return src ? (
     item.kind === "audio" ? (
-      <audio controls src={src} />
+      <audio
+        controls
+        src={src}
+        onPlay={(e) => {
+          const currentAudio = e.currentTarget;
+
+          // 如果另一首歌正在播放，先暂停它
+          if (activeAudio && activeAudio !== currentAudio) {
+            activeAudio.pause();
+          }
+
+          // 记录当前播放的歌曲
+          activeAudio = currentAudio;
+        }}
+        onPause={(e) => {
+          if (activeAudio === e.currentTarget) {
+            activeAudio = null;
+          }
+        }}
+        onEnded={(e) => {
+          if (activeAudio === e.currentTarget) {
+            activeAudio = null;
+          }
+        }}
+      />
     ) : item.kind === "video" ? (
       <video controls playsInline src={src} />
     ) : (
