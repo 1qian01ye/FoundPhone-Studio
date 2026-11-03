@@ -46,6 +46,7 @@ export type SkinProps = {
   onAdd: () => void;
   onSendMessage?: (body: string) => void;
   onBack: () => void;
+  onDouyinLevisChat?: () => void;
   thread: string;
   onThread: (s: string) => void;
 };
