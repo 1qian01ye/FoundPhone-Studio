@@ -877,6 +877,240 @@ const chooseYangCallOption = (step: number) => {
               </div>
             </div>
           )}
+          {/* 杨云皓微信语音来电弹窗 */}
+{yangIncomingVisible && app === "douyin" && (
+  <div
+    style={{
+      position: "absolute",
+      top: "68px",
+      left: "10px",
+      right: "10px",
+      zIndex: 10001,
+      padding: "20px 18px 18px",
+      borderRadius: "34px",
+      background: "#050505",
+      color: "#fff",
+      boxSizing: "border-box",
+      boxShadow: "0 8px 28px rgba(0,0,0,0.35)",
+    }}
+  >
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "12px",
+        marginBottom: "22px",
+      }}
+    >
+      <div
+        style={{
+          width: "54px",
+          height: "54px",
+          borderRadius: "50%",
+          background: "#333",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "24px",
+        }}
+      >
+        杨
+      </div>
+
+      <div>
+        <div style={{ fontSize: "17px", fontWeight: 700 }}>
+          杨云皓邀请你语音通话
+        </div>
+        <div style={{ color: "#aaa", fontSize: "14px", marginTop: "4px" }}>
+          微信语音通话
+        </div>
+      </div>
+    </div>
+
+    <div style={{ display: "flex", gap: "10px" }}>
+      <button
+        onClick={hangupYangCall}
+        style={{
+          flex: 1,
+          height: "54px",
+          border: "none",
+          borderRadius: "40px",
+          background: "#fa3b43",
+          color: "#fff",
+          fontSize: "17px",
+          fontWeight: 600,
+        }}
+      >
+        ✕ 拒绝
+      </button>
+
+      <button
+        onClick={acceptYangCall}
+        style={{
+          flex: 1,
+          height: "54px",
+          border: "none",
+          borderRadius: "40px",
+          background: "#078cf0",
+          color: "#fff",
+          fontSize: "17px",
+          fontWeight: 600,
+        }}
+      >
+        ✓ 接受
+      </button>
+    </div>
+  </div>
+)}
+
+{/* 杨云皓微信全屏语音通话 */}
+{yangCallActive && app === "douyin" && (
+  <div
+    style={{
+      position: "absolute",
+      inset: 0,
+      zIndex: 10002,
+      background: "#17191f",
+      color: "#fff",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "space-between",
+      padding: "85px 24px 45px",
+      boxSizing: "border-box",
+    }}
+  >
+    <div style={{ textAlign: "center", color: "#aaa", fontSize: "16px" }}>
+      微信语音通话
+    </div>
+
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: "22px",
+      }}
+    >
+      <div
+        style={{
+          width: "112px",
+          height: "112px",
+          borderRadius: "50%",
+          background: "#333",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          fontSize: "48px",
+        }}
+      >
+        杨
+      </div>
+
+      <div style={{ fontSize: "27px", fontWeight: 600 }}>杨云皓</div>
+
+      <div style={{ color: "#aaa", fontSize: "16px" }}>
+        正在语音通话…
+      </div>
+    </div>
+
+    <div
+      style={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        gap: "12px",
+      }}
+    >
+      {yangCallChoiceStage === 1 && (
+        <>
+          <button
+            onClick={() => chooseYangCallOption(2)}
+            style={{
+              padding: "16px",
+              borderRadius: "14px",
+              border: "1px solid #454954",
+              background: "#292d36",
+              color: "#fff",
+              fontSize: "15px",
+            }}
+          >
+            选项1：我在写作业呢。
+          </button>
+
+          <button
+            onClick={() => chooseYangCallOption(3)}
+            style={{
+              padding: "16px",
+              borderRadius: "14px",
+              border: "1px solid #454954",
+              background: "#292d36",
+              color: "#fff",
+              fontSize: "15px",
+            }}
+          >
+            选项2：我在刷抖音啊。
+          </button>
+        </>
+      )}
+
+      {yangCallChoiceStage === 2 && (
+        <>
+          <button
+            onClick={() => chooseYangCallOption(4)}
+            style={{
+              padding: "16px",
+              borderRadius: "14px",
+              border: "1px solid #454954",
+              background: "#292d36",
+              color: "#fff",
+              fontSize: "15px",
+            }}
+          >
+            选项1：可以啊，我等会发消息给你
+          </button>
+
+          <button
+            onClick={() => chooseYangCallOption(5)}
+            style={{
+              padding: "16px",
+              borderRadius: "14px",
+              border: "1px solid #454954",
+              background: "#292d36",
+              color: "#fff",
+              fontSize: "15px",
+            }}
+          >
+            选项2：改天吧，我约了吕政熙等会打游戏
+          </button>
+        </>
+      )}
+
+      <button
+        onClick={hangupYangCall}
+        aria-label="挂断通话"
+        style={{
+          alignSelf: "center",
+          width: "76px",
+          height: "76px",
+          marginTop: "12px",
+          borderRadius: "50%",
+          border: "none",
+          background: "#fa3b43",
+          color: "#fff",
+          fontSize: "32px",
+          cursor: "pointer",
+        }}
+      >
+        ✆
+      </button>
+
+      <div style={{ color: "#aaa", fontSize: "14px", textAlign: "center" }}>
+        挂断
+      </div>
+    </div>
+  </div>
+)}
           {folder && (
             <div className="folder-overlay" onClick={() => setFolder("")}>
               <h2>{folder}</h2>
