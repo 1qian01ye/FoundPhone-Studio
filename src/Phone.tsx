@@ -909,7 +909,7 @@ const chooseYangCallOption = (step: number) => {
       }}
     >
       <img
-  src={`${import.meta.env.BASE_URL}yangyunhaoQQ.jpg`}
+  src={`${import.meta.env.BASE_URL}杨云皓.jpg`}
   alt="杨云皓"
   style={{
     width: "54px",
@@ -996,7 +996,7 @@ const chooseYangCallOption = (step: number) => {
       }}
     >
       <img
-  src={`${import.meta.env.BASE_URL}yangyunhaoQQ.jpg`}
+  src={`${import.meta.env.BASE_URL}杨云皓.jpg`}
   alt="杨云皓"
   style={{
     width: "112px",
