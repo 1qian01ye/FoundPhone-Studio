@@ -139,6 +139,11 @@ const [homeRequest, setHomeRequest] = useState(0);
 const [wechatIncomingVisible, setWechatIncomingVisible] = useState(false);
 const [wechatCallActive, setWechatCallActive] = useState(false);
 const wechatCallAudio = useRef<HTMLAudioElement | null>(null);
+  // 杨云皓抖音私聊语音来电
+const [yangIncomingVisible, setYangIncomingVisible] = useState(false);
+const [yangCallActive, setYangCallActive] = useState(false);
+const [yangCallChoiceStage, setYangCallChoiceStage] = useState(0);
+const yangCallAudio = useRef<HTMLAudioElement | null>(null);
   const [locked, setLocked] = useState(!creator);
   const [pinOpen, setPinOpen] = useState(false);
   const [quickCamera, setQuickCamera] = useState(false);
@@ -357,6 +362,75 @@ const hangupWechatCall = () => {
   setWechatCallActive(false);
   setWechatIncomingVisible(false);
 };
+  // 杨云皓来电：停止当前音频
+const stopYangCallAudio = () => {
+  if (yangCallAudio.current) {
+    yangCallAudio.current.pause();
+    yangCallAudio.current.currentTime = 0;
+    yangCallAudio.current = null;
+  }
+};
+
+// 杨云皓来电：挂断
+const hangupYangCall = () => {
+  stopYangCallAudio();
+  setYangIncomingVisible(false);
+  setYangCallActive(false);
+  setYangCallChoiceStage(0);
+};
+
+// 杨云皓来电：播放指定音频
+const playYangCallAudio = (step: number) => {
+  stopYangCallAudio();
+
+  const audio = new Audio(
+    `${import.meta.env.BASE_URL}杨云皓来电${step}.mp3`
+  );
+
+  yangCallAudio.current = audio;
+
+  audio.onended = () => {
+    yangCallAudio.current = null;
+
+    if (step === 1) {
+      // 第一段播放完，显示第一组选项
+      setYangCallChoiceStage(1);
+    } else if (step === 2 || step === 3) {
+      // 第二、三段播放完，显示相同的第二组选项
+      setYangCallChoiceStage(2);
+    } else if (step === 4 || step === 5) {
+      // 最后一段播放完，自动挂断
+      hangupYangCall();
+    }
+  };
+
+  audio.onerror = () => {
+    yangCallAudio.current = null;
+    setBanner("杨云皓来电音频加载失败，请检查 public 文件夹中的音频文件");
+    hangupYangCall();
+  };
+
+  audio.play().catch(() => {
+    setBanner("音频播放失败，请检查浏览器播放权限");
+    hangupYangCall();
+  });
+};
+
+// 接听杨云皓的微信语音
+const acceptYangCall = () => {
+  setYangIncomingVisible(false);
+  setYangCallActive(true);
+  setYangCallChoiceStage(0);
+
+  // 接通后先播放第一段
+  playYangCallAudio(1);
+};
+
+// 选择对话
+const chooseYangCallOption = (step: number) => {
+  setYangCallChoiceStage(0);
+  playYangCallAudio(step);
+};
   const installedApps = work.apps.filter((a) => a.installed);
   const apps = installedApps.filter((a) => a.visible);
   const unlock = (pin = "") => {
@@ -558,6 +632,7 @@ const hangupWechatCall = () => {
                   onEdit={(item) => onEdit?.(app, item)}
                   onAdd={() => onAdd?.(app)}
                   onBack={() => setApp("")}
+                  onDouyinLevisChat={() => setYangIncomingVisible(true)}
                   onSettings={onSettings}
                   onUi={(key, value) => {
                     const current = runtimeRef.current;
@@ -1452,6 +1527,7 @@ function AppContent({
   onEdit,
   onAdd,
   onBack,
+  onDouyinLevisChat,
   onSettings,
   onUi,
   work,
@@ -1465,6 +1541,7 @@ function AppContent({
   onEdit: (item: Item) => void;
   onAdd: () => void;
   onBack: () => void;
+  onDouyinLevisChat?: () => void;
   onSettings?: () => void;
   onUi?: (key: string, value: UiValue) => void;
   work: Work;
@@ -1914,9 +1991,14 @@ socialDetailApps.has(app.id) &&
                   className="contact-row"
                   key={t}
                   onClick={() => {
-                    setThread(t);
-                    onRead(t);
-                  }}
+  setThread(t);
+  onRead(t);
+
+  // 打开抖音中利维斯的私聊时，触发杨云皓来电
+  if (app.id === "douyin" && t === "利维斯") {
+    onDouyinLevisChat?.();
+  }
+}}
                 >
                   <span className="avatar" style={{ background: app.color }}>
                     {t.slice(0, 1)}
