@@ -202,8 +202,9 @@ function MessageList({
             )}
 
             <div
-              className={`skin-message ${i.outgoing ? "outgoing" : ""}`}
-            >
+  className={`skin-message ${i.outgoing ? "outgoing" : ""}`}
+  style={{ alignItems: "flex-start" }}
+>
               {!whatsapp && !i.outgoing && (
                 <Avatar name={i.sender} src={i.avatar} />
               )}
