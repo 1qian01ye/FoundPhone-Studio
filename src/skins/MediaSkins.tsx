@@ -499,35 +499,39 @@ function VerticalVideo({ p, item }: { p: Props; item: Item }) {
   const articleRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const article = articleRef.current;
-    const video = article?.querySelector("video");
+  const article = articleRef.current;
+  const video = article?.querySelector("video");
 
-    if (!article || !video) return;
+  if (!article || !video) return;
 
-    // 推荐视频默认静音，禁止自动播放声音
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      const isActive =
+        entry.isIntersecting && entry.intersectionRatio >= 0.5;
+
+      if (isActive) {
+        // 当前屏幕中的视频：开启声音并播放
+        video.muted = false;
+        video.play().catch((error) => {
+          console.warn("视频自动播放失败：", error);
+        });
+      } else {
+        // 其他视频：静音并暂停
+        video.muted = true;
+        video.pause();
+      }
+    },
+    { threshold: [0, 0.5, 1] },
+  );
+
+  observer.observe(article);
+
+  return () => {
+    observer.disconnect();
     video.pause();
     video.muted = true;
-    video.autoplay = false;
-    video.removeAttribute("autoplay");
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting || entry.intersectionRatio < 0.5) {
-          video.pause();
-          video.muted = true;
-        }
-      },
-      { threshold: [0, 0.5, 1] },
-    );
-
-    observer.observe(article);
-
-    return () => {
-      observer.disconnect();
-      video.pause();
-      video.muted = true;
-    };
-  }, [item.id]);
+  };
+}, [item.id]);
   const [liked, setLiked] = useSkinState<boolean>(
     p,
     `liked-${item.id}`,
