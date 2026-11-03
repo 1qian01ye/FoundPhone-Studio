@@ -563,7 +563,8 @@ console.log(
     })}
   </div>
 )}
-          {utility === "听一听" ? (
+          
+{utility === "听一听" ? (
   <div style={{ padding: "12px 16px" }}>
     {p.items
       .filter((i) => i.folder === "听一听" && i.kind === "audio")
@@ -589,6 +590,120 @@ console.log(
       (i) => i.folder === "听一听" && i.kind === "audio"
     ) && <p className="skin-empty">暂无音频</p>}
   </div>
+) : utility === "视频号" ? (
+  <div
+    style={{
+      padding: "10px",
+      display: "grid",
+      gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+      gap: "10px",
+      background: "#f5f5f5",
+      minHeight: "100%",
+    }}
+  >
+    {Array.from({ length: 14 }, (_, index) => {
+      const number = index + 1;
+      const fileName = `视频号${number}.mp4`;
+
+      return (
+        <button
+          key={fileName}
+          onClick={() => {
+            setUtility(`视频播放${number}`);
+          }}
+          style={{
+            padding: 0,
+            border: "none",
+            borderRadius: "10px",
+            overflow: "hidden",
+            background: "#fff",
+            textAlign: "left",
+            cursor: "pointer",
+          }}
+        >
+          <div
+            style={{
+              width: "100%",
+              aspectRatio: "3 / 4",
+              background: "#222",
+              position: "relative",
+            }}
+          >
+            <video
+              src={`${import.meta.env.BASE_URL}${fileName}`}
+              muted
+              playsInline
+              preload="metadata"
+              tabIndex={-1}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                pointerEvents: "none",
+              }}
+            />
+            <span
+              style={{
+                position: "absolute",
+                right: "8px",
+                bottom: "8px",
+                color: "#fff",
+                fontSize: "12px",
+                textShadow: "0 1px 4px #000",
+              }}
+            >
+              ▶
+            </span>
+          </div>
+          <div
+            style={{
+              padding: "8px",
+              fontSize: "13px",
+              color: "#222",
+            }}
+          >
+            视频号{number}
+          </div>
+        </button>
+      );
+    })}
+  </div>
+) : utility.startsWith("视频播放") ? (
+  <div
+    style={{
+      padding: "12px",
+      background: "#111",
+      minHeight: "100%",
+    }}
+  >
+    <button
+      onClick={() => setUtility("视频号")}
+      style={{
+        border: "none",
+        background: "transparent",
+        color: "#fff",
+        padding: "8px 0 16px",
+        fontSize: "15px",
+        cursor: "pointer",
+      }}
+    >
+      ‹ 返回视频号
+    </button>
+
+    <video
+      key={utility}
+      src={`${import.meta.env.BASE_URL}视频号${utility.replace("视频播放", "")}.mp4`}
+      controls
+      autoPlay
+      playsInline
+      style={{
+        width: "100%",
+        maxHeight: "75vh",
+        background: "#000",
+        borderRadius: "10px",
+      }}
+    />
+  </div>
 ) : (
   p.items
     .filter((i) => i.folder === utility)
@@ -603,9 +718,12 @@ console.log(
       </button>
     ))
 )}
-          {utility !== "听一听" &&
+{utility !== "听一听" &&
+  utility !== "视频号" &&
+  !utility.startsWith("视频播放") &&
   !p.items.some((i) => i.folder === utility) &&
   utility !== "聊天信息" && <p className="skin-empty">暂无内容</p>}
+
         </div>
       ) : p.thread ? (
         <>
