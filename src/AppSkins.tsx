@@ -526,11 +526,16 @@ const groupMembers: Record<string, string[]> = {
       ) : p.thread ? (
         <>
           <MessageList
-            items={p.items.filter((i) => i.title === p.thread)}
-            creator={p.creator}
-            onItem={p.onItem}
-            onRead={p.onRead}
-          />
+  items={p.items.filter(
+    (i) =>
+      i.title === p.thread &&
+      i.folder !== "朋友圈" &&
+      i.kind !== "post",
+  )}
+  creator={p.creator}
+  onItem={p.onItem}
+  onRead={p.onRead}
+/>
           <Compose
   creator={p.creator}
   onAdd={p.onAdd}
