@@ -684,6 +684,7 @@ console.log(
     <video
       key={utility}
       src={`${import.meta.env.BASE_URL}视频号${utility.replace("视频播放", "")}.mp4`}
+      controls
       autoPlay
       playsInline
       style={{
