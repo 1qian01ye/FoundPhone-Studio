@@ -2087,6 +2087,7 @@ if (app.id === "camera") {
               onItem={read}
               onAdd={onAdd}
               onBack={onBack}
+              onDouyinLevisChat={onDouyinLevisChat}
               thread={thread}
               onThread={setThread}
             />
