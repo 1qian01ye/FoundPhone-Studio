@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import type { SkinProps } from "../AppSkins";
-import { safeMedia, type Item } from "../schema";
+import { assetUrl, safeMedia, type Item } from "../schema";
 export type Props = SkinProps;
 export const meta = (
   i: Pick<Item, "meta"> | undefined,
@@ -93,7 +93,7 @@ export function Avatar({
   round?: boolean;
   src?: string;
 }) {
-  const imageSrc = safeMedia(src);
+  const imageSrc = assetUrl(safeMedia(src));
 
   return (
     <span className={`catalog-avatar ${round ? "round" : ""}`}>
@@ -124,10 +124,7 @@ export function Media({
 }) {
   const src = safeMedia(item.media);
 
-  // 自动适配 GitHub Pages 的 /FoundPhone-Studio/ 部署路径
-  const mediaSrc = src.startsWith("/")
-    ? `${import.meta.env.BASE_URL}${src.slice(1)}`
-    : src;
+  const mediaSrc = assetUrl(src);
 
   return src ? (
     item.kind === "audio" ? (
