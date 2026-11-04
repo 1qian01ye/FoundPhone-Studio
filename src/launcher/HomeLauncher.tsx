@@ -67,14 +67,14 @@ const launcherMusicTracks = [
   },
   {
     title: "拜托拜托",
-    artist: "TF家族",
+    artist: "TF家族五代",
     album: "",
     src: `${import.meta.env.BASE_URL}拜托拜托.mp3`,
     cover: `${import.meta.env.BASE_URL}拜托拜托封面.jpg`,
   },
   {
     title: "不完美小孩",
-    artist: "TFBOYS",
+    artist: "TF家族五代",
     album: "",
     src: `${import.meta.env.BASE_URL}不完美小孩.mp3`,
     cover: `${import.meta.env.BASE_URL}不完美小孩封面.jpg`,
