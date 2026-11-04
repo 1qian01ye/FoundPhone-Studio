@@ -1219,7 +1219,7 @@ export function DouyinSkin(p: Props) {
       duration: "00:00",
     },
   },
-  {
+    {
     id: 10,
     outgoing: false,
     time: "11月14日",
@@ -1230,10 +1230,10 @@ export function DouyinSkin(p: Props) {
       cover: "/FoundPhone-Studio/杨云皓抖音8.jpg",
       url: "",
       duration: "00:00",
-       },
     },
-  ],
-          "这里有哲理": [
+  },
+],
+"这里有哲理": [
       {
         id: 1,
         text: "我们来玩一个游戏",
