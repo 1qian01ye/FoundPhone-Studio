@@ -41,6 +41,26 @@ export const useStudio = create<Store>((set, get) => ({
       const template = compileStory(storyTemplate).work;
       const musicSongs = template.data.music ?? [];
       const wechatMessages = template.data.wechat ?? [];
+      console.log("[朋友圈检查] 微信数据总数:", wechatMessages.length);
+
+console.log(
+  "[朋友圈检查] 每条数据的 ID、标题、类型、文件夹:",
+  wechatMessages.map((item) => ({
+    id: item.id,
+    title: item.title,
+    sender: item.sender,
+    kind: item.kind,
+    folder: item.folder,
+    body: item.body,
+  })),
+);
+
+console.log(
+  "[朋友圈检查] 被识别为动态的数据:",
+  wechatMessages.filter(
+    (item) => item.folder === "朋友圈" || item.kind === "post",
+  ),
+);
       console.log("[朋友圈诊断] 模板读取到的微信数据：", wechatMessages);
 console.log("[朋友圈诊断] 模板朋友圈动态数量：", wechatMessages.filter(
   (item) => item.folder === "朋友圈" || item.kind === "post"
