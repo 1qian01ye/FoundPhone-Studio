@@ -87,6 +87,14 @@ export function createWork(title = "雨停之前"): Work {
       }),
     ];
     w.data.music = [
+      makeItem({
+      id: "music-touch-the-sky",
+      title: "Touch the Sky",
+      sender: "Kanye West",
+      body: "Late Registration",
+      meta: { album: "Late Registration" },
+      folder: "我的歌单",
+    }),
      makeItem({
       id: "music-street-lights",
       title: "Street Lights",
