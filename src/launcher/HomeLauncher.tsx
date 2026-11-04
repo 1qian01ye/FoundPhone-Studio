@@ -67,12 +67,12 @@ const launcherMusicTracks = [
       "https://coverartarchive.org/release/2e817d2f-34a3-3e6a-97e9-376453421fea/front-500",
   },
   {
-    title: "拜托拜托",
-    artist: "TF家族",
-    album: "",
-    src: `${import.meta.env.BASE_URL}拜托拜托.mp3`,
-    cover: "",
-  },
+  title: "拜托拜托",
+  artist: "TF家族",
+  album: "",
+  src: `${import.meta.env.BASE_URL}拜托拜托.mp3`,
+  cover: `${import.meta.env.BASE_URL}拜托拜托封面.jpg`,
+},
 ] as const;
 function WidgetFace({
   widget,
@@ -586,9 +586,9 @@ export function HomeLauncher(p: Props) {
                   <div className="street-lights-widget">
         <div className="street-lights-cover">
           <img
-            src="https://coverartarchive.org/release/2e817d2f-34a3-3e6a-97e9-376453421fea/front-500"
-            alt="808s & Heartbreak album cover"
-          />
+  src={launcherMusicTracks[musicTrack].cover}
+  alt={`${launcherMusicTracks[musicTrack].title} album cover`}
+/>
         </div>
 
         <div className="street-lights-info">
