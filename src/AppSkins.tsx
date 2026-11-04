@@ -31,7 +31,7 @@ import {
   Layers,
   ShoppingBag,
 } from "lucide-react";
-import { safeMedia, type Item, type UiValue } from "./schema";
+import { assetUrl, safeMedia, type Item, type UiValue } from "./schema";
 export type SkinProps = {
   ui?: Record<string, UiValue>;
   onUi?: (key: string, value: UiValue) => void;
@@ -93,7 +93,7 @@ function Avatar({
     "朱映宸": "/FoundPhone-Studio/朱映宸.jpg",
   };
 
-  const imageSrc = src || avatarFiles[name];
+  const imageSrc = assetUrl(src || avatarFiles[name] || "");
 
     return (
     <span
@@ -148,7 +148,7 @@ function Avatar({
 let activeAudio: HTMLAudioElement | null = null;
 
 function ItemMedia({ item }: { item: Item }) {
-  const src = safeMedia(item.media);
+  const src = assetUrl(safeMedia(item.media));
 
   return src ? (
     item.kind === "audio" ? (
@@ -626,7 +626,8 @@ console.log(
             }}
           >
             <video
-  src={`${import.meta.env.BASE_URL}${fileName}`}
+  src={assetUrl(`/${fileName}`)}
+  poster={assetUrl(`/视频号${number}.jpg`)}
   muted
   playsInline
   preload="metadata"
@@ -682,7 +683,7 @@ console.log(
 
     <video
       key={utility}
-      src={`${import.meta.env.BASE_URL}视频号${utility.replace("视频播放", "")}.mp4`}
+      src={assetUrl(`/视频号${utility.replace("视频播放", "")}.mp4`)}
       controls
       autoPlay
       playsInline
@@ -740,7 +741,7 @@ console.log(
           <div
   className="wx-moment-cover"
 style={{
-  backgroundImage: 'url("/FoundPhone-Studio/朋友圈背景图.jpg")',
+  backgroundImage: `url("${assetUrl("/FoundPhone-Studio/朋友圈背景图.jpg")}")`,
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
