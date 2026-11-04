@@ -5083,6 +5083,18 @@
       }
     ],
     "music": [
+       {
+        "id": "music-touch-the-sky",
+        "title": "Touch the Sky",
+        "body": "Touch the Sky",
+        "sender": "Kanye West",
+        "kind": "text",
+        "folder": "我的歌单",
+        "media": "/music-covers/touch-the-sky.jpg",
+        "meta": {
+          "album": "Late Registration"
+        }
+      },
       {
         "id": "music-street-lights",
         "title": "Street Lights",
