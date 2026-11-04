@@ -102,10 +102,29 @@ const mergedWechat = [
   ),
 ];
 
+// 同步微信数据，包括朋友圈动态
+const existingWechat = work.data.wechat ?? [];
+
+const templateWechatMap = new Map(
+  wechatMessages.map((item) => [item.id, item]),
+);
+
+const existingWechatMap = new Map(
+  existingWechat.map((item) => [item.id, item]),
+);
+
+// 更新模板中已有的记录，同时保留本地独有的记录
+const mergedWechat = [
+  ...existingWechat.map(
+    (item) => templateWechatMap.get(item.id) ?? item,
+  ),
+  ...wechatMessages.filter(
+    (item) => !existingWechatMap.has(item.id),
+  ),
+];
+
 const wechatChanged =
-  mergedWechat.some(
-    (item, index) => item !== existingWechat[index],
-  ) || mergedWechat.length !== existingWechat.length;
+  JSON.stringify(mergedWechat) !== JSON.stringify(existingWechat);
 
           // 只要有新增或更新内容，就写入旧作品
 if (missingMusic.length || wechatChanged) {
@@ -122,15 +141,10 @@ if (missingMusic.length || wechatChanged) {
             updatedWorks.push(updated);
 
             console.info("[自动同步] 已更新作品:", {
-              workId: work.id,
-              新增歌曲: missingMusic.length,
-              新增微信消息: missingWechat.length,
-              微信新增内容: missingWechat.map((item) => ({
-                title: item.title,
-                sender: item.sender,
-                body: item.body,
-              })),
-            });
+  workId: work.id,
+  新增歌曲: missingMusic.length,
+  微信记录数量: mergedWechat.length,
+});
           } else {
             updatedWorks.push(work);
           }
