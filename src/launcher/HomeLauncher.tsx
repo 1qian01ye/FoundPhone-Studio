@@ -151,7 +151,7 @@ export function HomeLauncher(p: Props) {
     } | null>(null),
     [widgetType, setWidgetType] = useState<Widget["type"]>("calendar"),
     [size, setSize] = useState<Widget["size"]>("small");
-  const root = useRef<HTMLDivElement>(null),
+    const root = useRef<HTMLDivElement>(null),
     pager = useRef<HTMLDivElement>(null),
     timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined),
     edge = useRef<ReturnType<typeof setTimeout> | undefined>(undefined),
@@ -165,24 +165,6 @@ export function HomeLauncher(p: Props) {
       hover: number;
       pointer: number;
     } | null>(null),
-    const [musicTrack, setMusicTrack] = useState(0);
-const musicAudio = useRef<HTMLAudioElement>(null);
-
-const switchMusicTrack = (index: 0 | 1) => {
-  const audio = musicAudio.current;
-
-  setMusicTrack(index);
-
-  if (!audio) return;
-
-  audio.pause();
-  audio.src = launcherMusicTracks[index].src;
-  audio.load();
-
-  void audio.play().catch((error) => {
-    console.error("音乐播放失败：", error);
-  });
-};
     suppress = useRef(false),
     swipe = useRef<{
       pointer: number;
@@ -192,7 +174,29 @@ const switchMusicTrack = (index: 0 | 1) => {
       started: number;
       active: boolean;
     } | null>(null);
+
+  const [musicTrack, setMusicTrack] = useState(0);
+  const musicAudio = useRef<HTMLAudioElement>(null);
+
+  const switchMusicTrack = (index: 0 | 1) => {
+    const audio = musicAudio.current;
+
+    setMusicTrack(index);
+
+    if (!audio) return;
+
+    audio.pause();
+    audio.src = launcherMusicTracks[index].src;
+    audio.load();
+
+    void audio.play().catch((error) => {
+      console.error("音乐播放失败：", error);
+    });
+  };
+
   const pages = packHome(homeEntries(p.layout), p.layout.positions),
+    apps = p.layout.apps,
+    active = apps.find((a) => a.id === selected);
     apps = p.layout.apps,
     active = apps.find((a) => a.id === selected);
   if (editing && pages.length < 20) pages.push([]);
