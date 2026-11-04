@@ -57,6 +57,23 @@ const widgetApp = {
   notes: "notes",
   battery: "settings",
 };
+const launcherMusicTracks = [
+  {
+    title: "Street Lights",
+    artist: "Kanye West",
+    album: "808s & Heartbreak",
+    src: `${import.meta.env.BASE_URL}street-lights.mp3`,
+    cover:
+      "https://coverartarchive.org/release/2e817d2f-34a3-3e6a-97e9-376453421fea/front-500",
+  },
+  {
+    title: "拜托拜托",
+    artist: "TF家族",
+    album: "",
+    src: `${import.meta.env.BASE_URL}拜托拜托.mp3`,
+    cover: "",
+  },
+] as const;
 function WidgetFace({
   widget,
   work,
@@ -148,6 +165,24 @@ export function HomeLauncher(p: Props) {
       hover: number;
       pointer: number;
     } | null>(null),
+    const [musicTrack, setMusicTrack] = useState(0);
+const musicAudio = useRef<HTMLAudioElement>(null);
+
+const switchMusicTrack = (index: 0 | 1) => {
+  const audio = musicAudio.current;
+
+  setMusicTrack(index);
+
+  if (!audio) return;
+
+  audio.pause();
+  audio.src = launcherMusicTracks[index].src;
+  audio.load();
+
+  void audio.play().catch((error) => {
+    console.error("音乐播放失败：", error);
+  });
+};
     suppress = useRef(false),
     swipe = useRef<{
       pointer: number;
@@ -560,9 +595,17 @@ export function HomeLauncher(p: Props) {
             <span className="street-lights-source">♫ MUSIC</span>
           </div>
 
-          <div className="street-lights-song">Street Lights</div>
-          <div className="street-lights-artist">Kanye West</div>
-          <div className="street-lights-album">808s &amp; Heartbreak</div>
+          <div className="street-lights-song">
+  {launcherMusicTracks[musicTrack].title}
+</div>
+
+<div className="street-lights-artist">
+  {launcherMusicTracks[musicTrack].artist}
+</div>
+
+<div className="street-lights-album">
+  {launcherMusicTracks[musicTrack].album}
+</div>
 
           <div className="street-lights-controls">
           <button
@@ -617,7 +660,8 @@ export function HomeLauncher(p: Props) {
 </button>
           <audio
   id="street-lights-audio"
-  src={`${import.meta.env.BASE_URL}street-lights.mp3`}
+  ref={musicAudio}
+  src={launcherMusicTracks[musicTrack].src}
   preload="metadata"
   onPlay={(e) => {
     const button = e.currentTarget.parentElement?.querySelector(
