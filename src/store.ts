@@ -81,21 +81,40 @@ export const useStudio = create<Store>((set, get) => ({
             (item) => !musicIds.has(item.id),
           );
 
-          // 同步微信聊天记录
-          const existingWechat = work.data.wechat ?? [];
-          const wechatIds = new Set(existingWechat.map((item) => item.id));
-          const missingWechat = wechatMessages.filter(
-            (item) => !wechatIds.has(item.id),
-          );
+          // 同步微信数据，包括朋友圈动态
+const existingWechat = work.data.wechat ?? [];
 
-          // 只要有新增内容，就写入旧作品
-          if (missingMusic.length || missingWechat.length) {
+const templateWechatMap = new Map(
+  wechatMessages.map((item) => [item.id, item]),
+);
+
+const existingWechatMap = new Map(
+  existingWechat.map((item) => [item.id, item]),
+);
+
+// 用模板中的最新内容更新同 ID 数据，同时保留本地独有的数据
+const mergedWechat = [
+  ...existingWechat.map(
+    (item) => templateWechatMap.get(item.id) ?? item,
+  ),
+  ...wechatMessages.filter(
+    (item) => !existingWechatMap.has(item.id),
+  ),
+];
+
+const wechatChanged =
+  mergedWechat.some(
+    (item, index) => item !== existingWechat[index],
+  ) || mergedWechat.length !== existingWechat.length;
+
+          // 只要有新增或更新内容，就写入旧作品
+if (missingMusic.length || wechatChanged) {
             const updated: Work = {
               ...work,
               data: {
                 ...work.data,
                 music: [...existingMusic, ...missingMusic],
-                wechat: [...existingWechat, ...missingWechat],
+                wechat: mergedWechat,
               },
             };
 
