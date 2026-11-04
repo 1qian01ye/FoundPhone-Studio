@@ -197,8 +197,6 @@ export function HomeLauncher(p: Props) {
   const pages = packHome(homeEntries(p.layout), p.layout.positions),
     apps = p.layout.apps,
     active = apps.find((a) => a.id === selected);
-    apps = p.layout.apps,
-    active = apps.find((a) => a.id === selected);
   if (editing && pages.length < 20) pages.push([]);
   const beginSwipe = (e: PointerEvent<HTMLDivElement>) => {
     if (
