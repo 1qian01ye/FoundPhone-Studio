@@ -254,6 +254,18 @@ export function validateWork(input: unknown): Work {
   return workSchema.parse(input);
 }
 
+/** Resolve local public assets under Vite's configured base path.
+ * Also accepts legacy GitHub Pages paths that began with /FoundPhone-Studio/.
+ */
+export function assetUrl(value: string) {
+  if (!value) return "";
+  if (/^(https?:|data:|blob:)/i.test(value)) return value;
+  const relative = value
+    .replace(/^\/?FoundPhone-Studio\//, "")
+    .replace(/^\/+/, "");
+  return `${import.meta.env.BASE_URL}${relative}`;
+}
+
 export function safeMedia(value: string) {
   const embeddedMedia =
     /^data:(image\/(png|jpeg|webp|gif)|audio\/(mpeg|mp3|wav|ogg|webm|mp4)|video\/(mp4|webm));base64,[a-zA-Z0-9+/=\s]+$/;
