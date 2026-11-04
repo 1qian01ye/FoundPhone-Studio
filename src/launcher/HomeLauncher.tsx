@@ -59,20 +59,26 @@ const widgetApp = {
 };
 const launcherMusicTracks = [
   {
+    title: "不完美小孩",
+    artist: "TFBOYS",
+    album: "",
+    src: `${import.meta.env.BASE_URL}不完美小孩.mp3`,
+    cover: `${import.meta.env.BASE_URL}不完美小孩封面.jpg`,
+  },
+  {
     title: "Street Lights",
     artist: "Kanye West",
     album: "808s & Heartbreak",
     src: `${import.meta.env.BASE_URL}street-lights.mp3`,
-    cover:
-      "https://coverartarchive.org/release/2e817d2f-34a3-3e6a-97e9-376453421fea/front-500",
+    cover: `${import.meta.env.BASE_URL}Street Lights封面.jpg`,
   },
   {
-  title: "拜托拜托",
-  artist: "TF家族",
-  album: "",
-  src: `${import.meta.env.BASE_URL}拜托拜托.mp3`,
-  cover: `${import.meta.env.BASE_URL}拜托拜托封面.jpg`,
-},
+    title: "拜托拜托",
+    artist: "TF家族",
+    album: "",
+    src: `${import.meta.env.BASE_URL}拜托拜托.mp3`,
+    cover: `${import.meta.env.BASE_URL}拜托拜托封面.jpg`,
+  },
 ] as const;
 function WidgetFace({
   widget,
@@ -175,10 +181,10 @@ export function HomeLauncher(p: Props) {
       active: boolean;
     } | null>(null);
 
-  const [musicTrack, setMusicTrack] = useState(0);
+  const [musicTrack, setMusicTrack] = useState(1);
   const musicAudio = useRef<HTMLAudioElement>(null);
 
-  const switchMusicTrack = (index: 0 | 1) => {
+  const switchMusicTrack = (index: number) => {
     const audio = musicAudio.current;
 
     setMusicTrack(index);
@@ -613,7 +619,7 @@ export function HomeLauncher(p: Props) {
           <button
             type="button"
             className="street-lights-heart"
-            aria-label="收藏 Street Lights"
+            aria-label={`收藏 ${launcherMusicTracks[musicTrack].title}`}
             title="收藏"
             onClick={(e) => {
               e.stopPropagation();
@@ -629,9 +635,9 @@ export function HomeLauncher(p: Props) {
             aria-label="上一首"
             title="上一首"
             onClick={(e) => {
-  e.stopPropagation();
-  switchMusicTrack(0);
-}}
+              e.stopPropagation();
+              switchMusicTrack(0);
+            }}
           >
             ◀◀
           </button>
@@ -639,7 +645,7 @@ export function HomeLauncher(p: Props) {
           <button
   type="button"
   className="street-lights-play"
-  aria-label="播放或暂停 Street Lights"
+  aria-label={`播放或暂停 ${launcherMusicTracks[musicTrack].title}`}
   onClick={(e) => {
     e.stopPropagation();
 
@@ -691,9 +697,9 @@ export function HomeLauncher(p: Props) {
             aria-label="下一首"
             title="下一首"
             onClick={(e) => {
-  e.stopPropagation();
-  switchMusicTrack(1);
-}}
+              e.stopPropagation();
+              switchMusicTrack(2);
+            }}
           >
             ▶▶
           </button>
@@ -705,7 +711,7 @@ export function HomeLauncher(p: Props) {
             title="更多"
             onClick={(e) => {
               e.stopPropagation();
-              window.alert("Street Lights · Kanye West");
+              window.alert(`${launcherMusicTracks[musicTrack].title} · ${launcherMusicTracks[musicTrack].artist}`);
             }}
           >
             •••
