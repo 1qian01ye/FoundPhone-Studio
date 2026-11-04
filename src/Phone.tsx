@@ -1458,6 +1458,8 @@ function Media({ item }: { item: Item }) {
 
 function AppleMusicPlayer({ item }: { item: Item }) {
   const appleMusicUrls: Record<string, string> = {
+    "Touch the Sky":
+      "https://embed.music.apple.com/cn/song/1440763831?theme=auto",
     "Street Lights":
       "https://embed.music.apple.com/cn/song/1440895179?theme=auto",
     Twenties:
