@@ -4,18 +4,18 @@ import fs from "node:fs";
 const storyPath = "stories/template/story.json";
 
 const photos = [
-  "public/snapchat-photo.jpg",
-  "public/snapchat-photo-2.jpg",
-  "public/snapchat-photo-3.jpg",
-  "public/snapchat-photo-4.jpg",
-  "public/memory-photo-1.jpg",
-  "public/memory-photo-2.jpg",
-  "public/memory-photo-3.jpg",
-  "public/memory-photo-4.jpg",
-  "public/memory-photo-5.jpg",
-  "public/memory-photo-6.jpg",
-  "public/memory-photo-7.jpg",
-  "public/memory-photo-8.jpg",
+  `${import.meta.env.BASE_URL}snapchat-photo.jpg`,
+  `${import.meta.env.BASE_URL}snapchat-photo-2.jpg`,
+  `${import.meta.env.BASE_URL}snapchat-photo-3.jpg`,
+  `${import.meta.env.BASE_URL}snapchat-photo-4.jpg`,
+  `${import.meta.env.BASE_URL}memory-photo-1.jpg`,
+  `${import.meta.env.BASE_URL}memory-photo-2.jpg`,
+  `${import.meta.env.BASE_URL}memory-photo-3.jpg`,
+  `${import.meta.env.BASE_URL}memory-photo-4.jpg`,
+  `${import.meta.env.BASE_URL}memory-photo-5.jpg`,
+  `${import.meta.env.BASE_URL}memory-photo-6.jpg`,
+  `${import.meta.env.BASE_URL}memory-photo-7.jpg`,
+  `${import.meta.env.BASE_URL}memory-photo-8.jpg`,
 ];
 
 const story = JSON.parse(fs.readFileSync(storyPath, "utf8"));
