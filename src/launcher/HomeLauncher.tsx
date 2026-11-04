@@ -59,13 +59,6 @@ const widgetApp = {
 };
 const launcherMusicTracks = [
   {
-    title: "不完美小孩",
-    artist: "TFBOYS",
-    album: "",
-    src: `${import.meta.env.BASE_URL}不完美小孩.mp3`,
-    cover: `${import.meta.env.BASE_URL}不完美小孩封面.jpg`,
-  },
-  {
     title: "Street Lights",
     artist: "Kanye West",
     album: "808s & Heartbreak",
@@ -78,6 +71,13 @@ const launcherMusicTracks = [
     album: "",
     src: `${import.meta.env.BASE_URL}拜托拜托.mp3`,
     cover: `${import.meta.env.BASE_URL}拜托拜托封面.jpg`,
+  },
+  {
+    title: "不完美小孩",
+    artist: "TFBOYS",
+    album: "",
+    src: `${import.meta.env.BASE_URL}不完美小孩.mp3`,
+    cover: `${import.meta.env.BASE_URL}不完美小孩封面.jpg`,
   },
 ] as const;
 function WidgetFace({
@@ -181,7 +181,7 @@ export function HomeLauncher(p: Props) {
       active: boolean;
     } | null>(null);
 
-  const [musicTrack, setMusicTrack] = useState(1);
+  const [musicTrack, setMusicTrack] = useState(0);
   const musicAudio = useRef<HTMLAudioElement>(null);
 
   const switchMusicTrack = (index: number) => {
@@ -636,7 +636,10 @@ export function HomeLauncher(p: Props) {
             title="上一首"
             onClick={(e) => {
               e.stopPropagation();
-              switchMusicTrack(0);
+              switchMusicTrack(
+  (musicTrack + launcherMusicTracks.length - 1) %
+    launcherMusicTracks.length
+);
             }}
           >
             ◀◀
@@ -698,7 +701,9 @@ export function HomeLauncher(p: Props) {
             title="下一首"
             onClick={(e) => {
               e.stopPropagation();
-              switchMusicTrack(2);
+              switchMusicTrack(
+  (musicTrack + 1) % launcherMusicTracks.length
+);
             }}
           >
             ▶▶
