@@ -41,6 +41,10 @@ export const useStudio = create<Store>((set, get) => ({
       const template = compileStory(storyTemplate).work;
       const musicSongs = template.data.music ?? [];
       const wechatMessages = template.data.wechat ?? [];
+      console.log("[朋友圈诊断] 模板读取到的微信数据：", wechatMessages);
+console.log("[朋友圈诊断] 模板朋友圈动态数量：", wechatMessages.filter(
+  (item) => item.folder === "朋友圈" || item.kind === "post"
+).length);
       console.info("[Music诊断] 模板歌曲数量:", musicSongs.length);
       console.info(
         "[Music诊断] 模板歌曲:",
@@ -133,6 +137,13 @@ if (missingMusic.length || wechatChanged) {
       }
 
       const selectedWork = works[0];
+      console.log("[朋友圈诊断] 当前存档微信数据：", selectedWork?.data.wechat);
+console.log(
+  "[朋友圈诊断] 当前存档朋友圈动态数量：",
+  (selectedWork?.data.wechat ?? []).filter(
+    (item) => item.folder === "朋友圈" || item.kind === "post"
+  ).length
+);
       const finalMusic = selectedWork?.data.music ?? [];
 
       console.info("[Music诊断] 加载完成:", {
