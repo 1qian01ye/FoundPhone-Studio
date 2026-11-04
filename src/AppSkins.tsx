@@ -441,13 +441,9 @@ console.log(
     )
   )
 );
-  const posts = p.items.filter((i) => {
-  // 排除听一听的歌曲
-  if (i.folder === "听一听" || i.kind === "audio") return false;
-
-  // 朋友圈动态
-  return i.folder === "朋友圈" || i.kind === "post";
-});
+  const posts = p.items.filter(
+  (i) => i.folder === "朋友圈" || i.kind === "post"
+);
   return (
     <div
       className="wechat-ui independent-skin"
