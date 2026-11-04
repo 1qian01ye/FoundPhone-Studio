@@ -629,9 +629,9 @@ export function HomeLauncher(p: Props) {
             aria-label="上一首"
             title="上一首"
             onClick={(e) => {
-              e.stopPropagation();
-              console.info("目前只有一首本地歌曲");
-            }}
+  e.stopPropagation();
+  switchMusicTrack(0);
+}}
           >
             ◀◀
           </button>
@@ -691,9 +691,9 @@ export function HomeLauncher(p: Props) {
             aria-label="下一首"
             title="下一首"
             onClick={(e) => {
-              e.stopPropagation();
-              console.info("目前只有一首本地歌曲");
-            }}
+  e.stopPropagation();
+  switchMusicTrack(1);
+}}
           >
             ▶▶
           </button>
